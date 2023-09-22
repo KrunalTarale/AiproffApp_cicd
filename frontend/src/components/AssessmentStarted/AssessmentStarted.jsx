@@ -74,7 +74,7 @@ const AssessmentStarted = () => {
 
   const submitQuiz = async () => {
     
-    const res = await fetch('http://localhost:3000/send_result', {
+    const res = await fetch('/send_result', {
       method: 'POST',
       headers: {
           "Content-Type": "application/json",

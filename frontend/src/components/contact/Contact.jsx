@@ -47,7 +47,7 @@ const Contact = () => {
       // alert("please fill all the fields")
   }
   else{
-    const res = await fetch('http://localhost:3000/add_inquiry', {
+    const res = await fetch('/add_inquiry', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -76,7 +76,7 @@ const Contact = () => {
 
   const getCountries = async () => {
     console.log("countries");
-    let res = await fetch('http://localhost:3000/get_countries');
+    let res = await fetch('/get_countries');
     console.log(res);
     let data = await res.json();
     setCountries(data);
@@ -92,7 +92,7 @@ const getStates = async (e) => {
     let selected_country = selectedOption.innerHTML;
     setcountry(selected_country);
   const countryId = e.target.value
-  let res = await fetch('http://localhost:3000/get_states/'+countryId);
+  let res = await fetch('/get_states/'+countryId);
   let data = await res.json();
   setStates(data);
 }
@@ -106,7 +106,7 @@ const getCities = async (e) => {
   let selected_state = selectedOption.innerHTML;
   setstate(selected_state);
   const stateId = e.target.value
-  let res = await fetch('http://localhost:3000/get_cities/'+stateId);
+  let res = await fetch('/get_cities/'+stateId);
   let data = await res.json();
   setCities(data);
 }
@@ -117,7 +117,7 @@ const addCities = (city) => {
 
 
 const gettopics = async () => {
-  let res = await fetch('http://localhost:3000/get_topics');
+  let res = await fetch('/get_topics');
   let data = await res.json();
   setTopics(data);
 }

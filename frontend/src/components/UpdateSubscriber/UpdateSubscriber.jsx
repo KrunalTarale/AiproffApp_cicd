@@ -10,7 +10,7 @@ const UpdateSubscriber = () => {
   console.log(params.id);
 
   const updateUser = async () => {
-    const res = await fetch('http://localhost:3000/update_subscribed_user/'+params.id)
+    const res = await fetch('/update_subscribed_user/'+params.id)
     const data = await res.json();
     // console.log(data);
     setStatus(data.status);
