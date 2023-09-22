@@ -104,7 +104,7 @@ function Navbar() {
               onMouseLeave={clearOfferingsTimer} //
             >
               <button className="relative flex items-center justify-between w-full py-2 pl-3 pr-4   md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto text-black">
-                OFFERINGS{' '}
+                OFFERING{' '}
                 <svg
                   className="w-2.5 h-2.5 ml-2.5"
                   aria-hidden="true"
