@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
 const cors = require('cors');
 app.use(cors());
@@ -8,6 +9,8 @@ const connectToDatabase = require('./module/conn.module')
 connectToDatabase();
 
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, '/frontend/dist')));
 
 
 const get_countries = require('./controller/get_countries.route')
@@ -30,6 +33,6 @@ app.use(Send_result)
 
 
 
-app.listen(3000, () => {
+app.listen(1337, () => {
     console.log('Server is running on port 3000');
 })
