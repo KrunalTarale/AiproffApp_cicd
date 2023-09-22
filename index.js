@@ -30,6 +30,9 @@ app.use(UpdateSubscriber)
 const Send_result = require('./controller/send_result.route')
 app.use(Send_result)
 
+app.get("/tempor" , (req, res) => {
+    res.send("tempor");
+})
 
 
 
