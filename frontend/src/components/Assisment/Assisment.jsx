@@ -12,7 +12,7 @@ const Assisment = () => {
       <div className="allCards">
 
 
-        <div className="card">
+        <div className="cards">
           <div className="img"></div>
           <span>About Me</span>
           <p className="info">
@@ -23,7 +23,7 @@ const Assisment = () => {
           </p>
           <Link to={"/assessmentStarted/0"}><button>Start Assessment</button></Link>
         </div>
-        <div className="card">
+        <div className="cards">
           <div className="img"></div>
           <span>About Me</span>
           <p className="info">
@@ -34,7 +34,7 @@ const Assisment = () => {
           </p>
           <Link to={"/assessmentStarted/1"}><button>Start Assessment</button></Link>
         </div>
-        <div className="card">
+        <div className="cards">
           <div className="img"></div>
           <span>About Me</span>
           <p className="info">

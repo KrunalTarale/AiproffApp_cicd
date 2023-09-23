@@ -1,193 +1,17 @@
+import React, { useState, useRef, useEffect } from 'react';
 
-// import React, { useState, useRef, useEffect } from "react";
-// import "./audio.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faDownload, faPlay, faPause, faTimes } from "@fortawesome/free-solid-svg-icons"; // Import the close (times) icon
-
-// function formatTime(time) {
-//   const minutes = Math.floor(time / 60);
-//   const seconds = Math.floor(time % 60);
-//   return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-// }
-
-// function AudioPlayer(props) {
-//   const audioRef = useRef(null);
-//   const [isPlaying, setIsPlaying] = useState(false);
-//   const [currentTime, setCurrentTime] = useState(0);
-//   const [duration, setDuration] = useState(0);
-
-
-//   const togglePlay = () => {
-//     if (isPlaying) {
-//       audioRef.current.pause();
-//     } else {
-//       audioRef.current.play();
-//     }
-//     setIsPlaying(!isPlaying);
-//   };
-
-//   const handleTimeUpdate = () => {
-//     setCurrentTime(audioRef.current.currentTime);
-//   };
-
-//   useEffect(() => {
-//     audioRef.current.addEventListener("timeupdate", handleTimeUpdate);
-//     audioRef.current.addEventListener("loadedmetadata", () => {
-//       setDuration(audioRef.current.duration);
-//     });
-
-//     return () => {
-//       audioRef.current.removeEventListener("timeupdate", handleTimeUpdate);
-//     };
-//   }, []);
-
-//   const handleClose = () => {
-//     // Implement this function to close the audio player
-//     // You can set a state to hide the audio player or remove it from the DOM
-//     props.onClose();
-//   };
-
-//   return (
-//     <div className="audio">
-//       <div className="close-icon" onClick={handleClose}>
-//         <FontAwesomeIcon icon={faTimes} />
-//       </div>
-//       <div>
-//         {/* <audio ref={audioRef} src={audioFile} /> */}
-
-//         <span className="time">{formatTime(duration)}</span>
-//         <input
-//           type="range"
-//           min="0"
-//           max={duration}
-//           value={currentTime}
-//           className="nav_audio"
-//           onChange={(e) => {
-//             setCurrentTime(e.target.value);
-//             audioRef.current.currentTime = e.target.value;
-//           }}
-//         />
-//         <span className="time">{formatTime(currentTime)}</span>
-//       </div>
-//       <div className="down_play">
-//         <button onClick={togglePlay} className="play_btn btnss">
-//           {isPlaying ? (
-//             <FontAwesomeIcon icon={faPause} />
-//           ) : (
-//             <FontAwesomeIcon icon={faPlay} />
-//           )}
-//         </button>
-//         <a href={audioFile} className="download btnss" download>
-//           <FontAwesomeIcon
-//             icon={faDownload}
-//             className="hover:text-blue-500 cursor-pointer"
-//           />
-//         </a>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default AudioPlayer;
-
-// import React, { useState, useRef, useEffect } from "react";
-// import "./audio.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faDownload, faPlay, faPause, faTimes } from "@fortawesome/free-solid-svg-icons";
-// function formatTime(time) {
-//   const minutes = Math.floor(time / 60);
-//   const seconds = Math.floor(time % 60);
-//   return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-// }
-
-// function AudioPlayer(props) {
-//   const audioRef = useRef(null);
-//   const [isPlaying, setIsPlaying] = useState(false);
-//   const [currentTime, setCurrentTime] = useState(0);
-//   const [duration, setDuration] = useState(0);
-
-//   const audioFile = props.audio;
-
-//   const togglePlay = () => {
-//     if (isPlaying) {
-//       audioRef.current.pause();
-//     } else {
-//       audioRef.current.play();
-//     }
-//     setIsPlaying(!isPlaying);
-//   };
-
-//   const handleTimeUpdate = () => {
-//     setCurrentTime(audioRef.current.currentTime);
-//   };
-
-//   useEffect(() => {
-//     audioRef.current.addEventListener("timeupdate", handleTimeUpdate);
-//     audioRef.current.addEventListener("loadedmetadata", () => {
-//       setDuration(audioRef.current.duration);
-//     });
-
-//     return () => {
-//       audioRef.current.removeEventListener("timeupdate", handleTimeUpdate);
-//     };
-//   }, []);
-
-//   const handleClose = () => { 
-//     props.onClose();
-//   };
-
-//   return (
-//     <div className="audio">
-//       <div className="close-icon" onClick={handleClose}>
-//         <FontAwesomeIcon icon={faTimes} />
-//       </div>
-//       <div>
-//         <audio ref={audioRef} src={audioFile} />
-
-//         <span className="time">{formatTime(duration)}</span>
-//         <input
-//           type="range"
-//           min="0"
-//           max={duration}
-//           value={currentTime}
-//           className="nav_audio"
-//           onChange={(e) => {
-//             setCurrentTime(e.target.value);
-//             audioRef.current.currentTime = e.target.value;
-//           }}
-//         />
-//         <span className="time">{formatTime(currentTime)}</span>
-//       </div>
-//       <div className="down_play">
-//         <button onClick={togglePlay} className="play_btn btnss">
-//           {isPlaying ? (
-//             <FontAwesomeIcon icon={faPause} />
-//           ) : (
-//             <FontAwesomeIcon icon={faPlay} />
-//           )}
-//         </button>
-//         <a href={audioFile} className="download btnss" download>
-//           <FontAwesomeIcon
-//             icon={faDownload}
-//             className="hover:text-blue-500 cursor-pointer"
-//           />
-//         </a>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default AudioPlayer;
-
-import React, { useState, useRef, useEffect } from "react";
-import "./audio.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload, faPlay, faPause, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faDownload,
+  faPlay,
+  faPause,
+  faTimes,
+} from '@fortawesome/free-solid-svg-icons';
 
 function formatTime(time) {
   const minutes = Math.floor(time / 60);
   const seconds = Math.floor(time % 60);
-  return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
 
 function AudioPlayer(props) {
@@ -212,66 +36,93 @@ function AudioPlayer(props) {
   };
 
   useEffect(() => {
-    // Check if audioRef.current exists before adding event listeners
     if (audioRef.current) {
-      audioRef.current.addEventListener("timeupdate", handleTimeUpdate);
-      audioRef.current.addEventListener("loadedmetadata", () => {
+      audioRef.current.addEventListener('timeupdate', handleTimeUpdate);
+      audioRef.current.addEventListener('loadedmetadata', () => {
         setDuration(audioRef.current.duration);
       });
 
       return () => {
-        // Check if audioRef.current exists before removing event listeners
         if (audioRef.current) {
-          audioRef.current.removeEventListener("timeupdate", handleTimeUpdate);
+          audioRef.current.removeEventListener('timeupdate', handleTimeUpdate);
         }
       };
     }
   }, []);
 
   const handleClose = () => {
-    props.onClose();
+    if (props.onClose) {
+      props.onClose();
+    }
   };
 
   return (
-    <div className="audio">
-      <div className="close-icon" onClick={handleClose}>
-        <FontAwesomeIcon icon={faTimes} />
+    <div className="p-2 pb-5 bg-gray-100 border-2  rounded-lg fixed bottom-4 md:right-56  lg:right-2 ">
+      <div className="flex flex-col items-center mb-2 w-25 ">
+        <div className="lg:w-32 lg:h-32  rounded-full overflow-hidden mb-3">
+          <img
+            src="https://picsum.photos/500/600"
+            alt=""
+            className="hidden lg:flex  object-cover w-full h-full"
+          />
+        </div>
+        <h2 className="font-medium mb-1">
+          Applied AI | When AI solves real world problems
+        </h2>
+        <p className="text-sm text-gray-500">{`Duration | ${formatTime(
+          duration
+        )} mins`}</p>
       </div>
-      <div>
-        <audio ref={audioRef} src={audioFile} />
+      <div className="flex justify-center gap-4 mb-2">
+        <button onClick={togglePlay} className=" p-2 flex items-center py-1 ">
+          {isPlaying ? (
+            <FontAwesomeIcon
+              icon={faPause}
+              className=" p-1 text-xl text-blue-600 rounded-full hover:bg-blue-600 hover:text-white"
+            />
+          ) : (
+            <FontAwesomeIcon
+              icon={faPlay}
+              className=" p-1 text-xl text-blue-600 rounded-full hover:bg-blue-600 hover:text-white"
+            />
+          )}
+          {isPlaying ? '' : ''}
+        </button>
+        <a
+          href={audioFile}
+          download
+          className="p-1 text-xl text-blue-600 rounded-full hover:bg-blue-600 hover:text-white"
+        >
+          <FontAwesomeIcon icon={faDownload} />
+        </a>
+        <button
+          onClick={handleClose}
+          className="p-1 text-xl text-blue-600 rounded-full hover:bg-blue-600 hover:text-white"
+        >
+          <FontAwesomeIcon icon={faTimes} />
+        </button>
+      </div>
 
-        <span className="time">{formatTime(duration)}</span>
+      <div className="w-full relative">
         <input
           type="range"
           min="0"
           max={duration}
           value={currentTime}
-          className="nav_audio"
+          className="w-full appearance-none bg-gray-300 focus:outline-none "
           onChange={(e) => {
             setCurrentTime(e.target.value);
             audioRef.current.currentTime = e.target.value;
           }}
         />
-        <span className="time">{formatTime(currentTime)}</span>
+        {/* Remaining Time Text */}
+        <span className="absolute right-2 bottom-[-15px] text-s text-gray-500">
+          {formatTime(duration - currentTime)}
+        </span>
       </div>
-      <div className="down_play">
-        <button onClick={togglePlay} className="play_btn btnss">
-          {isPlaying ? (
-            <FontAwesomeIcon icon={faPause} />
-          ) : (
-            <FontAwesomeIcon icon={faPlay} />
-          )}
-        </button>
-        <a href={audioFile} className="download btnss" download>
-          <FontAwesomeIcon
-            icon={faDownload}
-            className="hover:text-blue-500 cursor-pointer"
-          />
-        </a>
-      </div>
+      <audio ref={audioRef} src={audioFile} />
     </div>
   );
 }
 
 export default AudioPlayer;
-
