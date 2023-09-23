@@ -30,10 +30,9 @@ app.use(UpdateSubscriber)
 const Send_result = require('./controller/send_result.route')
 app.use(Send_result)
 
-app.get("/tempor" , (req, res) => {
-    res.send("tempor");
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/frontend/dist/index.html'));
 })
-
 
 
 app.listen(1338, () => {
