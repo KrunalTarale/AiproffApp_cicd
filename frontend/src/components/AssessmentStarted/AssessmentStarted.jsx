@@ -133,6 +133,8 @@ const AssessmentStarted = () => {
           </p>
           <h2 className="question">{quizData[currentQuestion]?.question}</h2>
           {/* Display the timer */}
+          
+          <img src={quizData[currentQuestion]?.img} alt="this is img" />
 
           <ul>
             {quizData[currentQuestion]?.options &&
