@@ -67,7 +67,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-slate-100 ">
+    <nav className="bg-slate-100 border-b-2">
       <div className="flex items-center justify-between lg:p-6 py-4  ">
         <div className="flex items-center justify-between md:mr-auto space-x-4 lg:ml-0 ml-4">
           <div>
@@ -216,22 +216,25 @@ function Navbar() {
             </li>
 
             <li>
-            <Link to="/assessment" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 text-black">
+              <Link
+                to="/assessment"
+                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 text-black"
+              >
                 ASSESSMENTS
               </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 text-black   "
+              <Link
+                to="/blog"
+                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 text-black"
               >
                 BLOG
-              </a>
+              </Link>
             </li>
             <li>
-            <Link to="/contact" className="ml-10">
+              <Link to="/contact" className="ml-10">
                 CONTACT US
-                </Link>
+              </Link>
             </li>
           </ul>
         </div>
