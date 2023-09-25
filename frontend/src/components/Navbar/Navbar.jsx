@@ -232,9 +232,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="ml-10">
-                CONTACT US
-              </Link>
+              <Link to="/contact">CONTACT US</Link>
             </li>
           </ul>
         </div>
