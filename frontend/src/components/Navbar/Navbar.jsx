@@ -238,6 +238,14 @@ function Navbar() {
             </li>
           </ul>
         </div>
+
+
+
+
+
+
+
+        
         <div className="pt-4 pr-4 lg:pt-2 lg:pr-0 ">
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
