@@ -4,7 +4,7 @@ const User = require("../module/user.module");
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
-rotue.post("/signup", async (req, res) => {
+rotue.post("/user_signup", async (req, res) => {
   const user = req.body;
 
   const data = await User.find({ email: user.email });
