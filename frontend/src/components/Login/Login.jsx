@@ -1,17 +1,23 @@
 import React , {useState} from "react";
+import { useNavigate } from 'react-router-dom'
 import "./Login.css";
+import logo from '../assets/logo.png';
 
 const Login = () => {
 
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [error, setError] = React.useState(false);
+  const [login, setLogin] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSubmit = async () => {
-    
+
     if (!username || !password) {
       setError(true);
     }
+
 
     else{
 
@@ -31,9 +37,10 @@ const Login = () => {
     if (data.sanitizedResult && data.sanitizedResult.length > 0 && data.sanitizedResult[0].name !== "") {
         localStorage.setItem("user", JSON.stringify(data.sanitizedResult[0]));
         localStorage.setItem("token", JSON.stringify(data.auth));
+        navigate("/")
     } 
     else if (data.auth == "incorrect password") {
-        alert(`Invalid Username or Password`);
+        setLogin("Username or Password is Incorrect")
     }
     
   }
@@ -45,9 +52,11 @@ const Login = () => {
       <div className="h-screen flex whole_form">
         <div className="flex bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center left_side">
           <div>
+          {/* <img src={logo} className="logo" alt="logo" /> */}
             <h1 className="text-white font-bold text-4xl font-sans">
-              AiProff
+              Aiproff
             </h1>
+            
             <p className="text-white mt-1">
               The most popular peer to peer lending at SEA
             </p>
@@ -67,7 +76,7 @@ const Login = () => {
             <p className="text-sm font-normal text-gray-600 mb-2">
               Welcome Back
             </p>
-            <span className="warning_massage">Username or Password is Incorrect</span>
+            <span className="warning_massage">{login}</span>
             <div className="mb-4">
             <div className="flex items-center border-2 py-2 px-3 rounded-2xl">
               <svg

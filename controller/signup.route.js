@@ -26,7 +26,8 @@ rotue.post("/signup", async (req, res) => {
         fname: user.fname,
         lname: user.lname,
         email: user.email,
-        password: hash
+        password: hash,
+        articles: []
       });
 
       try {
