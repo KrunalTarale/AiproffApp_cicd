@@ -18,21 +18,17 @@ const Trailer = () => {
             alt="Left"
             className="w-full h-auto md:ml-0 md:mr-4 object-cover"
           />
-
-
-
-
         </div>
-        <div className="lg:w-1/2 p-10 ">
+        <div className="lg:w-1/2 p-10 lg:space-y-10">
           <div>
-            <h1 className="text-5xl font-semibold leading-snug">
+            <h1 className="text-3xl lg:text-5xl font-semibold leading-snug">
               From poverty to empowerment: Raising the bar for sustainable and
               inclusive growth
             </h1>
           </div>
           <div className="mt-4">
             {' '}
-            <p className="leading-loose text-xl font-thin  text-gray-700">
+            <p className="leading-loose text-md md:text-xl font-thin  text-gray-700">
               What would it take to raise minimum living standards and get on a
               net-zero path in this decade? Our research explores twin ambitions
               for people and the planet.
@@ -102,10 +98,10 @@ const Trailer = () => {
         </div>
       </div>
 
-      {/* Row 2 */}
+      
 
       <div className="lg:flex flex-row-reverse trailer ">
-      <div className="flex lg:w-1/2">
+        <div className="flex lg:w-1/2">
           <img
             src={image2}
             alt="Left"
@@ -113,15 +109,15 @@ const Trailer = () => {
           />
         </div>
         <div className="lg:w-1/2 p-10  flex justify-end">
-          <div className="lg:max-w-lg">
+          <div className="lg:max-w-lg lg:space-y-10">
             <div>
-              <h1 className="text-5xl font-semibold leading-snug">
+              <h1 className="text-3xl lg:text-5xl font-semibold leading-snug">
                 Don’t wait—create with generative AI
               </h1>
             </div>
             <div className="mt-4">
               {' '}
-              <p className="leading-loose text-xl font-thin  text-gray-700">
+              <p className="leading-loose text-md md:text-xl font-thin  text-gray-700">
                 Generative AI could add enormous value across the global
                 economy, from banking to life sciences. The companies that use
                 the technology quickly and effectively will have the edge.
@@ -190,7 +186,6 @@ const Trailer = () => {
             </div>
           </div>
         </div>
-   
       </div>
     </div>
   );

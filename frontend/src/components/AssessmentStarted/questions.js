@@ -108,13 +108,14 @@ const questions = [
             answer : "2:3:4",
         },
         {
-            question : "Arrange the statements provided below in logical order to make a coherent paragraph – A. Despite the strong performance of the economy in 2010-11, the outlook for 2011-12 is clouded by stubborn and persistently high inflation, and rising external risks.B. The three key macroeconomic concerns before the Union Budget 2011-12 were high inflation, high current account deficit (CAD), and fiscal consolidation. C. Additionally, there was an expectation that the government would restart the reform process. D. While the Budget sets a lower nominal gross domestic product (GDP) growth target of 14%, we believe that the real GDP growth target of 9% factored in the Budget is on the optimistic side. E. The Budget has made an attempt to address all these issues, albeit through small steps.",
+            question : "Arrange the statements provided below in logical order to make a coherent paragraph -",
             options : [
                 "BCEAD",
                 "CBAED",
                 "DACEB",
                 " ADCEB",
             ],
+            img: "/test_imgs/sec1_que11.png",
             answer : "2:3:4",
         },
         {
