@@ -21,7 +21,7 @@ const Signin = () => {
       if (password === cpassword) {
         setCheckpass("");
 
-        const res = await fetch("/signup", {
+        const res = await fetch("/user_signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
