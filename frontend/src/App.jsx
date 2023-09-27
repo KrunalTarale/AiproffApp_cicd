@@ -12,9 +12,10 @@ import Footer from './components/Foot/Foot';
 import Article from './components/Article/Article';
 import SearchSite from './components/Search/SearchSite';
 import Contact from './components/contact/Contact';
-import Assessment from './components/Assisment/Assisment';  
+import Assessment from './components/Assisment/Assisment';
 import AssessmentStarted from './components/AssessmentStarted/AssessmentStarted';
 import UpdateSubscriber from './components/UpdateSubscriber/UpdateSubscriber';
+import Blog from './components/Blog/Blog';
 import Login from "./components/Login/Login";
 import Signin from "./components/Signin/Signin";
 function App() {
@@ -22,6 +23,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/article" element={<Article />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/search" element={<SearchSite />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/assessment" element={<Assessment />} />
@@ -39,7 +41,7 @@ function App() {
                     <TopLinks className="h-1/2" />
                     <Navbar className="h-1/2" />
                   </div>
-                  
+
                   <Carousel />
                   <Trending className="h-2/5 z-99" />
                 </div>
