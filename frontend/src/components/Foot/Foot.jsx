@@ -23,34 +23,34 @@ const Footer = () => {
     setShowCookieModal(false);
   };
 
-    // New code starts
+  // New code starts
 
-    const [email , setEmail] = useState('');
-    const [status , setStatus] = useState("");
-    
-    const handleSubmit = async () => {
-      const res = await fetch('/subscribe_user', {
-          method: 'POST',
-          headers: {
-              "Content-Type": "application/json",
-              'Accept': 'application/json'
-          },
-          body: JSON.stringify({
-            email : email
-        })
-      })
-      const data = await res.json();
-      if(data){
-        setStatus(data.status);
-        setEmail('');
-      }
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = async () => {
+    const res = await fetch('/subscribe_user', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        email: email,
+      }),
+    });
+    const data = await res.json();
+    if (data) {
+      setStatus(data.status);
+      setEmail('');
     }
-  
-    // New code ends
+  };
+
+  // New code ends
 
   return (
-    <footer className="bg-white text-black py-6 lg:py-8 ">
-      <div className="mx-auto lg:mx-24 px-20 ">
+    <footer className="bg-slate-100 text-black py-6 lg:py-8 border-t-2   ">
+      <div className="mx-auto lg:mx-24 px-10">
         <div className="flex lg:flex-row flex-col justify-center  lg:justify-between space-y-12">
           <div className="space-y-6">
             <div>
@@ -59,7 +59,7 @@ const Footer = () => {
               </h2>
             </div>
             <p>{status}</p>
-            <div className="flex">
+            <div className="flex" id='subscribe'>
               <input
                 type="email"
                 className="px-4 py-2 border border-gray-400 rounded-l-md focus:outline-none"
@@ -67,7 +67,10 @@ const Footer = () => {
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
               />
-              <button onClick={handleSubmit} className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-r-md hover:bg-blue-600 focus:outline-none">
+              <button
+                onClick={handleSubmit}
+                className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-r-md hover:bg-blue-600 focus:outline-none"
+              >
                 Submit
               </button>
             </div>
