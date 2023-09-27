@@ -21,7 +21,7 @@ const Signin = () => {
       if (password === cpassword) {
         setCheckpass("");
 
-        const res = await fetch("http://localhost:1338/signup", {
+        const res = await fetch("/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
