@@ -84,3 +84,7 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+.card_img{
+  background-image: url("/src/components/assets/trailer1.jpeg");
+}

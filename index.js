@@ -12,7 +12,6 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '/frontend/dist')));
 
-
 const get_countries = require('./controller/get_countries.route')
 app.use(get_countries)
 const get_states = require('./controller/get_states.route')
@@ -29,6 +28,10 @@ const UpdateSubscriber = require('./controller/update_subscribed_user.route')
 app.use(UpdateSubscriber)
 const Send_result = require('./controller/send_result.route')
 app.use(Send_result)
+const SignUp = require('./controller/signup.route');
+app.use(SignUp);
+const Login = require('./controller/login.route');
+app.use(Login);
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/dist/index.html'));

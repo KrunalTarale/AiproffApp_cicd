@@ -105,13 +105,13 @@ const AssessmentStarted = () => {
     return (
       <div className="quiz_section quiz_completed">
         <h2>Quiz Completed!</h2>
-        <p>
+        {/* <p>
           
           Your Score: {score} out of {quizData.length}
-        </p>
+        </p> */}
 
         <p>
-            Enter your E-mail Address To see Answers
+            Enter your E-mail Address To see Result
         </p> 
 
         <input type="email" name="email" id="" placeholder="Enter your E-mail Address" onChange={(event) => setEmail(event.target.value)}/> <br/>
@@ -134,7 +134,7 @@ const AssessmentStarted = () => {
           <h2 className="question">{quizData[currentQuestion]?.question}</h2>
           {/* Display the timer */}
           
-          <img src={quizData[currentQuestion]?.img} alt="this is img" />
+          {quizData[currentQuestion]?.img && <img src={quizData[currentQuestion]?.img} alt="this is img" />}
 
           <ul>
             {quizData[currentQuestion]?.options &&

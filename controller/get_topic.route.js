@@ -1,4 +1,5 @@
 const route = require('express').Router();
+// const Topic = require('../module/topics.module');
 const Topic = require('../module/topics.module');
 
 route.get('/get_topics', async (req, res) => {

@@ -15,6 +15,8 @@ import Contact from './components/contact/Contact';
 import Assessment from './components/Assisment/Assisment';  
 import AssessmentStarted from './components/AssessmentStarted/AssessmentStarted';
 import UpdateSubscriber from './components/UpdateSubscriber/UpdateSubscriber';
+import Login from "./components/Login/Login";
+import Signin from "./components/Signin/Signin";
 function App() {
   return (
     <Router>
@@ -25,6 +27,8 @@ function App() {
         <Route path="/assessment" element={<Assessment />} />
         <Route path="/assessmentStarted/:id" element={<AssessmentStarted />} />
         <Route path="/updatesubscriber/:id" element={<UpdateSubscriber />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signin" element={<Signin />} />
         <Route
           path="/"
           element={
