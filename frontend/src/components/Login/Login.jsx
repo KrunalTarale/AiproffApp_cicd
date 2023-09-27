@@ -21,7 +21,7 @@ const Login = () => {
 
     else{
 
-    const res = await fetch("/login", {
+    const res = await fetch("/user_login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
