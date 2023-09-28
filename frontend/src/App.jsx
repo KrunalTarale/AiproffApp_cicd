@@ -28,7 +28,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/assessment" element={<Assessment />} />
         <Route path="/assessmentStarted/:id" element={<AssessmentStarted />} />
-        <Route path="/updatesubscriber" element={<UpdateSubscriber />} />
+        <Route path="/update_subscribed_user/:id" element={<UpdateSubscriber />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signin" element={<Signin />} />
         <Route
