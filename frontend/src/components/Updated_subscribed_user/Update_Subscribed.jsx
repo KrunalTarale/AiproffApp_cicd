@@ -1,7 +1,25 @@
-import React from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useParams } from "react-router-dom";
 
 const Update_Subscribed = () => {
+  const params = useParams();
+  let productId = params.id;
+  useEffect(() => {
+    
+    updateSubscriber();
+    
+  }, []);
+  
+  const updateSubscriber = async() => {
+
+    const res = await fetch(`/update_subscribed_user/${productId}`);
+    let data = await res.json();
+    
+  }
+
+
+  
   return (
     <div className="flex items-center justify-center h-screen">
     <div>
