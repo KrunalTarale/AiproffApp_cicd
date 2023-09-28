@@ -8,7 +8,8 @@ rotue.get('/update_subscribed_user/:id', async (req, res) => {
         
         const result = await Subscriber.updateOne({ _id: id }, { status: "verified" });
         if(result) {
-            res.send({status : "You are verified"});
+            // res.send({status : "You are verified"});
+            res.redirect('http://www.aiproff.com/updatesubscriber');
         }
         
     } catch (err) {

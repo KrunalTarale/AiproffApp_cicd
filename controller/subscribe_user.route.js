@@ -44,7 +44,7 @@ route.post('/subscribe_user', async (req, res) => {
                         button: {
                             color: '#22BC66',
                             text: 'Confirm your Email',
-                            link: 'http://localhost:5173/updatesubscriber/'+result._id
+                            link: 'http://localhost:1338/update_subscribed_user/'+result._id
                         }
                     },
                     outro: "Looking forward to doing more business"
