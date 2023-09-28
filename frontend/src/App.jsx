@@ -14,7 +14,7 @@ import SearchSite from './components/Search/SearchSite';
 import Contact from './components/contact/Contact';
 import Assessment from './components/Assisment/Assisment';
 import AssessmentStarted from './components/AssessmentStarted/AssessmentStarted';
-import UpdateSubscriber from './components/UpdateSubscriber/UpdateSubscriber';
+import UpdateSubscriber from './components/Updated_subscribed_user/Update_Subscribed';
 import Blog from './components/Blog/Blog';
 import Login from "./components/Login/Login";
 import Signin from "./components/Signin/Signin";
@@ -28,7 +28,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/assessment" element={<Assessment />} />
         <Route path="/assessmentStarted/:id" element={<AssessmentStarted />} />
-        <Route path="/updatesubscriber/:id" element={<UpdateSubscriber />} />
+        <Route path="/updatesubscriber" element={<UpdateSubscriber />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signin" element={<Signin />} />
         <Route
