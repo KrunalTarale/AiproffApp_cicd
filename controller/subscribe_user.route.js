@@ -44,7 +44,7 @@ route.post('/subscribe_user', async (req, res) => {
                         button: {
                             color: '#22BC66',
                             text: 'Confirm your Email',
-                            link: 'http://www.aiproff.com/update_subscribed_user/'+result._id
+                            link: 'http://www.aiproff.com/updatesubscribeduser/'+result._id
                         }
                     },
                     outro: "Looking forward to doing more business"
