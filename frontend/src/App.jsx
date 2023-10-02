@@ -18,6 +18,8 @@ import UpdateSubscriber from './components/Updated_subscribed_user/Update_Subscr
 import Blog from './components/Blog/Blog';
 import Login from './components/Login/Login';
 import Signin from './components/Signin/Signin';
+import MVP from './components/MVP/Mvp'
+import POC from './components/POC/Poc';
 import YourArticle from './components/YourArticle/YourArticle';
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/signin" element={<Signin />} />
+        <Route path="/mvp" element={<MVP />} />
+        <Route path="/poc" element={<POC />} />
         <Route
           path="/"
           element={
