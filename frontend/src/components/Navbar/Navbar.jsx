@@ -2,7 +2,7 @@ import logo from "../assets/logo.png";
 import "font-awesome/css/font-awesome.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-
+import "./Navbar.css";
 import { useState, useEffect } from "react";
 import NewHam from "./NewHam";
 import "./NewHam.css";
@@ -90,9 +90,9 @@ function Navbar() {
               <FontAwesomeIcon icon={faBars} size="2x" />
             </button>
           </div>
-          <div className="p-0 m-0 w-24">
+          <div className="">
             <Link to="/" className="">
-              <img src={logo} className="mr-3 h-full" alt="Logo" />
+              <img src={logo} className="Logo " alt="Logo" />
             </Link>
           </div>
         </div>
