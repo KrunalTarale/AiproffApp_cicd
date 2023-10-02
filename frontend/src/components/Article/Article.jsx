@@ -118,6 +118,9 @@ const Article = () => {
         body: JSON.stringify({
           id: user._id,
           article: "Article",
+          title: "Applied AI: When AI solves real world problems",
+          date : "September 4, 2023",
+          url : "article"
         }),
       });
       const data = await res.json();
