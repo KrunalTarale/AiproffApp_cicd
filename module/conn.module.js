@@ -13,4 +13,4 @@ try {
 }
 }
 
-module.exports = connectToDatabase
+module.exports = connectToDatabase;

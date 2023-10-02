@@ -32,6 +32,10 @@ const SignUp = require('./controller/signup.route');
 app.use(SignUp);
 const Login = require('./controller/login.route');
 app.use(Login);
+const update_article = require('./controller/update_article.route');
+app.use(update_article);
+const get_user_article = require('./controller/get_user_article.route');
+app.use(get_user_article);
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/dist/index.html'));

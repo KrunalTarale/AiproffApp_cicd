@@ -1,35 +1,35 @@
-import React, { useRef } from 'react';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar';
-import './Article.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useRef } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
+import "./Article.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShare,
   faPrint,
   faDownload,
   faSave,
   faEnvelope,
-} from '@fortawesome/free-solid-svg-icons';
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-solid-svg-icons";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 import {
   faLinkedin,
   faTwitter,
   faFacebook,
-} from '@fortawesome/free-brands-svg-icons';
+} from "@fortawesome/free-brands-svg-icons";
 
-import image1 from '../assets/article.png';
-import image2 from '../assets/Article1/graph-1.png';
-import image3 from '../assets/Article1/pie1.png';
-import image4 from '../assets/Article1/diag1.png';
-import image5 from '../assets/Article1/diag2.png';
-import image6 from '../assets/Article1/diag3.png';
-import image7 from '../assets/Article1/logo.png';
-import card1 from '../assets/Article1/card1.png';
+import image1 from "../assets/article.png";
+import image2 from "../assets/Article1/graph-1.png";
+import image3 from "../assets/Article1/pie1.png";
+import image4 from "../assets/Article1/diag1.png";
+import image5 from "../assets/Article1/diag2.png";
+import image6 from "../assets/Article1/diag3.png";
+import image7 from "../assets/Article1/logo.png";
+import card1 from "../assets/Article1/card1.png";
 
-import AudioPlayer from '../AudioPlayer/AudioPlayer';
-import Footer from '../Foot/Foot';
+import AudioPlayer from "../AudioPlayer/AudioPlayer";
+import Footer from "../Foot/Foot";
 
 const Article = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -43,16 +43,16 @@ const Article = () => {
       // check if the target of the click event is not the dropdown or the share icon
       if (
         dropdownVisible &&
-        event.target.closest('.share-icon') === null &&
-        event.target.closest('.dropdown') === null
+        event.target.closest(".share-icon") === null &&
+        event.target.closest(".dropdown") === null
       ) {
         setDropdownVisible(false);
       }
     }
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [dropdownVisible]);
 
@@ -61,16 +61,16 @@ const Article = () => {
       // Check if the target of the click event is not the dropdown or the share icon
       if (
         progressdropdownVisible &&
-        event.target.closest('.share-icon-progress') === null &&
-        event.target.closest('.progress-dropdown') === null
+        event.target.closest(".share-icon-progress") === null &&
+        event.target.closest(".progress-dropdown") === null
       ) {
         setprogressDropdownVisible(false);
       }
     }
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [progressdropdownVisible]);
 
@@ -88,10 +88,10 @@ const Article = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -99,6 +99,43 @@ const Article = () => {
 
   const toggleAudioPlayerVisibility = () => {
     setIsAudioPlayerVisible(!isAudioPlayerVisible);
+  };
+
+  // Saving the article code
+
+  const [message, setmassage] = useState("");
+  const handleSaveArticle = async () => {
+    const auth = localStorage.getItem("user");
+    const user = JSON.parse(auth);
+
+    if (user) {
+      let res = await fetch("/update_article", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          id: user._id,
+          article: "Article2",
+          title: "Applied AI: When AI solves real world problems",
+          date : "September 4, 2023",
+          url : "article6"
+        }),
+      });
+      const data = await res.json();
+      console.log(data);
+      setmassage(data.message);
+
+      setTimeout(() => {
+        setmassage("");
+      }, 2000);
+    } else {
+      setmassage("Please login first");
+      setTimeout(() => {
+        setmassage("");
+      }, 2000);
+    }
   };
 
   return (
@@ -127,7 +164,13 @@ const Article = () => {
             </div>
           </div>
 
-          <div className="mx-auto lg:max-w-7xl flex flex-col justify-center p-16  ">
+          {message && (
+              <div className="px-3 py-3 leading-normal text-blue-700 bg-blue-100 rounded-lg massege_alrt" role="alert">
+              <p>{message}</p>
+            </div>
+      )}
+
+          <div className="mx-auto lg:max-w-7xl flex flex-col justify-center p-16 article_padding">
             <div className="md:flex md:justify-between md:w-4/5 space-y-8 md:space-y-0">
               <div className="underline underline-offset-4">
                 <Link to="/">By AiProff</Link>
@@ -204,7 +247,10 @@ const Article = () => {
                   </div>
                 </Link>
 
-                <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
+                <div
+                  className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer"
+                  onClick={handleSaveArticle}
+                >
                   <FontAwesomeIcon
                     icon={faSave}
                     className="hover:text-blue-500 cursor-pointer"
@@ -230,25 +276,25 @@ const Article = () => {
                     </p>
                   </div>
                   <div>
-                    {' '}
+                    {" "}
                     <p>
-                      {' '}
+                      {" "}
                       However, the true value of AI is realised when it is
                       applied to real-world scenarios and used to address actual
                       challenges. This is what Applied AI refers to.
                     </p>
                   </div>
                   <div>
-                    {' '}
+                    {" "}
                     <p>
                       This is what Applied AI refers to. The importance of
-                      Applied AI in the current context is immense.{' '}
+                      Applied AI in the current context is immense.{" "}
                       <a
                         className="text-blue-600 no-underline hover:underline underline-offset-4"
                         href="https://www.gartner.com/en/newsroom/press-releases/2019-01-21-gartner-survey-shows-37-percent-of-organizations-have"
                       >
-                        A Gartner survey{' '}
-                      </a>{' '}
+                        A Gartner survey{" "}
+                      </a>{" "}
                       revealed that the number of enterprises adopting AI
                       increased by 270% in the last four years - and remarkably,
                       it tripled in the last year alone!
@@ -279,7 +325,7 @@ const Article = () => {
                     automate repetitive tasks and save human resources, using AI
                     to detect patterns that might be missed by human judgement,
                     or using AI to project and anticipate the behaviour of the
-                    stock market – the possibilities are limitless.{' '}
+                    stock market – the possibilities are limitless.{" "}
                   </p>
                   <p>
                     Over the past few years, AI has transformed a lot. Deep
@@ -287,26 +333,26 @@ const Article = () => {
                     artificial neural networks, has seen tremendous progress in
                     recent years. The availability of large amounts of data,
                     both labelled and unlabeled, the affordability of computing
-                    and storage resources, and the improved{' '}
+                    and storage resources, and the improved{" "}
                     <a
                       className="text-blue-600 no-underline hover:underline underline-offset-4"
                       href="https://pytorch.org/blog/quantization-in-practice/"
                     >
                       quantizations technique
-                    </a>{' '}
+                    </a>{" "}
                     in Deep Learning Model – which makes it affordable – are
                     some of the main reasons for the feasible development in
                     Deep Learning
                   </p>
                   <p>
                     The major point of inflection came in 2017, when Google
-                    released their famous{' '}
+                    released their famous{" "}
                     <a
                       className="text-blue-600 no-underline hover:underline underline-offset-4"
                       href="https://research.google/pubs/pub46201/"
                     >
                       "Attention is All You Need"
-                    </a>{' '}
+                    </a>{" "}
                     research paper. The paper introduced a new network
                     architecture called the Transformer. Transformers were
                     revolutionary in the fields of Natural Language Processing
@@ -317,19 +363,19 @@ const Article = () => {
                     recurrence or convolutions – which are two different types
                     of neural networks used in deep learning, which allows these
                     Transformer models superior in quality, as well as really
-                    fast to train.{' '}
+                    fast to train.{" "}
                   </p>
                   <p>
                     After the introduction to Transformers, innovations under AI
                     skyrocketed. Companies and enterprises belonging to various
                     industries started adopting AI in their workflow and
-                    enterprise – with each of them showing a{' '}
+                    enterprise – with each of them showing a{" "}
                     <a
                       className="text-blue-600 no-underline hover:underline underline-offset-4"
                       href="https://research.google/pubs/pub46201/"
                     >
-                      significant boost in revenue.{' '}
-                    </a>{' '}
+                      significant boost in revenue.{" "}
+                    </a>{" "}
                   </p>
                 </div>
                 <div>
@@ -343,23 +389,23 @@ const Article = () => {
                   <p>
                     In healthcare, AI is being used to analyse medical images
                     with 90% accuracy, aiding in early disease detection. A 2023
-                    article in{' '}
+                    article in{" "}
                     <a
                       href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10385763/"
                       className="text-blue-600 no-underline hover:underline underline-offset-4"
                     >
                       Innovation in Pharmacy
-                    </a>{' '}
+                    </a>{" "}
                     showed that AI algorithms could potentially condense a
                     typical four or five-year exploratory research into a time
                     span of less than a year. Furthermore, in 2023, a team at
-                    MIT developed a new model called{' '}
+                    MIT developed a new model called{" "}
                     <a
                       href="https://medicaltrend.org/2023/06/11/mit-team-developed-a-chatgpt-like-model-to-accelerate-ai-drug-discovery/"
                       className="text-blue-600 no-underline hover:underline underline-offset-4"
                     >
                       ConPLex
-                    </a>{' '}
+                    </a>{" "}
                     that could predict whether potential drug molecules will
                     interact with specific protein targets, without having to
                     physically conduct tests in the lab. In the field of
@@ -368,7 +414,7 @@ const Article = () => {
                     ambitious self-driving cars of the future. Self-driving cars
                     use sensors to gather data from their surroundings, and AI
                     algorithms interpret this data and make calculated
-                    decisions.{' '}
+                    decisions.{" "}
                     <a
                       href="https://techcrunch.com/2023/05/04/waymo-doubles-robotaxi-service-area-in-phoenix-in-bid-to-grow-driverless-trips-tenfold/#:~:text=Waymo%20robotaxis%20will%20now%20pick%20up%20and%20drop,to%20grow%20its%20business%20and%20generate%20more%20revenue."
                       className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 "
@@ -383,7 +429,7 @@ const Article = () => {
                   <img src={image4} alt="" />
                   <p className="text-xs ">
                     AI would be a catalyst for the development in
-                    Self-Autonomous Vehicles. Source:{' '}
+                    Self-Autonomous Vehicles. Source:{" "}
                     <a
                       href="https://www.marketsandmarkets.com/Market-Reports/electric-vehicle-market-209371461.html"
                       className="text-blue-600 no-underline hover:underline underline-offset-4 "
@@ -429,12 +475,12 @@ const Article = () => {
                     Even though the revolutionary field of Artificial
                     Intelligence is presently promising - and it will continue
                     to be promising in the future as well – it has its inherent
-                    flaws that shouldn’t be overlooked.{' '}
+                    flaws that shouldn’t be overlooked.{" "}
                   </p>
                   <p>
                     Two of the most challenging issues that these
                     superintelligent machines face are hallucination and
-                    algorithmic bias.{' '}
+                    algorithmic bias.{" "}
                   </p>
                   <p>
                     Hallucination is when AI apps, such as ChatGPT, create their
@@ -536,7 +582,7 @@ const Article = () => {
                     domain that enables you to discover the endless
                     opportunities that AI provides. We are a group of skilled
                     experts with a wealth of knowledge and experience in machine
-                    learning, artificial intelligence, and data science.{' '}
+                    learning, artificial intelligence, and data science.{" "}
                   </p>
                   <p>
                     We not only know how to build machine learning models, but
@@ -554,7 +600,7 @@ const Article = () => {
 
               <div
                 className="ml-8 lg:ml-12 lg:w-3/12 border-y-2 border-black border-b-0 p-4 lg:pl-8 flex flex-col items-start space-y-8"
-                style={{ height: '12rem' }}
+                style={{ height: "12rem" }}
               >
                 <div className="text-2xl font-normal">Downloads</div>
 
@@ -588,7 +634,7 @@ const Article = () => {
 
               <div className="flex space-x-4 ">
                 <div className="relative">
-                  {' '}
+                  {" "}
                   <div
                     className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer share-icon-progress"
                     onClick={() =>
@@ -645,7 +691,7 @@ const Article = () => {
                   </div>
                 </Link>
 
-                <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
+                <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer" onClick={handleSaveArticle}>
                   <FontAwesomeIcon
                     icon={faSave}
                     className=" hover:text-blue-500 cursor-pointer"
@@ -672,7 +718,7 @@ const Article = () => {
 
               <div className="flex space-x-4 ">
                 <div className="relative">
-                  {' '}
+                  {" "}
                   <div
                     className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer share-icon-progress"
                     onClick={() =>
