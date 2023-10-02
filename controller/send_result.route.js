@@ -36,7 +36,7 @@ route.post('/send_result', async (req, res) => {
         table: {
           data: tableData
         },
-        outro: "Looking forward to do more business"
+        outro: "Thanks for attempting. Reach out to us for more such assessments.",
       }
     };
   

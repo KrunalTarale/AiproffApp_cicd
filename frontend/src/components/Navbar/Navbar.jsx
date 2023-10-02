@@ -1,15 +1,42 @@
-import logo from '../assets/logo.png';
-import 'font-awesome/css/font-awesome.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import logo from "../assets/logo.png";
+import "font-awesome/css/font-awesome.min.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-import { useState } from 'react';
-import NewHam from './NewHam';
-import './NewHam.css';
-import { Link } from 'react-router-dom';
-import NavSearch from '../Search/NavSearch';
+import { useState, useEffect } from "react";
+import NewHam from "./NewHam";
+import "./NewHam.css";
+import { Link } from "react-router-dom";
+import NavSearch from "../Search/NavSearch";
 
 function Navbar() {
+  useEffect(() => {
+    getArticles();
+  });
+
+  // Rendeering articles start
+  const [articles, setArticles] = useState([]);
+
+  const auth = localStorage.getItem("user");
+  const user = JSON.parse(auth);
+
+  const getArticles = async () => {
+    let res = await fetch("http://localhost:1338/get_user_article/" + user._id);
+    let data = await res.json();
+    setArticles(data[0].articles);
+  };
+
+  //                <li>
+  //                   <Link
+  //                     to="/mvp"
+  //                     className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+  //                   >
+  //                     Minimum Viable Product (MVP)
+  //                   </Link>
+  //                 </li>
+
+  // Rendeering articles end
+
   const [offeringsDropdownVisible, setOfferingsDropdownVisible] =
     useState(false);
   const [shopsDropdownVisible, setShopsDropdownVisible] = useState(false);
@@ -18,6 +45,10 @@ function Navbar() {
   let shopsTimer;
 
   const clearOfferingsTimer = () => {
+    clearTimeout(offeringsTimer);
+  };
+
+  const clearOfferingsTimer1 = () => {
     clearTimeout(offeringsTimer);
   };
 
@@ -33,6 +64,12 @@ function Navbar() {
   };
 
   const handleOfferingsMouseEnter = () => {
+    clearShopsTimer();
+    setOfferingsDropdownVisible(true);
+    setShopsDropdownVisible(false);
+  };
+
+  const handleOfferingsMouseEnter1 = () => {
     clearShopsTimer();
     setOfferingsDropdownVisible(true);
     setShopsDropdownVisible(false);
@@ -87,7 +124,7 @@ function Navbar() {
           id="navbar-dropdown"
           onMouseLeave={handleMouseLeave}
         >
-          {' '}
+          {" "}
           <ul className="hidden lg:flex font-medium lg:p-0  mr-0 lg:mr-20 lg:space-x-8 lg:mt-0 ">
             <li>
               <a
@@ -104,7 +141,7 @@ function Navbar() {
               onMouseLeave={clearOfferingsTimer} //
             >
               <button className="relative flex items-center justify-between w-full py-2 pl-3 pr-4   md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto text-black">
-                OFFERING{' '}
+                OFFERING{" "}
                 <svg
                   className="w-2.5 h-2.5 ml-2.5"
                   aria-hidden="true"
@@ -124,7 +161,7 @@ function Navbar() {
 
               <div
                 className={`z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ${
-                  offeringsDropdownVisible ? 'block' : 'hidden'
+                  offeringsDropdownVisible ? "block" : "hidden"
                 } absolute mt-2`}
                 onMouseEnter={clearOfferingsTimer} // Add onMouseEnter to clear the timer
                 onMouseLeave={handleMouseLeave} // Add onMouseLeave event handler
@@ -134,20 +171,20 @@ function Navbar() {
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/mvp"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Minimum Viable Product (MVP)
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/poc"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Proof of Concept (POC)
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a
@@ -166,7 +203,7 @@ function Navbar() {
               onMouseLeave={clearShopsTimer} // A
             >
               <button className="relative flex items-center justify-between w-full py-2 pl-3 pr-4   md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto text-black">
-                SHOP{' '}
+                SHOP{" "}
                 <svg
                   className="w-2.5 h-2.5 ml-2.5"
                   aria-hidden="true"
@@ -186,7 +223,7 @@ function Navbar() {
 
               <div
                 className={`z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ${
-                  shopsDropdownVisible ? 'block' : 'hidden'
+                  shopsDropdownVisible ? "block" : "hidden"
                 } absolute mt-2`}
                 onMouseEnter={clearShopsTimer} // Add onMouseEnter to clear the timer
                 onMouseLeave={handleMouseLeave} // Add onMouseLeave event handler
@@ -234,6 +271,70 @@ function Navbar() {
             <li>
               <Link to="/contact">CONTACT US</Link>
             </li>
+
+            {user ? (
+              <li
+                onMouseEnter={handleOfferingsMouseEnter1}
+                onMouseLeave={clearOfferingsTimer1} //
+              >
+                <button className="relative flex items-center justify-between w-full py-2 pl-3 pr-4   md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto text-black">
+                  Your Articles{" "}
+                  <svg
+                    className="w-2.5 h-2.5 ml-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+
+                <div
+                  className={`z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ${
+                    offeringsDropdownVisible ? "block" : "hidden"
+                  } absolute mt-2`}
+                  onMouseEnter={clearOfferingsTimer} // Add onMouseEnter to clear the timer
+                  onMouseLeave={handleMouseLeave} // Add onMouseLeave event handler
+                >
+                  <ul
+                    className="py-2 text-sm  text-white"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+
+                  {articles.length > 0 ? (
+                    articles.map((article) => (
+                      <li key={article._id}>
+                        <Link
+                          to={"/" + article}
+                          className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >
+                          {article}
+                        </Link>
+                      </li>
+                    ))
+                  ) : (
+                    <li>
+                      <Link
+                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >
+                        You didn't save anything
+                      </Link>
+                    </li>
+                  )}
+
+
+                  </ul>
+                </div>
+              </li>
+            ) : null}
+
           </ul>
         </div>
         <div className="pt-4 pr-4 lg:pt-2 lg:pr-0 ">

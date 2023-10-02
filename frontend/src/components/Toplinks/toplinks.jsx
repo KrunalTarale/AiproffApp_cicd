@@ -1,15 +1,29 @@
 import { useNavigate, Link } from 'react-router-dom'
+import { useState } from 'react' 
 
 const TopLinks = () => {
 
-  const auth = localStorage.getItem('user')
+
+
   const navigate = useNavigate()
+  const auth = localStorage.getItem('user')
+  // const user = JSON.parse(auth);
+  
+    const user = auth ? JSON.parse(auth) : null;
+  
+    const username = user ? "Hello, " + user.fname : "";
+  
+
   const logout = () => {
     localStorage.clear()
     navigate('/singup')
 }
 
   return (
+    <div className='m-1'>
+    
+    <p>{username}</p>
+      
     <div className="absolute top-2 right-4 space-x-4 text-sm">
       {
         auth ?
@@ -25,6 +39,8 @@ const TopLinks = () => {
       <a href="#subscribe" className="text-blue-600 hover:underline">
         Subscribe
       </a>
+
+    </div>
     </div>
   );
 };

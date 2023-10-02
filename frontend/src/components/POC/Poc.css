@@ -1,0 +1,46 @@
+.head {
+    font-size: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .mvpcontainer {
+    padding-left: 15%;
+    padding-right: 15%;
+    font-family: Helvetica Neue, Calibri, Corbel, Helvetica, Roboto, Droid,
+      sans-serif;
+    font-size: 1.2rem;
+    
+  } 
+  
+  .list {
+    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    list-style-type: disc;
+  }
+  
+  
+  .mvpcontainer p {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* .main_box{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .box1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .box2{
+    width: 50%;
+  }
+  
+  .mvpimg{
+    width: 500px;
+    object-fit: contain;
+  } */

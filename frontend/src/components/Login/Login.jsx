@@ -21,7 +21,7 @@ const Login = () => {
 
     else{
 
-    const res = await fetch("/user_login", {
+    const res = await fetch("http://localhost:1338/user_login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ const Login = () => {
             </h1>
             
             <p className="text-white mt-1">
-              The most popular peer to peer lending at SEA
+              Applied AI for Everyone
             </p>
             <button
               type="submit"

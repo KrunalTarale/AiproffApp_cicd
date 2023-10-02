@@ -18,6 +18,8 @@ import UpdateSubscriber from './components/Updated_subscribed_user/Update_Subscr
 import Blog from './components/Blog/Blog';
 import Login from "./components/Login/Login";
 import Signin from "./components/Signin/Signin";
+import Mvp from './components/MVP/Mvp';
+import POC from './components/POC/Poc';
 function App() {
   return (
     <Router>
@@ -31,6 +33,8 @@ function App() {
         <Route path="/updatesubscribeduser/:id" element={<UpdateSubscriber />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signin" element={<Signin />} />
+        <Route path="/mvp" element={<Mvp />} />
+        <Route path="/poc" element={<POC />} />
         <Route
           path="/"
           element={

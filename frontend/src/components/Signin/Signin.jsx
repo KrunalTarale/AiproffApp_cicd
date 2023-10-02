@@ -21,7 +21,7 @@ const Signin = () => {
       if (password === cpassword) {
         setCheckpass("");
 
-        const res = await fetch("/user_signup", {
+        const res = await fetch("http://localhost:1338/user_signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -59,7 +59,7 @@ const Signin = () => {
           <div>
             <h1 className="text-white font-bold text-4xl font-sans">AiProff</h1>
             <p className="text-white mt-1">
-              The most popular peer to peer lending at SEA
+            Applied AI for Everyone
             </p>
             <button
               type="submit"

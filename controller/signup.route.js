@@ -1,6 +1,9 @@
 const rotue = require("express").Router();
 const User = require("../module/user.module");
 
+const nodemailer = require('nodemailer');
+const Mailgen = require('mailgen');
+
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
@@ -31,10 +34,65 @@ rotue.post("/user_signup", async (req, res) => {
       });
 
       try {
-        await newUser.save(); // Use await here to handle the promise
+        await newUser.save();
         res.status(201).json({
           message: 'User created successfully'
         });
+
+        // Mailer function after user created
+
+        const config = {
+          service: "gmail",
+          auth: {
+              user: "krunaltarale.iceico@gmail.com",
+              pass: "zblzoiergfvatxwd",
+          },
+      }
+
+      let transporter = nodemailer.createTransport(config);
+
+      let MailGenerator = new Mailgen({
+          theme: "default",
+          product: {
+              name: 'AIPROFF',
+              link: 'https://www.aiproff.ai/'
+          }
+      })
+
+      let response = {
+          body: {
+              name: "AIPROFF",
+              intro: "Congratulations on your successful sign-in! We're excited to have you with us.",
+              // action: {
+              //     button: {
+              //         color: '#22BC66',
+              //         text: 'Confirm your Email',
+              //         // link: 'http://aiproff.com/updatesubscribeduser/'+result._id
+              //     }
+              // },
+              outro: "Looking forward to doing more business"
+          }
+      }
+
+      let mail = MailGenerator.generate(response)
+
+      let message = {
+          from: "krunaltarale.iceico@gmail.com",
+          to: user.email,
+          subject: "Verify Your Email Address",
+          html: mail
+      }
+
+      transporter.sendMail(message).then(() => {
+          res.status(201).json({
+              status: "You should receive an email"
+          })
+      }).catch(error => {
+          res.status(500).json({ error })
+      })
+
+
+
       } catch (error) {
         console.log(error);
         res.status(500).json({
