@@ -16,19 +16,24 @@ import Assessment from './components/Assisment/Assisment';
 import AssessmentStarted from './components/AssessmentStarted/AssessmentStarted';
 import UpdateSubscriber from './components/Updated_subscribed_user/Update_Subscribed';
 import Blog from './components/Blog/Blog';
-import Login from "./components/Login/Login";
-import Signin from "./components/Signin/Signin";
+import Login from './components/Login/Login';
+import Signin from './components/Signin/Signin';
+import YourArticle from './components/YourArticle/YourArticle';
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/article" element={<Article />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/yourarticle" element={<YourArticle />} />
         <Route path="/search" element={<SearchSite />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/assessment" element={<Assessment />} />
         <Route path="/assessmentStarted/:id" element={<AssessmentStarted />} />
-        <Route path="/updatesubscribeduser/:id" element={<UpdateSubscriber />} />
+        <Route
+          path="/updatesubscribeduser/:id"
+          element={<UpdateSubscriber />}
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/signin" element={<Signin />} />
         <Route

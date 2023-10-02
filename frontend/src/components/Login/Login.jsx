@@ -2,6 +2,7 @@ import React , {useState} from "react";
 import { useNavigate } from 'react-router-dom'
 import "./Login.css";
 import logo from '../assets/logo.png';
+import {Link} from 'react-router-dom'
 
 const Login = () => {
 
@@ -58,13 +59,14 @@ const Login = () => {
             </h1>
             
             <p className="text-white mt-1">
-              The most popular peer to peer lending at SEA
+              Applied AI for Everyone
             </p>
             <button
-              type="submit"
               className="block w-28 bg-white text-indigo-800 mt-4 py-2 rounded-2xl font-bold mb-2"
             >
+              <Link to="/">
               Read More
+            </Link>
             </button>
           </div>
         </div>

@@ -16,7 +16,6 @@ route.post('/subscribe_user', async (req, res) => {
 
         try {
             const result = await createdSubscriber.save();
-            console.log(result);
 
             const config = {
                 service: "gmail",
@@ -65,7 +64,6 @@ route.post('/subscribe_user', async (req, res) => {
                     status: "You should receive an email"
                 })
             }).catch(error => {
-                console.error(error);
                 res.status(500).json({ error })
             })
         } catch (err) {

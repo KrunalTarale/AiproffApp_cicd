@@ -59,13 +59,15 @@ const Signin = () => {
           <div>
             <h1 className="text-white font-bold text-4xl font-sans">AiProff</h1>
             <p className="text-white mt-1">
-              The most popular peer to peer lending at SEA
+            Applied AI for Everyone
             </p>
+            
             <button
-              type="submit"
               className="block w-28 bg-white text-indigo-800 mt-4 py-2 rounded-2xl font-bold mb-2"
             >
+              <Link to="/">
               Read More
+            </Link>
             </button>
           </div>
         </div>

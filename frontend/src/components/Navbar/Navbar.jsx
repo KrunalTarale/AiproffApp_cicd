@@ -1,15 +1,20 @@
-import logo from '../assets/logo.png';
-import 'font-awesome/css/font-awesome.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import logo from "../assets/logo.png";
+import "font-awesome/css/font-awesome.min.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-import { useState } from 'react';
-import NewHam from './NewHam';
-import './NewHam.css';
-import { Link } from 'react-router-dom';
-import NavSearch from '../Search/NavSearch';
+import { useState, useEffect } from "react";
+import NewHam from "./NewHam";
+import "./NewHam.css";
+import { Link } from "react-router-dom";
+import NavSearch from "../Search/NavSearch";
 
 function Navbar() {
+
+
+  const auth = localStorage.getItem('user');  
+  console.log(auth);
+
   const [offeringsDropdownVisible, setOfferingsDropdownVisible] =
     useState(false);
   const [shopsDropdownVisible, setShopsDropdownVisible] = useState(false);
@@ -18,6 +23,10 @@ function Navbar() {
   let shopsTimer;
 
   const clearOfferingsTimer = () => {
+    clearTimeout(offeringsTimer);
+  };
+
+  const clearOfferingsTimer1 = () => {
     clearTimeout(offeringsTimer);
   };
 
@@ -33,6 +42,12 @@ function Navbar() {
   };
 
   const handleOfferingsMouseEnter = () => {
+    clearShopsTimer();
+    setOfferingsDropdownVisible(true);
+    setShopsDropdownVisible(false);
+  };
+
+  const handleOfferingsMouseEnter1 = () => {
     clearShopsTimer();
     setOfferingsDropdownVisible(true);
     setShopsDropdownVisible(false);
@@ -87,7 +102,7 @@ function Navbar() {
           id="navbar-dropdown"
           onMouseLeave={handleMouseLeave}
         >
-          {' '}
+          {" "}
           <ul className="hidden lg:flex font-medium lg:p-0  mr-0 lg:mr-20 lg:space-x-8 lg:mt-0 ">
             <li>
               <a
@@ -104,7 +119,7 @@ function Navbar() {
               onMouseLeave={clearOfferingsTimer} //
             >
               <button className="relative flex items-center justify-between w-full py-2 pl-3 pr-4   md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto text-black">
-                OFFERING{' '}
+                OFFERING{" "}
                 <svg
                   className="w-2.5 h-2.5 ml-2.5"
                   aria-hidden="true"
@@ -124,7 +139,7 @@ function Navbar() {
 
               <div
                 className={`z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ${
-                  offeringsDropdownVisible ? 'block' : 'hidden'
+                  offeringsDropdownVisible ? "block" : "hidden"
                 } absolute mt-2`}
                 onMouseEnter={clearOfferingsTimer} // Add onMouseEnter to clear the timer
                 onMouseLeave={handleMouseLeave} // Add onMouseLeave event handler
@@ -134,20 +149,20 @@ function Navbar() {
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/mvp"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Minimum Viable Product (MVP)
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/poc"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Proof of Concept (POC)
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a
@@ -166,7 +181,7 @@ function Navbar() {
               onMouseLeave={clearShopsTimer} // A
             >
               <button className="relative flex items-center justify-between w-full py-2 pl-3 pr-4   md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto text-black">
-                SHOP{' '}
+                SHOP{" "}
                 <svg
                   className="w-2.5 h-2.5 ml-2.5"
                   aria-hidden="true"
@@ -186,7 +201,7 @@ function Navbar() {
 
               <div
                 className={`z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ${
-                  shopsDropdownVisible ? 'block' : 'hidden'
+                  shopsDropdownVisible ? "block" : "hidden"
                 } absolute mt-2`}
                 onMouseEnter={clearShopsTimer} // Add onMouseEnter to clear the timer
                 onMouseLeave={handleMouseLeave} // Add onMouseLeave event handler
@@ -231,9 +246,27 @@ function Navbar() {
                 BLOG
               </Link>
             </li>
+            {
+  auth ? (
+    <li>
+      <Link
+        to="/yourarticle"
+        className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 text-black"
+      >
+        Your Articles
+      </Link>
+    </li>
+  ) : null
+}
+
+
+
             <li>
               <Link to="/contact">CONTACT US</Link>
             </li>
+
+
+
           </ul>
         </div>
         <div className="pt-4 pr-4 lg:pt-2 lg:pr-0 ">
