@@ -16,7 +16,8 @@ const TopLinks = () => {
 
   const logout = () => {
     localStorage.clear()
-    navigate('/singup')
+    console.log("logout");
+    navigate('/login')
 }
 
   return (
@@ -27,7 +28,7 @@ const TopLinks = () => {
     <div className="absolute top-2 right-4 space-x-4 text-sm">
       {
         auth ?
-      <Link  onClick={logout} className="text-blue-600 hover:underline">
+      <Link  onClick={logout} to={"/login"} className="text-blue-600 hover:underline">
         Logout
       </Link>
       :

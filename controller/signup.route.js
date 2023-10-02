@@ -63,13 +63,6 @@ rotue.post("/user_signup", async (req, res) => {
           body: {
               name: "AIPROFF",
               intro: "Congratulations on your successful sign-in! We're excited to have you with us.",
-              // action: {
-              //     button: {
-              //         color: '#22BC66',
-              //         text: 'Confirm your Email',
-              //         // link: 'http://aiproff.com/updatesubscribeduser/'+result._id
-              //     }
-              // },
               outro: "Looking forward to doing more business"
           }
       }
@@ -79,16 +72,16 @@ rotue.post("/user_signup", async (req, res) => {
       let message = {
           from: "krunaltarale.iceico@gmail.com",
           to: user.email,
-          subject: "Verify Your Email Address",
+          subject: "Welcome to AiProff",
           html: mail
       }
 
       transporter.sendMail(message).then(() => {
-          res.status(201).json({
-              status: "You should receive an email"
-          })
+          // res.status(201).json({
+          //     status: "You should receive an email"
+          // })
       }).catch(error => {
-          res.status(500).json({ error })
+          // res.status(500).json({ error })
       })
 
 

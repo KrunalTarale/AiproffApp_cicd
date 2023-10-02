@@ -109,7 +109,7 @@ const Article = () => {
     const user = JSON.parse(auth);
 
     if (user) {
-      let res = await fetch("http://localhost:1338/update_article", {
+      let res = await fetch("/update_article", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -117,10 +117,10 @@ const Article = () => {
         },
         body: JSON.stringify({
           id: user._id,
-          article: "Article",
+          article: "Article2",
           title: "Applied AI: When AI solves real world problems",
           date : "September 4, 2023",
-          url : "article"
+          url : "article6"
         }),
       });
       const data = await res.json();

@@ -2,6 +2,7 @@ import React , {useState} from "react";
 import { useNavigate } from 'react-router-dom'
 import "./Login.css";
 import logo from '../assets/logo.png';
+import {Link} from 'react-router-dom'
 
 const Login = () => {
 
@@ -21,7 +22,7 @@ const Login = () => {
 
     else{
 
-    const res = await fetch("http://localhost:1338/user_login", {
+    const res = await fetch("/user_login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -61,10 +62,11 @@ const Login = () => {
               Applied AI for Everyone
             </p>
             <button
-              type="submit"
               className="block w-28 bg-white text-indigo-800 mt-4 py-2 rounded-2xl font-bold mb-2"
             >
+              <Link to="/">
               Read More
+            </Link>
             </button>
           </div>
         </div>
