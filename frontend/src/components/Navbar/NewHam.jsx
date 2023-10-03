@@ -58,9 +58,9 @@ const NewHam = ({ closeModal }) => {
               <button className="text-black mr-2" onClick={closeModal}>
                 <FontAwesomeIcon icon={faTimes} size="3x" />
               </button>
-              <div className="p-0 m-0 w-24">
+              <div className="">
                 <Link to="/" className="">
-                  <img src={logo} className="mr-3 h-full" alt="Logo" />
+                  <img src={logo} className="Logoham " alt="Logo" />
                 </Link>
               </div>
             </div>

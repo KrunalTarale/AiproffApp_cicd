@@ -1,6 +1,6 @@
 import React , {useState} from "react";
 import { useParams } from "react-router-dom";
-
+import { useNavigate } from 'react-router-dom'
 const Updatepassword = () => {
   const params = useParams();
   let userid = params.id;
@@ -10,6 +10,8 @@ const Updatepassword = () => {
   const [error, setError] = React.useState(false);
   const [cnfpass , setcnfpass] = useState(false);
   const [result, setresult] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSubmit = async () => {
     if (!password || !confirmpassword) {
@@ -32,6 +34,10 @@ const Updatepassword = () => {
           const data = await res.json();
           setresult(data.auth);
 
+          setTimeout(function() {
+            navigate("/login");
+          }, 3000);
+          
 
       } else {
         setcnfpass(true);

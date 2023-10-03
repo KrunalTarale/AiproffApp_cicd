@@ -37,13 +37,12 @@ route.post('/forgetpassword', async (req, res) => {
 
             let response = {
                 body: {
-                    // name: "AIPROFF",
                     intro: "Please click below button to reset your password",
                     action: {
                         button: {
                             color: '#22BC66',
                             text: 'Change Password',
-                            link: 'http://68.183.81.0/updatepassword/'+user[0]._id
+                            link: 'http://www.aiproff.com//updatepassword/'+user[0]._id
                         }
                     }
                 }
