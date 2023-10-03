@@ -19,6 +19,7 @@ import Blog from './components/Blog/Blog';
 import Login from './components/Login/Login';
 import Signin from './components/Signin/Signin';
 import YourArticle from './components/YourArticle/YourArticle';
+import About from './components/About/About';
 function App() {
   return (
     <Router>
@@ -26,6 +27,7 @@ function App() {
         <Route path="/article" element={<Article />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/yourarticle" element={<YourArticle />} />
+        <Route path="/about" element={<About />} />
         <Route path="/search" element={<SearchSite />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/assessment" element={<Assessment />} />

@@ -1,0 +1,38 @@
+.Logo {
+  height: 50px;
+  width: 100px;
+  margin-left: 10px;
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .Logo {
+    height: 45px;
+    width: 200px;
+    margin-left: 5px;
+  }
+}
+
+/* For tablets */
+@media (min-width: 480px) and (max-width: 650px) {
+  .Logo {
+    height: 45px;
+    width: 180px;
+    margin-left: 8px;
+  }
+}
+
+@media (min-width: 650px) and (max-width:766px) {
+    .Logo {
+      height: 45px;
+      width: 180px;
+      margin-left: 8px;
+    }
+  }
+  
+
+/* For desktops */
+@media (min-width: 650px) {
+  .Logo {
+  }
+}
