@@ -43,7 +43,7 @@ route.post('/subscribe_user', async (req, res) => {
                         button: {
                             color: '#22BC66',
                             text: 'Confirm your Email',
-                            link: 'http://68.183.81.0/updatesubscribeduser/'+result._id
+                            link: 'http://www.aiproff.com/updatesubscribeduser/'+result._id
                         }
                     },
                     outro: "Looking forward to doing more business"

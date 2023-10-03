@@ -129,7 +129,7 @@ const getAlltopics = (topic) => {
   return (
     <>
       <Navbar />
-      <div className="contact_form">
+      <div className="contact_form mb-5">
 
         <div className="Form_page">
           <htmlForm className="w-full max-w-lg">

@@ -22,6 +22,7 @@ import MVP from './components/MVP/Mvp'
 import POC from './components/POC/Poc';
 import YourArticle from './components/YourArticle/YourArticle';
 import Updatepassword from './components/Updatepassword/Updatepassword';
+import About from './components/About/About';
 function App() {
   return (
     <Router>
@@ -33,6 +34,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/assessment" element={<Assessment />} />
         <Route path="/assessmentStarted/:id" element={<AssessmentStarted />} />
+        <Route path="/about" element={<About />} />
         <Route
           path="/updatesubscribeduser/:id"
           element={<UpdateSubscriber />}

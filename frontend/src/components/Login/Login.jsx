@@ -84,7 +84,7 @@ const Login = () => {
           <div>
           {/* <img src={logo} className="logo" alt="logo" /> */}
             <h1 className="text-white font-bold text-4xl font-sans">
-              Aiproff
+              AiProff
             </h1>
             
             <p className="text-white mt-1">
@@ -143,7 +143,6 @@ const Login = () => {
               )}
             </div>  
 
-  
             <div className="flex items-center border-2 py-2 px-3 rounded-2xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -166,6 +165,8 @@ const Login = () => {
                 onChange={(event) => setPassword(event.target.value)}
               />
             </div>
+
+
             {error && !password && (
                 <span className="warning_massage">Please Enter Password</span>
               )}
