@@ -21,6 +21,7 @@ import Signin from './components/Signin/Signin';
 import MVP from './components/MVP/Mvp'
 import POC from './components/POC/Poc';
 import YourArticle from './components/YourArticle/YourArticle';
+import Updatepassword from './components/Updatepassword/Updatepassword';
 function App() {
   return (
     <Router>
@@ -40,6 +41,7 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/mvp" element={<MVP />} />
         <Route path="/poc" element={<POC />} />
+        <Route path="/updatepassword/:id" element={<Updatepassword />} />
         <Route
           path="/"
           element={

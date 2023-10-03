@@ -8,7 +8,7 @@ const JwtKey = "e-comm";
 route.post("/user_login", async (req, res) => {
   const user = req.body;
 
-  const data = await User.find({ email: user.username });
+  const data = await User.find({ email: user.username.toLowerCase()  });
 
   if (data.length === 0) {
     res.send({ auth: "incorrect password" });
