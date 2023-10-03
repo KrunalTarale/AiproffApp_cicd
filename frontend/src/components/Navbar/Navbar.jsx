@@ -105,13 +105,13 @@ function Navbar() {
           {" "}
           <ul className="hidden lg:flex font-medium lg:p-0  mr-0 lg:mr-20 lg:space-x-8 lg:mt-0 ">
             <li>
-              <a
-                href="#"
+              <Link
+                to="/about"
                 className="block py-2 pl-3 pr-4  rounded  md:hover:text-blue-500 md:p-0 text-black "
                 aria-current="page"
               >
                 ABOUT US
-              </a>
+              </Link>
             </li>
 
             <li
@@ -253,7 +253,7 @@ function Navbar() {
         to="/yourarticle"
         className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 text-black"
       >
-        Your Articles
+        YOUR ARTICLES
       </Link>
     </li>
   ) : null

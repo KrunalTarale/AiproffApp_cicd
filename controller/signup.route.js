@@ -61,9 +61,8 @@ rotue.post("/user_signup", async (req, res) => {
 
         let response = {
           body: {
-            name: "AIPROFF",
             intro:
-              "Congratulations on your successful sign-in! We're excited to have you with us.",
+              "Congratulations on your successful sign-up! We're excited to have you with us.",
             outro: "Looking forward to doing more business",
           },
         };

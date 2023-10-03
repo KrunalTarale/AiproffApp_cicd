@@ -21,7 +21,7 @@ const TopLinks = () => {
 }
 
   return (
-    <div className='m-1'>
+    <div className=''>
     
     <p>{username}</p>
       
