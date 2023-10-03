@@ -52,7 +52,7 @@ const NewHam = ({ closeModal }) => {
   return (
     <div>
       <div>
-        <nav className="bg-white border-gray-200 border-2 ">
+        <nav className="bg-white border-gray-200 border-1 ">
           <div className="flex flex-wrap items-center justify-between p-6  ">
             <div className="flex items-center mr-auto ml-0">
               <button className="text-black mr-2" onClick={closeModal}>
