@@ -1,7 +1,6 @@
 import React , {useState} from "react";
 import { useNavigate } from 'react-router-dom'
 import "./Login.css";
-import logo from '../assets/logo.png';
 import {Link} from 'react-router-dom'
 
 const Login = () => {
@@ -48,6 +47,36 @@ const Login = () => {
 
   }
 
+  const [forpasserr , setforpasserr] = useState(false)
+  const [message , setmessage] = useState("")
+
+  const handleforgetpassword = async () => {
+
+    if(!username){
+      setforpasserr(true)
+    }
+    
+
+    else{
+    console.log(username);
+
+    const res = await fetch("/forgetpassword", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        username : username
+      }),
+    });
+    const data = await res.json();
+    console.log(data);
+    setmessage(data.message)
+
+    }
+  }
+
   return (
     <div>
       <div className="h-screen flex whole_form">
@@ -78,6 +107,8 @@ const Login = () => {
             <p className="text-sm font-normal text-gray-600 mb-2">
               Welcome Back
             </p>
+
+            <p className="text-red-600 font-bold">{message}</p>
             <span className="warning_massage">{login}</span>
             <div className="mb-4">
             <div className="flex items-center border-2 py-2 px-3 rounded-2xl">
@@ -105,7 +136,10 @@ const Login = () => {
               />
             </div>
             {error && !username && (
-                <span className="warning_massage">Please Enter Username</span>
+                <span className="warning_massage">Please Enter Username.</span>
+              )}
+            {forpasserr && !username && (
+                <span className="warning_massage"> Please enter username to reset password</span>
               )}
             </div>  
 
@@ -142,9 +176,11 @@ const Login = () => {
             >
               Login
             </button>
-            <span className="text-sm ml-2 hover:text-blue-500 cursor-pointer">
+            <div >
+            <span className="text-sm ml-2 hover:text-blue-500 cursor-pointer" onClick={handleforgetpassword}>
               Forgot Password ?
             </span>
+            </div>
           </div>
         </div>
       </div>

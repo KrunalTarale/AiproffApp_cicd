@@ -1,21 +1,21 @@
 const route = require('express').Router();
-const Subscriber = require('../module/subscribe.module');
-
+const User = require('../module/user.module');
 const nodemailer = require('nodemailer');
 const Mailgen = require('mailgen');
 
-route.post('/subscribe_user', async (req, res) => {
-    const subscriber = req.body;
-    const data = await Subscriber.find({ email: subscriber.email });
+route.post('/forgetpassword', async (req, res) => {
 
-    if (data.length === 0) {
-        const createdSubscriber = new Subscriber({
-            email: subscriber.email,
-            status: "unverified",
+
+    const user = await User.find({ email: req.body.username.toLowerCase() });
+
+
+    if (user.length > 0) {
+
+        res.status(201).json({
+          message: 'You should receive an email'
         });
 
         try {
-            const result = await createdSubscriber.save();
 
             const config = {
                 service: "gmail",
@@ -38,15 +38,14 @@ route.post('/subscribe_user', async (req, res) => {
             let response = {
                 body: {
                     // name: "AIPROFF",
-                    intro: "Verify Your Email Address",
+                    intro: "Please click below button to reset your password",
                     action: {
                         button: {
                             color: '#22BC66',
-                            text: 'Confirm your Email',
-                            link: 'http://68.183.81.0/updatesubscribeduser/'+result._id
+                            text: 'Change Password',
+                            link: 'http://68.183.81.0/updatepassword/'+user[0]._id
                         }
-                    },
-                    outro: "Looking forward to doing more business"
+                    }
                 }
             }
 
@@ -54,27 +53,27 @@ route.post('/subscribe_user', async (req, res) => {
 
             let message = {
                 from: "krunaltarale.iceico@gmail.com",
-                to: subscriber.email,
-                subject: "Verify Your Email Address",
+                to: user[0].email,
+                subject: "Change your password",
                 html: mail
             }
 
             transporter.sendMail(message).then(() => {
-                res.status(201).json({
-                    status: "You should receive an email"
-                })
             }).catch(error => {
-                res.status(500).json({ error })
             })
         } catch (err) {
             console.error(err);
             res.status(500).json({ status: 'Internal Server Error' });
         }
-    } else {
-        res.send({
-            status: "Already subscribed"
+
+    }
+     else {
+        
+        res.status(200).json({
+          message: 'User is not exists'
         })
+
     }
 })
 
-module.exports = route;
+module.exports = route

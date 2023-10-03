@@ -1,10 +1,10 @@
 const rotue = require("express").Router();
 const User = require("../module/user.module");
 
-const nodemailer = require('nodemailer');
-const Mailgen = require('mailgen');
+const nodemailer = require("nodemailer");
+const Mailgen = require("mailgen");
 
-const bcrypt = require('bcrypt');
+const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
 rotue.post("/user_signup", async (req, res) => {
@@ -14,14 +14,14 @@ rotue.post("/user_signup", async (req, res) => {
 
   if (data.length > 0) {
     res.status(201).json({
-      message: 'User already exists'
+      message: "User already exists",
     });
   } else {
     bcrypt.hash(user.password, saltRounds, async (err, hash) => {
       if (err) {
         console.log(err);
         return res.status(500).json({
-          error: 'Internal Server Error'
+          error: "Internal Server Error",
         });
       }
 
@@ -30,13 +30,13 @@ rotue.post("/user_signup", async (req, res) => {
         lname: user.lname,
         email: user.email,
         password: hash,
-        articles: []
+        articles: [],
       });
 
       try {
         await newUser.save();
         res.status(201).json({
-          message: 'User created successfully'
+          message: "User created successfully",
         });
 
         // Mailer function after user created
@@ -44,52 +44,53 @@ rotue.post("/user_signup", async (req, res) => {
         const config = {
           service: "gmail",
           auth: {
-              user: "krunaltarale.iceico@gmail.com",
-              pass: "zblzoiergfvatxwd",
+            user: "krunaltarale.iceico@gmail.com",
+            pass: "zblzoiergfvatxwd",
           },
-      }
+        };
 
-      let transporter = nodemailer.createTransport(config);
+        let transporter = nodemailer.createTransport(config);
 
-      let MailGenerator = new Mailgen({
+        let MailGenerator = new Mailgen({
           theme: "default",
           product: {
-              name: 'AIPROFF',
-              link: 'https://www.aiproff.ai/'
-          }
-      })
+            name: "AIPROFF",
+            link: "https://www.aiproff.ai/",
+          },
+        });
 
-      let response = {
+        let response = {
           body: {
-              name: "AIPROFF",
-              intro: "Congratulations on your successful sign-in! We're excited to have you with us.",
-              outro: "Looking forward to doing more business"
-          }
-      }
+            name: "AIPROFF",
+            intro:
+              "Congratulations on your successful sign-in! We're excited to have you with us.",
+            outro: "Looking forward to doing more business",
+          },
+        };
 
-      let mail = MailGenerator.generate(response)
+        let mail = MailGenerator.generate(response);
 
-      let message = {
+        let message = {
           from: "krunaltarale.iceico@gmail.com",
           to: user.email,
           subject: "Welcome to AiProff",
-          html: mail
-      }
+          html: mail,
+        };
 
-      transporter.sendMail(message).then(() => {
-          // res.status(201).json({
-          //     status: "You should receive an email"
-          // })
-      }).catch(error => {
-          // res.status(500).json({ error })
-      })
-
-
-
+        transporter
+          .sendMail(message)
+          .then(() => {
+            // res.status(201).json({
+            //     status: "You should receive an email"
+            // })
+          })
+          .catch((error) => {
+            // res.status(500).json({ error })
+          });
       } catch (error) {
         console.log(error);
         res.status(500).json({
-          error: 'Internal Server Error'
+          error: "Internal Server Error",
         });
       }
     });
@@ -97,5 +98,3 @@ rotue.post("/user_signup", async (req, res) => {
 });
 
 module.exports = rotue;
-
-
