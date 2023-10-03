@@ -36,6 +36,10 @@ const update_article = require('./controller/update_article.route');
 app.use(update_article);
 const get_user_article = require('./controller/get_user_article.route');
 app.use(get_user_article);
+const forgetpassword = require('./controller/forgetpassword.route');
+app.use(forgetpassword);
+const updatepassword = require('./controller/updatepassword.route');
+app.use(updatepassword);
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/dist/index.html'));

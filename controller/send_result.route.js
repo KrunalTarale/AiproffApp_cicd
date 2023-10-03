@@ -31,7 +31,7 @@ route.post('/send_result', async (req, res) => {
   
     let response = {
       body: {
-        name: "AIPROFF",
+        // name: "AIPROFF",
         intro: "Assessment Result. Your Score is " + resp.score + " out of "+resp.outoff,
         table: {
           data: tableData
