@@ -3,6 +3,8 @@ import Footer from '../Foot/Foot';
 import { Link } from 'react-router-dom'
 import { useState,useEffect } from 'react';
 import './YourArticle.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const YourArticle = () => {
   const [email, setEmail] = useState('');
@@ -12,7 +14,6 @@ const YourArticle = () => {
   const getArticles = async () => {
     const auth = localStorage.getItem('user');
     const user = JSON.parse(auth);
-    console.log(user._id);
 
     let res = await fetch('/get_user_article/'+user._id , {
         method: 'GET'
@@ -26,27 +27,7 @@ const YourArticle = () => {
     getArticles();
   })
 
-  // const articles = [
-  //   {
-  //     title: 'Applied AI: When AI solves real world problems ',
-  //     subTitle:
-  //       'Artificial Intelligence is a promising technological marvel that holds the key to the future. ',
-  //     imageUrl:
-  //       'https://miro.medium.com/v2/resize:fill:140:140/1*xGMde9uuUeHNIRShrkBRSA.jpeg',
-  //     readTime: '3 min',
-  //     date: 'Sept 23, 2023',
-  //     publisher: 'Applied AI',
-  //   },
-  //   {
-  //     title: 'Introduction to Computer Vision: When Machines Start to See',
-  //     subTitle: 'The quest for intelligence has been going on for ages, ',
-  //     imageUrl:
-  //       'https://miro.medium.com/v2/resize:fill:140:140/0*_i9J5BLER8FSyMWb',
-  //     readTime: '4 min',
-  //     date: 'Sept 22, 2023',
-  //     publisher: 'Applied AI',
-  //   },
-  // ];
+
 
   const handleSubmit = async () => {
     const res = await fetch('/subscribe_user', {
@@ -78,6 +59,29 @@ const YourArticle = () => {
     'Politics',
   ];
 
+  // delete article
+
+  const handelDelete = async (articleId) => {
+
+    const auth = localStorage.getItem("user");
+    const user = JSON.parse(auth);
+
+    let res = await fetch("/delete_article", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          id: user._id,
+          article_id : articleId,
+        }),
+      });
+      const data = await res.json();
+      console.log(data);
+  
+  };
+
   return (
     <div className="min-h-screen flex flex-col h-full YourArticle">
       <div className="flex-shrink-0">
@@ -89,28 +93,34 @@ const YourArticle = () => {
       <div className="  flex flex-col-reverse lg:flex-row items-start justify-center w-full md:mb-14  px-4 xl:px-0 bg-white flex-grow">
 
 <div className="space-y-5 lg:w-3/5 xl:w-2/5 p-4">
+
   {allarticles.length === 0 ? (
     <div className="text-xl font-semibold">You didn't save any articles</div>
-  ) : (
+  )
+   :
+ (
     allarticles.map((article, idx) => (
-      <Link to={`/${article.url}`} key={idx}>
-      <div
-        className="flex space-x-6 border-b-2 border-black items-start hover:bg-gray-100 p-4 transition duration-200 cursor-pointer"
-      >
+
+      // <Link to={`/${article.url}`} key={idx}>
+      <div className="flex space-x-6 border-b-2 border-black items-start hover:bg-gray-100 p-4 transition duration-200 cursor-pointer" key={idx}>
         <div className="flex-1">
           <div className="text-gray-500 text-sm">
             {article.date}
           </div>
+          <Link to={`/${article.url}`}>
           <h1 className="text-2xl font-bold mt-2 font-serif">
             {article.title}
           </h1>
+          </Link>
           {/* ... (rest of the article rendering code) ... */}
         </div>
-        <div>
+        <div className="del_btn">
           {/* ... (image rendering code) ... */}
+          <FontAwesomeIcon icon={faTrash} className="cursor-pointer" onClick={() => handelDelete(article._id)} />
         </div>
       </div>
-      </Link>
+      // {/* </Link> */}
+    
     ))
   )}
 </div>

@@ -6,3 +6,7 @@
   font-family: 'Helvetica Neue', Calibri, Corbel, Helvetica, Roboto, Droid,
     sans-serif;
 }
+
+.del_btn{
+  z-index: 2;
+}
