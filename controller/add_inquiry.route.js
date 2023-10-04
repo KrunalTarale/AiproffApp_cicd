@@ -1,7 +1,7 @@
 const rotue = require('express').Router();
 const Inquiry = require("../module/inquiry.module")
 
-
+// this is testing
 // Change the route definition to an async function
 rotue.post('/add_inquiry', async (req, res) => {
     try {
