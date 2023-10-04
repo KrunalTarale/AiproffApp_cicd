@@ -12,8 +12,7 @@ import NavSearch from "../Search/NavSearch";
 function Navbar() {
 
 
-  const auth = localStorage.getItem('user');  
-  console.log(auth);
+  const auth = localStorage.getItem('user'); 
 
   const [offeringsDropdownVisible, setOfferingsDropdownVisible] =
     useState(false);

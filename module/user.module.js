@@ -1,5 +1,14 @@
 const mongoose = require('mongoose');
 
+const articleSchema = new mongoose.Schema(
+    {
+        article : String,
+        title : String,
+        date : String,
+        url : String
+    }
+)
+
 const userSchema = new mongoose.Schema(
     {
         fname : String,
@@ -9,7 +18,7 @@ const userSchema = new mongoose.Schema(
             lowercase: true,
         },
         password : String,
-        articles : Array
+        articles : [articleSchema]
     }
 )
 
