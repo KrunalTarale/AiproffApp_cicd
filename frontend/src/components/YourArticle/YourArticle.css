@@ -6,3 +6,11 @@
   font-family: 'Helvetica Neue', Calibri, Corbel, Helvetica, Roboto, Droid,
     sans-serif;
 }
+
+.del_btn{
+  color: rgba(255, 0, 0, 0.63);
+}
+
+.del_btn:hover{
+  color: rgb(226, 0, 0);
+}
