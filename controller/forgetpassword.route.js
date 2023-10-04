@@ -33,6 +33,7 @@ route.post('/forgetpassword', async (req, res) => {
                     name: 'AIPROFF',
                     link: 'https://www.aiproff.ai/'
                 }
+                
             })
 
             let response = {
