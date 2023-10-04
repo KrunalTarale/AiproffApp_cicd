@@ -8,5 +8,9 @@
 }
 
 .del_btn{
-  z-index: 2;
+  color: rgba(255, 0, 0, 0.63);
+}
+
+.del_btn:hover{
+  color: rgb(226, 0, 0);
 }
