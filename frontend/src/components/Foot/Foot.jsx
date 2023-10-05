@@ -31,7 +31,7 @@ const Footer = () => {
   const [status, setStatus] = useState('');
 
   const handleSubmit = async () => {
-    const res = await fetch('/subscribe_user', {
+    const res = await fetch('http://localhost:1338/subscribe_user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

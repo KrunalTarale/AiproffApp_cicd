@@ -18,10 +18,12 @@ route.post('/subscribe_user', async (req, res) => {
             const result = await createdSubscriber.save();
 
             const config = {
-                service: "gmail",
+                host: "smtpout.secureserver.net",
+                port: 465,
+                secure: true,
                 auth: {
-                    user: "krunaltarale.iceico@gmail.com",
-                    pass: "zblzoiergfvatxwd",
+                    user: "support@aiproff.ai",
+                    pass: process.env.EMAIL_PASS,
                 },
             }
 
@@ -30,7 +32,7 @@ route.post('/subscribe_user', async (req, res) => {
             let MailGenerator = new Mailgen({
                 theme: "default",
                 product: {
-                    name: 'AIPROFF',
+                    name: 'Welcome to AIProff',
                     link: 'https://www.aiproff.ai/'
                 }
             })
@@ -38,7 +40,7 @@ route.post('/subscribe_user', async (req, res) => {
             let response = {
                 body: {
                     // name: "AIPROFF",
-                    intro: "Verify Your Email Address",
+                    intro: "Thanks for exploring AIProff. To get started, we need to verify your email first.",
                     action: {
                         button: {
                             color: '#22BC66',
@@ -46,14 +48,14 @@ route.post('/subscribe_user', async (req, res) => {
                             link: 'http://www.aiproff.com/updatesubscribeduser/'+result._id
                         }
                     },
-                    outro: "Looking forward to doing more business"
+                    outro: 'http://www.aiproff.com/updatesubscribeduser/'+result._id
                 }
             }
 
             let mail = MailGenerator.generate(response)
 
             let message = {
-                from: "krunaltarale.iceico@gmail.com",
+                from: "support@aiproff.ai",
                 to: subscriber.email,
                 subject: "Verify Your Email Address",
                 html: mail
