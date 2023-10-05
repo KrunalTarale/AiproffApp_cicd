@@ -1,18 +1,16 @@
-import logo from "../assets/logo.png";
-import "font-awesome/css/font-awesome.min.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import "./Navbar.css";
-import { useState, useEffect } from "react";
-import NewHam from "./NewHam";
-import "./NewHam.css";
-import { Link } from "react-router-dom";
-import NavSearch from "../Search/NavSearch";
+import logo from '../assets/logo.png';
+import 'font-awesome/css/font-awesome.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import './Navbar.css';
+import { useState, useEffect } from 'react';
+import NewHam from './NewHam';
+import './NewHam.css';
+import { Link } from 'react-router-dom';
+import NavSearch from '../Search/NavSearch';
 
 function Navbar() {
-
-
-  const auth = localStorage.getItem('user'); 
+  const auth = localStorage.getItem('user');
 
   const [offeringsDropdownVisible, setOfferingsDropdownVisible] =
     useState(false);
@@ -32,6 +30,8 @@ function Navbar() {
   const clearShopsTimer = () => {
     clearTimeout(shopsTimer);
   };
+
+  const [subMenuOpen, setSubMenuOpen] = useState(null);
 
   const closeDropdowns = () => {
     clearOfferingsTimer();
@@ -80,6 +80,8 @@ function Navbar() {
     setIsSearchModalOpen(!isSearchModalOpen);
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="bg-slate-100 border-b-2">
       <div className="flex items-center justify-between lg:p-6 py-4  ">
@@ -101,7 +103,7 @@ function Navbar() {
           id="navbar-dropdown"
           onMouseLeave={handleMouseLeave}
         >
-          {" "}
+          {' '}
           <ul className="hidden lg:flex font-medium lg:p-0  mr-0 lg:mr-20 lg:space-x-8 lg:mt-0 ">
             <li>
               <Link
@@ -118,7 +120,7 @@ function Navbar() {
               onMouseLeave={clearOfferingsTimer} //
             >
               <button className="relative flex items-center justify-between w-full py-2 pl-3 pr-4   md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto text-black">
-                OFFERING{" "}
+                OFFERING{' '}
                 <svg
                   className="w-2.5 h-2.5 ml-2.5"
                   aria-hidden="true"
@@ -138,7 +140,7 @@ function Navbar() {
 
               <div
                 className={`z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ${
-                  offeringsDropdownVisible ? "block" : "hidden"
+                  offeringsDropdownVisible ? 'block' : 'hidden'
                 } absolute mt-2`}
                 onMouseEnter={clearOfferingsTimer} // Add onMouseEnter to clear the timer
                 onMouseLeave={handleMouseLeave} // Add onMouseLeave event handler
@@ -180,7 +182,7 @@ function Navbar() {
               onMouseLeave={clearShopsTimer} // A
             >
               <button className="relative flex items-center justify-between w-full py-2 pl-3 pr-4   md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto text-black">
-                SHOP{" "}
+                SHOP{' '}
                 <svg
                   className="w-2.5 h-2.5 ml-2.5"
                   aria-hidden="true"
@@ -200,7 +202,7 @@ function Navbar() {
 
               <div
                 className={`z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ${
-                  shopsDropdownVisible ? "block" : "hidden"
+                  shopsDropdownVisible ? 'block' : 'hidden'
                 } absolute mt-2`}
                 onMouseEnter={clearShopsTimer} // Add onMouseEnter to clear the timer
                 onMouseLeave={handleMouseLeave} // Add onMouseLeave event handler
@@ -245,29 +247,132 @@ function Navbar() {
                 BLOG
               </Link>
             </li>
-            {
-  auth ? (
-    <li>
-      <Link
-        to="/yourarticle"
-        className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 text-black"
-      >
-        YOUR ARTICLES
-      </Link>
-    </li>
-  ) : null
-}
-
-
+            {auth ? (
+              <li>
+                <Link
+                  to="/yourarticle"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 text-black"
+                >
+                  YOUR ARTICLES
+                </Link>
+              </li>
+            ) : null}
 
             <li>
               <Link to="/contact">CONTACT US</Link>
             </li>
-
-
-
           </ul>
         </div>
+
+        <div className="lg:hidden relative p-2 right-3 top-2  ">
+          {/* Dropdown Button */}
+          <button
+            className="px-4 py-1 text-white bg-blue-600 rounded"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            Menu
+          </button>
+
+          {/* Dropdown Content */}
+          {isOpen && (
+            <div className="absolute right-2 mt-2 md:w-56 w-40 rounded-md shadow-lg bg-white">
+              <div className="rounded-md shadow-xs border-2 border-slate-400">
+                <Link
+                  to="/"
+                  className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100"
+                >
+                  HOME
+                </Link>
+                <Link
+                  to="/about"
+                  className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100"
+                >
+                  ABOUT US
+                </Link>
+
+                <div
+                  className="relative" // Just "relative" here
+                  onMouseEnter={() => setSubMenuOpen('offering')}
+                  onMouseLeave={() => setSubMenuOpen(null)}
+                >
+                  <span className="block px-4 py-2 text-sm leading-5 text-gray-700 cursor-pointer">
+                    OFFERING
+                  </span>
+                  {subMenuOpen === 'offering' && (
+                    <div className="absolute right-full top-0 mr-1 ml-2 w-32 rounded-md shadow-lg bg-white">
+                      {/* Sub-menu items */}
+                      <Link
+                        to="/mvp"
+                        className="block px-4  py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100"
+                      >
+                        Minimum Viable Product (MVP)
+                      </Link>
+                      <Link
+                        to="/poc"
+                        className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100"
+                      >
+                        Proof of Concept (POC)
+                      </Link>
+                      <Link
+                        to="/"
+                        className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100"
+                      >
+                        Corporate and Academic Training(CAT)
+                      </Link>
+                    </div>
+                  )}
+                </div>
+
+                <div
+                  className="relative" // Just "relative" here
+                  onMouseEnter={() => setSubMenuOpen('shop')}
+                  onMouseLeave={() => setSubMenuOpen(null)}
+                >
+                  <span className="block px-4 py-2 text-sm leading-5 text-gray-700 cursor-pointer">
+                    SHOP
+                  </span>
+                  {subMenuOpen === 'shop' && (
+                    <div className="absolute right-full top-0 mr-1 w-32 rounded-md shadow-lg bg-white">
+                      {/* Sub-menu items */}
+                      <Link
+                        to="/product1"
+                        className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100"
+                      >
+                        Try
+                      </Link>
+                      <Link
+                        to="/product2"
+                        className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100"
+                      >
+                        Buy
+                      </Link>
+                    </div>
+                  )}
+                </div>
+
+                <Link
+                  to="/assessment"
+                  className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100"
+                >
+                  ASSESSMENTS
+                </Link>
+                <Link
+                  to="/blog"
+                  className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100"
+                >
+                  BLOG
+                </Link>
+                <Link
+                  to="/contact"
+                  className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100"
+                >
+                  CONTACT US
+                </Link>
+              </div>
+            </div>
+          )}
+        </div>
+
         <div className="pt-4 pr-4 lg:pt-2 lg:pr-0 ">
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
