@@ -2,6 +2,7 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
 import { useState } from 'react';
 import './blog.css';
+import { Link } from 'react-router-dom'
 
 const Blog = () => {
   const [email, setEmail] = useState('');
@@ -17,35 +18,39 @@ const Blog = () => {
       readTime: '3 min',
       date: 'Sept 23, 2023',
       publisher: 'Applied AI',
+      link : '/article'
     },
     {
-      title: 'Introduction to Computer Vision: When Machines Start to See',
-      subTitle: 'The quest for intelligence has been going on for ages, ',
+      title: 'Introduction: Reliable and Robust AI',
+      subTitle: 'The field of Artificial intelligence (AI) is rapidly evolving.  ',
       imageUrl:
         'https://miro.medium.com/v2/resize:fill:140:140/0*_i9J5BLER8FSyMWb',
       readTime: '4 min',
       date: 'Sept 22, 2023',
       publisher: 'Applied AI',
+      link: '/Realaible_And_RodbustAi'
     },
     {
-      title: 'Introduction: When AI starts to predict Future',
+      title: 'Introduction to NLP: When AI talks',
       subTitle:
-        'Forecasting is the art and science of predicting future events or outcomes based on past and present data. ',
+        'The field of Artificial intelligence is exciting. Under this discipline of Technology, machines can talk, ',
       imageUrl:
         'https://miro.medium.com/v2/resize:fill:140:140/1*kfpE5sUY6tXRFech4Ju2gg.png',
       readTime: '4 min',
       date: 'Sept 22, 2023',
       publisher: 'Applied AI',
+      link: '/npl'
     },
     {
-      title: 'Introduction to NLP: When AI talks',
+      title: 'Introduction to Computer Vision: When Machines Start to See',
       subTitle:
-        'The field of Artificial intelligence is exciting. Under this discipline of Technology, machines can talk',
+        '"A computer deserves to be called intelligent if it could deceive a human into believing that it was human.”',
       imageUrl:
         'https://miro.medium.com/v2/resize:fill:140:140/1*rEZoI7uE1NiTN6WV2bAbHw.png',
       readTime: '4 min',
       date: 'Sept 22, 2023',
       publisher: 'Applied AI',
+      link: '/Computer_Vision'
     },
   ];
 
@@ -85,21 +90,27 @@ const Blog = () => {
         <div className="space-y-5 lg:w-3/5 xl:w-2/5 p-4">
           {articles.map((article, idx) => (
             <div
-              key={idx}
-              className="flex space-x-6 border-b-2 border-black items-start hover:bg-gray-100 p-4 transition duration-200 cursor-pointer"
+            key={idx}
+            className="flex space-x-6 border-b-2 border-black items-start hover:bg-gray-100 p-4 transition duration-200 cursor-pointer"
             >
+          
+
               <div className="flex-1">
                 <div className="text-gray-500 text-sm">
                   {article.date} • by {article.publisher}
                 </div>
+                <Link to={article.link}>
                 <h1 className="text-2xl font-bold mt-2 font-serif">
                   {article.title}
                 </h1>
+                </Link>
                 <p className="text-gray-700 mt-2 ">{article.subTitle}</p>
                 <div className="text-sm text-gray-600 mt-2">
                   {article.readTime} read
                 </div>
               </div>
+
+
               <div>
                 <img
                   src={article.imageUrl}
@@ -107,6 +118,7 @@ const Blog = () => {
                   className="w-48 h-32 object-cover rounded-lg shadow-md"
                 />
               </div>
+
             </div>
           ))}
         </div>
