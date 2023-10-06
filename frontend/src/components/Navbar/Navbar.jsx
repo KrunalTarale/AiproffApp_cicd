@@ -139,7 +139,7 @@ function Navbar() {
               </button>
 
               <div
-                className={`z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ${
+                className={`z-10 font-normal  divide-y divide-gray-100 rounded-lg shadow w-44 bg-gray-700 divide-gray-600 ${
                   offeringsDropdownVisible ? 'block' : 'hidden'
                 } absolute mt-2`}
                 onMouseEnter={clearOfferingsTimer} // Add onMouseEnter to clear the timer
@@ -152,7 +152,7 @@ function Navbar() {
                   <li>
                     <Link
                       to="/mvp"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white"
                     >
                       Minimum Viable Product (MVP)
                     </Link>
@@ -160,7 +160,7 @@ function Navbar() {
                   <li>
                     <Link
                       to="/poc"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white"
                     >
                       Proof of Concept (POC)
                     </Link>
@@ -168,7 +168,7 @@ function Navbar() {
                   <li>
                     <a
                       href="#"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white"
                     >
                       Corporate and Academic Training(CAT)
                     </a>
@@ -201,7 +201,7 @@ function Navbar() {
               </button>
 
               <div
-                className={`z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 ${
+                className={`z-10 font-normal  divide-y divide-gray-100 rounded-lg shadow w-44 bg-gray-700 divide-gray-600 ${
                   shopsDropdownVisible ? 'block' : 'hidden'
                 } absolute mt-2`}
                 onMouseEnter={clearShopsTimer} // Add onMouseEnter to clear the timer
@@ -214,7 +214,7 @@ function Navbar() {
                   <li>
                     <a
                       href="#"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white"
                     >
                       Try
                     </a>
@@ -222,7 +222,7 @@ function Navbar() {
                   <li>
                     <a
                       href="#"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      className="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white"
                     >
                       Buy
                     </a>
