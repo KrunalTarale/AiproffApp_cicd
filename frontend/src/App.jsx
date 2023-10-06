@@ -25,6 +25,7 @@ import Updatepassword from './components/Updatepassword/Updatepassword';
 import About from './components/About/About';
 import NLP from './components/NLP/Nlp';
 import RealaibleAndRodbustAi from './components/RelaibleAndRodbustAI/RelaibleAndRodbustAi';
+import ComputerVision from './components/ComputerVision/ComputerVision';
 function App() {
   return (
     <Router>
@@ -48,6 +49,7 @@ function App() {
         <Route path="/updatepassword/:id" element={<Updatepassword />} />
         <Route path="/nlp" element={<NLP />} />
         <Route path="/Realaible_And_RodbustAi" element={<RealaibleAndRodbustAi />} />
+        <Route path="/Computer_Vision" element={<ComputerVision />} />
         
         <Route
           path="/"
