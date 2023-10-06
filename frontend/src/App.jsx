@@ -23,6 +23,7 @@ import POC from './components/POC/Poc';
 import YourArticle from './components/YourArticle/YourArticle';
 import Updatepassword from './components/Updatepassword/Updatepassword';
 import About from './components/About/About';
+import NLP from './components/NLP/Nlp';
 function App() {
   return (
     <Router>
@@ -44,6 +45,8 @@ function App() {
         <Route path="/mvp" element={<MVP />} />
         <Route path="/poc" element={<POC />} />
         <Route path="/updatepassword/:id" element={<Updatepassword />} />
+        <Route path="/nlp" element={<NLP />} />
+        
         <Route
           path="/"
           element={

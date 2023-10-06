@@ -130,8 +130,8 @@ const Trailer = () => {
             </div>
             <div className="mt-4">
               <p className="text-gray-500 dark:text-gray-400">
-                <a
-                  href="#"
+                <Link
+                  to="/nlp"
                   className={`inline-flex items-center font-semibold text-black hover:text-blue-700 hover:no-underline ${
                     isHovered ? 'hovered' : ''
                   }`}
@@ -157,7 +157,7 @@ const Trailer = () => {
                       d="M1 5h12m0 0L9 1m4 4L9 9"
                     />
                   </svg>
-                </a>
+                </Link>
               </p>
 
               <p className="text-gray-500 dark:text-gray-400 mt-4">
