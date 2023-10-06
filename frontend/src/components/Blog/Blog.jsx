@@ -68,15 +68,14 @@ const Blog = () => {
   };
 
   const topics = [
-    'Programming',
-    'Data Science',
-    'Technology',
-    'Self Improvement',
-    'Writing',
-    'Relationships',
+    'Internet Of Things',
     'Machine Learning',
-    'Productivity',
-    'Politics',
+    'Data Visualization',
+    'Data Engineering',
+    'Cloud Computing',
+    'ML Ops',
+    'Deep Learning in NLP',
+    'Deep Learning in Computer Vision',
   ];
 
   return (
@@ -151,7 +150,7 @@ const Blog = () => {
             <div>
               <h2 className="text-2xl font-bold">Discover more topics:</h2>
             </div>
-            <div className="max-w-screen mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-2 xl:grid-cols-3 gap-5 pt-6">
+            <div className="max-w-screen mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-2 xl:grid-cols-2 gap-5 pt-6">
               {topics.map((topic, index) => (
                 <button
                   key={index}

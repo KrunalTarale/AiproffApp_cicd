@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTwitter,
@@ -80,9 +81,9 @@ const Footer = () => {
 
           <div className="flex flex-col justify-end">
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-blue-500">
-                Legal
-              </a>
+              <Link to="/about" className="hover:text-blue-500">
+                About Us
+              </Link>
               <a href="#" className="hover:text-blue-500">
                 FAQ
               </a>
