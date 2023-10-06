@@ -42,12 +42,14 @@ rotue.post("/user_signup", async (req, res) => {
         // Mailer function after user created
 
         const config = {
-          service: "gmail",
+          host: "smtpout.secureserver.net",
+          port: 465,
+          secure: true,
           auth: {
-            user: "krunaltarale.iceico@gmail.com",
-            pass: "zblzoiergfvatxwd",
+              user: "support@aiproff.ai",
+              pass: process.env.EMAIL_PASS,
           },
-        };
+      }
 
         let transporter = nodemailer.createTransport(config);
 
@@ -70,7 +72,7 @@ rotue.post("/user_signup", async (req, res) => {
         let mail = MailGenerator.generate(response);
 
         let message = {
-          from: "krunaltarale.iceico@gmail.com",
+          from: "support@aiproff.ai",
           to: user.email,
           subject: "Welcome to AiProff",
           html: mail,
