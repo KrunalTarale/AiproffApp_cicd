@@ -106,7 +106,7 @@ const Footer = () => {
                   style={{ width: '24px', height: '24px' }}
                 />
               </a>
-              <a href="#" className="text-gray-600 hover:text-blue-500">
+              <a href="https://www.facebook.com/aiproffai/" className="text-gray-600 hover:text-blue-500">
                 <FontAwesomeIcon
                   icon={faFacebook}
                   size="lg"
