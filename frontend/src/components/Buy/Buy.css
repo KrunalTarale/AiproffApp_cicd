@@ -4,7 +4,7 @@
     padding: .4em;
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    
+    margin: 5px;
   }
   
   ._card-image {
@@ -58,5 +58,16 @@
   .allcards{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin : 2rem 4rem 2rem 4rem;
+  }
+
+  .category{
+    margin-top: 1rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  .cat_head{
+    font-size: 2rem;
   }
