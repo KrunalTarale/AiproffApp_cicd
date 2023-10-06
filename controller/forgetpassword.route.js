@@ -18,10 +18,12 @@ route.post('/forgetpassword', async (req, res) => {
         try {
 
             const config = {
-                service: "gmail",
+                host: "smtpout.secureserver.net",
+                port: 465,
+                secure: true,
                 auth: {
-                    user: "krunaltarale.iceico@gmail.com",
-                    pass: "zblzoiergfvatxwd",
+                    user: "support@aiproff.ai",
+                    pass: process.env.EMAIL_PASS,
                 },
             }
 
@@ -53,7 +55,7 @@ route.post('/forgetpassword', async (req, res) => {
             let mail = MailGenerator.generate(response)
 
             let message = {
-                from: "krunaltarale.iceico@gmail.com",
+                from: "support@aiproff.ai",
                 to: user[0].email,
                 subject: "Change your password",
                 html: mail

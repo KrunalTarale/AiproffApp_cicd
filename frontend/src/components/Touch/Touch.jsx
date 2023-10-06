@@ -18,12 +18,12 @@ const Touch = () => {
         
         <div className="flex items-center justify-center text-center">
           <FontAwesomeIcon icon={faEnvelope} size="lg" />
-          <p className="ml-2">Email us: anushree.singh@aiproff.ai</p>
+          <p className="ml-2">Email us: support@aiproff.ai</p>
         </div>
       
       </div>
     </div>
   );
 };
-
+  
 export default Touch;

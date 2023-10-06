@@ -6,12 +6,14 @@ route.post('/send_result', async (req, res) => {
     const resp = req.body;
   
     const config = {
-      service: "gmail",
+      host: "smtpout.secureserver.net",
+      port: 465,
+      secure: true,
       auth: {
-        user: "krunaltarale.iceico@gmail.com",
-        pass: "zblzoiergfvatxwd",
+          user: "support@aiproff.ai",
+          pass: process.env.EMAIL_PASS,
       },
-    };
+  }
   
     let transporter = nodemailer.createTransport(config);
   
@@ -43,7 +45,7 @@ route.post('/send_result', async (req, res) => {
     let mail = MailGenerator.generate(response);
   
     let message = {
-      from: "krunaltarale.iceico@gmail.com",
+      from: "support@aiproff.ai",
       to: resp.email,
       subject: "Assessment Result",
       html: mail

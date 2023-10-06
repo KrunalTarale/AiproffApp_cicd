@@ -23,6 +23,8 @@ import POC from './components/POC/Poc';
 import YourArticle from './components/YourArticle/YourArticle';
 import Updatepassword from './components/Updatepassword/Updatepassword';
 import About from './components/About/About';
+import NLP from './components/NLP/Nlp';
+import RealaibleAndRodbustAi from './components/RelaibleAndRodbustAI/RelaibleAndRodbustAi';
 function App() {
   return (
     <Router>
@@ -44,6 +46,9 @@ function App() {
         <Route path="/mvp" element={<MVP />} />
         <Route path="/poc" element={<POC />} />
         <Route path="/updatepassword/:id" element={<Updatepassword />} />
+        <Route path="/nlp" element={<NLP />} />
+        <Route path="/Realaible_And_RodbustAi" element={<RealaibleAndRodbustAi />} />
+        
         <Route
           path="/"
           element={

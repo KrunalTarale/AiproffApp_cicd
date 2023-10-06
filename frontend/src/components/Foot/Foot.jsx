@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faTwitter,
@@ -7,6 +8,8 @@ import {
   faInstagram,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
+
+import twitter from '../assets/x-twitter.svg';
 
 import Cookie from '../Cookie/Cookie';
 
@@ -59,7 +62,7 @@ const Footer = () => {
               </h2>
             </div>
             <p>{status}</p>
-            <div className="flex" id='subscribe'>
+            <div className="flex" id="subscribe">
               <input
                 type="email"
                 className="px-4 py-2 border border-gray-400 rounded-l-md focus:outline-none"
@@ -78,9 +81,9 @@ const Footer = () => {
 
           <div className="flex flex-col justify-end">
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-blue-500">
-                Legal
-              </a>
+              <Link to="/about" className="hover:text-blue-500">
+                About Us
+              </Link>
               <a href="#" className="hover:text-blue-500">
                 FAQ
               </a>
@@ -97,10 +100,10 @@ const Footer = () => {
                 href="https://twitter.com/aiproff_ai"
                 className="text-gray-600 hover:text-blue-500"
               >
-                <FontAwesomeIcon
-                  icon={faTwitter}
-                  size="lg"
-                  style={{ color: '#292323' }}
+                <img
+                  src={twitter}
+                  alt="Twitter Icon"
+                  style={{ width: '24px', height: '24px' }}
                 />
               </a>
               <a href="#" className="text-gray-600 hover:text-blue-500">
@@ -127,7 +130,7 @@ const Footer = () => {
                   style={{ color: '#3d3d3d' }}
                 />
               </a>
-              <a href="#" className="text-gray-600 hover:text-blue-500">
+              <a href="https://www.youtube.com/channel/UCCI91MUrgIGZYhNNOdfzIzQ" target='blank' className="text-gray-600 hover:text-blue-500">
                 <FontAwesomeIcon
                   icon={faYoutube}
                   size="lg"
