@@ -8,6 +8,8 @@ import {
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
 
+import twitter from '../assets/x-twitter.svg';
+
 import Cookie from '../Cookie/Cookie';
 
 const Footer = () => {
@@ -59,7 +61,7 @@ const Footer = () => {
               </h2>
             </div>
             <p>{status}</p>
-            <div className="flex" id='subscribe'>
+            <div className="flex" id="subscribe">
               <input
                 type="email"
                 className="px-4 py-2 border border-gray-400 rounded-l-md focus:outline-none"
@@ -97,10 +99,10 @@ const Footer = () => {
                 href="https://twitter.com/aiproff_ai"
                 className="text-gray-600 hover:text-blue-500"
               >
-                <FontAwesomeIcon
-                  icon={faTwitter}
-                  size="lg"
-                  style={{ color: '#292323' }}
+                <img
+                  src={twitter}
+                  alt="Twitter Icon"
+                  style={{ width: '24px', height: '24px' }}
                 />
               </a>
               <a href="#" className="text-gray-600 hover:text-blue-500">
