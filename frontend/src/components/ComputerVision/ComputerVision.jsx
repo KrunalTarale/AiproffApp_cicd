@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
-import "./Nlp.css";
+import "./ComputerVision.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShare,
@@ -19,18 +19,17 @@ import {
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 
-import image1 from "../assets/Nlp_img/nlp_img1.jpg";
-import image2 from "../assets/Nlp_img/nlp_img2.jpg";
-import image3 from "../assets/Nlp_img/nlp_img3.jpg";
-import image4 from "../assets/Nlp_img/nlp_img4.jpg";
-import image5 from "../assets/Nlp_img/nlp_img5.jpg";
+import image1 from "../assets/ComputerVision/img1.jpg";
+import image2 from "../assets/ComputerVision/img2.jpg";
+import image3 from "../assets/ComputerVision/img3.jpg";
+import image4 from "../assets/ComputerVision/img4.jpg";
 import image7 from "../assets/Article1/logo.png";
 import card1 from "../assets/Article1/card1.png";
 
 import AudioPlayer from "../AudioPlayer/AudioPlayer";
 import Footer from "../Foot/Foot";
 
-const NLP = () => {
+const ComputerVision = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [progressdropdownVisible, setprogressDropdownVisible] = useState(false);
   const [scrollProgress, setScrollProgress] = React.useState(0);
@@ -116,10 +115,10 @@ const NLP = () => {
         },
         body: JSON.stringify({
           id: user._id,
-          article: "NLP",
-          title: "Introduction to NLP: When AI talks",
+          article: "Computer Vision",
+          title: "Introduction to Computer Vision: When Machines Start to See",
           date : "September 4, 2023",
-          url : "nlp"
+          url : "Computer_Vision"
         }),
       });
       const data = await res.json();
@@ -264,270 +263,165 @@ const NLP = () => {
                 <div>
                 <div>
                     <h1 className="text-4xl font-bold mb-6 ">
-                    Introduction to NLP: When AI talks
+                    Introduction to Computer Vision: When Machines Start to See
                     </h1>
                   </div>
                   <div>
                     <p className="">
-                      The field of Artificial intelligence is exciting. Under this discipline of Technology, machines can talk, machines can see, and machines can think. Computer Vision allows machines to see. Conversational AI systems allow machines to talk. Deep learning allows machines to mimic human thinking.
+                    "A computer deserves to be called intelligent if it could deceive a human into believing that it was human.” – Alan Turing. 
                     </p>
                   </div>
                   <div>
                     {" "}
                     <p>
                       {" "}
-                      Natural Language Processing (NLP) is an interdisciplinary field that combines linguistics, computer science, and artificial intelligence. It aims to enable computers to understand and communicate with humans using natural language. NLP involves developing algorithms and systems that can process and analyse large volumes of language data, and use it to interact with humans.
+                      The quest for intelligence has been going on for ages, and the question of ‘whether humans can think’ led us to many pursuits that culminated finally at a point where we made machines that can ‘mimic’ human thinking. This is Artificial Intelligence. 
                     </p>
                   </div>
                   <div>
                     {" "}
                     <p>
-                    Interestingly, NLP began in the 1940s after World War II when people recognized the importance of translating languages using a machine. They wanted a machine that could do this automatically, and thus aid in communicating effectively without physical and language barriers. The 1960s saw some early forms of NLP, which included SHRDLU - a natural language system that worked with restricted vocabularies.
+                    But it is its subfield computer vision that gave these machines the power to ‘see’ and comprehend their surroundings.
                     </p>
                   </div>
                   <div>
                     {" "}
                     <p>
-                    Then, after nearly 60 years, innovations under NLP saw its biggest boost yet – thanks to Transformers. 
+                    Computer vision is a subfield of artificial intelligence that focuses on making computers that can identify and understand images and videos.  The goal of any computer vision application is to replicate the human visual capabilities and try to make inferences from the visual information. 
                     </p>
                   </div>
                   <div>
                     {" "}
                     <p>
-                    In 2017, Google released its famous "Attention is All You Need" research paper, which introduced a new network architecture called the Transformer. The Transformer was a breakthrough in Natural Language Processing (NLP) because it relied only on attention mechanisms. This enabled the model to pay attention to different parts of the input sequence when generating an output.
+                    While the starting point of computer vision isn't clearly known, many believe that it started long back in the 1950s. In 1957, the first digital image scanner was invented by Russell Kirsch and his team at the US National Bureau of Standards. They used a rotating drum to scan images and convert them into digital signals. 
                     </p>
                   </div>
                   <div>
                     {" "}
                     <p>
-                    Moreover, Transformers did not use recurrence or convolutions – which are two different types of neural networks used in deep learning. This allowed these Transformer models to be superior in quality, as well as fast to train. 
+                    Since then, there has been an introduction and acceleration in deep learning techniques. This allowed computer vision to become a rising interest that is backing many modern innovations and solutions.
                     </p>
                   </div>
                   <div>
                     {" "}
                     <p>
-                    But how are NLP used in modern-day enterprises? What are the requirements to build your own NLP models? And finally, what are things we should keep in mind before using these NLP models in our organisations.?
+                    And that kicked off the field of computer vision that gained traction in the 2000s. The market of global computer vision was even valued at USD 11.7 billion in 2021 – and the interest in the field is only going up. The global Computer Vision market is expected to reach USD 21.3 billion by 2030 according to a report by Spherical Insight.
+                    </p>
+                  </div>
+                  <div>
+                    {" "}
+                    <p>
+                    But what is the state of computer vision currently? What are the promising insights about this field that you need to know?
                     </p>
                   </div>
                 </div>
 
-                <div className="space-y-8">
-                  <div>
-                    <h1 className="text-4xl font-bold  ">
-                    NLP Techniques and Methods: How does AI understand human languages and responses
-                    </h1>
-                  </div>
-                  <div>
-                    <img src={image2} alt="graph-economic-impact" />
-                    <p className="text-xs ">
-                    The interest in AI and NLP are growing at an exponential rate rate. Source: DZone Big Data
-                    </p>
-                  </div>
-                </div>
                 <div className="space-y-8 ">
+                <div>
+                    <h1 className="text-4xl font-bold extra_space">
+                    How is Computer vision achieved: Applications and Methods 
+                    </h1>
+                  </div>
+                  <div>
+                    <img src={image2} alt="" />
+                  </div>
                   <p>
-                  Natural Language Processing (NLP) uses a variety of techniques and methods to process and analyse human language. However, the whole process of building an NLP model can be classified as the culmination of three processes - computational linguistics, deep learning, and (lots of) statistics. 
+                  The earliest applications of computer vision were mostly devoted to creating algorithms that could identify plane shapes and edges in 2D pictures. This began in the 1960s when Larry Roberts described the process of deriving 3D information about solid objects from 2D photographs. Later in 1979, Dr. Kunihiko Fukushima proposed Neocognitron – a revolutionary hierarchical multilayered neural network that was capable of robust visual pattern recognition that could detect basic shapes in an image. 
                   </p>
                   <p>
-                  Computational linguistics refers to combining natural language and computational approaches to linguistic questions. Deep learning is a subfield of artificial intelligence that uses neural networks to learn from large amounts of data and make predictions based on these data. Statistics is also used in NLP to refine the training data, develop algorithms, and build models on top of these training data and algorithms. 
+                  This led to the development of an entirely new field of AI – Computer Vision.
                   </p>
                   <p>
-                  Over recent years, the field of NLP has seen a wide range of applications. Some prominent applications of NLP used by modern enterprises are listed below:
+                  It was, however, not until the 2000s when computer vision technology advanced rapidly. The point of rapid development in computer vision was in the year 2001 when the first real-time face recognition video application was developed.  This was achieved using the Viola-Jones object detection framework for faces, which was later launched as an application called AdaBoost – the first real-time frontal-view face detector. 
                   </p>
-                  <ul className="list-disc ml-5 mb-5">
-                    <li> <b> Chatbots and Virtual Assistants: </b> NLP is being used to develop chatbots and virtual assistants like ChatGPT and Amazon’s Alexa respectively. The understanding of NLP allows these applications to interact with customers, providing them with information and assistance in a natural way that is understandable by humans.</li>
-                    <li> <b> Speech Recognition: </b> NLP often deals with the tasks of converting spoken words into text. This technology is used in applications such as text-to-speech, automated call centres, and even voice-enabled verification systems.</li>
-                    <li> <b> Email Filtering: </b> With the power of NLP, one can teach a system to filter and categorise emails based on their content. Moreover, by reading the content of emails, these models can label the messages as well. This helps in prioritising emails and reducing the time spent on email management.</li>
-                    <li> <b> Language Translation: </b> This was the main foundational reason for which NLP came into existence. NLP translation software can be used to translate text from one language to another. This technology is used in applications such as Google Translate and other language translation software.</li>
-                    <li> <b> Proofreading: </b> NLP leverages its language skills to enhance grammar-checking software and autocorrect functions. This technology is used in applications such as Grammarly and other grammar-checking software, and modern-day autocorrect apps.</li>
-                  </ul>
-
                   <p>
-                  On the technical front, there are three steps taken to train an NLP:  data acquisition, data training, and data fine-tuning. The model takes a text input (raw data) and splits it into smaller units that the machine can understand. The model then extracts useful information from these units and applies machine learning algorithms to process it. The machine repeats this process with some adjustments to improve the output, and the machine learns progressively. 
-                  </p>
-
-                  <p>
-                  Techniques such as Tokenization, Stemming, Lemmatization and Sentiment Analysis are used to produce texts that are comprehensible to humans.
-                  </p>
-
-                  <p>
-                  Here are some of the well-known NLP models and frameworks: 
+                  Today, Computer Vision powered apps are used in wide range of applications. Content organisation, facial recognition, automatic checkout, spotting defects in manufacturing, detecting early signs of plant disease in agriculture, and many more. 
                   </p>
                 </div>
 
                 <div>
+
+                <div>
+                  </div>
                   <img src={image3} alt="graph-economic-impact" />
-                  {/* <p className="text-xs ">
-                    AI holds a promising future for economies of G20 countries.
-                    Source: Accenture & Frontier Economics
-                  </p> */}
-                </div>
-                <div>
-
-                  <ul className="list-disc ml-5 mb-5">
-                    <li> <b> TensorFlow: </b> One of the most popular open-source frameworks for NLP and machine learning  is TensorFlow, which was created by Google. TensorFlow is widely used for NLP tasks and has a large community of developers.</li>
-                    <li> <b> BERT: </b> BERT (Bidirectional Encoder Representations from Transformers) is a pre-trained NLP model which is also developed by Google. It can handle different tasks such as identifying the sentiment, answering questions, and named entity recognition.</li>
-                    <li> <b> GPT-3: </b> GPT-3 (Generative Pre-trained Transformer 3) is a popular transformer-based NLP model developed by OpenAI. It is capable of performing a wide range of NLP tasks such as generating code, doing simple maths calculations, and text generation.</li>
-                    <li> <b> NLTK: </b> NLTK (Natural Language Toolkit) is a popular open-source library for NLP in Python. It provides a wide range of tools for analysis and text processing. It supports various functionalities such as tokenization, tagging, and semantic analysis.</li>
-                    <li> <b> Word2Vec: </b> Word2Vec is a neural network-based model for word embedding developed by Google. It is widely used for text classification, sentiment analysis, and other NLP tasks</li>
-                  </ul>
-                </div>
-
-                <div>
-
-                  <div id="nlp-benefits">
-                    <h1 className="text-4xl font-bold  ">
-                      NLP Benefits and Shortcomings: Misinformations and Hallucinations
-                    </h1>
-                  </div>
-                  
                   <p className="mt-4 mb-5">
-                  Natural language processing (NLP) is a rapidly growing field in the AI industry. According to forecasts, the global NLP market size will reach 43.9 billion U.S. dollars by 2025. The reason for this growth is that NLP is becoming an essential tool for analytics and knowledge creation in various domains, as enterprises increasingly rely on big data to gain insights and value.
+                  The process of Computer Vision involves acquiring and processing data from visual media (images and videos ) and converting them into machine-understandable information. 
                   </p>
-
-                  <img src={image4} alt="" className="mb-5"/>
-
-                  <p className="mt-5 mb-5">
-                  The following four qualities of NLP make it a promising technology for enterprises- 
+                  <p className="mb-5">
+                  The basic functions of computer vision include the following:
                   </p>
 
                   <ul className="list-disc ml-5 mb-5">
-                    <li> <b> NLP can Perform large-scale analysis: </b> NLP systems can process and interpret large amounts of data in a very short time. They can discover patterns that are hard or tedious for humans to find, allowing employees to boost their productivity with NLP applications and collaborate on a common objective. NLP is already applied to various domains such as processing unstructured text data, social media analytics, customer support tickets, online reviews, and more.</li>
-                    <li> <b> Automate processes in real-time: </b> Machines can automate tasks in a fast way, and AI can automate tasks in a smart way. NLP tools would help machines to sort and carry out operations on information with very little or no human interaction. NLP tools, along with the supervision of humans, can do tasks in a quick, efficient, and accurate manner.</li>
-                    <li> <b> Searching and Querying huge corpus of unstructured data: </b> Generative AI is using NLP to make the task of querying image data searching easier. This is useful in institutions like healthcare and law, where NLP apps can quickly and efficiently access the records that date back to 20-30 years. Moreover, using NLP, you can not only retrieve information from a huge sea of unstructured data, but also run analysis over it to find key trends or patterns.</li>
-                    <li> <b> Real time analysis from a large pool of data: </b> NLP techniques can enable applications to analyse large amounts of data in real time. For instance, MeetGeek and Otter Ai are applications that can accurately capture and summarise the key points of a meeting with multiple participants. This can enhance the productivity of the meeting by saving time and effort that would otherwise be spent on manual transcription and summarization.</li>
+                    <li><b>Image Classification:</b> This involves categorising images into predefined classes or categories and assigning a label to the image based on its content. For example, an image classification model can recognize whether an image contains a cat, a dog, a car, or a person. </li>
+                    <li><b>Object Detection:</b> This involves identifying and localising objects within an image or video. It is used so that the computer can ‘see’ the environment (or the visual media) and locate instances of visual objects (say such as humans, animals, cars, or buildings</li>
+                    <li><b>Semantic Segmentation:</b> This involves dividing an image into multiple segments and assigning each segment a label based on its visual content. Usually, it is the task that assigns a class label to each pixel in an image. For example, in an image of a street scene, semantic segmentation can identify pixels that belong to cars, pedestrians, roads, buildings, etc.</li>
+                    <li><b>Instance Segmentation:</b> This involves identifying and localising the above instance of an object within an image or video. This is different from object detection, as in this the aim is to ‘differentiate’ various different segments of the visual content. For example, in an image of a crowd of people, instance segmentation would not only label each pixel as a person or background but also assign a unique ID to each identified person in the image – essentially differentiating each instance. </li>
                   </ul>
 
-                  <p className="mt-5">NLP, thus, has limitless potential for data-driven industries. This innovative technology can revolutionise any field that involves data and analysis.</p>
-
-                  <p>However, no matter how revolutionary this field of AI is, it is not devoid of flaws. Just like any other AI application, NLP apps also have inherent drawbacks – hallucination and misinformation.</p>
-
-                  <p>One of the ethical challenges of AI systems is that they can produce false or harmful information or stereotypes. This can occur when the AI model creates text that is not grounded in facts, but on its own prejudices, lack of real-world knowledge, or flaws of the data it was trained on. </p>
-
-                  <p>These are known as hallucinations, and they can have severe negative consequences for society, especially when the language model is confident in its output, which can deceive or misinform people on a large scale.</p>
-
-                  <p> <b> Misinformation,</b> which is caused as an aftermath of hallucination, can potentially perpetuate harmful stereotypes or misinformation, making AI systems ethically questionable. </p>
-
-                  <p> <b> Hallucinations</b> can potentially cause society widespread panic and misinformation on a global scale, as language models are confident in their answers, which can lead to serious consequences.</p>
-
-                  <p>Thus, improper implementation of NLP applications in your enterprise could lead to heavy costs if they behave erroneously. This apparent risk only increases in magnitude as the scale of the enterprise increases.</p>
+                  <p className="mb-5">
+                  In recent years, Modern Computer Vision applications have used deep learning algorithms to accurately identify and classify objects from visual media. Deep learning is used in all of the above methods, where an AI is used to process and fine-tune computer vision prediction.
+                  </p>
+                  <p className="mb-5">
+                  Thus, the infusion of AI in computer vision has made it more reliable and promising. Machine learning, which is the part of AI, has been at the forefront of enabling computer vision
+                  </p>
+                  <p className="mb-5">
+                  With the help of AI, many enterprises are using computer vision to leverage its potential, such as: helping retailers monitor inventory, preventing theft, personalising recommendations systems for customers, and more. Moreover, computer vision has helped healthcare providers diagnose diseases, monitor patients, and enhance telemedicine. 
+                  </p>
+                  <p className="mb-5">
+                  But how Reliable and Robust is Computer Vision? 
+                  </p>
                 </div>
 
                 <div className="space-y-8">
                   <div>
                     <h1 className="text-4xl font-bold  ">
-                    Solutions & AiProff Assistance
+                    What does the future hold: Predicting with Confidence with AiProff
                     </h1>
                   </div>
                   <div>
-                    {/* <img src={image5} alt="" /> */}
+                    <img src={image4} alt="" />
                   </div>
                 </div>
-                <div className="space-y-8">
+                <div className="space-y-4">
                   <p>
-                  The good news is, there are many ways through which you can overcome these shortcomings. 
+                  The interest in Computer Vision is growing every year, and it is projected to be around 24 Billion when in 2027. Source: verifiedmarketresearch.com
                   </p>
                   <p>
-                  First, you can improve the quality and diversity of your training data. This will help your model avoid hallucination and misinformation, as it will have more and varied data to learn from.
+                  The range of practical applications for computer vision technology makes it a central piece of innovation for many technology-based enterprises. However, amidst the growing numbers and growing interest, the rate of growth in this field hasn’t shown much positive results.
                   </p>
                   <p>
-                  Moreover, identifying and reducing the inherent biases in the data also makes these models less susceptible towards generating erroneous responses.
+                  Computer vision, though rapidly evolving, is facing several challenges that make it harder to implement and pose a barrier to continual growth and success. Here are some of the challenges you might have to face in computer vision:
                   </p>
-                  <p>
-                  Second, you can use better regularisation methods. Regularisation methods are methods that help prevent overfitting and other issues in the AI model that could lead to hallucinations.
-                  </p>
-                  <p>
-                  Additionally, employing adversarial training and reinforcement learning also improves the robustness of NLP models and reduces the risk of hallucinations.
-                  </p>
-                  <p>
-                  Third, you can apply more constraints on the model's output, such as limiting the length of responses or limiting the scope of facts. This will help your model generate more relevant and accurate responses.
-                  </p>
-                  <p>
-                  As we can see, AI can offer many benefits for your organisation. However, the correct implementation of AI in your organisation is important. 
-                  </p>
-                  <p>
-                  It may seem easy to use AI-based solutions for various tasks, but the reality is that NLP apps, like any other deep learning applications, are not always reliable. The reason for this is that the more data and complexity you have, the more unpredictable the deep learning architecture becomes.
-                  </p>
-                <div>
-                  <img src={image5}></img>
-                  <p className="text-xs ">
-                  The Diversity in AI and NLP, and interest in this field over the decade, has been growing. Source: kbvresearch.com
-                    </p>
-                </div>
 
-                <p>Right now, NLP is one of the most important and influential fields in the age of AI. However, NLP also faces many limitations and challenges that need to be addressed. </p>
-                <p>To make the best use of NLP, one needs to understand how the NLP model works and design the optimal way to implement it in the organisation. </p>
+                  <ul className="list-disc ml-5 mb-5">
+                    <li><b>Inadequate hardware:</b> Implementing computer vision requires powerful hardware. These include components such as processors, memory chips, graphics cards and cameras. These components affect the performance, accuracy, and efficiency of computer vision algorithms. Thus, inadequate hardware can limit the amount of data that can be processed, the complexity of the models that can be trained, and the speed of the inference that can be done.</li>
+                    <li><b>Poor data quality:</b> Collecting relevant and sufficient data can be challenging, and poor data quality can lead to a lack of training data for computer vision systems. Poor data quality can result from various factors, such as noise, blur, occlusion, distortion, illumination, or annotation errors. These factors can affect the performance and accuracy of computer vision models, leading to undesirable outcomes or failures. </li>
+                    <li><b>Weak planning for model development:</b> Developing computer vision models requires careful planning, and weak planning can lead to poor performance and inaccurate results. This means, that having a lack of clear objectives, requirements, and evaluation criteria could affect the computer vision models negatively – leading to poor performance, inefficiency, and wasted resources. To overcome this challenge, computer vision practitioners need to follow a systematic and rigorous process of problem definition, data collection, model selection, training, testing, and deployment.</li>
+                    <li><b>Lack of annotated data:</b> Gathering labelled data (or data in general) for computer vision systems can be challenging. Annotated data is data that has been labelled with some information that can help a computer vision model learn from it. However, annotating data is a time-consuming and expensive process that requires human experts or crowdsourcing platforms, and a lack of annotated data can lead to poor performance and inaccurate results.</li>
+                    <li><b>Lack of experienced professionals:</b> Humans are the weakest link in the security chain, but the necessary component in any architecture. The complexity and diversity of computer vision problems requires a combination of mathematical, algorithmic and domain-specific knowledge. Moreover, there has been a rapid pace of innovation and research in computer vision, which makes it hard for enterprises to keep up with the latest developments and best practices. Developing and implementing computer vision systems, thus, requires skilled professionals – a lack of which can have serious consequences for businesses if overlooked.</li>
+                  </ul>
+                  <p>However, this field of Computer vision is evolving rapidly.</p>
+                  <p>On the infrastructure front, faster, cheaper, and more efficient edge computing storage has given computer vision a boost and better performance. Improved hardware, on the other hand, has made the implementation of computer vision applications more efficient and cost-friendly. </p>
+                  <p>Moreover,  modern enterprises are making a shift towards data-centric computer vision, where the primary emphasis is laid on collecting and processing high-quality data – instead of using algorithms of unprocessed and unlabeled datasets. Furthermore, advancements in the field of Natural Language Processing have also boosted the capabilities of computer vision applications, as it is being integrated with computer vision to enable machines to understand and respond to human language</p>
+                  <p>The adoption of computer vision technology is increasing across various industries – including retail,  healthcare and self-driving cars.</p>
+                  <p>Overall, the trends and interests in computer vision technology will have a significant impact on businesses and organisations of tomorrow, in the coming years.</p>
+                  <p>But to really make a mark with your Computer Vision applications, one needs to understand how to correctly implement computer vision models in their enterprise. Optimisation of computer vision models, using reliable and robust AI, differs for each enterprise – depending on the scale and needs of the organisation.</p>
                 </div>
-
-                {/* <div>
-                  <h1 className="text-4xl font-bold ">
-                    How AI works, a brief overview
-                  </h1>
-                </div> */}
-                {/* <div className="space-y-8">
-                  <p>
-                    AI is not truly intelligent, but rather imitates human
-                    intelligence. This is because AI learns from a specific data
-                    set, and its knowledge is bounded by the data that it is
-                    exposed to during its training. They do not possess any
-                    intelligence of their own.
-                  </p>
-                  <p>
-                    Therefore, AI does not have reasoning abilities; it cannot
-                    distinguish between right and wrong, true and false, or
-                    biased and unbiased facts. For a machine, all information –
-                    regardless of its quality – is simply ‘data’ from the
-                    viewpoint of AI.
-                  </p>
-                  <p>
-                    This leads to another problem of AI – it can make biassed
-                    conclusions. This depends largely on the quality of the data
-                    that is used to train the AI system. If the data is skewed
-                    or incomplete, or if the algorithm that runs the AI system
-                    has some errors, it could lead to unwanted outcomes.
-                  </p>
-                  <p>
-                    These 'undesirable' outputs can have serious implications
-                    for enterprises that rely on large-scale data. For example,
-                    CNET, a well-known news outlet, experimented with AI to
-                    produce web articles for its website. However, to their
-                    disappointment, the news-outlet found errors in more than
-                    <a
-                      href=""
-                      className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 "
-                    >
-                      half of its AI-written stories
-                    </a>
-                    .
-                  </p>
-                  <p>
-                    This undesirable outcome is the result of bad AI deployment
-                    and insufficient consideration towards the risks associated
-                    with AI
-                  </p>
-                  <p>
-                    Therefore, it is essential for organisations to exercise
-                    caution when integrating AI into one's organisation or
-                    workflow.
-                  </p>
-                </div> */}
-                {/* <div>
-                  <h1 className="text-4xl font-bold">
-                    Predict with Confidence with AiProff
-                  </h1>
-                </div> */}
-                <div>
-                  <img src={image7} />
-                </div>
+                
                 <div className="space-y-8">
+                  <div>
+                    <img src={image7} alt="" />
+                  </div>
+                </div>
+                <div className="space-y-4">
                   <p>
-                  This is where AiProff can assist you. AiProff is a leading company in the AI domain that enables you to discover the endless opportunities that AI provides. We are a group of skilled experts with a wealth of knowledge and experience in machine learning, artificial intelligence, and data science. 
+                  This is where AiProff can assist you. We are a group of skilled experts with a wealth of knowledge and experience in machine learning, artificial intelligence, and data science. 
                   </p>
                   <p>
-                  We not only know how to build machine learning models but also how to detect and prevent vulnerabilities and biases that can lead to erroneous or harmful outcomes.
+                  Our expertise encompasses not only the development of machine learning models but also the identification and mitigation of vulnerabilities and biases that can result in erroneous or harmful outcomes. 
                   </p>
-                  <p>
-                  We excel at creating state-of-the-art solutions as Minimum Viable Products for Enterprises and Academic Institutions to lower the entry barrier – using cutting-edge AI/ML solutions – and expedite time to market.
+                  <p>  
+                    We provide state-of-the-art solutions as Minimum Viable Products for Enterprises and Academic Institutions, leveraging cutting-edge AI/ML solutions to lower the entry barrier and expedite time to market.
                   </p>
                   <p>
                   <b>Interested in making your revolutionary products/services using AI? Contact us: </b>
@@ -789,4 +683,4 @@ const NLP = () => {
   );
 };
 
-export default NLP;
+export default ComputerVision;

@@ -67,7 +67,7 @@ const Trailer = () => {
               </Link>
             </p>
 
-            <p className="text-gray-500 dark:text-gray-400 mt-4">
+            {/* <p className="text-gray-500 dark:text-gray-400 mt-4">
               <a
                 href="#"
                 className={`inline-flex items-center font-semibold text-black hover:text-blue-700 hover:no-underline ${
@@ -96,7 +96,7 @@ const Trailer = () => {
                   />
                 </svg>
               </a>
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
@@ -160,9 +160,9 @@ const Trailer = () => {
                 </Link>
               </p>
 
-              <p className="text-gray-500 dark:text-gray-400 mt-4">
-                <a
-                  href="#"
+              {/* <p className="text-gray-500 dark:text-gray-400 mt-4">
+                <Link
+                  to="/nlp/#nlp-benefits:~:text=NLP%20Benefits%20and%20Shortcomings%3A%20Misinformations%20and%20Hallucinationss"
                   className={`inline-flex items-center font-semibold text-black hover:text-blue-700 hover:no-underline ${
                     isHoveredtwo ? 'hovered' : ''
                   }`}
@@ -187,8 +187,8 @@ const Trailer = () => {
                       d="M1 5h12m0 0L9 1m4 4L9 9"
                     />
                   </svg>
-                </a>
-              </p>
+                </Link>
+              </p> */}
             </div>
           </div>
         </div>
@@ -253,7 +253,7 @@ const Trailer = () => {
               </Link>
             </p>
 
-            <p className="text-gray-500 dark:text-gray-400 mt-4">
+            {/* <p className="text-gray-500 dark:text-gray-400 mt-4">
               <a
                 href="#"
                 className={`inline-flex items-center font-semibold text-black hover:text-blue-700 hover:no-underline ${
@@ -281,7 +281,7 @@ const Trailer = () => {
                   />
                 </svg>
               </a>
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
