@@ -225,7 +225,7 @@ const Trailer = () => {
           <div className="mt-4">
             <p className="text-gray-500 dark:text-gray-400">
               <Link
-                to="/article"
+                to="/Realaible_And_RodbustAi"
                 className={`inline-flex items-center font-semibold text-black hover:text-blue-700 hover:no-underline ${
                   isHovered ? 'hovered' : ''
                 }`}

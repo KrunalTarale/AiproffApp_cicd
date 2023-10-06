@@ -32,7 +32,7 @@ const Footer = () => {
   const [status, setStatus] = useState('');
 
   const handleSubmit = async () => {
-    const res = await fetch('http://localhost:1338/subscribe_user', {
+    const res = await fetch('/subscribe_user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -130,7 +130,7 @@ const Footer = () => {
                   style={{ color: '#3d3d3d' }}
                 />
               </a>
-              <a href="#" className="text-gray-600 hover:text-blue-500">
+              <a href="https://www.youtube.com/channel/UCCI91MUrgIGZYhNNOdfzIzQ" target='blank' className="text-gray-600 hover:text-blue-500">
                 <FontAwesomeIcon
                   icon={faYoutube}
                   size="lg"
