@@ -28,6 +28,7 @@ import About from './components/About/About';
 import NLP from './components/NLP/Nlp';
 import RealaibleAndRodbustAi from './components/RelaibleAndRodbustAI/RelaibleAndRodbustAi';
 import ComputerVision from './components/ComputerVision/ComputerVision';
+import ForcastingUsingAi from './components/ForcastingUsingAi/ForcastingUsingAi';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -62,11 +63,9 @@ function App() {
         <Route path="/poc" element={<POC />} />
         <Route path="/updatepassword/:id" element={<Updatepassword />} />
         <Route path="/nlp" element={<NLP />} />
-        <Route
-          path="/Realaible_And_RodbustAi"
-          element={<RealaibleAndRodbustAi />}
-        />
+        <Route path="/Realaible_And_RodbustAi" element={<RealaibleAndRodbustAi />}/>
         <Route path="/Computer_Vision" element={<ComputerVision />} />
+        <Route path="/ForcastingUsingAi" element={<ForcastingUsingAi />} />
 
         <Route
           path="/"

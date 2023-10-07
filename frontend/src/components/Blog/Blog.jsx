@@ -4,17 +4,22 @@ import { useState } from 'react';
 import './blog.css';
 import { Link } from 'react-router-dom'
 
+// Blog Images
+import image1 from "../assets/Article1/diag2.png";
+import image2 from "../assets/rodbust_ai/img_1.jpg";
+import image3 from "../assets/Nlp_img/nlp_img1.jpg";
+import image4 from "../assets/ComputerVision/img1.jpg";
+import image5 from "../assets/forcastingAi/img3.jpg";
+
 const Blog = () => {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('');
+
 
   const articles = [
     {
       title: 'Applied AI: When AI solves real world problems ',
       subTitle:
         'Artificial Intelligence is a promising technological marvel that holds the key to the future. ',
-      imageUrl:
-        'https://miro.medium.com/v2/resize:fill:140:140/1*xGMde9uuUeHNIRShrkBRSA.jpeg',
+      imageUrl: image1,
       readTime: '3 min',
       date: 'Sept 23, 2023',
       publisher: 'Applied AI',
@@ -23,8 +28,7 @@ const Blog = () => {
     {
       title: 'Introduction: Reliable and Robust AI',
       subTitle: 'The field of Artificial intelligence (AI) is rapidly evolving.  ',
-      imageUrl:
-        'https://miro.medium.com/v2/resize:fill:140:140/0*_i9J5BLER8FSyMWb',
+      imageUrl:image2,
       readTime: '4 min',
       date: 'Sept 22, 2023',
       publisher: 'Applied AI',
@@ -34,25 +38,36 @@ const Blog = () => {
       title: 'Introduction to NLP: When AI talks',
       subTitle:
         'The field of Artificial intelligence is exciting. Under this discipline of Technology, machines can talk, ',
-      imageUrl:
-        'https://miro.medium.com/v2/resize:fill:140:140/1*kfpE5sUY6tXRFech4Ju2gg.png',
+      imageUrl:image3,
       readTime: '4 min',
       date: 'Sept 22, 2023',
       publisher: 'Applied AI',
-      link: '/npl'
+      link: '/nlp'
     },
     {
       title: 'Introduction to Computer Vision: When Machines Start to See',
       subTitle:
         '"A computer deserves to be called intelligent if it could deceive a human into believing that it was human.”',
-      imageUrl:
-        'https://miro.medium.com/v2/resize:fill:140:140/1*rEZoI7uE1NiTN6WV2bAbHw.png',
+      imageUrl:image4,
       readTime: '4 min',
       date: 'Sept 22, 2023',
       publisher: 'Applied AI',
       link: '/Computer_Vision'
     },
+    {
+      title: 'Introduction: When AI starts to predict Future',
+      subTitle:
+        '"Forecasting is the art and science of predicting future events or outcomes based on past and present data.”',
+      imageUrl:image5,
+      readTime: '4 min',
+      date: 'Sept 22, 2023',
+      publisher: 'Applied AI',
+      link: '/ForcastingUsingAi'
+    },
   ];
+
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('');
 
   const handleSubmit = async () => {
     const res = await fetch('/subscribe_user', {
@@ -137,6 +152,7 @@ const Blog = () => {
                   </h2>
                 </div>
 
+                    <p>{status}</p>
                 <div className="flex justify-center">
                   <div className="flex text-black">
                     <input
