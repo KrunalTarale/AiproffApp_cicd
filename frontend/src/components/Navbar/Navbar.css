@@ -6,9 +6,9 @@
   /* For mobile devices */
   @media (max-width: 480px) {
     .Logo {
-      height: 45px;
-      width: 200px;
-      margin-left: 5px;
+      height: 42px;
+      width: 430px;
+      margin-left: 0px;
     }
   }
   /* For tablets */
