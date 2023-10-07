@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import './App.css';
 
@@ -18,7 +20,7 @@ import UpdateSubscriber from './components/Updated_subscribed_user/Update_Subscr
 import Blog from './components/Blog/Blog';
 import Login from './components/Login/Login';
 import Signin from './components/Signin/Signin';
-import MVP from './components/MVP/Mvp'
+import MVP from './components/MVP/Mvp';
 import POC from './components/POC/Poc';
 import YourArticle from './components/YourArticle/YourArticle';
 import Updatepassword from './components/Updatepassword/Updatepassword';
@@ -26,9 +28,22 @@ import About from './components/About/About';
 import NLP from './components/NLP/Nlp';
 import RealaibleAndRodbustAi from './components/RelaibleAndRodbustAI/RelaibleAndRodbustAi';
 import ComputerVision from './components/ComputerVision/ComputerVision';
+import ForcastingUsingAi from './components/ForcastingUsingAi/ForcastingUsingAi';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/article" element={<Article />} />
         <Route path="/blog" element={<Blog />} />
@@ -48,9 +63,10 @@ function App() {
         <Route path="/poc" element={<POC />} />
         <Route path="/updatepassword/:id" element={<Updatepassword />} />
         <Route path="/nlp" element={<NLP />} />
-        <Route path="/Realaible_And_RodbustAi" element={<RealaibleAndRodbustAi />} />
+        <Route path="/Realaible_And_RodbustAi" element={<RealaibleAndRodbustAi />}/>
         <Route path="/Computer_Vision" element={<ComputerVision />} />
-        
+        <Route path="/ForcastingUsingAi" element={<ForcastingUsingAi />} />
+
         <Route
           path="/"
           element={

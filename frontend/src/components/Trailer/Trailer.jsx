@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import image1 from '../assets/trailer2.jpeg';
 import image2 from '../assets/trailer1.jpeg';
 import './Trailer.css';
@@ -22,7 +22,7 @@ const Trailer = () => {
         </div>
         <div className="lg:w-1/2 p-10 lg:space-y-10">
           <div>
-            <h1 className="text-3xl lg:text-5xl font-semibold leading-snug">
+            <h1 className="text-3xl lg:text-4xl font-semibold leading-snug">
               From Vision to Reality: How Applied AI is Reshaping Our World!
             </h1>
           </div>
@@ -110,9 +110,9 @@ const Trailer = () => {
           />
         </div>
         <div className="lg:w-1/2 p-10  flex justify-end">
-          <div className="lg:max-w-xl lg:space-y-10">
+          <div className="lg:max-w-3xl lg:space-y-10">
             <div>
-              <h1 className="text-3xl lg:text-5xl font-semibold leading-snug">
+              <h1 className="text-3xl lg:text-4xl font-semibold leading-snug">
                 From Words to Wisdom: Harnessing the Power of NLP for the Future
               </h1>
             </div>
@@ -206,7 +206,7 @@ const Trailer = () => {
         </div>
         <div className="lg:w-1/2 p-10 lg:space-y-10">
           <div>
-            <h1 className="text-3xl lg:text-5xl font-semibold leading-snug">
+            <h1 className="text-3xl lg:text-4xl font-semibold leading-snug">
               Navigating the AI Landscape: Building Reliable and Robust Systems
             </h1>
           </div>
