@@ -17,7 +17,7 @@ const Trending = () => {
     },
     {
       headline:
-        'PMorgan CEO Jamie Dimon predicts that AI will shorten the workweek to three and a half days',
+        'JPMorgan CEO Jamie Dimon predicts that AI will shorten the workweek to three and a half days',
       url: 'https://www.businessinsider.in/tech/news/jpmorgan-ceo-jamie-dimon-says-our-children-will-probably-only-work-3-5-days-a-week-thanks-to-ai/articleshow/104137497.cms',
     },
   ];
