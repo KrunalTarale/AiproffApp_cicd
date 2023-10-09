@@ -571,7 +571,7 @@ const Nlp = () => {
             <div className="max-w-3xl lg:max-w-6xl px-8 lg:px-4 md:mx-auto flex justify-center  md:justify-between items-center pt-4">
               <div>
                 <h1 className="hidden md:flex text-xl">
-                  Applied AI: When AI solves real world problems
+                Introduction to NLP: When AI talks
                 </h1>
               </div>
 
@@ -655,7 +655,7 @@ const Nlp = () => {
             <div className="max-w-3xl lg:max-w-6xl px-8 lg:px-4 md:mx-auto flex justify-center  md:justify-between items-center pt-4">
               <div>
                 <h1 className="hidden md:flex text-xl">
-                  Applied AI: When AI solves real world problems
+                Introduction to NLP: When AI talks
                 </h1>
               </div>
 

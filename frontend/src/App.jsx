@@ -32,7 +32,9 @@ import ComputerVision from './components/ComputerVision/ComputerVision';
 import ForcastingUsingAi from './components/ForcastingUsingAi/ForcastingUsingAi';
 
 import AIHealthcare from './components/HamburgerArticles/AIHealthcare';
-
+import AppliedAIinEductaion from './components/AppliedAIinEductaion/AppliedaiEducation';
+import AppliedaiAerospace from './components/AppliedAiinAerospace/AppliedaiAerospace';
+import Buy from './components/Buy/Buy';
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -58,7 +60,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/aihealth" element={<AIHealthcare />} />
-
+        <Route path="/aieducation" element={<AppliedAIinEductaion />} />
+        <Route path="/aiaerospace" element={<AppliedaiAerospace />} />
+        <Route path="/buy" element={<Buy />} />
         <Route
           path="/updatesubscribeduser/:id"
           element={<UpdateSubscriber />}
@@ -75,7 +79,6 @@ function App() {
         />
         <Route path="/Computer_Vision" element={<ComputerVision />} />
         <Route path="/ForcastingUsingAi" element={<ForcastingUsingAi />} />
-
         <Route
           path="/"
           element={

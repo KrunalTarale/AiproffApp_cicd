@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import logo from '../assets/logo.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from "react";
+import logo from "../assets/logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronRight,
   faChevronLeft,
-} from '@fortawesome/free-solid-svg-icons';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+} from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const NewHam = ({ closeModal }) => {
   const [activeMenu, setActiveMenu] = useState(0);
@@ -14,39 +14,44 @@ const NewHam = ({ closeModal }) => {
 
   const menus = [
     {
-      title: 'Applied AI',
+      title: "Applied AI",
       options: [
-        'Applied AI in Health Care',
-        'Applied AI in Education',
-        'Applied AI in Aerospace',
+        "Applied AI in Health Care",
+        "Applied AI in Education",
+        "Applied AI in Aerospace",
+      ],
+      url: [
+        "/aihealth",
+        "/aieducation",
+        "/aiaerospace"
+      ]
+    },
+    {
+      title: "Natural Language Processing",
+      options: ["NLP in Healthcare", "NLP in Education", "NLP in Finance"],
+    },
+    {
+      title: "Computer Vision",
+      options: [
+        "Computer Vision in Automotive",
+        "Computer Vision in Retail",
+        "Computer Vision in Manufacturing",
       ],
     },
     {
-      title: 'Natural Language Processing',
-      options: ['NLP in Healthcare', 'NLP in Education', 'NLP in Finance'],
-    },
-    {
-      title: 'Computer Vision',
+      title: "Forecasting Using AI",
       options: [
-        'Computer Vision in Automotive',
-        'Computer Vision in Retail',
-        'Computer Vision in Manufacturing',
-      ],
-    },
-    {
-      title: 'Forecasting Using AI',
-      options: [
-        'Forecasting Stock Prices',
-        'Demand Forecasting',
-        'Sales Prediction',
+        "Forecasting Stock Prices",
+        "Demand Forecasting",
+        "Sales Prediction",
       ],
     },
 
     {
-      title: 'Reliable and Robust AI',
-      options: ['Concept A', 'Concept B', 'Concept C'],
+      title: "Reliable and Robust AI",
+      options: ["Concept A", "Concept B", "Concept C"],
     },
-    { title: 'Data Science Glossary', options: ['Term 1', 'Term 2', 'Term 3'] },
+    { title: "Data Science Glossary", options: ["Term 1", "Term 2", "Term 3"] },
   ];
 
   return (
@@ -76,14 +81,14 @@ const NewHam = ({ closeModal }) => {
         <div className="md:flex NewHam ">
           <div
             className={`${
-              showOptions ? 'hidden' : ''
+              showOptions ? "hidden" : ""
             } md:block min-h-screen md:min-h-fit w-full md:w-1/2 lg:w-1/4 bg-gradient-to-r from-blue-950 to-blue-600 p-8 text-white font-semibold`}
           >
             {menus.map((menu, index) => (
               <div
                 key={index}
                 className={`cursor-pointer py-2 flex items-center text-xl mt-10 justify-between ${
-                  activeMenu === index ? 'text-blue-400' : 'text-white'
+                  activeMenu === index ? "text-blue-400" : "text-white"
                 } hover:text-blue-400`}
                 onClick={() => {
                   setActiveMenu(index);
@@ -94,7 +99,7 @@ const NewHam = ({ closeModal }) => {
                 <FontAwesomeIcon
                   icon={faChevronRight}
                   className={`${
-                    activeMenu === index ? 'text-blue-400' : ''
+                    activeMenu === index ? "text-blue-400" : ""
                   } ml-2`}
                 />
               </div>
@@ -102,7 +107,7 @@ const NewHam = ({ closeModal }) => {
           </div>
           <div
             className={`${
-              showOptions ? '' : 'hidden'
+              showOptions ? "" : "hidden"
             } min-h-screen md:min-h-fit md:block lg:w-3/4 md:w-1/2 bg-gray-100 md:p-10 p-8`}
           >
             {activeMenu !== null && (
@@ -119,15 +124,17 @@ const NewHam = ({ closeModal }) => {
 
                   {/* Add the horizontal line */}
                 </div>
-                <hr className="my-4 border-gray-400" />{' '}
+                <hr className="my-4 border-gray-400" />{" "}
                 <div>
                   <ul className="space-y-6">
                     {menus[activeMenu].options.map((option, index) => (
+                      
+                      // <Link to={"/aihealth"} key={index}></Link>
                       <li
                         key={index}
                         className="py-2 text-xl cursor-pointer hover:underline hover:text-blue-600"
                       >
-                        <Link to="/aihealth">{option}</Link>
+                        <Link to={{}}>{option}</Link>
                       </li>
                     ))}
                   </ul>
