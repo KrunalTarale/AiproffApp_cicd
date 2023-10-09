@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import logo from '../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -123,8 +123,11 @@ const NewHam = ({ closeModal }) => {
                 <div>
                   <ul className="space-y-6">
                     {menus[activeMenu].options.map((option, index) => (
-                      <li key={index} className="py-2 text-xl">
-                        {option}
+                      <li
+                        key={index}
+                        className="py-2 text-xl cursor-pointer hover:underline hover:text-blue-600"
+                      >
+                        <Link to="/aihealth">{option}</Link>
                       </li>
                     ))}
                   </ul>

@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import NewHam from './NewHam';
 import './NewHam.css';
 import { Link } from 'react-router-dom';
+
 import NavSearch from '../Search/NavSearch';
 
 function Navbar() {
