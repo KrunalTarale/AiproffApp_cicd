@@ -37,8 +37,8 @@ function SearchSite() {
   return (
     <div>
       <Navbar />
-      <div className="bg-neutral-200 py-10 space-y-4 flex flex-col justify-center items-center">
-        <div className="flex items-center bg-white p-2 px-4 w-full xl:w-3/4">
+      <div className="bg-neutral-200  py-10 space-y-4 flex flex-col justify-center items-center">
+        <div className=" flex items-center bg-white p-2 px-4 w-full xl:w-3/4">
           <input
             type="text"
             value={searchValue}
@@ -60,7 +60,7 @@ function SearchSite() {
         </div>
       </div>
       <div
-        className="p-6 search-content flex justify-center  overflow-y-auto"
+        className="container p-6 search-content flex justify-center  overflow-y-auto"
         style={{ height: '35rem' }}
       >
         <ul className="m-8 max-w-7xl w-full">
@@ -112,7 +112,7 @@ function SearchSite() {
           )}
         </ul>
       </div>
-      <div className="mt-6 pt-4 border-2">
+      <div className="mt-6 pt-4 ">
         <Foot />
       </div>
     </div>

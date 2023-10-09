@@ -25,10 +25,13 @@ import POC from './components/POC/Poc';
 import YourArticle from './components/YourArticle/YourArticle';
 import Updatepassword from './components/Updatepassword/Updatepassword';
 import About from './components/About/About';
+import Faq from './components/FAQ/FAQ';
 import NLP from './components/NLP/Nlp';
 import RealaibleAndRodbustAi from './components/RelaibleAndRodbustAI/RelaibleAndRodbustAi';
 import ComputerVision from './components/ComputerVision/ComputerVision';
 import ForcastingUsingAi from './components/ForcastingUsingAi/ForcastingUsingAi';
+
+import AIHealthcare from './components/HamburgerArticles/AIHealthcare';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -53,6 +56,9 @@ function App() {
         <Route path="/assessment" element={<Assessment />} />
         <Route path="/assessmentStarted/:id" element={<AssessmentStarted />} />
         <Route path="/about" element={<About />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/aihealth" element={<AIHealthcare />} />
+
         <Route
           path="/updatesubscribeduser/:id"
           element={<UpdateSubscriber />}
@@ -63,7 +69,10 @@ function App() {
         <Route path="/poc" element={<POC />} />
         <Route path="/updatepassword/:id" element={<Updatepassword />} />
         <Route path="/nlp" element={<NLP />} />
-        <Route path="/Realaible_And_RodbustAi" element={<RealaibleAndRodbustAi />}/>
+        <Route
+          path="/Realaible_And_RodbustAi"
+          element={<RealaibleAndRodbustAi />}
+        />
         <Route path="/Computer_Vision" element={<ComputerVision />} />
         <Route path="/ForcastingUsingAi" element={<ForcastingUsingAi />} />
 

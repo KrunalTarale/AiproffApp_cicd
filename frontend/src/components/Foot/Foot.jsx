@@ -84,9 +84,9 @@ const Footer = () => {
               <Link to="/about" className="hover:text-blue-500">
                 About Us
               </Link>
-              <a href="#" className="hover:text-blue-500">
+              <Link to="/faq" className="hover:text-blue-500">
                 FAQ
-              </a>
+              </Link>
               <a
                 href="#"
                 className="hover:text-blue-500"
@@ -106,7 +106,10 @@ const Footer = () => {
                   style={{ width: '24px', height: '24px' }}
                 />
               </a>
-              <a href="https://www.facebook.com/aiproffai/" className="text-gray-600 hover:text-blue-500">
+              <a
+                href="https://www.facebook.com/aiproffai/"
+                className="text-gray-600 hover:text-blue-500"
+              >
                 <FontAwesomeIcon
                   icon={faFacebook}
                   size="lg"
@@ -130,7 +133,11 @@ const Footer = () => {
                   style={{ color: '#3d3d3d' }}
                 />
               </a>
-              <a href="https://www.youtube.com/channel/UCCI91MUrgIGZYhNNOdfzIzQ" target='blank' className="text-gray-600 hover:text-blue-500">
+              <a
+                href="https://www.youtube.com/channel/UCCI91MUrgIGZYhNNOdfzIzQ"
+                target="blank"
+                className="text-gray-600 hover:text-blue-500"
+              >
                 <FontAwesomeIcon
                   icon={faYoutube}
                   size="lg"
