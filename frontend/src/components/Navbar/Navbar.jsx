@@ -167,12 +167,12 @@ function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/cat"
                       className="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white"
                     >
                       Corporate and Academic Training(CAT)
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

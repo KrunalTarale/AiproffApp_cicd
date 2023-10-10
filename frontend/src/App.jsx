@@ -22,6 +22,7 @@ import Login from './components/Login/Login';
 import Signin from './components/Signin/Signin';
 import MVP from './components/MVP/Mvp';
 import POC from './components/POC/Poc';
+import CAT from './components/CAT/Cat';
 import YourArticle from './components/YourArticle/YourArticle';
 import Updatepassword from './components/Updatepassword/Updatepassword';
 import About from './components/About/About';
@@ -96,6 +97,7 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/mvp" element={<MVP />} />
         <Route path="/poc" element={<POC />} />
+        <Route path="/cat" element={<CAT />} />
         <Route path="/updatepassword/:id" element={<Updatepassword />} />
         <Route path="/nlp" element={<NLP />} />
         <Route

@@ -8,6 +8,8 @@ import {
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 
+import logoimg from "../assets/AiProff X Profile.png"
+
 function formatTime(time) {
   const minutes = Math.floor(time / 60);
   const seconds = Math.floor(time % 60);
@@ -61,8 +63,8 @@ function AudioPlayer(props) {
       <div className="flex flex-col items-center mb-2 w-25 ">
         <div className="lg:w-32 lg:h-32  rounded-full overflow-hidden mb-3">
           <img
-            src="https://picsum.photos/500/600"
-            alt=""
+            src={logoimg}
+            alt="this is img"
             className="hidden lg:flex  object-cover w-full h-full"
           />
         </div>
