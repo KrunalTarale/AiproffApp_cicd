@@ -232,7 +232,7 @@ const ComputerVision = () => {
                 </div>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Synthetic+data+for+enterprises_ebook_2023_August.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/cv.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -443,7 +443,7 @@ const ComputerVision = () => {
 
                 <div className="flex flex-row text-blue-600 hover:underline underline-offset-4 mb-4 space-x-2">
                   <Link
-                    to="https://ingestionpeekai.s3.amazonaws.com/Synthetic+data+for+enterprises_ebook_2023_August.pdf"
+                    to="https://ingestionpeekai.s3.amazonaws.com/cv.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="space-x-4"
@@ -465,7 +465,7 @@ const ComputerVision = () => {
             <div className="max-w-3xl lg:max-w-6xl px-8 lg:px-4 md:mx-auto flex justify-center  md:justify-between items-center pt-4">
               <div>
                 <h1 className="hidden md:flex text-xl">
-                  Applied AI: When AI solves real world problems
+                Introduction to Computer Vision: When Machines Start to See
                 </h1>
               </div>
 
@@ -515,7 +515,7 @@ const ComputerVision = () => {
                 </div>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Synthetic+data+for+enterprises_ebook_2023_August.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/cv.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -549,7 +549,7 @@ const ComputerVision = () => {
             <div className="max-w-3xl lg:max-w-6xl px-8 lg:px-4 md:mx-auto flex justify-center  md:justify-between items-center pt-4">
               <div>
                 <h1 className="hidden md:flex text-xl">
-                  Applied AI: When AI solves real world problems
+                Introduction to Computer Vision: When Machines Start to See
                 </h1>
               </div>
 
@@ -598,7 +598,7 @@ const ComputerVision = () => {
                 </div>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Synthetic+data+for+enterprises_ebook_2023_August.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/cv.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import NewHam from './NewHam';
 import './NewHam.css';
 import { Link } from 'react-router-dom';
+
 import NavSearch from '../Search/NavSearch';
 
 function Navbar() {
@@ -220,12 +221,12 @@ function Navbar() {
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to={"/buy"}
                       className="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white"
                     >
                       Buy
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

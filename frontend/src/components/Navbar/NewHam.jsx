@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import logo from '../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -16,37 +16,51 @@ const NewHam = ({ closeModal }) => {
     {
       title: 'Applied AI',
       options: [
-        'Applied AI in Health Care',
-        'Applied AI in Education',
-        'Applied AI in Aerospace',
+        { name: 'Applied AI in Health Care', url: '/aihealth' },
+        { name: 'Applied AI in Education', url: '/aieducation' },
+        { name: 'Applied AI in Aerospace', url: '/aiaerospace' },
       ],
     },
     {
       title: 'Natural Language Processing',
-      options: ['NLP in Healthcare', 'NLP in Education', 'NLP in Finance'],
+      options: [
+        { name: 'NLP in Healthcare', url: '/nlpinhealthcare' },
+        { name: 'NLP in Education', url: '/nlpeducation' },
+        { name: 'NLP in Finance', url: '/nlpfinance' },
+      ],
     },
     {
       title: 'Computer Vision',
       options: [
-        'Computer Vision in Automotive',
-        'Computer Vision in Retail',
-        'Computer Vision in Manufacturing',
+        { name: 'Computer Vision in Automotive', url: '/cvautomotive' },
+        { name: 'Computer Vision in Retail', url: '/cvretail' },
+        { name: 'Computer Vision in Manufacturing', url: '/cvmanufacturing' },
       ],
     },
     {
       title: 'Forecasting Using AI',
       options: [
-        'Forecasting Stock Prices',
-        'Demand Forecasting',
-        'Sales Prediction',
+        { name: 'Forecasting Stock Prices', url: '/forecastingstocks' },
+        { name: 'Demand Forecasting', url: '/demandforecasting' },
+        { name: 'Sales Prediction', url: '/salesprediction' },
       ],
     },
-
     {
       title: 'Reliable and Robust AI',
-      options: ['Concept A', 'Concept B', 'Concept C'],
+      options: [
+        { name: 'Concept A', url: '/conceptA' },
+        { name: 'Concept B', url: '/conceptB' },
+        { name: 'Concept C', url: '/conceptC' },
+      ],
     },
-    { title: 'Data Science Glossary', options: ['Term 1', 'Term 2', 'Term 3'] },
+    {
+      title: 'Data Science Glossary',
+      options: [
+        { name: 'Term 1', url: '/term1' },
+        { name: 'Term 2', url: '/term2' },
+        { name: 'Term 3', url: '/term3' },
+      ],
+    },
   ];
 
   return (
@@ -123,8 +137,11 @@ const NewHam = ({ closeModal }) => {
                 <div>
                   <ul className="space-y-6">
                     {menus[activeMenu].options.map((option, index) => (
-                      <li key={index} className="py-2 text-xl">
-                        {option}
+                      <li
+                        key={index}
+                        className="py-2 text-xl cursor-pointer hover:underline hover:text-blue-600"
+                      >
+                        <Link to={option.url}>{option.name}</Link>
                       </li>
                     ))}
                   </ul>
