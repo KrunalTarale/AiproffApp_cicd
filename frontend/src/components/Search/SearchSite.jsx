@@ -28,10 +28,13 @@ function SearchSite() {
 
   if (searchValue) {
     filteredContent = SearchContent.filter((item) =>
+      item.component.toLowerCase().includes(searchValue.toLowerCase()) ||
+      item.heading.toLowerCase().includes(searchValue.toLowerCase()) ||
       item.description.toLowerCase().includes(searchValue.toLowerCase())
     );
   }
 
+  
   const isNoResults = filteredContent.length === 0 && searchValue;
 
   return (
@@ -79,7 +82,7 @@ function SearchSite() {
               <li className="border-b-2 py-8" key={index}>
                 <div className="space-y-4">
                   <div>
-                    <Link to="/article">
+                    <Link to={item.url}>
                       <h1 className="text-2xl font-semibold hover:text-blue-600 hover:underline">
                         {item.heading}
                       </h1>
