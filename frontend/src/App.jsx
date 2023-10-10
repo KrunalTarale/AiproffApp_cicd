@@ -46,6 +46,7 @@ import CVManufacturing from './components/HamburgerArticles/CVManufacturing';
 import ForecastingStockPrices from './components/HamburgerArticles/ForecastingStockPrices';
 import DemandForecasting from './components/HamburgerArticles/DemandForecasting';
 import SalesPrediction from './components/HamburgerArticles/SalesPrediction';
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy'
 
 import Buy from './components/Buy/Buy';
 function ScrollToTop() {
@@ -106,6 +107,7 @@ function App() {
         />
         <Route path="/Computer_Vision" element={<ComputerVision />} />
         <Route path="/ForcastingUsingAi" element={<ForcastingUsingAi />} />
+        <Route path="/Privacypolicy" element={<PrivacyPolicy />} />
         <Route
           path="/"
           element={

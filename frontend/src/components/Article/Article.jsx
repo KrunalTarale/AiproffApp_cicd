@@ -138,30 +138,6 @@ const Article = () => {
     }
   };
 
-    // links
-    function shareOnLinkedIn() {
-      var url = 'https://www.aiproff.com/article';
-      var linkedinUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url);
-      window.open(linkedinUrl, '_blank');
-    }
-    
-    function shareOnTwitter() {
-      // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
-      var url = 'https://www.aiproff.com/article';
-      window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url), '_blank');
-    }
-    
-    function shareOnFacebook() {
-      // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
-      var url = 'https://www.aiproff.com/article';
-      window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
-    }
-    
-    function shareByEmail() {
-      // Replace 'your-email-share-url' with the URL you want to share via email.
-      var url = 'https://www.aiproff.com/article';
-      window.location.href = 'mailto:?body=' + encodeURIComponent(url);
-    }
 
   return (
     <>
