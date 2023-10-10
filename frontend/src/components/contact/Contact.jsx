@@ -130,7 +130,11 @@ const getAlltopics = (topic) => {
     <>
       <Navbar />
       <div className="contact_form mb-5">
-
+      <div className="flex items-center justify-center">
+  <h1 className="p-8 heading">
+    Contact Us
+  </h1>
+</div>
         <div className="Form_page">
           <htmlForm className="w-full max-w-lg">
             {/* First section */}

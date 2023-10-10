@@ -171,6 +171,9 @@ const ForcastingUsingAi = () => {
           )}
 
           <div className="mx-auto lg:max-w-7xl flex flex-col justify-center p-16 article_padding">
+          <h1 className="text-4xl font-bold mb-8 upper_heading">
+                      Introduction: When AI starts to predict Future
+          </h1>
             <div className="md:flex md:justify-between md:w-4/5 space-y-8 md:space-y-0">
               <div className="underline underline-offset-4">
                 <Link to="/">By AiProff</Link>
@@ -264,19 +267,19 @@ const ForcastingUsingAi = () => {
               <div className="flex-grow md:w-4/6 space-y-20 justify-center">
                 <div>
                   <div>
-                    <h1 className="text-4xl font-bold mb-6 ">
+                    <h1 className="text-4xl font-bold mb-6 lower_heading">
                       Introduction: When AI starts to predict Future
                     </h1>
                   </div>
                   <div>
-                    <p className="">
+                    <p className="mb-5">
                       Forecasting is the art and science of predicting future
                       events or outcomes based on past and present data.
                     </p>
                   </div>
                   <div>
                     {' '}
-                    <p>
+                    <p className="mb-5">
                       {' '}
                       It is a crucial skill for many domains, such as business,
                       economics, weather, sports, and health. Forecasting is the
@@ -289,7 +292,7 @@ const ForcastingUsingAi = () => {
                   </div>
                   <div>
                     {' '}
-                    <p>
+                    <p className="mb-5">
                       However, forecasting can also be challenging, complex, and
                       uncertain, especially if you are dealing with large and
                       dynamic data sets. That's where the power of artificial
@@ -298,7 +301,7 @@ const ForcastingUsingAi = () => {
                   </div>
                   <div>
                     {' '}
-                    <p>
+                    <p className="mb-5">
                       AI is the branch of computer science that aims to create
                       machines or systems that can perform and automate tasks
                       that normally require human intelligence – such as
@@ -310,7 +313,7 @@ const ForcastingUsingAi = () => {
                   </div>
                   <div>
                     {' '}
-                    <p>
+                    <p className="mb-5">
                       AI is transforming the way we forecast and plan for the
                       future. By using machine learning algorithms, AI can
                       analyse large amounts of data and identify patterns,
@@ -322,7 +325,7 @@ const ForcastingUsingAi = () => {
                   </div>
                   <div>
                     {' '}
-                    <p>
+                    <p className="mb-5">
                       For example, AI can help investors predict the movements
                       of the stock market and optimise their portfolio
                       strategies. AI can also help e-commerce businesses
@@ -337,7 +340,7 @@ const ForcastingUsingAi = () => {
                   </div>
                   <div>
                     {' '}
-                    <p>
+                    <p className="mb-5">
                       Forecasting is important for various domains such as
                       business, finance, weather, etc. because it helps them
                       plan ahead, optimise resources, reduce risks, and seize
@@ -410,7 +413,7 @@ const ForcastingUsingAi = () => {
                 <div>
                   <img src={image2} alt="graph-economic-impact" />
                   <p className="mt-4 mb-5">
-                    Interestingly, according to an article by TechJury, AI is
+                    Interestingly, according to an article by <a href="https://techjury.net/blog/ai-statistics/" target="_blank" className='links'> TechJury </a>, AI is
                     becoming more and more prevalent in business analytics. 35%
                     of companies are using AI in some way, while 42% of
                     companies are investigating how to implement AI in the
@@ -423,7 +426,7 @@ const ForcastingUsingAi = () => {
                   </p>
 
                   <ul className="list-disc ml-5 mb-5">
-                    <li>
+                    <li className="mb-3">
                       <b>Efficient use of Time series data:</b> AI tools use the
                       time series data much more efficiently to estimate future
                       developments and forecast trends. For example, the AI tool
@@ -432,7 +435,7 @@ const ForcastingUsingAi = () => {
                       quarter, or an AI tool can use the time series data of a
                       patient's blood pressure to detect any anomalies or risks.{' '}
                     </li>
-                    <li>
+                    <li className="mb-3">
                       <b>Autonomous and continuous reconfiguration:</b> AI-based
                       forecasting solutions are fully autonomous, continuously
                       reconfiguring projections as patterns change to better
@@ -443,7 +446,7 @@ const ForcastingUsingAi = () => {
                       Automation and continuous reconfiguration help the AI to
                       find optimised and efficient solutions.{' '}
                     </li>
-                    <li>
+                    <li className="mb-3">
                       <b>Faster and better decision-making:</b> employing
                       machines with AI capabilities to conduct forecasts using
                       machine learning algorithms would streamline and optimise
@@ -451,7 +454,7 @@ const ForcastingUsingAi = () => {
                       to plan and execute forecasting operations faster, thereby
                       having more time to make better decisions.
                     </li>
-                    <li>
+                    <li className="mb-3">
                       <b>Improved forecast accuracy:</b> A human forecaster can
                       bring time series data, and AI can further enhance the
                       forecast using forecasting algorithms. Using AI can be
@@ -459,7 +462,7 @@ const ForcastingUsingAi = () => {
                       accurate picture of demand. This improves forecast results
                       compared to traditional forecasting methods.
                     </li>
-                    <li>
+                    <li className="mb-3">
                       <b>Real-time data and pattern identification:</b> By far
                       the biggest advantage of using AI-powered forecasting.
                       AI-driven forecasting allows forecasters to do real-time
@@ -496,7 +499,7 @@ const ForcastingUsingAi = () => {
                     increasing. Interestingly, AI forecasts are employed not
                     only on the analyst front but also in the field of product
                     management, decision making and data Augmentation. Source:
-                    Peak.ai
+                    <a href="https://peak.ai/hub/blog/ai-demand-forecasting/" target="_blank" className='links'> Peak.ai </a>
                   </p>
                   <p>
                     Enterprises favour AI-enabled forecasting due to the
@@ -504,19 +507,19 @@ const ForcastingUsingAi = () => {
                   </p>
 
                   <ul className="list-disc ml-5 mb-5">
-                    <li>
+                    <li className="mb-3">
                       <b>Accuracy:</b> AI forecasting can achieve higher
                       accuracy than humans. This is because AI can learn from
                       large amounts of data and find complex patterns and
                       relationships efficiently.
                     </li>
-                    <li>
+                    <li className="mb-3">
                       <b>Speed:</b> AI forecasting can process data and generate
                       predictions faster than human analysts – which not only
                       saves time but also valuable resources to conduct the
                       forecast.
                     </li>
-                    <li>
+                    <li className="mb-3">
                       <b>Scalability:</b> AI forecasting can handle large-scale
                       and high-dimensional data that can work at par with expert
                       human analysts. Moreover, AI forecasts can provide
@@ -524,7 +527,7 @@ const ForcastingUsingAi = () => {
                       phenomena – such as market trends, customer behaviour, or
                       climate change.
                     </li>
-                    <li>
+                    <li className="mb-3">
                       <b>Adaptability:</b> AI forecasting can adapt to changing
                       conditions, account for additional data, and update and
                       improve its models automatically to the needs and
@@ -542,14 +545,14 @@ const ForcastingUsingAi = () => {
                   <p>AI forecasting is challenging due to following reasons:</p>
 
                   <ul className="list-disc ml-5 mb-5">
-                    <li>
+                    <li className="mb-3">
                       <b>Hallucinations:</b> Hallucinations are a phenomenon
                       where the AI model makes up its own outputs that are not
                       consistent with the input data or the expected patterns.
                       This can lead to inaccurate or misleading predictions,
                       which can affect future forecasting heavily.
                     </li>
-                    <li>
+                    <li className="mb-3">
                       <b>Data quality:</b> AI forecasting depends on the quality
                       and availability of data. The better the quality, the
                       better the prediction. Poor or incomplete data can lead to
@@ -557,7 +560,7 @@ const ForcastingUsingAi = () => {
                       challenge due to data privacy and security issues which
                       can limit the access and use of data.
                     </li>
-                    <li>
+                    <li className="mb-3">
                       <b>Infrastructure and Complexity:</b> AI forecasting, just
                       like any other field of AI, can be difficult to understand
                       and explain. They are dependent on the AI model and the
@@ -568,7 +571,7 @@ const ForcastingUsingAi = () => {
                       architecture, this could cost the enterprise both
                       resources and time.
                     </li>
-                    <li>
+                    <li className="mb-3">
                       <b>Human Bias:</b> Having human bias in AI forecasting can
                       have negative impacts on fairness, diversity, and
                       inclusion of the predictions. This is usually overlooked
