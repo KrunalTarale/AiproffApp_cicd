@@ -18,7 +18,7 @@ const Touch = () => {
         
         <div className="flex items-center justify-center text-center">
           <FontAwesomeIcon icon={faEnvelope} size="lg" />
-          <p className="ml-2">Email us: support@aiproff.ai</p>
+          <p className="ml-2">Email us: <a href="mailto:support@aiproff.ai" className="ml-2"> support@aiproff.ai</a></p>
         </div>
       
       </div>

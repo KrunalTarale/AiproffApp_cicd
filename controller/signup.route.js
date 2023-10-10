@@ -1,5 +1,6 @@
 const rotue = require("express").Router();
 const User = require("../module/user.module");
+const Subscriber = require('../module/subscribe.module');
 
 const nodemailer = require("nodemailer");
 const Mailgen = require("mailgen");
@@ -38,6 +39,20 @@ rotue.post("/user_signup", async (req, res) => {
         res.status(201).json({
           message: "User created successfully",
         });
+
+        // Add the user in subscribe collection
+
+        const data = await Subscriber.find({ email: user.email });
+
+        if (data.length === 0) {
+            const createdSubscriber = new Subscriber({
+                email: user.email,
+                status: "verified",
+            });
+            createdSubscriber.save();
+        }
+
+        // Add the user in subscribe collection logic ends hear
 
         // Mailer function after user created
 
