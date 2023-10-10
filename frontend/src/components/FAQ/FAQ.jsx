@@ -24,9 +24,11 @@ const Faq = () => {
   };
 
   return (
-    <div>
-      <Navbar />
-      <div className="lg:container mx-auto p-20">
+    <div className="flex flex-col ">
+      <div>
+        <Navbar />
+      </div>
+      <div className="min-h-[45rem] lg:min-h-[50rem] mx-auto p-20">
         <h1 className="text-4xl md:text-5xl  lg:text-6xl font-semibold mb-10 lg:mb-20 md:leading-normal">
           Frequently Asked Questions:
         </h1>
@@ -135,7 +137,9 @@ const Faq = () => {
           )}
         </FaqItem>
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };
