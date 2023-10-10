@@ -1,8 +1,8 @@
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
-import './AppliedaiEducation.css';
+import './HamburgerArticle.css';
 
-function AppliedaiEducation() {
+function CVRetail() {
   return (
     <div>
       <Navbar />
@@ -10,16 +10,21 @@ function AppliedaiEducation() {
         <div className="flex w-full xl:h-[35rem] bg-gradient-to-r from-blue-950 to-blue-500  ">
           <div className="max-3xl p-20 max-w-5xl ">
             <h1 className="text-white xl:text-6xl lg:text-5xl md:text-4xl text-3xl leading-normal md:leading-normal lg:leading-normal font-semibold xl:leading-normal ">
-            Empowering Education with Applied Artificial Intelligence
+              Revolutionising Retail with Computer Vision Technology
             </h1>
             <p className="text-white py-4 max-w-2xl text-xl">
-            From intelligent tutoring systems to AI-powered assessment tools, AI is revolutionising how students learn and how educators teach. 
+              From cashier-less stores to personalised product recommendations,
+              Computer Vision is redefining the way we shop.
             </p>
           </div>
         </div>
         <div className="flex p-20 justify-center  item-center max-w-5xl mx-auto text-xl font leading-relaxed">
           <p>
-          The world of education is undergoing a profound transformation thanks to the integration of applied artificial intelligence (AI). Recent developments in AI technology have opened up exciting possibilities for enhancing learning, personalising education, and optimising administrative processes.
+            The retail industry is experiencing a transformational shift through
+            the integration of Computer Vision technology. Recent advancements
+            in Computer Vision are reshaping how retailers engage with
+            customers, optimise operations, and enhance the overall shopping
+            experience.
           </p>
         </div>
       </div>
@@ -28,4 +33,4 @@ function AppliedaiEducation() {
   );
 }
 
-export default AppliedaiEducation;
+export default CVRetail;
