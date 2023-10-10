@@ -170,6 +170,9 @@ const Nlp = () => {
       )}
 
           <div className="mx-auto lg:max-w-7xl flex flex-col justify-center p-16 article_padding">
+          <h1 className="text-4xl font-bold mb-6 upper_heading">
+                    Introduction to NLP: When AI talks
+                    </h1>
             <div className="md:flex md:justify-between md:w-4/5 space-y-8 md:space-y-0">
               <div className="underline underline-offset-4">
                 <Link to="/">By AiProff</Link>
@@ -263,49 +266,49 @@ const Nlp = () => {
               <div className="flex-grow md:w-4/6 space-y-20 justify-center">
                 <div>
                 <div>
-                    <h1 className="text-4xl font-bold mb-6 ">
+                    <h1 className="text-4xl font-bold mb-6 lower_heading">
                     Introduction to NLP: When AI talks
                     </h1>
                   </div>
                   <div>
-                    <p className="">
+                    <p className="mb-5">
                       The field of Artificial intelligence is exciting. Under this discipline of Technology, machines can talk, machines can see, and machines can think. Computer Vision allows machines to see. Conversational AI systems allow machines to talk. Deep learning allows machines to mimic human thinking.
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-5">
                       {" "}
                       Natural Language Processing (NLP) is an interdisciplinary field that combines linguistics, computer science, and artificial intelligence. It aims to enable computers to understand and communicate with humans using natural language. NLP involves developing algorithms and systems that can process and analyse large volumes of language data, and use it to interact with humans.
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-5">
                     Interestingly, NLP began in the 1940s after World War II when people recognized the importance of translating languages using a machine. They wanted a machine that could do this automatically, and thus aid in communicating effectively without physical and language barriers. The 1960s saw some early forms of NLP, which included SHRDLU - a natural language system that worked with restricted vocabularies.
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-5">
                     Then, after nearly 60 years, innovations under NLP saw its biggest boost yet – thanks to Transformers. 
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-5">
                     In 2017, Google released its famous "Attention is All You Need" research paper, which introduced a new network architecture called the Transformer. The Transformer was a breakthrough in Natural Language Processing (NLP) because it relied only on attention mechanisms. This enabled the model to pay attention to different parts of the input sequence when generating an output.
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-5">
                     Moreover, Transformers did not use recurrence or convolutions – which are two different types of neural networks used in deep learning. This allowed these Transformer models to be superior in quality, as well as fast to train. 
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-5">
                     But how are NLP used in modern-day enterprises? What are the requirements to build your own NLP models? And finally, what are things we should keep in mind before using these NLP models in our organisations.?
                     </p>
                   </div>
@@ -320,7 +323,7 @@ const Nlp = () => {
                   <div>
                     <img src={image2} alt="graph-economic-impact" />
                     <p className="text-xs ">
-                    The interest in AI and NLP are growing at an exponential rate rate. Source: DZone Big Data
+                    The interest in AI and NLP are growing at an exponential rate rate. Source: <a href="https://dzone.com/articles/natural-language-processing-projects-amp-startups" target="_blank" className="links">DZone Big Data</a>
                     </p>
                   </div>
                 </div>
@@ -335,11 +338,11 @@ const Nlp = () => {
                   Over recent years, the field of NLP has seen a wide range of applications. Some prominent applications of NLP used by modern enterprises are listed below:
                   </p>
                   <ul className="list-disc ml-5 mb-5">
-                    <li> <b> Chatbots and Virtual Assistants: </b> NLP is being used to develop chatbots and virtual assistants like ChatGPT and Amazon’s Alexa respectively. The understanding of NLP allows these applications to interact with customers, providing them with information and assistance in a natural way that is understandable by humans.</li>
-                    <li> <b> Speech Recognition: </b> NLP often deals with the tasks of converting spoken words into text. This technology is used in applications such as text-to-speech, automated call centres, and even voice-enabled verification systems.</li>
-                    <li> <b> Email Filtering: </b> With the power of NLP, one can teach a system to filter and categorise emails based on their content. Moreover, by reading the content of emails, these models can label the messages as well. This helps in prioritising emails and reducing the time spent on email management.</li>
-                    <li> <b> Language Translation: </b> This was the main foundational reason for which NLP came into existence. NLP translation software can be used to translate text from one language to another. This technology is used in applications such as Google Translate and other language translation software.</li>
-                    <li> <b> Proofreading: </b> NLP leverages its language skills to enhance grammar-checking software and autocorrect functions. This technology is used in applications such as Grammarly and other grammar-checking software, and modern-day autocorrect apps.</li>
+                    <li className="mb-3"> <b> Chatbots and Virtual Assistants: </b> NLP is being used to develop chatbots and virtual assistants like ChatGPT and Amazon’s Alexa respectively. The understanding of NLP allows these applications to interact with customers, providing them with information and assistance in a natural way that is understandable by humans.</li>
+                    <li className="mb-3"> <b> Speech Recognition: </b> NLP often deals with the tasks of converting spoken words into text. This technology is used in applications such as text-to-speech, automated call centres, and even voice-enabled verification systems.</li>
+                    <li className="mb-3"> <b> Email Filtering: </b> With the power of NLP, one can teach a system to filter and categorise emails based on their content. Moreover, by reading the content of emails, these models can label the messages as well. This helps in prioritising emails and reducing the time spent on email management.</li>
+                    <li className="mb-3"> <b> Language Translation: </b> This was the main foundational reason for which NLP came into existence. NLP translation software can be used to translate text from one language to another. This technology is used in applications such as Google Translate and other language translation software.</li>
+                    <li className="mb-3"> <b> Proofreading: </b> NLP leverages its language skills to enhance grammar-checking software and autocorrect functions. This technology is used in applications such as Grammarly and other grammar-checking software, and modern-day autocorrect apps.</li>
                   </ul>
 
                   <p>
@@ -365,11 +368,11 @@ const Nlp = () => {
                 <div>
 
                   <ul className="list-disc ml-5 mb-5">
-                    <li> <b> TensorFlow: </b> One of the most popular open-source frameworks for NLP and machine learning  is TensorFlow, which was created by Google. TensorFlow is widely used for NLP tasks and has a large community of developers.</li>
-                    <li> <b> BERT: </b> BERT (Bidirectional Encoder Representations from Transformers) is a pre-trained NLP model which is also developed by Google. It can handle different tasks such as identifying the sentiment, answering questions, and named entity recognition.</li>
-                    <li> <b> GPT-3: </b> GPT-3 (Generative Pre-trained Transformer 3) is a popular transformer-based NLP model developed by OpenAI. It is capable of performing a wide range of NLP tasks such as generating code, doing simple maths calculations, and text generation.</li>
-                    <li> <b> NLTK: </b> NLTK (Natural Language Toolkit) is a popular open-source library for NLP in Python. It provides a wide range of tools for analysis and text processing. It supports various functionalities such as tokenization, tagging, and semantic analysis.</li>
-                    <li> <b> Word2Vec: </b> Word2Vec is a neural network-based model for word embedding developed by Google. It is widely used for text classification, sentiment analysis, and other NLP tasks</li>
+                    <li className="mb-3"> <b> TensorFlow: </b> One of the most popular open-source frameworks for NLP and machine learning  is TensorFlow, which was created by Google. TensorFlow is widely used for NLP tasks and has a large community of developers.</li>
+                    <li className="mb-3"> <b> BERT: </b> BERT (Bidirectional Encoder Representations from Transformers) is a pre-trained NLP model which is also developed by Google. It can handle different tasks such as identifying the sentiment, answering questions, and named entity recognition.</li>
+                    <li className="mb-3"> <b> GPT-3: </b> GPT-3 (Generative Pre-trained Transformer 3) is a popular transformer-based NLP model developed by OpenAI. It is capable of performing a wide range of NLP tasks such as generating code, doing simple maths calculations, and text generation.</li>
+                    <li className="mb-3"> <b> NLTK: </b> NLTK (Natural Language Toolkit) is a popular open-source library for NLP in Python. It provides a wide range of tools for analysis and text processing. It supports various functionalities such as tokenization, tagging, and semantic analysis.</li>
+                    <li className="mb-3"> <b> Word2Vec: </b> Word2Vec is a neural network-based model for word embedding developed by Google. It is widely used for text classification, sentiment analysis, and other NLP tasks</li>
                   </ul>
                 </div>
 
@@ -386,29 +389,31 @@ const Nlp = () => {
                   </p>
 
                   <img src={image4} alt="" className="mb-5"/>
-
+                  <p>
+                  2020 NLP survey. Source: <a href="https://www.prweb.com/releases/the-2020-nlp-industry-survey-finds-increasing-enterprise-investment-in-natural-language-processing-despite-pandemic-impacted-it-budgets-898607278.html" target="_blank" className="links"> prweb.com </a>
+                  </p>
                   <p className="mt-5 mb-5">
                   The following four qualities of NLP make it a promising technology for enterprises- 
                   </p>
 
                   <ul className="list-disc ml-5 mb-5">
-                    <li> <b> NLP can Perform large-scale analysis: </b> NLP systems can process and interpret large amounts of data in a very short time. They can discover patterns that are hard or tedious for humans to find, allowing employees to boost their productivity with NLP applications and collaborate on a common objective. NLP is already applied to various domains such as processing unstructured text data, social media analytics, customer support tickets, online reviews, and more.</li>
-                    <li> <b> Automate processes in real-time: </b> Machines can automate tasks in a fast way, and AI can automate tasks in a smart way. NLP tools would help machines to sort and carry out operations on information with very little or no human interaction. NLP tools, along with the supervision of humans, can do tasks in a quick, efficient, and accurate manner.</li>
-                    <li> <b> Searching and Querying huge corpus of unstructured data: </b> Generative AI is using NLP to make the task of querying image data searching easier. This is useful in institutions like healthcare and law, where NLP apps can quickly and efficiently access the records that date back to 20-30 years. Moreover, using NLP, you can not only retrieve information from a huge sea of unstructured data, but also run analysis over it to find key trends or patterns.</li>
-                    <li> <b> Real time analysis from a large pool of data: </b> NLP techniques can enable applications to analyse large amounts of data in real time. For instance, MeetGeek and Otter Ai are applications that can accurately capture and summarise the key points of a meeting with multiple participants. This can enhance the productivity of the meeting by saving time and effort that would otherwise be spent on manual transcription and summarization.</li>
+                    <li className="mb-3"> <b> NLP can Perform large-scale analysis: </b> NLP systems can process and interpret large amounts of data in a very short time. They can discover patterns that are hard or tedious for humans to find, allowing employees to boost their productivity with NLP applications and collaborate on a common objective. NLP is already applied to various domains such as processing unstructured text data, social media analytics, customer support tickets, online reviews, and more.</li>
+                    <li className="mb-3"> <b> Automate processes in real-time: </b> Machines can automate tasks in a fast way, and AI can automate tasks in a smart way. NLP tools would help machines to sort and carry out operations on information with very little or no human interaction. NLP tools, along with the supervision of humans, can do tasks in a quick, efficient, and accurate manner.</li>
+                    <li className="mb-3"> <b> Searching and Querying huge corpus of unstructured data: </b> Generative AI is using NLP to make the task of querying image data searching easier. This is useful in institutions like healthcare and law, where NLP apps can quickly and efficiently access the records that date back to 20-30 years. Moreover, using NLP, you can not only retrieve information from a huge sea of unstructured data, but also run analysis over it to find key trends or patterns.</li>
+                    <li className="mb-3"> <b> Real time analysis from a large pool of data: </b> NLP techniques can enable applications to analyse large amounts of data in real time. For instance, MeetGeek and Otter Ai are applications that can accurately capture and summarise the key points of a meeting with multiple participants. This can enhance the productivity of the meeting by saving time and effort that would otherwise be spent on manual transcription and summarization.</li>
                   </ul>
 
                   <p className="mt-5">NLP, thus, has limitless potential for data-driven industries. This innovative technology can revolutionise any field that involves data and analysis.</p>
 
-                  <p>However, no matter how revolutionary this field of AI is, it is not devoid of flaws. Just like any other AI application, NLP apps also have inherent drawbacks – hallucination and misinformation.</p>
+                  <p className="mb-5">However, no matter how revolutionary this field of AI is, it is not devoid of flaws. Just like any other AI application, NLP apps also have inherent drawbacks – hallucination and misinformation.</p>
 
-                  <p>One of the ethical challenges of AI systems is that they can produce false or harmful information or stereotypes. This can occur when the AI model creates text that is not grounded in facts, but on its own prejudices, lack of real-world knowledge, or flaws of the data it was trained on. </p>
+                  <p className="mb-5">One of the ethical challenges of AI systems is that they can produce false or harmful information or stereotypes. This can occur when the AI model creates text that is not grounded in facts, but on its own prejudices, lack of real-world knowledge, or flaws of the data it was trained on. </p>
 
-                  <p>These are known as hallucinations, and they can have severe negative consequences for society, especially when the language model is confident in its output, which can deceive or misinform people on a large scale.</p>
+                  <p className="mb-5">These are known as hallucinations, and they can have severe negative consequences for society, especially when the language model is confident in its output, which can deceive or misinform people on a large scale.</p>
 
-                  <p> <b> Misinformation,</b> which is caused as an aftermath of hallucination, can potentially perpetuate harmful stereotypes or misinformation, making AI systems ethically questionable. </p>
+                  <p className="mb-5"> <b> Misinformation,</b> which is caused as an aftermath of hallucination, can potentially perpetuate harmful stereotypes or misinformation, making AI systems ethically questionable. </p>
 
-                  <p> <b> Hallucinations</b> can potentially cause society widespread panic and misinformation on a global scale, as language models are confident in their answers, which can lead to serious consequences.</p>
+                  <p className="mb-5"> <b> Hallucinations</b> can potentially cause society widespread panic and misinformation on a global scale, as language models are confident in their answers, which can lead to serious consequences.</p>
 
                   <p>Thus, improper implementation of NLP applications in your enterprise could lead to heavy costs if they behave erroneously. This apparent risk only increases in magnitude as the scale of the enterprise increases.</p>
                 </div>
@@ -423,7 +428,7 @@ const Nlp = () => {
                     {/* <img src={image5} alt="" /> */}
                   </div>
                 </div>
-                <div className="space-y-8">
+                <div className="space-y-5">
                   <p>
                   The good news is, there are many ways through which you can overcome these shortcomings. 
                   </p>
@@ -451,7 +456,7 @@ const Nlp = () => {
                 <div>
                   <img src={image5}></img>
                   <p className="text-xs ">
-                  The Diversity in AI and NLP, and interest in this field over the decade, has been growing. Source: kbvresearch.com
+                  The Diversity in AI and NLP, and interest in this field over the decade, has been growing. Source: <a href="https://www.kbvresearch.com/natural-language-processing-market/" target="_blank" className="links"> kbvresearch.com </a>
                     </p>
                 </div>
 

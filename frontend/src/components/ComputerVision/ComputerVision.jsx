@@ -136,6 +136,32 @@ const ComputerVision = () => {
     }
   };
 
+  // links
+  function shareOnLinkedIn() {
+    var url = 'https://www.aiproff.com/Computer_Vision';
+    var linkedinUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url);
+    window.open(linkedinUrl, '_blank');
+  }
+  
+  function shareOnTwitter() {
+    // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
+    var url = 'https://www.aiproff.com/Computer_Vision';
+    window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url), '_blank');
+  }
+  
+  function shareOnFacebook() {
+    // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
+    var url = 'https://www.aiproff.com/Computer_Vision';
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+  }
+  
+  function shareByEmail() {
+    // Replace 'your-email-share-url' with the URL you want to share via email.
+    var url = 'https://www.aiproff.com/Computer_Vision';
+    window.location.href = 'mailto:?body=' + encodeURIComponent(url);
+  }
+  
+
   return (
     <>
       <Navbar />
@@ -169,6 +195,9 @@ const ComputerVision = () => {
       )}
 
           <div className="mx-auto lg:max-w-7xl flex flex-col justify-center p-16 article_padding">
+          <h1 className="text-4xl font-bold mb-6 upper_heading">
+                    Introduction to Computer Vision: When Machines Start to See
+          </h1>
             <div className="md:flex md:justify-between md:w-4/5 space-y-8 md:space-y-0">
               <div className="underline underline-offset-4">
                 <Link to="/">By AiProff</Link>
@@ -203,19 +232,19 @@ const ComputerVision = () => {
                   </div>
                   {dropdownVisible && (
                     <div className="mt-2 p-4 px-6 absolute left-[-50%] ml-3 border-2 rounded shadow-lg bg-white z-10 chat-bubble dropdown">
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer ">
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer " onClick={shareOnLinkedIn}>
                         <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
                         Linkedin
                       </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer">
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnTwitter}>
                         <FontAwesomeIcon icon={faTwitter} className="mr-2" />
                         Twitter
                       </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer">
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnFacebook}>
                         <FontAwesomeIcon icon={faFacebook} className="mr-2" />
                         Facebook
                       </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer">
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareByEmail}>
                         <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
                         Email
                       </div>
@@ -262,55 +291,55 @@ const ComputerVision = () => {
               <div className="flex-grow md:w-4/6 space-y-20 justify-center">
                 <div>
                 <div>
-                    <h1 className="text-4xl font-bold mb-6 ">
+                    <h1 className="text-4xl font-bold mb-6 lower_heading">
                     Introduction to Computer Vision: When Machines Start to See
                     </h1>
                   </div>
                   <div>
-                    <p className="">
+                    <p className="mb-5">
                     "A computer deserves to be called intelligent if it could deceive a human into believing that it was human.” – Alan Turing. 
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-5">
                       {" "}
                       The quest for intelligence has been going on for ages, and the question of ‘whether humans can think’ led us to many pursuits that culminated finally at a point where we made machines that can ‘mimic’ human thinking. This is Artificial Intelligence. 
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-5">
                     But it is its subfield computer vision that gave these machines the power to ‘see’ and comprehend their surroundings.
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-5">
                     Computer vision is a subfield of artificial intelligence that focuses on making computers that can identify and understand images and videos.  The goal of any computer vision application is to replicate the human visual capabilities and try to make inferences from the visual information. 
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-5">
                     While the starting point of computer vision isn't clearly known, many believe that it started long back in the 1950s. In 1957, the first digital image scanner was invented by Russell Kirsch and his team at the US National Bureau of Standards. They used a rotating drum to scan images and convert them into digital signals. 
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-5">
                     Since then, there has been an introduction and acceleration in deep learning techniques. This allowed computer vision to become a rising interest that is backing many modern innovations and solutions.
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
-                    And that kicked off the field of computer vision that gained traction in the 2000s. The market of global computer vision was even valued at USD 11.7 billion in 2021 – and the interest in the field is only going up. The global Computer Vision market is expected to reach USD 21.3 billion by 2030 according to a report by Spherical Insight.
+                    <p className="mb-5">
+                    And that kicked off the field of computer vision that gained traction in the 2000s. The market of global computer vision was even valued at USD 11.7 billion in 2021 – and the interest in the field is only going up. The global Computer Vision market is expected to reach USD 21.3 billion by 2030 according to a report by <a href="https://www.bing.com/search?q=The+global+Computer+Vision+market+is+expected+to+reach+USD+21.3+billion+by+2030&cvid=2145a939394b43fdb27f98b3b693c16c&aqs=edge..69i57j69i59.1449j0j4&FORM=ANAB01&PC=U531" target="_blank" className="links"> Spherical Insight </a>.
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-5">
                     But what is the state of computer vision currently? What are the promising insights about this field that you need to know?
                     </p>
                   </div>
@@ -326,13 +355,13 @@ const ComputerVision = () => {
                     <img src={image2} alt="" />
                   </div>
                   <p>
-                  The earliest applications of computer vision were mostly devoted to creating algorithms that could identify plane shapes and edges in 2D pictures. This began in the 1960s when Larry Roberts described the process of deriving 3D information about solid objects from 2D photographs. Later in 1979, Dr. Kunihiko Fukushima proposed Neocognitron – a revolutionary hierarchical multilayered neural network that was capable of robust visual pattern recognition that could detect basic shapes in an image. 
+                  The earliest applications of computer vision were mostly devoted to creating algorithms that could identify plane shapes and edges in 2D pictures. This began in the 1960s when Larry Roberts described the process of deriving 3D information about solid objects from 2D photographs. Later in 1979, Dr. Kunihiko Fukushima proposed <a href="https://search.ieice.org/bin/summary.php?id=j62-a_10_658" target="_blank" className="links"> Neocognitron </a> – a revolutionary hierarchical multilayered neural network that was capable of robust visual pattern recognition that could detect basic shapes in an image. 
                   </p>
                   <p>
                   This led to the development of an entirely new field of AI – Computer Vision.
                   </p>
                   <p>
-                  It was, however, not until the 2000s when computer vision technology advanced rapidly. The point of rapid development in computer vision was in the year 2001 when the first real-time face recognition video application was developed.  This was achieved using the Viola-Jones object detection framework for faces, which was later launched as an application called AdaBoost – the first real-time frontal-view face detector. 
+                  It was, however, not until the 2000s when computer vision technology advanced rapidly. The point of rapid development in computer vision was in the year 2001 when the first real-time face recognition video application was developed.  This was achieved using the <a href="https://ieeexplore.ieee.org/document/990517" target="_blank" className="links"> Viola-Jones object detection framework </a> for faces, which was later launched as an application called AdaBoost – the first real-time frontal-view face detector. 
                   </p>
                   <p>
                   Today, Computer Vision powered apps are used in wide range of applications. Content organisation, facial recognition, automatic checkout, spotting defects in manufacturing, detecting early signs of plant disease in agriculture, and many more. 
@@ -352,10 +381,10 @@ const ComputerVision = () => {
                   </p>
 
                   <ul className="list-disc ml-5 mb-5">
-                    <li><b>Image Classification:</b> This involves categorising images into predefined classes or categories and assigning a label to the image based on its content. For example, an image classification model can recognize whether an image contains a cat, a dog, a car, or a person. </li>
-                    <li><b>Object Detection:</b> This involves identifying and localising objects within an image or video. It is used so that the computer can ‘see’ the environment (or the visual media) and locate instances of visual objects (say such as humans, animals, cars, or buildings</li>
-                    <li><b>Semantic Segmentation:</b> This involves dividing an image into multiple segments and assigning each segment a label based on its visual content. Usually, it is the task that assigns a class label to each pixel in an image. For example, in an image of a street scene, semantic segmentation can identify pixels that belong to cars, pedestrians, roads, buildings, etc.</li>
-                    <li><b>Instance Segmentation:</b> This involves identifying and localising the above instance of an object within an image or video. This is different from object detection, as in this the aim is to ‘differentiate’ various different segments of the visual content. For example, in an image of a crowd of people, instance segmentation would not only label each pixel as a person or background but also assign a unique ID to each identified person in the image – essentially differentiating each instance. </li>
+                    <li className="mb-3"><b>Image Classification:</b> This involves categorising images into predefined classes or categories and assigning a label to the image based on its content. For example, an image classification model can recognize whether an image contains a cat, a dog, a car, or a person. </li>
+                    <li className="mb-3"><b>Object Detection:</b> This involves identifying and localising objects within an image or video. It is used so that the computer can ‘see’ the environment (or the visual media) and locate instances of visual objects (say such as humans, animals, cars, or buildings</li>
+                    <li className="mb-3"><b>Semantic Segmentation:</b> This involves dividing an image into multiple segments and assigning each segment a label based on its visual content. Usually, it is the task that assigns a class label to each pixel in an image. For example, in an image of a street scene, semantic segmentation can identify pixels that belong to cars, pedestrians, roads, buildings, etc.</li>
+                    <li className="mb-3"><b>Instance Segmentation:</b> This involves identifying and localising the above instance of an object within an image or video. This is different from object detection, as in this the aim is to ‘differentiate’ various different segments of the visual content. For example, in an image of a crowd of people, instance segmentation would not only label each pixel as a person or background but also assign a unique ID to each identified person in the image – essentially differentiating each instance. </li>
                   </ul>
 
                   <p className="mb-5">
@@ -394,11 +423,11 @@ const ComputerVision = () => {
                   </p>
 
                   <ul className="list-disc ml-5 mb-5">
-                    <li><b>Inadequate hardware:</b> Implementing computer vision requires powerful hardware. These include components such as processors, memory chips, graphics cards and cameras. These components affect the performance, accuracy, and efficiency of computer vision algorithms. Thus, inadequate hardware can limit the amount of data that can be processed, the complexity of the models that can be trained, and the speed of the inference that can be done.</li>
-                    <li><b>Poor data quality:</b> Collecting relevant and sufficient data can be challenging, and poor data quality can lead to a lack of training data for computer vision systems. Poor data quality can result from various factors, such as noise, blur, occlusion, distortion, illumination, or annotation errors. These factors can affect the performance and accuracy of computer vision models, leading to undesirable outcomes or failures. </li>
-                    <li><b>Weak planning for model development:</b> Developing computer vision models requires careful planning, and weak planning can lead to poor performance and inaccurate results. This means, that having a lack of clear objectives, requirements, and evaluation criteria could affect the computer vision models negatively – leading to poor performance, inefficiency, and wasted resources. To overcome this challenge, computer vision practitioners need to follow a systematic and rigorous process of problem definition, data collection, model selection, training, testing, and deployment.</li>
-                    <li><b>Lack of annotated data:</b> Gathering labelled data (or data in general) for computer vision systems can be challenging. Annotated data is data that has been labelled with some information that can help a computer vision model learn from it. However, annotating data is a time-consuming and expensive process that requires human experts or crowdsourcing platforms, and a lack of annotated data can lead to poor performance and inaccurate results.</li>
-                    <li><b>Lack of experienced professionals:</b> Humans are the weakest link in the security chain, but the necessary component in any architecture. The complexity and diversity of computer vision problems requires a combination of mathematical, algorithmic and domain-specific knowledge. Moreover, there has been a rapid pace of innovation and research in computer vision, which makes it hard for enterprises to keep up with the latest developments and best practices. Developing and implementing computer vision systems, thus, requires skilled professionals – a lack of which can have serious consequences for businesses if overlooked.</li>
+                    <li className="mb-3"><b>Inadequate hardware:</b> Implementing computer vision requires powerful hardware. These include components such as processors, memory chips, graphics cards and cameras. These components affect the performance, accuracy, and efficiency of computer vision algorithms. Thus, inadequate hardware can limit the amount of data that can be processed, the complexity of the models that can be trained, and the speed of the inference that can be done.</li>
+                    <li className="mb-3"><b>Poor data quality:</b> Collecting relevant and sufficient data can be challenging, and poor data quality can lead to a lack of training data for computer vision systems. Poor data quality can result from various factors, such as noise, blur, occlusion, distortion, illumination, or annotation errors. These factors can affect the performance and accuracy of computer vision models, leading to undesirable outcomes or failures. </li>
+                    <li className="mb-3"><b>Weak planning for model development:</b> Developing computer vision models requires careful planning, and weak planning can lead to poor performance and inaccurate results. This means, that having a lack of clear objectives, requirements, and evaluation criteria could affect the computer vision models negatively – leading to poor performance, inefficiency, and wasted resources. To overcome this challenge, computer vision practitioners need to follow a systematic and rigorous process of problem definition, data collection, model selection, training, testing, and deployment.</li>
+                    <li className="mb-3"><b>Lack of annotated data:</b> Gathering labelled data (or data in general) for computer vision systems can be challenging. Annotated data is data that has been labelled with some information that can help a computer vision model learn from it. However, annotating data is a time-consuming and expensive process that requires human experts or crowdsourcing platforms, and a lack of annotated data can lead to poor performance and inaccurate results.</li>
+                    <li className="mb-3"><b>Lack of experienced professionals:</b> Humans are the weakest link in the security chain, but the necessary component in any architecture. The complexity and diversity of computer vision problems requires a combination of mathematical, algorithmic and domain-specific knowledge. Moreover, there has been a rapid pace of innovation and research in computer vision, which makes it hard for enterprises to keep up with the latest developments and best practices. Developing and implementing computer vision systems, thus, requires skilled professionals – a lack of which can have serious consequences for businesses if overlooked.</li>
                   </ul>
                   <p>However, this field of Computer vision is evolving rapidly.</p>
                   <p>On the infrastructure front, faster, cheaper, and more efficient edge computing storage has given computer vision a boost and better performance. Improved hardware, on the other hand, has made the implementation of computer vision applications more efficient and cost-friendly. </p>
