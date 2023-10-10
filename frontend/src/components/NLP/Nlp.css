@@ -34,3 +34,25 @@
     }
   }
   
+  .links{
+    color: rgb(38, 38, 246);
+  }
+
+  .links:hover{
+    color: rgb(22, 22, 249);
+    text-decoration: underline; 
+  }
+
+  .upper_heading{
+    display: none;
+  }
+
+  @media screen and (max-width: 760px) {
+    .lower_heading{
+      display: none;
+    }
+
+    .upper_heading{
+      display: block;
+    }
+  }

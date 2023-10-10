@@ -167,6 +167,9 @@ const RealaibleAndRodbustAi = () => {
       )}
 
           <div className="mx-auto lg:max-w-7xl flex flex-col justify-center p-16 article_padding">
+          <h1 className="text-4xl font-bold mb-6 upper_heading">
+                    Introduction: Reliable and Robust AI
+          </h1>
             <div className="md:flex md:justify-between md:w-4/5 space-y-8 md:space-y-0">
               <div className="underline underline-offset-4">
                 <Link to="/">By AiProff</Link>
@@ -260,46 +263,46 @@ const RealaibleAndRodbustAi = () => {
               <div className="flex-grow md:w-4/6 space-y-20 justify-center">
                 <div>
                 <div>
-                    <h1 className="text-4xl font-bold mb-6 ">
+                    <h1 className="text-4xl font-bold mb-6 lower_heading">
                     Introduction: Reliable and Robust AI
                     </h1>
                   </div>
                   <div>
-                    <p className="">
+                    <p className="mb-4">
                     The field of Artificial intelligence (AI) is rapidly evolving. It is tapping into industries and it exhibits promising transformative impacts across various sectors such as healthcare, education, finance, entertainment, and security. 
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-4">
                       {" "}
                       AI is no longer a niche technology that only applies to the Tech sector. It has proven its value in various industries that leverage its capabilities, such as automation, analysis, speech recognition and computer vision. 
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-4">
                     However, to fully unlock its potential, AI systems must be reliable and robust. Reliable and Robust AI are AI systems that are capable of providing consistent and accurate performance under diverse conditions, taking care of unforeseen challenges and technical adversaries.
                     </p>
                   </div>
                   <div>
                     {" "}
-                    <p>
+                    <p className="mb-4">
                     Reliability and robustness in AI are crucial for ensuring safety, trustworthiness, and fairness. Hence, if an enterprise is planning to integrate AI into its operations, then the reliability and robustness of AI applications are necessary to foster public acceptance and advance AI technologies.
                     </p>
                   </div>
 
                     <ul className="list-disc ml-5 mb-5">
-                        <li>
+                        <li  className="mb-3">
                         <b>Explainability and Verification:</b> AI systems should be built in such a way that it is transparent and explainable to the developers and users. This allows them to understand how the model works, how its logic and reasoning capability work, and what caveats one should be aware of before using the AI system.
                         </li>
-                        <li>
+                        <li  className="mb-3">
                         <b>Model Robustness:</b> Reliable AI employs techniques like data augmentation, distributionally robust optimization, and fine-tuning from pre-trained models to enhance the robustness of deep learning models. This ensures that the AI system is not only reliable but also robust.
                         </li>
-                        <li>
+                        <li  className="mb-3">
                         <b>Failure Identification and Validation:</b> AI systems may have errors and failures that affect their performance. Therefore, developers should use methods such as importance sampling, randomised smoothing, and neural network verification to estimate the probability of failure and validate the machine learning models. These methods help to reduce the errors in the AI models and improve their reliability in an enterprise setting.
                         </li>
-                        <li>
+                        <li  className="mb-3">
                         <b>Uncertainty Quantification:</b> Uncertainty quantification (UQ) is a key component of AI systems. UQ aims to measure and communicate the confidence and robustness of AI models. UQ can help identify sources of uncertainty, such as data noise, model misspecification, or adversarial attacks, and mitigate their impact on the performance and safety of AI systems. 
                         </li>
                     </ul>
@@ -350,11 +353,11 @@ const RealaibleAndRodbustAi = () => {
                   </p>
 
                   <ul className="list-disc ml-5 mb-5">
-                    <li><b>Testing:</b> AI systems undergo testing to check functionality and performance against predefined criteria. This standard procedure majorly includes unit testing, integration testing, system testing, and acceptance testing, conducted in different environments.</li>
-                    <li><b>Verification:</b> Verification is built on top of testing. It is used to prove that an AI system meets formal specifications and demands. This is done by verifying how closely the AI system relies on formal methods, model checking, theorem proving, or static analysis.</li>
-                    <li><b>Validation:</b> after testing and certification comes validation. Validation demonstrates that an AI system meets its intended purpose and user needs, typically through empirical evaluation, RLHF, user review, testing, or external studies and research.</li>
-                    <li><b>Monitoring:</b> Monitoring observes and measures AI system behaviour over time, and accesses the performance during operation and deployment, helping detect and diagnose anomalies, errors, or deviations.</li>
-                    <li><b>Debugging:</b> Debugging is the process that includes identifying and fixing problems or defects in AI systems, and enhancing code and data quality.</li>
+                    <li className="mb-3"><b>Testing:</b> AI systems undergo testing to check functionality and performance against predefined criteria. This standard procedure majorly includes unit testing, integration testing, system testing, and acceptance testing, conducted in different environments.</li>
+                    <li className="mb-3"><b>Verification:</b> Verification is built on top of testing. It is used to prove that an AI system meets formal specifications and demands. This is done by verifying how closely the AI system relies on formal methods, model checking, theorem proving, or static analysis.</li>
+                    <li className="mb-3"><b>Validation:</b> after testing and certification comes validation. Validation demonstrates that an AI system meets its intended purpose and user needs, typically through empirical evaluation, RLHF, user review, testing, or external studies and research.</li>
+                    <li className="mb-3"><b>Monitoring:</b> Monitoring observes and measures AI system behaviour over time, and accesses the performance during operation and deployment, helping detect and diagnose anomalies, errors, or deviations.</li>
+                    <li className="mb-3"><b>Debugging:</b> Debugging is the process that includes identifying and fixing problems or defects in AI systems, and enhancing code and data quality.</li>
                   </ul>
                 </div>
 
@@ -395,10 +398,10 @@ const RealaibleAndRodbustAi = () => {
                   </p>
 
                   <ul className="list-disc ml-5 mb-5">
-                    <li><b>Automated Testing:</b> Verify functionality, performance, and accuracy of AI models.</li>
-                    <li><b>Explainable AI:</b> Generate human-readable explanations for AI model decisions, enhancing transparency.</li>
-                    <li><b>Adversarial Robustness:</b> Protect AI models from malicious attacks, ensuring security and integrity.</li>
-                    <li><b>Fairness and Bias Detection:</b> Measure and mitigate potential biases and unfairness in AI model outcomes, promoting fairness and ethics.</li>
+                    <li className="mb-3"><b>Automated Testing:</b> Verify functionality, performance, and accuracy of AI models.</li>
+                    <li className="mb-3"><b>Explainable AI:</b> Generate human-readable explanations for AI model decisions, enhancing transparency.</li>
+                    <li className="mb-3"><b>Adversarial Robustness:</b> Protect AI models from malicious attacks, ensuring security and integrity.</li>
+                    <li className="mb-3"><b>Fairness and Bias Detection:</b> Measure and mitigate potential biases and unfairness in AI model outcomes, promoting fairness and ethics.</li>
                   </ul>
                   <p>and many more</p>
                   <p>In the evolving landscape of AI, AIProff is here to help you achieve your AI goals and overcome challenges, ultimately creating reliable and robust AI systems for the benefit of enterprises and society.</p>
