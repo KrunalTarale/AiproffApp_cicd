@@ -88,7 +88,10 @@ const Footer = () => {
                 FAQ
               </Link>
               <Link to="/privacyandpolicy" className="hover:text-blue-500">
-              Privacy Policy
+                Privacy Policy
+              </Link>
+              <Link to="/legal" className="hover:text-blue-500">
+                Legal
               </Link>
               <a
                 href="#"
