@@ -1,32 +1,32 @@
-import React, { useRef } from "react";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
-import "./ForcastingUsingAi.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useRef } from 'react';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Navbar from '../Navbar/Navbar';
+import './ForcastingUsingAi.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faShare,
   faPrint,
   faDownload,
   faSave,
   faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
 import {
   faLinkedin,
   faTwitter,
   faFacebook,
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons';
 
-import image1 from "../assets/forcastingAi/img1.jpg";
-import image2 from "../assets/forcastingAi/img2.jpg";
-import image3 from "../assets/forcastingAi/img3.jpg";
-import image7 from "../assets/Article1/logo.png";
-import card1 from "../assets/Article1/card1.png";
+import image1 from '../assets/forcastingAi/img1.jpg';
+import image2 from '../assets/forcastingAi/img2.jpg';
+import image3 from '../assets/forcastingAi/img3.jpg';
+import image7 from '../assets/Article1/logo.png';
+import card1 from '../assets/Article1/card1.png';
 
-import AudioPlayer from "../AudioPlayer/AudioPlayer";
-import Footer from "../Foot/Foot";
+import AudioPlayer from '../AudioPlayer/AudioPlayer';
+import Footer from '../Foot/Foot';
 
 const ForcastingUsingAi = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -40,16 +40,16 @@ const ForcastingUsingAi = () => {
       // check if the target of the click event is not the dropdown or the share icon
       if (
         dropdownVisible &&
-        event.target.closest(".share-icon") === null &&
-        event.target.closest(".dropdown") === null
+        event.target.closest('.share-icon') === null &&
+        event.target.closest('.dropdown') === null
       ) {
         setDropdownVisible(false);
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [dropdownVisible]);
 
@@ -58,16 +58,16 @@ const ForcastingUsingAi = () => {
       // Check if the target of the click event is not the dropdown or the share icon
       if (
         progressdropdownVisible &&
-        event.target.closest(".share-icon-progress") === null &&
-        event.target.closest(".progress-dropdown") === null
+        event.target.closest('.share-icon-progress') === null &&
+        event.target.closest('.progress-dropdown') === null
       ) {
         setprogressDropdownVisible(false);
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [progressdropdownVisible]);
 
@@ -85,10 +85,10 @@ const ForcastingUsingAi = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -100,24 +100,24 @@ const ForcastingUsingAi = () => {
 
   // Saving the article code
 
-  const [message, setmassage] = useState("");
+  const [message, setmassage] = useState('');
   const handleSaveArticle = async () => {
-    const auth = localStorage.getItem("user");
+    const auth = localStorage.getItem('user');
     const user = JSON.parse(auth);
 
     if (user) {
-      let res = await fetch("/update_article", {
-        method: "PUT",
+      let res = await fetch('/update_article', {
+        method: 'PUT',
         headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
         body: JSON.stringify({
           id: user._id,
-          article: "Forcasting using ai",
-          title: "Introduction: When AI starts to predict Future",
-          date : "September 4, 2023",
-          url : "ForcastingUsingAi"
+          article: 'Forcasting using ai',
+          title: 'Introduction: When AI starts to predict Future',
+          date: 'September 4, 2023',
+          url: 'ForcastingUsingAi',
         }),
       });
       const data = await res.json();
@@ -125,12 +125,12 @@ const ForcastingUsingAi = () => {
       setmassage(data.message);
 
       setTimeout(() => {
-        setmassage("");
+        setmassage('');
       }, 2000);
     } else {
-      setmassage("Please login first");
+      setmassage('Please login first');
       setTimeout(() => {
-        setmassage("");
+        setmassage('');
       }, 2000);
     }
   };
@@ -162,10 +162,13 @@ const ForcastingUsingAi = () => {
           </div>
 
           {message && (
-              <div className="px-3 py-3 leading-normal text-blue-700 bg-blue-100 rounded-lg massege_alrt" role="alert">
+            <div
+              className="px-3 py-3 leading-normal text-blue-700 bg-blue-100 rounded-lg massege_alrt"
+              role="alert"
+            >
               <p>{message}</p>
             </div>
-      )}
+          )}
 
           <div className="mx-auto lg:max-w-7xl flex flex-col justify-center p-16 article_padding">
             <div className="md:flex md:justify-between md:w-4/5 space-y-8 md:space-y-0">
@@ -260,152 +263,335 @@ const ForcastingUsingAi = () => {
             <div className=" mt-12 text-lg md:text-xl font-light leading-normal space-y-6 md:flex justify-center">
               <div className="flex-grow md:w-4/6 space-y-20 justify-center">
                 <div>
-                <div>
+                  <div>
                     <h1 className="text-4xl font-bold mb-6 ">
-                    Introduction: When AI starts to predict Future
+                      Introduction: When AI starts to predict Future
                     </h1>
                   </div>
                   <div>
                     <p className="">
-                    Forecasting is the art and science of predicting future events or outcomes based on past and present data. 
+                      Forecasting is the art and science of predicting future
+                      events or outcomes based on past and present data.
                     </p>
                   </div>
                   <div>
-                    {" "}
+                    {' '}
                     <p>
-                      {" "}
-                      It is a crucial skill for many domains, such as business, economics, weather, sports, and health. Forecasting is the process of using historical data, trends, and statistics to predict future outcomes or events. Forecasting has immense applications: from predicting weather patterns and the movement of stocks, to evaluating economies of countries, scientific research, and so on.
+                      {' '}
+                      It is a crucial skill for many domains, such as business,
+                      economics, weather, sports, and health. Forecasting is the
+                      process of using historical data, trends, and statistics
+                      to predict future outcomes or events. Forecasting has
+                      immense applications: from predicting weather patterns and
+                      the movement of stocks, to evaluating economies of
+                      countries, scientific research, and so on.
                     </p>
                   </div>
                   <div>
-                    {" "}
+                    {' '}
                     <p>
-                    However, forecasting can also be challenging, complex, and uncertain, especially if you are dealing with large and dynamic data sets. That's where the power of artificial intelligence (AI) comes in. 
+                      However, forecasting can also be challenging, complex, and
+                      uncertain, especially if you are dealing with large and
+                      dynamic data sets. That's where the power of artificial
+                      intelligence (AI) comes in.
                     </p>
                   </div>
                   <div>
-                    {" "}
+                    {' '}
                     <p>
-                    AI is the branch of computer science that aims to create machines or systems that can perform and automate tasks that normally require human intelligence – such as learning, reasoning, and decision making.  These AI machines are not only efficient and fast, but also hold the capability to ‘mimic’ human intelligence to carry out tasks dynamically.
+                      AI is the branch of computer science that aims to create
+                      machines or systems that can perform and automate tasks
+                      that normally require human intelligence – such as
+                      learning, reasoning, and decision making. These AI
+                      machines are not only efficient and fast, but also hold
+                      the capability to ‘mimic’ human intelligence to carry out
+                      tasks dynamically.
                     </p>
                   </div>
                   <div>
-                    {" "}
+                    {' '}
                     <p>
-                    AI is transforming the way we forecast and plan for the future. By using machine learning algorithms, AI can analyse large amounts of data and identify patterns, trends and anomalies that can help us make better decisions. AI forecasting has applications in various domains such as the stock market, e-commerce, climate change, healthcare, customer service and more.
+                      AI is transforming the way we forecast and plan for the
+                      future. By using machine learning algorithms, AI can
+                      analyse large amounts of data and identify patterns,
+                      trends and anomalies that can help us make better
+                      decisions. AI forecasting has applications in various
+                      domains such as the stock market, e-commerce, climate
+                      change, healthcare, customer service and more.
                     </p>
                   </div>
                   <div>
-                    {" "}
+                    {' '}
                     <p>
-                    For example, AI can help investors predict the movements of the stock market and optimise their portfolio strategies. AI can also help e-commerce businesses forecast the demand for their products and services and optimise their inventory, pricing and promotions. AI can also help meteorologists forecast the weather and climate change more accurately and communicate the risks to the public. AI can also help healthcare providers forecast the spread of diseases and personalise treatments for patients.
+                      For example, AI can help investors predict the movements
+                      of the stock market and optimise their portfolio
+                      strategies. AI can also help e-commerce businesses
+                      forecast the demand for their products and services and
+                      optimise their inventory, pricing and promotions. AI can
+                      also help meteorologists forecast the weather and climate
+                      change more accurately and communicate the risks to the
+                      public. AI can also help healthcare providers forecast the
+                      spread of diseases and personalise treatments for
+                      patients.
                     </p>
                   </div>
                   <div>
-                    {" "}
+                    {' '}
                     <p>
-                    Forecasting is important for various domains such as business, finance, weather, etc. because it helps them plan ahead, optimise resources, reduce risks, and seize opportunities. 
+                      Forecasting is important for various domains such as
+                      business, finance, weather, etc. because it helps them
+                      plan ahead, optimise resources, reduce risks, and seize
+                      opportunities.
                     </p>
                   </div>
                   <div>
-                    {" "}
+                    {' '}
                     <p>
-                    So if you want to explore how using AI in forecasting could help boost your productivity, and minimise errors, then read ahead. In this post, we will explore how AI-aided forecasting can enhance forecasting by providing more accurate, timely, and flexible predictions based on large and complex data sets.
+                      So if you want to explore how using AI in forecasting
+                      could help boost your productivity, and minimise errors,
+                      then read ahead. In this post, we will explore how
+                      AI-aided forecasting can enhance forecasting by providing
+                      more accurate, timely, and flexible predictions based on
+                      large and complex data sets.
                     </p>
                   </div>
                 </div>
 
                 <div className="space-y-8 ">
-                <div>
+                  <div>
                     <h1 className="text-4xl font-bold extra_space">
-                    Forecasting demystified: How is AI able to forecast
+                      Forecasting demystified: How is AI able to forecast
                     </h1>
                   </div>
                   <p>
-                  Traditional forecasting employs the concepts of statistics and forecasting methods such as time-series analysis, regression analysis, and qualitative judgement. 
+                    Traditional forecasting employs the concepts of statistics
+                    and forecasting methods such as time-series analysis,
+                    regression analysis, and qualitative judgement.
                   </p>
                   <p>
-                  However, integrating AI supercharges the whole process and makes the forecasting easier.
+                    However, integrating AI supercharges the whole process and
+                    makes the forecasting easier.
                   </p>
                   <p>
-                  Deep Learning  algorithms and classical Time Series algorithms both do forecasting, however deep learning models do a better job. This is due to their capability of extracting more detailed features of historical and recent data than classical time series models like ARIMA , Exponential  Smoothing models etc.
+                    Deep Learning algorithms and classical Time Series
+                    algorithms both do forecasting, however deep learning models
+                    do a better job. This is due to their capability of
+                    extracting more detailed features of historical and recent
+                    data than classical time series models like ARIMA ,
+                    Exponential Smoothing models etc.
                   </p>
                   <p>
-                  AI can forecast future events or outcomes based on historical data and current conditions, using techniques such as neural networks, deep learning, machine learning, etc. Machine learning is a general term for any technique that allows a computer system to learn from data and improve its performance without explicit programming. Neural networks are a type of machine learning that consists of layers of connected nodes that process information and learn from the training data. Deep learning is a specific kind of neural network that uses multiple layers of nodes to learn complex features and patterns from large amounts of data.
+                    AI can forecast future events or outcomes based on
+                    historical data and current conditions, using techniques
+                    such as neural networks, deep learning, machine learning,
+                    etc. Machine learning is a general term for any technique
+                    that allows a computer system to learn from data and improve
+                    its performance without explicit programming. Neural
+                    networks are a type of machine learning that consists of
+                    layers of connected nodes that process information and learn
+                    from the training data. Deep learning is a specific kind of
+                    neural network that uses multiple layers of nodes to learn
+                    complex features and patterns from large amounts of data.
                   </p>
-                 <p>
-                 This not only automates the task of forecasting but also helps the forecasters to find never-before-seen trends. Moreover, these forecasts are carried out without human judgement and bias, which is the reason why such forecasts tend to be far less erroneous. 
-                 </p>
-                 <p>
-                 AI-based forecasting is used in many domains, such as weather forecasting, stock market prediction, demand forecasting, etc.
-                 </p>
+                  <p>
+                    This not only automates the task of forecasting but also
+                    helps the forecasters to find never-before-seen trends.
+                    Moreover, these forecasts are carried out without human
+                    judgement and bias, which is the reason why such forecasts
+                    tend to be far less erroneous.
+                  </p>
+                  <p>
+                    AI-based forecasting is used in many domains, such as
+                    weather forecasting, stock market prediction, demand
+                    forecasting, etc.
+                  </p>
                 </div>
 
                 <div>
-
                   <img src={image2} alt="graph-economic-impact" />
                   <p className="mt-4 mb-5">
-                  Interestingly, according to an article by TechJury, AI is becoming more and more prevalent in business analytics. 35% of companies are using AI in some way, while 42% of companies are investigating how to implement AI in the future.
+                    Interestingly, according to an article by TechJury, AI is
+                    becoming more and more prevalent in business analytics. 35%
+                    of companies are using AI in some way, while 42% of
+                    companies are investigating how to implement AI in the
+                    future.
                   </p>
                   <p className="mb-5">
-                  What makes AI so appealing for business analysts and forecasters? Here are 5 main benefits of using AI for forecasting - 
+                    What makes AI so appealing for business analysts and
+                    forecasters? Here are 5 main benefits of using AI for
+                    forecasting -
                   </p>
 
                   <ul className="list-disc ml-5 mb-5">
-                    <li><b>Efficient use of Time series data:</b> AI tools use the time series data much more efficiently to estimate future developments and forecast trends. For example, the AI tool can use the time series data of a company's sales to forecast how much revenue it will generate in the next quarter, or an AI tool can use the time series data of a patient's blood pressure to detect any anomalies or risks. </li>
-                    <li><b>Autonomous and continuous reconfiguration:</b> AI-based forecasting solutions are fully autonomous, continuously reconfiguring projections as patterns change to better inform decision-making. This is especially useful for enterprises whose product or service is affected by seasonal trends, customer preferences, and external factors such as weather, competitors, and regulations. Automation and continuous reconfiguration help the AI to find optimised and efficient solutions. </li>
-                    <li><b>Faster and better decision-making:</b> employing machines with AI capabilities to conduct forecasts using machine learning algorithms would streamline and optimise the demand forecasting processes. This allows enterprises to plan and execute forecasting operations faster, thereby having more time to make better decisions.</li>
-                    <li><b>Improved forecast accuracy:</b> A human forecaster can bring time series data, and AI can further enhance the forecast using forecasting algorithms. Using AI can be helpful to minimise human bias, and can thus create a more accurate picture of demand. This improves forecast results compared to traditional forecasting methods.</li>
-                    <li><b>Real-time data and pattern identification:</b> By far the biggest advantage of using AI-powered forecasting. AI-driven forecasting allows forecasters to do real-time data analysis faster and more efficiently and continuously identify new patterns. Thus, automation allows forecasters to make real-time forecasts, enabling enterprises to plan better. </li>
+                    <li>
+                      <b>Efficient use of Time series data:</b> AI tools use the
+                      time series data much more efficiently to estimate future
+                      developments and forecast trends. For example, the AI tool
+                      can use the time series data of a company's sales to
+                      forecast how much revenue it will generate in the next
+                      quarter, or an AI tool can use the time series data of a
+                      patient's blood pressure to detect any anomalies or risks.{' '}
+                    </li>
+                    <li>
+                      <b>Autonomous and continuous reconfiguration:</b> AI-based
+                      forecasting solutions are fully autonomous, continuously
+                      reconfiguring projections as patterns change to better
+                      inform decision-making. This is especially useful for
+                      enterprises whose product or service is affected by
+                      seasonal trends, customer preferences, and external
+                      factors such as weather, competitors, and regulations.
+                      Automation and continuous reconfiguration help the AI to
+                      find optimised and efficient solutions.{' '}
+                    </li>
+                    <li>
+                      <b>Faster and better decision-making:</b> employing
+                      machines with AI capabilities to conduct forecasts using
+                      machine learning algorithms would streamline and optimise
+                      the demand forecasting processes. This allows enterprises
+                      to plan and execute forecasting operations faster, thereby
+                      having more time to make better decisions.
+                    </li>
+                    <li>
+                      <b>Improved forecast accuracy:</b> A human forecaster can
+                      bring time series data, and AI can further enhance the
+                      forecast using forecasting algorithms. Using AI can be
+                      helpful to minimise human bias, and can thus create a more
+                      accurate picture of demand. This improves forecast results
+                      compared to traditional forecasting methods.
+                    </li>
+                    <li>
+                      <b>Real-time data and pattern identification:</b> By far
+                      the biggest advantage of using AI-powered forecasting.
+                      AI-driven forecasting allows forecasters to do real-time
+                      data analysis faster and more efficiently and continuously
+                      identify new patterns. Thus, automation allows forecasters
+                      to make real-time forecasts, enabling enterprises to plan
+                      better.{' '}
+                    </li>
                   </ul>
                   <p>
-                  However, AI-based forecasting has its caveats, which it inherits from the AI architecture itself.
+                    However, AI-based forecasting has its caveats, which it
+                    inherits from the AI architecture itself.
                   </p>
                 </div>
 
                 <div className="space-y-8">
                   <div>
                     <h1 className="text-4xl font-bold  ">
-                    Pros and Cons, and Predicting with Confidence using AiProff
+                      Pros and Cons, and Predicting with Confidence using
+                      AiProff
                     </h1>
                   </div>
-                  <p>There are many benefits of using AI for forecasting, some of which you saw in the previous section. </p>
+                  <p>
+                    There are many benefits of using AI for forecasting, some of
+                    which you saw in the previous section.{' '}
+                  </p>
                   <div>
                     <img src={image3} alt="this is img" />
                   </div>
                 </div>
                 <div className="space-y-4">
                   <p>
-                  The demand for AI-based forecasts in businesses is rapidly increasing. Interestingly, AI forecasts are employed not only on the analyst front but also in the field of product management, decision making and data Augmentation. Source: Peak.ai
+                    The demand for AI-based forecasts in businesses is rapidly
+                    increasing. Interestingly, AI forecasts are employed not
+                    only on the analyst front but also in the field of product
+                    management, decision making and data Augmentation. Source:
+                    Peak.ai
                   </p>
                   <p>
-                  Enterprises favour AI-enabled forecasting due to the following advantages -
+                    Enterprises favour AI-enabled forecasting due to the
+                    following advantages -
                   </p>
-                  
+
                   <ul className="list-disc ml-5 mb-5">
-                    <li><b>Accuracy:</b> AI forecasting can achieve higher accuracy than humans. This is because AI can learn from large amounts of data and find complex patterns and relationships efficiently.</li>
-                    <li><b>Speed:</b> AI forecasting can process data and generate predictions faster than human analysts – which not only saves time but also valuable resources to conduct the forecast.</li>
-                    <li><b>Scalability:</b> AI forecasting can handle large-scale and high-dimensional data that can work at par with expert human analysts. Moreover, AI forecasts can provide comprehensive and granular analysis of complex and dynamic phenomena – such as market trends, customer behaviour, or climate change.</li>
-                    <li><b>Adaptability:</b> AI forecasting can adapt to changing conditions, account for additional data, and update and improve its models automatically to the needs and requirements. This makes forecasting using AI adaptable, and much more reliable and robust.</li>
+                    <li>
+                      <b>Accuracy:</b> AI forecasting can achieve higher
+                      accuracy than humans. This is because AI can learn from
+                      large amounts of data and find complex patterns and
+                      relationships efficiently.
+                    </li>
+                    <li>
+                      <b>Speed:</b> AI forecasting can process data and generate
+                      predictions faster than human analysts – which not only
+                      saves time but also valuable resources to conduct the
+                      forecast.
+                    </li>
+                    <li>
+                      <b>Scalability:</b> AI forecasting can handle large-scale
+                      and high-dimensional data that can work at par with expert
+                      human analysts. Moreover, AI forecasts can provide
+                      comprehensive and granular analysis of complex and dynamic
+                      phenomena – such as market trends, customer behaviour, or
+                      climate change.
+                    </li>
+                    <li>
+                      <b>Adaptability:</b> AI forecasting can adapt to changing
+                      conditions, account for additional data, and update and
+                      improve its models automatically to the needs and
+                      requirements. This makes forecasting using AI adaptable,
+                      and much more reliable and robust.
+                    </li>
                   </ul>
-                  <p>However, to get the complete picture, forecasting using AI isn’t going to be perfect. If your AI model isn’t a reliable and robust AI architecture, then the forecasting model is bound to errors which could cost the enterprise a fortune if overlooked. </p>
+                  <p>
+                    However, to get the complete picture, forecasting using AI
+                    isn’t going to be perfect. If your AI model isn’t a reliable
+                    and robust AI architecture, then the forecasting model is
+                    bound to errors which could cost the enterprise a fortune if
+                    overlooked.{' '}
+                  </p>
                   <p>AI forecasting is challenging due to following reasons:</p>
-                  
+
                   <ul className="list-disc ml-5 mb-5">
-                    <li><b>Hallucinations:</b> Hallucinations are a phenomenon where the AI model makes up its own outputs that are not consistent with the input data or the expected patterns. This can lead to inaccurate or misleading predictions, which can affect future forecasting heavily.</li>
-                    <li><b>Data quality:</b> AI forecasting depends on the quality and availability of data. The better the quality, the better the prediction. Poor or incomplete data can lead to inaccurate or biased predictions. Moreover, it can be a challenge due to data privacy and security issues which can limit the access and use of data.</li>
-                    <li><b>Infrastructure and Complexity:</b> AI forecasting, just like any other field of AI, can be difficult to understand and explain. They are dependent on the AI model and the infrastructure. The deep learning models use multiple layers of nonlinear transformations, which can reduce their transparency and trustworthiness. If it is not handled by people having expertise in reliable AI architecture, this could cost the enterprise both resources and time.</li>
-                    <li><b>Human Bias:</b> Having human bias in AI forecasting can have negative impacts on fairness, diversity, and inclusion of the predictions. This is usually overlooked because of bad practices in data handling, or using inefficient AI models. Therefore, it is important to identify and mitigate the sources of human bias in the data and the AI models and to evaluate the forecasts with appropriate metrics and methods.</li>
+                    <li>
+                      <b>Hallucinations:</b> Hallucinations are a phenomenon
+                      where the AI model makes up its own outputs that are not
+                      consistent with the input data or the expected patterns.
+                      This can lead to inaccurate or misleading predictions,
+                      which can affect future forecasting heavily.
+                    </li>
+                    <li>
+                      <b>Data quality:</b> AI forecasting depends on the quality
+                      and availability of data. The better the quality, the
+                      better the prediction. Poor or incomplete data can lead to
+                      inaccurate or biased predictions. Moreover, it can be a
+                      challenge due to data privacy and security issues which
+                      can limit the access and use of data.
+                    </li>
+                    <li>
+                      <b>Infrastructure and Complexity:</b> AI forecasting, just
+                      like any other field of AI, can be difficult to understand
+                      and explain. They are dependent on the AI model and the
+                      infrastructure. The deep learning models use multiple
+                      layers of nonlinear transformations, which can reduce
+                      their transparency and trustworthiness. If it is not
+                      handled by people having expertise in reliable AI
+                      architecture, this could cost the enterprise both
+                      resources and time.
+                    </li>
+                    <li>
+                      <b>Human Bias:</b> Having human bias in AI forecasting can
+                      have negative impacts on fairness, diversity, and
+                      inclusion of the predictions. This is usually overlooked
+                      because of bad practices in data handling, or using
+                      inefficient AI models. Therefore, it is important to
+                      identify and mitigate the sources of human bias in the
+                      data and the AI models and to evaluate the forecasts with
+                      appropriate metrics and methods.
+                    </li>
                   </ul>
 
-                    <p>
-                    Therefore, it is important to make sure that you and your enterprise use AI forecasting responsibly, with human oversight. It is important to partner with experts who can help you implement AI forecasting solutions that are tailored to your specific needs and goals.  
-                    </p>
+                  <p>
+                    Therefore, it is important to make sure that you and your
+                    enterprise use AI forecasting responsibly, with human
+                    oversight. It is important to partner with experts who can
+                    help you implement AI forecasting solutions that are
+                    tailored to your specific needs and goals.
+                  </p>
                 </div>
                 <div className="space-y-8">
                   <div>
                     <h1 className="text-4xl font-bold  ">
-                    That's where AiProff comes in. 
+                      That's where AiProff comes in.
                     </h1>
                   </div>
                   <div>
@@ -414,26 +600,38 @@ const ForcastingUsingAi = () => {
                 </div>
                 <div className="space-y-4">
                   <p>
-                  AiProff is a leading provider of AI and ML-based solutions for enterprises across various domains in Reliable and Robust AI. AiProff can help you leverage the power of AI forecasting to improve your performance, efficiency and competitiveness. 
+                    AiProff is a leading provider of AI and ML-based solutions
+                    for enterprises across various domains in Reliable and
+                    Robust AI. AiProff can help you leverage the power of AI
+                    forecasting to improve your performance, efficiency and
+                    competitiveness.
                   </p>
                   <p>
-                  We provide state-of-the-art solutions as Minimum Viable Products for Enterprises and Academic Institutions, leveraging cutting-edge AI/ML solutions to lower the entry barrier and expedite time to market.
+                    We provide state-of-the-art solutions as Minimum Viable
+                    Products for Enterprises and Academic Institutions,
+                    leveraging cutting-edge AI/ML solutions to lower the entry
+                    barrier and expedite time to market.
                   </p>
                   <p>
-                  <b>Contact AiProff today to find out how they can help you achieve your forecasting objectives with AI. Contact us</b>
+                    <b>
+                      Contact AiProff today to find out how they can help you
+                      achieve your forecasting objectives with AI. Contact us
+                    </b>
                   </p>
                   <p>
-                  Don’t let your critical and essential AI/ML workloads be at the mercy of naive assumptions.
+                    Don’t let your critical and essential AI/ML workloads be at
+                    the mercy of naive assumptions.
                   </p>
                   <p>
-                  Let’s secure and safeguard your innovation, and efficiencies to establish a robust and sustainable growth trajectory.
+                    Let’s secure and safeguard your innovation, and efficiencies
+                    to establish a robust and sustainable growth trajectory.
                   </p>
                 </div>
               </div>
 
               <div
                 className="ml-8 lg:ml-12 lg:w-3/12 border-y-2 border-black border-b-0 p-4 lg:pl-8 flex flex-col items-start space-y-8"
-                style={{ height: "12rem" }}
+                style={{ height: '12rem' }}
               >
                 <div className="text-2xl font-normal">Downloads</div>
 
@@ -467,7 +665,7 @@ const ForcastingUsingAi = () => {
 
               <div className="flex space-x-4 ">
                 <div className="relative">
-                  {" "}
+                  {' '}
                   <div
                     className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer share-icon-progress"
                     onClick={() =>
@@ -524,7 +722,10 @@ const ForcastingUsingAi = () => {
                   </div>
                 </Link>
 
-                <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer" onClick={handleSaveArticle}>
+                <div
+                  className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer"
+                  onClick={handleSaveArticle}
+                >
                   <FontAwesomeIcon
                     icon={faSave}
                     className=" hover:text-blue-500 cursor-pointer"
@@ -551,7 +752,7 @@ const ForcastingUsingAi = () => {
 
               <div className="flex space-x-4 ">
                 <div className="relative">
-                  {" "}
+                  {' '}
                   <div
                     className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer share-icon-progress"
                     onClick={() =>
