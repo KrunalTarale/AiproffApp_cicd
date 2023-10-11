@@ -147,8 +147,15 @@ const Nlp = () => {
       function shareOnTwitter() {
         // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
         var url = 'https://www.aiproff.com/nlp';
-        window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url), '_blank');
+        window.open( + 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url), '_blank');
       }
+
+    //   function shareOnTwitter() {
+    //     var url = 'https://www.aiproff.com/nlp';
+    //     var text = 'Thank you for connecting with us';
+    //     var twitterIntentURL = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text);
+    //     window.open(twitterIntentURL, '_blank');
+    // }
       
       function shareOnFacebook() {
         // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
