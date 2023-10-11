@@ -1,3 +1,4 @@
+
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
 import './HamburgerArticle.css';

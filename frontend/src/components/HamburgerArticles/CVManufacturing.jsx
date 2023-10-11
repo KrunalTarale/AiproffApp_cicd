@@ -1,3 +1,4 @@
+import backgroundImage from '../assets/Banners/CV/CVINMANUFACTURING.jpg';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
 import './HamburgerArticle.css';
@@ -7,7 +8,10 @@ function CVManufacturing() {
     <div>
       <Navbar />
       <div className="min-w-full flex flex-col article">
-        <div className="flex w-full xl:h-[35rem] bg-gradient-to-r from-blue-950 to-blue-500  ">
+        <div
+          className="flex w-full xl:h-[35rem] bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+        >
           <div className="max-3xl p-20 max-w-5xl ">
             <h1 className="text-white xl:text-6xl lg:text-5xl md:text-4xl text-3xl leading-normal md:leading-normal lg:leading-normal font-semibold xl:leading-normal ">
               Transforming Manufacturing with Computer Vision Technology
@@ -24,8 +28,8 @@ function CVManufacturing() {
             The manufacturing industry is undergoing a significant
             transformation through the integration of Computer Vision
             technology. Recent developments in Computer Vision are
-            revolutionising how manufacturers improve quality control, automate
-            processes, and optimise production.
+            revolutionizing how manufacturers improve quality control, automate
+            processes, and optimize production.
           </p>
         </div>
       </div>
