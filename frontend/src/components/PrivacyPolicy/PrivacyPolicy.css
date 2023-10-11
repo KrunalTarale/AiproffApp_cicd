@@ -1,0 +1,24 @@
+.About h1 {
+    font-family: 'Bower', Georgia, 'Times New Roman', serif;
+  }
+  
+  .About p {
+    font-family: 'Helvetica Neue', Calibri, Corbel, Helvetica, Roboto, Droid,
+      sans-serif;
+  }
+  
+  .list {
+    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    list-style-type: disc;
+  }
+
+  li{
+    margin-bottom: 1rem;
+  }
+
+  .linkss{
+    color: blue;
+  }

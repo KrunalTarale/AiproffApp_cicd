@@ -22,9 +22,11 @@ import Login from './components/Login/Login';
 import Signin from './components/Signin/Signin';
 import MVP from './components/MVP/Mvp';
 import POC from './components/POC/Poc';
+import CAT from './components/CAT/Cat';
 import YourArticle from './components/YourArticle/YourArticle';
 import Updatepassword from './components/Updatepassword/Updatepassword';
 import About from './components/About/About';
+import Legal from './components/Legal/Legal';
 import Faq from './components/FAQ/FAQ';
 import NLP from './components/NLP/Nlp';
 import RealaibleAndRodbustAi from './components/RelaibleAndRodbustAI/RelaibleAndRodbustAi';
@@ -45,6 +47,12 @@ import CVManufacturing from './components/HamburgerArticles/CVManufacturing';
 import ForecastingStockPrices from './components/HamburgerArticles/ForecastingStockPrices';
 import DemandForecasting from './components/HamburgerArticles/DemandForecasting';
 import SalesPrediction from './components/HamburgerArticles/SalesPrediction';
+
+import RREnterprises from './components/HamburgerArticles/RREnterprises';
+import RRHealthcare from './components/HamburgerArticles/RRHealthcare';
+import RREducational from './components/HamburgerArticles/RREducational';
+
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 
 import Buy from './components/Buy/Buy';
 function ScrollToTop() {
@@ -70,6 +78,7 @@ function App() {
         <Route path="/assessment" element={<Assessment />} />
         <Route path="/assessmentStarted/:id" element={<AssessmentStarted />} />
         <Route path="/about" element={<About />} />
+        <Route path="/Legal" element={<Legal />} />
         <Route path="/faq" element={<Faq />} />
 
         <Route path="/aihealth" element={<AppliedaiHealthcare />} />
@@ -87,6 +96,11 @@ function App() {
         <Route path="/forecastingstocks" element={<ForecastingStockPrices />} />
         <Route path="/demandforecasting" element={<DemandForecasting />} />
         <Route path="/salesprediction" element={<SalesPrediction />} />
+
+        <Route path="/rrenterprises" element={<RREnterprises />} />
+        <Route path="/rreducational" element={<RREducational />} />
+        <Route path="/rrhealthcare" element={<RRHealthcare />} />
+
         <Route path="/buy" element={<Buy />} />
         <Route
           path="/updatesubscribeduser/:id"
@@ -96,6 +110,7 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/mvp" element={<MVP />} />
         <Route path="/poc" element={<POC />} />
+        <Route path="/cat" element={<CAT />} />
         <Route path="/updatepassword/:id" element={<Updatepassword />} />
         <Route path="/nlp" element={<NLP />} />
         <Route
@@ -104,6 +119,7 @@ function App() {
         />
         <Route path="/Computer_Vision" element={<ComputerVision />} />
         <Route path="/ForcastingUsingAi" element={<ForcastingUsingAi />} />
+        <Route path="/Privacypolicy" element={<PrivacyPolicy />} />
         <Route
           path="/"
           element={

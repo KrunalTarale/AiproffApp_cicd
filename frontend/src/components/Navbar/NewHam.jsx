@@ -48,9 +48,15 @@ const NewHam = ({ closeModal }) => {
     {
       title: 'Reliable and Robust AI',
       options: [
-        { name: 'Concept A', url: '/conceptA' },
-        { name: 'Concept B', url: '/conceptB' },
-        { name: 'Concept C', url: '/conceptC' },
+        {
+          name: 'Reliable and Robust AI for Enterprises',
+          url: '/rrenterprises',
+        },
+        {
+          name: 'Reliable and Robust AI for Educational Institutions',
+          url: '/rreducational',
+        },
+        { name: 'Reliable and Robust AI for Healthcare', url: '/rrhealthcare' },
       ],
     },
     {

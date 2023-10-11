@@ -138,6 +138,7 @@ const Article = () => {
     }
   };
 
+
   return (
     <>
       <Navbar />
@@ -205,19 +206,19 @@ const Article = () => {
                   </div>
                   {dropdownVisible && (
                     <div className="mt-2 p-4 px-6 absolute left-[-50%] ml-3 border-2 rounded shadow-lg bg-white z-10 chat-bubble dropdown">
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer ">
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnLinkedIn}>
                         <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
                         Linkedin
                       </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer">
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnTwitter}>
                         <FontAwesomeIcon icon={faTwitter} className="mr-2" />
                         Twitter
                       </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer">
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnFacebook}>
                         <FontAwesomeIcon icon={faFacebook} className="mr-2" />
                         Facebook
                       </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer">
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareByEmail}>
                         <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
                         Email
                       </div>
