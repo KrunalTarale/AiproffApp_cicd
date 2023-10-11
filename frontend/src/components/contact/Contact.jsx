@@ -126,6 +126,19 @@ const getAlltopics = (topic) => {
   return <option value={topic.name}>{topic.name}</option>
 }
 
+// Massage counter
+
+const handleMassage = (e) => {
+  
+  const inputValue = e.target.value;
+  const inputWithoutSpaces = inputValue.replace(/\s/g, ''); 
+
+  if (inputWithoutSpaces.length <= 250) {
+    setmassage(inputValue);
+}
+
+};
+
   return (
     <>
       <Navbar />
@@ -300,8 +313,9 @@ const getAlltopics = (topic) => {
                 rows="4"
                 placeholder="Type your message here..."
                 value={massage}
-                onChange={(event) => setmassage(event.target.value)}
+                onChange={handleMassage}
               ></textarea>
+              <p>Remaining Characters: {250 - massage.replace(/\s/g, '').length}</p>
               {error && ! massage && <span className='warning_massage'>Please Add the Massage</span> }
             </div>
 
