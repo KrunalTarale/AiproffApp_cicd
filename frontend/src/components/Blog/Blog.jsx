@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom'
 // Blog Images
 import image1 from "../assets/Article1/diag2.png";
 import image2 from "../assets/rodbust_ai/img_1.jpg";
-import image3 from "../assets/Nlp_img/nlp_img1.jpg";
+import image3 from "../assets/Nlp_img/nlp_banner.jpg";
 import image4 from "../assets/ComputerVision/img1.jpg";
-import image5 from "../assets/forcastingAi/img3.jpg";
+import image5 from "../assets/forcastingAi/ForecastingusingAI.jpg";
 
 const Blog = () => {
 

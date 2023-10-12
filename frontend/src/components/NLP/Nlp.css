@@ -56,3 +56,10 @@
       display: block;
     }
   }
+
+  .banner_color{
+    background-color: yellow;
+    color: black;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
