@@ -26,6 +26,14 @@ import image4 from "../assets/ComputerVision/img4.jpg";
 import image7 from "../assets/Article1/logo.png";
 import card1 from "../assets/Article1/card1.png";
 
+// Card images
+
+import card_image1 from "../assets/forcastingAi/ForecastingusingAI.jpg";
+import card_image2 from "../assets/Article1/diag2.png";
+import card_image3 from "../assets/rodbust_ai/img_1.jpg";
+
+// Card images ends
+
 import AudioPlayer from "../AudioPlayer/AudioPlayer";
 import Footer from "../Foot/Foot";
 
@@ -665,40 +673,37 @@ const ComputerVision = () => {
             Related Articles
           </h1>
         </div>
-        <div className="flex lg:flex-row flex-col p-8 ">
-          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300">
-            <img src={card1} className="rounded-t" alt="Quantum Article" />
+        <div className="flex lg:flex-row flex-col p-8">
+          <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3">
+            <img src={card_image1} className="rounded-t" alt="Quantum Article" />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">Article</p>
+              <p className="text-gray-700 font-bold mb-2">Introduction: When AI starts to predict Future</p>
               <h1>
-                <a className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
-                  Shaping the long race in quantum communication and quantum
-                  sensing
-                </a>
+                <Link to={"/ForcastingUsingAi"} className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
+                Forecasting is the art and science of predicting future events or outcomes based on past and present data.
+                </Link>
               </h1>
             </div>
           </div>
-          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300">
-            <img src={card1} className="rounded-t" alt="Quantum Article" />
+          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3">
+            <img src={card_image2} className="rounded-t" alt="Quantum Article" />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">Article</p>
+              <p className="text-gray-700 font-bold mb-2">Applied AI: When AI solves real world problems</p>
               <h1>
-                <a className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
-                  Shaping the long race in quantum communication and quantum
-                  sensing
-                </a>
+                <Link to={"/article"} className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
+                Artificial Intelligence is a promising technological marvel that holds the key to the future.
+                </Link>
               </h1>
             </div>
           </div>
-          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300">
-            <img src={card1} className="rounded-t" alt="Quantum Article" />
+          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3">
+            <img src={card_image3} className="rounded-t" alt="Quantum Article" />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">Article</p>
+              <p className="text-gray-700 font-bold mb-2">Introduction: Reliable and Robust AI</p>
               <h1>
-                <a className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
-                  Shaping the long race in quantum communication and quantum
-                  sensing
-                </a>
+                <Link to={"/Realaible_And_RodbustAi"} className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
+                The field of Artificial intelligence (AI) is rapidly evolving. It is tapping into
+                </Link>
               </h1>
             </div>
           </div>

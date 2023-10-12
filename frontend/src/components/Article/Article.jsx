@@ -28,6 +28,14 @@ import image6 from "../assets/Article1/diag3.png";
 import image7 from "../assets/Article1/logo.png";
 import card1 from "../assets/Article1/card1.png";
 
+// Card images
+
+import card_image1 from "../assets/rodbust_ai/img_1.jpg";
+import card_image2 from "../assets/Nlp_img/nlp_banner.jpg";
+import card_image3 from "../assets/ComputerVision/img1.jpg";
+
+// Card images ends
+
 import AudioPlayer from "../AudioPlayer/AudioPlayer";
 import Footer from "../Foot/Foot";
 
@@ -831,40 +839,37 @@ const Article = () => {
             Related Articles
           </h1>
         </div>
-        <div className="flex lg:flex-row flex-col p-8 ">
-          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300">
-            <img src={card1} className="rounded-t" alt="Quantum Article" />
+        <div className="flex lg:flex-row flex-col p-8">
+          <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3">
+            <img src={card_image1} className="rounded-t" alt="Quantum Article" />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">Article</p>
+              <p className="text-gray-700 font-bold mb-2">Introduction: Reliable and Robust AI</p>
               <h1>
-                <a className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
-                  Shaping the long race in quantum communication and quantum
-                  sensing
-                </a>
+                <Link to={"/Realaible_And_RodbustAi"} className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
+                The field of Artificial intelligence (AI) is rapidly evolving. It is tapping into industries and it exhibits
+                </Link>
               </h1>
             </div>
           </div>
-          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300">
-            <img src={card1} className="rounded-t" alt="Quantum Article" />
+          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3">
+            <img src={card_image2} className="rounded-t" alt="Quantum Article" />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">Article</p>
+              <p className="text-gray-700 font-bold mb-2">Introduction to NLP: When AI talks</p>
               <h1>
-                <a className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
-                  Shaping the long race in quantum communication and quantum
-                  sensing
-                </a>
+                <Link to={"/nlp"} className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
+                The field of Artificial intelligence is exciting. Under this discipline of Technology, machines can talk,
+                </Link>
               </h1>
             </div>
           </div>
-          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300">
-            <img src={card1} className="rounded-t" alt="Quantum Article" />
+          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3">
+            <img src={card_image3} className="rounded-t" alt="Quantum Article" />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">Article</p>
+              <p className="text-gray-700 font-bold mb-2">Introduction to Computer Vision: When Machines Start to See</p>
               <h1>
-                <a className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
-                  Shaping the long race in quantum communication and quantum
-                  sensing
-                </a>
+                <Link to={"/computer_vision"} className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
+                A computer deserves to be called intelligent if it could deceive a 
+                </Link>
               </h1>
             </div>
           </div>
