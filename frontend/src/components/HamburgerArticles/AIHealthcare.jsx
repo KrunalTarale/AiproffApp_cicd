@@ -12,7 +12,7 @@ function AIHealthcare() {
           className="flex w-full xl:h-[35rem] bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         >
-          <div className="max-3xl p-20 max-w-5xl ">
+          <div className="max-3xl max-w-5xl common_padding">
             <h1 className="text-white xl:text-6xl lg:text-5xl md:text-4xl text-3xl leading-normal md:leading-normal lg:leading-normal font-semibold xl:leading-normal ">
               Advancing Healthcare Through Applied Artificial Intelligence
             </h1>
@@ -23,7 +23,7 @@ function AIHealthcare() {
           </div>
         </div>
 
-        <div className="flex p-20 justify-center  item-center max-w-5xl mx-auto text-xl font leading-relaxed">
+        <div className="flex justify-center  item-center max-w-5xl mx-auto text-xl font leading-relaxed common_padding">
           <p>
             The field of healthcare is experiencing a profound transformation
             driven by the relentless integration of applied artificial

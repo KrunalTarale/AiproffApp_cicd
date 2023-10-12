@@ -363,6 +363,14 @@ function Navbar() {
                 >
                   BLOG
                 </Link>
+                {auth ? (
+                <Link
+                  to="/yourarticle"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 text-black"
+                >
+                  YOUR ARTICLES
+                </Link>
+            ) : null}
                 <Link
                   to="/contact"
                   className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100"

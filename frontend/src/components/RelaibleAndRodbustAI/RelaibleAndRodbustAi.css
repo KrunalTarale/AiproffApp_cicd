@@ -56,3 +56,10 @@
       display: block;
     }
   }
+
+  .header_text{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.497);
+    padding: 1rem;
+    border-radius: 1rem;
+  }
