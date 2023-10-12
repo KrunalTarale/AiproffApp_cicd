@@ -31,3 +31,7 @@
     .Logo {
     }
   }
+
+  .z_index{
+    z-index: 2;
+  }
