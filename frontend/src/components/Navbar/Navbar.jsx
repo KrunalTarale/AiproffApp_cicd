@@ -276,7 +276,7 @@ function Navbar() {
 
           {/* Dropdown Content */}
           {isOpen && (
-            <div className="absolute right-2 mt-2 md:w-56 w-40 rounded-md shadow-lg bg-white">
+            <div className="absolute right-2 mt-2 md:w-56 w-40 rounded-md shadow-lg bg-white z_index">
               <div className="rounded-md shadow-xs border-2 border-slate-400">
                 <Link
                   to="/"
