@@ -7,3 +7,12 @@
       sans-serif;
   }
   
+  .common_padding {
+    padding: 5rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    .common_padding {
+      padding: 2rem;
+    }
+  }

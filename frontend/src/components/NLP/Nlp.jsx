@@ -19,7 +19,7 @@ import {
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 
-import image1 from "../assets/Nlp_img/nlp_img1.jpg";
+import image1 from "../assets/Nlp_img/nlp_banner.jpg";
 import image2 from "../assets/Nlp_img/nlp_img2.jpg";
 import image3 from "../assets/Nlp_img/nlp_img3.jpg";
 import image4 from "../assets/Nlp_img/nlp_img4.jpg";
@@ -187,11 +187,11 @@ const Nlp = () => {
             />
 
             <div className="max-w-5xl md:absolute inset-0 flex flex-col justify-center items-center p-6 mx-auto lg:mt-20 lg:pt-12">
-              {/* <h1 className="text-4xl md:text-5xl font-semibold mb-2 z-10 text-white leading-relaxed">
-                Applied AI: When AI solves real world problems
-              </h1> */}
+              <h1 className="text-4xl md:text-5xl font-semibold mb-2 z-10 leading-relaxed banner_color">
+              Introduction to NLP: When AI talks
+              </h1>
               <div className="w-full flex justify-start items-center">
-                {/* <p className="mt-2 text-slate-100">September 4, 2023</p> */}
+                {/* <p className="mt-2 banner_color">September 4, 2023</p> */}
               </div>
             </div>
           </div>

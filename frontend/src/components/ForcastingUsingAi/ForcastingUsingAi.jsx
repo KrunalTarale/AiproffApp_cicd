@@ -19,7 +19,7 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import image1 from '../assets/forcastingAi/img1.jpg';
+import image1 from '../assets/forcastingAi/ForecastingusingAI.jpg';
 import image2 from '../assets/forcastingAi/img2.jpg';
 import image3 from '../assets/forcastingAi/img3.jpg';
 import image7 from '../assets/Article1/logo.png';
@@ -178,11 +178,11 @@ const ForcastingUsingAi = () => {
             />
 
             <div className="max-w-5xl md:absolute inset-0 flex flex-col justify-center items-center p-6 mx-auto lg:mt-20 lg:pt-12">
-              {/* <h1 className="text-4xl md:text-5xl font-semibold mb-2 z-10 text-white leading-relaxed">
-                Applied AI: When AI solves real world problems
-              </h1> */}
+              <h1 className="text-4xl md:text-5xl font-semibold mb-2 z-10 leading-relaxed banner_text">
+              Forecasting using AI
+              </h1>
               <div className="w-full flex justify-start items-center">
-                {/* <p className="mt-2 text-slate-100">September 4, 2023</p> */}
+                {/* <p className="mt-2">September 4, 2023</p> */}
               </div>
             </div>
           </div>

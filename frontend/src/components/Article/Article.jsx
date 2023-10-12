@@ -138,6 +138,37 @@ const Article = () => {
     }
   };
 
+        // links
+        function shareOnLinkedIn() {
+          var url = 'https://www.aiproff.com/article';
+          var linkedinUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url);
+          window.open(linkedinUrl, '_blank');
+        }
+        
+        function shareOnTwitter() {
+          // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
+          var url = 'https://www.aiproff.com/article';
+          window.open( + 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url), '_blank');
+        }
+  
+      //   function shareOnTwitter() {
+      //     var url = 'https://www.aiproff.com/nlp';
+      //     var text = 'Thank you for connecting with us';
+      //     var twitterIntentURL = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text);
+      //     window.open(twitterIntentURL, '_blank');
+      // }
+        
+        function shareOnFacebook() {
+          // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
+          var url = 'https://www.aiproff.com/article';
+          window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+        }
+        
+        function shareByEmail() {
+          // Replace 'your-email-share-url' with the URL you want to share via email.
+          var url = 'https://www.aiproff.com/article';
+          window.location.href = 'mailto:?body=' + encodeURIComponent(url);
+        }
 
   return (
     <>
@@ -154,7 +185,7 @@ const Article = () => {
               alt="Generative AI"
               className="w-full object-cover opacity-0"
             />
-
+    
             <div className="max-w-5xl md:absolute inset-0 flex flex-col justify-center items-center p-6 mx-auto lg:mt-20 lg:pt-12">
               <h1 className="text-4xl md:text-5xl font-semibold mb-2 z-10 text-white leading-relaxed">
                 Applied AI: When AI solves real world problems
