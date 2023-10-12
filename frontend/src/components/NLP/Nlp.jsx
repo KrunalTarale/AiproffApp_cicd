@@ -27,6 +27,14 @@ import image5 from "../assets/Nlp_img/nlp_img5.jpg";
 import image7 from "../assets/Article1/logo.png";
 import card1 from "../assets/Article1/card1.png";
 
+// Card images
+
+import card_image1 from "../assets/forcastingAi/ForecastingusingAI.jpg";
+import card_image2 from "../assets/Article1/diag2.png";
+import card_image3 from "../assets/ComputerVision/img1.jpg";
+
+// Card images ends
+
 import AudioPlayer from "../AudioPlayer/AudioPlayer";
 import Footer from "../Foot/Foot";
 
@@ -780,46 +788,42 @@ const Nlp = () => {
             Related Articles
           </h1>
         </div>
-        <div className="flex lg:flex-row flex-col p-8 ">
-          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300">
-            <img src={card1} className="rounded-t" alt="Quantum Article" />
+        <div className="flex lg:flex-row flex-col p-8">
+          <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3">
+            <img src={card_image1} className="rounded-t" alt="Quantum Article" />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">Article</p>
+              <p className="text-gray-700 font-bold mb-2">Introduction: When AI starts to predict Future</p>
               <h1>
-                <a className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
-                  Shaping the long race in quantum communication and quantum
-                  sensing
-                </a>
+                <Link to={"/ForcastingUsingAi"} className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
+                Forecasting is the art and science of predicting future events or outcomes based on past and present data.
+                </Link>
               </h1>
             </div>
           </div>
-          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300">
-            <img src={card1} className="rounded-t" alt="Quantum Article" />
+          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3">
+            <img src={card_image2} className="rounded-t" alt="Quantum Article" />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">Article</p>
+              <p className="text-gray-700 font-bold mb-2">Applied AI: When AI solves real world problems</p>
               <h1>
-                <a className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
-                  Shaping the long race in quantum communication and quantum
-                  sensing
-                </a>
+                <Link to={"/article"} className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
+                Artificial Intelligence is a promising technological marvel that holds the key to the future.
+                </Link>
               </h1>
             </div>
           </div>
-          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300">
-            <img src={card1} className="rounded-t" alt="Quantum Article" />
+          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3">
+            <img src={card_image3} className="rounded-t" alt="Quantum Article" />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">Article</p>
+              <p className="text-gray-700 font-bold mb-2">Introduction to Computer Vision: When Machines Start to See</p>
               <h1>
-                <a className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
-                  Shaping the long race in quantum communication and quantum
-                  sensing
-                </a>
+                <Link to={"/computer_vision"} className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
+                A computer deserves to be called intelligent if it could deceive a 
+                </Link>
               </h1>
             </div>
           </div>
         </div>
       </div>
-
       <div className="mt-0 pt-4 border-2">
         <Footer />
       </div>
