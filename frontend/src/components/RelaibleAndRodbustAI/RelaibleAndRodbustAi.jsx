@@ -186,9 +186,9 @@ const RealaibleAndRodbustAi = () => {
             />
 
             <div className="max-w-5xl md:absolute inset-0 flex flex-col justify-center items-center p-6 mx-auto lg:mt-20 lg:pt-12">
-              <h1 className="text-4xl md:text-5xl font-semibold mb-2 z-10 header_text leading-relaxed">
+              {/* <h1 className="text-4xl md:text-5xl font-semibold mb-2 z-10 header_text leading-relaxed">
               Reliable and Robust AI
-              </h1>
+              </h1> */}
               <div className="w-full flex justify-start items-center">
                 {/* <p className="mt-2 text-slate-100">September 4, 2023</p> */}
               </div>

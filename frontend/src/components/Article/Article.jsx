@@ -199,7 +199,7 @@ const Article = () => {
                 Applied AI: When AI solves real world problems
               </h1>
               <div className="w-full flex justify-start items-center">
-                <p className="mt-2 text-slate-100">September 4, 2023</p>
+                {/* <p className="mt-2 text-slate-100">September 4, 2023</p> */}
               </div>
             </div>
           </div>
