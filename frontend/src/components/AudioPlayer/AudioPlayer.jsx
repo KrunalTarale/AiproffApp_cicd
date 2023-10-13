@@ -8,7 +8,7 @@ import {
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 
-import logoimg from "../assets/AiProff X Profile.png"
+import logoimg from '../assets/AiProff X Profile.png';
 
 function formatTime(time) {
   const minutes = Math.floor(time / 60);
@@ -68,9 +68,7 @@ function AudioPlayer(props) {
             className="hidden lg:flex  object-cover w-full h-full"
           />
         </div>
-        <h2 className="font-medium mb-1">
-          Applied AI | When AI solves real world problems
-        </h2>
+        <h2 className="font-medium mb-1">{props.Title}</h2>
         <p className="text-sm text-gray-500">{`Duration | ${formatTime(
           duration
         )} mins`}</p>
