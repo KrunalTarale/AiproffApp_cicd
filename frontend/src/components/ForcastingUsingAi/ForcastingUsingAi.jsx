@@ -27,9 +27,9 @@ import card1 from '../assets/Article1/card1.png';
 
 // Card images
 
-import card_image1 from "../assets/rodbust_ai/img_1.jpg";
-import card_image2 from "../assets/Nlp_img/nlp_banner.jpg";
-import card_image3 from "../assets/ComputerVision/img1.jpg";
+import card_image1 from '../assets/rodbust_ai/img_1.jpg';
+import card_image2 from '../assets/Nlp_img/nlp_banner.jpg';
+import card_image3 from '../assets/ComputerVision/img1.jpg';
 
 // Card images ends
 
@@ -37,6 +37,8 @@ import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import Footer from '../Foot/Foot';
 
 const ForcastingUsingAi = () => {
+  const Title = 'Forecasting using AI';
+
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [progressdropdownVisible, setprogressDropdownVisible] = useState(false);
   const [scrollProgress, setScrollProgress] = React.useState(0);
@@ -143,31 +145,38 @@ const ForcastingUsingAi = () => {
     }
   };
 
-      // links
-      function shareOnLinkedIn() {
-        var url = 'https://www.aiproff.com/ForcastingUsingAi';
-        var linkedinUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url);
-        window.open(linkedinUrl, '_blank');
-      }
-      
-      function shareOnTwitter() {
-        // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
-        var url = 'https://www.aiproff.com/ForcastingUsingAi';
-        window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url), '_blank');
-      }
-      
-      function shareOnFacebook() {
-        // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
-        var url = 'https://www.aiproff.com/ForcastingUsingAi';
-        window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
-      }
-      
-      function shareByEmail() {
-        // Replace 'your-email-share-url' with the URL you want to share via email.
-        var url = 'https://www.aiproff.com/ForcastingUsingAi';
-        window.location.href = 'mailto:?body=' + encodeURIComponent(url);
-      }
-  
+  // links
+  function shareOnLinkedIn() {
+    var url = 'https://www.aiproff.com/ForcastingUsingAi';
+    var linkedinUrl =
+      'https://www.linkedin.com/sharing/share-offsite/?url=' +
+      encodeURIComponent(url);
+    window.open(linkedinUrl, '_blank');
+  }
+
+  function shareOnTwitter() {
+    // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
+    var url = 'https://www.aiproff.com/ForcastingUsingAi';
+    window.open(
+      'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url),
+      '_blank'
+    );
+  }
+
+  function shareOnFacebook() {
+    // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
+    var url = 'https://www.aiproff.com/ForcastingUsingAi';
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
+      '_blank'
+    );
+  }
+
+  function shareByEmail() {
+    // Replace 'your-email-share-url' with the URL you want to share via email.
+    var url = 'https://www.aiproff.com/ForcastingUsingAi';
+    window.location.href = 'mailto:?body=' + encodeURIComponent(url);
+  }
 
   return (
     <>
@@ -187,7 +196,7 @@ const ForcastingUsingAi = () => {
 
             <div className="max-w-5xl md:absolute inset-0 flex flex-col justify-center items-center p-6 mx-auto lg:mt-20 lg:pt-12">
               <h1 className="text-4xl md:text-5xl font-semibold mb-2 z-10 leading-relaxed banner_text">
-              Forecasting using AI
+                Forecasting using AI
               </h1>
               <div className="w-full flex justify-start items-center">
                 {/* <p className="mt-2">September 4, 2023</p> */}
@@ -205,9 +214,9 @@ const ForcastingUsingAi = () => {
           )}
 
           <div className="mx-auto lg:max-w-7xl flex flex-col justify-center p-16 article_padding">
-          <h1 className="text-4xl font-bold mb-8 upper_heading">
-                      Introduction: When AI starts to predict Future
-          </h1>
+            <h1 className="text-4xl font-bold mb-8 upper_heading">
+              Introduction: When AI starts to predict Future
+            </h1>
             <div className="md:flex md:justify-between md:w-4/5 space-y-8 md:space-y-0">
               <div className="underline underline-offset-4">
                 <Link to="/">By AiProff</Link>
@@ -217,6 +226,7 @@ const ForcastingUsingAi = () => {
                   <AudioPlayer
                     audio="/audiofile.mp3"
                     onClose={toggleAudioPlayerVisibility}
+                    Title={Title}
                   />
                 ) : (
                   <button
@@ -242,19 +252,31 @@ const ForcastingUsingAi = () => {
                   </div>
                   {dropdownVisible && (
                     <div className="mt-2 p-4 px-6 absolute left-[-50%] ml-3 border-2 rounded shadow-lg bg-white z-10 chat-bubble dropdown">
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnLinkedIn}>
+                      <div
+                        className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                        onClick={shareOnLinkedIn}
+                      >
                         <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
                         Linkedin
                       </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnTwitter}>
+                      <div
+                        className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                        onClick={shareOnTwitter}
+                      >
                         <FontAwesomeIcon icon={faTwitter} className="mr-2" />
                         Twitter
                       </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnFacebook}>
+                      <div
+                        className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                        onClick={shareOnFacebook}
+                      >
                         <FontAwesomeIcon icon={faFacebook} className="mr-2" />
                         Facebook
                       </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareByEmail}>
+                      <div
+                        className="flex items-center py-1 hover:bg-blue-100 cursor-pointer"
+                        onClick={shareByEmail}
+                      >
                         <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
                         Email
                       </div>
@@ -271,7 +293,7 @@ const ForcastingUsingAi = () => {
                 </div>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Synthetic+data+for+enterprises_ebook_2023_August.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Forecasting.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -447,11 +469,19 @@ const ForcastingUsingAi = () => {
                 <div>
                   <img src={image2} alt="graph-economic-impact" />
                   <p className="mt-4 mb-5">
-                    Interestingly, according to an article by <a href="https://techjury.net/blog/ai-statistics/" target="_blank" className='links'> TechJury </a>, AI is
-                    becoming more and more prevalent in business analytics. 35%
-                    of companies are using AI in some way, while 42% of
-                    companies are investigating how to implement AI in the
-                    future.
+                    Interestingly, according to an article by{' '}
+                    <a
+                      href="https://techjury.net/blog/ai-statistics/"
+                      target="_blank"
+                      className="links"
+                    >
+                      {' '}
+                      TechJury{' '}
+                    </a>
+                    , AI is becoming more and more prevalent in business
+                    analytics. 35% of companies are using AI in some way, while
+                    42% of companies are investigating how to implement AI in
+                    the future.
                   </p>
                   <p className="mb-5">
                     What makes AI so appealing for business analysts and
@@ -533,7 +563,14 @@ const ForcastingUsingAi = () => {
                     increasing. Interestingly, AI forecasts are employed not
                     only on the analyst front but also in the field of product
                     management, decision making and data Augmentation. Source:
-                    <a href="https://peak.ai/hub/blog/ai-demand-forecasting/" target="_blank" className='links'> Peak.ai </a>
+                    <a
+                      href="https://peak.ai/hub/blog/ai-demand-forecasting/"
+                      target="_blank"
+                      className="links"
+                    >
+                      {' '}
+                      Peak.ai{' '}
+                    </a>
                   </p>
                   <p>
                     Enterprises favour AI-enabled forecasting due to the
@@ -674,7 +711,7 @@ const ForcastingUsingAi = () => {
 
                 <div className="flex flex-row text-blue-600 hover:underline underline-offset-4 mb-4 space-x-2">
                   <Link
-                    to="https://ingestionpeekai.s3.amazonaws.com/Synthetic+data+for+enterprises_ebook_2023_August.pdf"
+                    to="https://ingestionpeekai.s3.amazonaws.com/Forecasting.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="space-x-4"
@@ -696,7 +733,7 @@ const ForcastingUsingAi = () => {
             <div className="max-w-3xl lg:max-w-6xl px-8 lg:px-4 md:mx-auto flex justify-center  md:justify-between items-center pt-4">
               <div>
                 <h1 className="hidden md:flex text-xl">
-                Introduction: When AI starts to predict Future
+                  Introduction: When AI starts to predict Future
                 </h1>
               </div>
 
@@ -746,7 +783,7 @@ const ForcastingUsingAi = () => {
                 </div>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Synthetic+data+for+enterprises_ebook_2023_August.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Forecasting.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -783,7 +820,7 @@ const ForcastingUsingAi = () => {
             <div className="max-w-3xl lg:max-w-6xl px-8 lg:px-4 md:mx-auto flex justify-center  md:justify-between items-center pt-4">
               <div>
                 <h1 className="hidden md:flex text-xl">
-                Introduction: When AI starts to predict Future
+                  Introduction: When AI starts to predict Future
                 </h1>
               </div>
 
@@ -832,7 +869,7 @@ const ForcastingUsingAi = () => {
                 </div>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Synthetic+data+for+enterprises_ebook_2023_August.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Forecasting.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -872,34 +909,64 @@ const ForcastingUsingAi = () => {
         </div>
         <div className="flex lg:flex-row flex-col p-8">
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3">
-            <img src={card_image1} className="rounded-t" alt="Quantum Article" />
+            <img
+              src={card_image1}
+              className="rounded-t"
+              alt="Quantum Article"
+            />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">Introduction: Reliable and Robust AI</p>
+              <p className="text-gray-700 font-bold mb-2">
+                Introduction: Reliable and Robust AI
+              </p>
               <h1>
-                <Link to={"/Realaible_And_RodbustAi"} className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
-                The field of Artificial intelligence (AI) is rapidly evolving. It is tapping into industries and it exhibits
+                <Link
+                  to={'/Realaible_And_RodbustAi'}
+                  className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer"
+                >
+                  The field of Artificial intelligence (AI) is rapidly evolving.
+                  It is tapping into industries and it exhibits
                 </Link>
               </h1>
             </div>
           </div>
           <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3">
-            <img src={card_image2} className="rounded-t" alt="Quantum Article" />
+            <img
+              src={card_image2}
+              className="rounded-t"
+              alt="Quantum Article"
+            />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">Introduction to NLP: When AI talks</p>
+              <p className="text-gray-700 font-bold mb-2">
+                Introduction to NLP: When AI talks
+              </p>
               <h1>
-                <Link to={"/nlp"} className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
-                The field of Artificial intelligence is exciting. Under this discipline of Technology, machines can talk,
+                <Link
+                  to={'/nlp'}
+                  className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer"
+                >
+                  The field of Artificial intelligence is exciting. Under this
+                  discipline of Technology, machines can talk,
                 </Link>
               </h1>
             </div>
           </div>
           <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3">
-            <img src={card_image3} className="rounded-t" alt="Quantum Article" />
+            <img
+              src={card_image3}
+              className="rounded-t"
+              alt="Quantum Article"
+            />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">Introduction to Computer Vision: When Machines Start to See</p>
+              <p className="text-gray-700 font-bold mb-2">
+                Introduction to Computer Vision: When Machines Start to See
+              </p>
               <h1>
-                <Link to={"/computer_vision"} className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer">
-                A computer deserves to be called intelligent if it could deceive a 
+                <Link
+                  to={'/computer_vision'}
+                  className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer"
+                >
+                  A computer deserves to be called intelligent if it could
+                  deceive a
                 </Link>
               </h1>
             </div>

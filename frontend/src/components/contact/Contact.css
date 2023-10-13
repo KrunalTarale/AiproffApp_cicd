@@ -1,27 +1,26 @@
-.Form_page{
-    width: 50%;
-    border-radius: 5px;
-    padding: 30px;
-    margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.Form_page {
+  width: 50%;
+  border-radius: 5px;
+  padding: 30px;
+  margin: auto;
 }
 
-.contact_form{
-    margin-top: 20px;
-    margin-bottom: 20px;
+.contact_form {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.warning_massage{
-    color: red;
+.warning_massage {
+  color: red;
 }
 
-.heading{
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 765px) {
-    .Form_page{
-        width: 90%;
-    }
+  .Form_page {
+    width: 90%;
   }
+}
