@@ -231,7 +231,7 @@ const Article = () => {
               <div>
                 {isAudioPlayerVisible ? (
                   <AudioPlayer
-                    audio="/audiofile.mp3"
+                    audio="/audio_files/Applied AI.mp3"
                     onClose={toggleAudioPlayerVisibility}
                     Title={Title}
                   />

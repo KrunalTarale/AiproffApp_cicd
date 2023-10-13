@@ -225,7 +225,7 @@ const ComputerVision = () => {
               <div>
                 {isAudioPlayerVisible ? (
                   <AudioPlayer
-                    audio="/audiofile.mp3"
+                    audio="/audio_files/Computer Vision.mp3"
                     onClose={toggleAudioPlayerVisibility}
                     Title={Title}
                   />

@@ -204,9 +204,9 @@ const Nlp = () => {
             />
 
             <div className="max-w-5xl md:absolute inset-0 flex flex-col justify-center items-center p-6 mx-auto lg:mt-20 lg:pt-12">
-              <h1 className="text-4xl md:text-5xl font-semibold mb-2 z-10 leading-relaxed banner_color">
+              {/* <h1 className="text-4xl md:text-5xl font-semibold mb-2 z-10 leading-relaxed banner_color">
                 Introduction to NLP: When AI talks
-              </h1>
+              </h1> */}
               <div className="w-full flex justify-start items-center">
                 {/* <p className="mt-2 banner_color">September 4, 2023</p> */}
               </div>
@@ -233,7 +233,7 @@ const Nlp = () => {
               <div>
                 {isAudioPlayerVisible ? (
                   <AudioPlayer
-                    audio="/audiofile.mp3"
+                    audio="/audio_files/NLP.mp3"
                     onClose={toggleAudioPlayerVisibility}
                     Title={Title}
                   />
