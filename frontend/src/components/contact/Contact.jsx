@@ -148,7 +148,7 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <div className="contact_form mb-5 bg-gray-800 text-white py-8 mt-0">
+      <div className="contact_form bg-gradient-to-r from-blue-950 to-blue-500 text-white py-8 mt-0 mb-0">
         {/* <div className="flex items-center justify-center">
           <h1 className="px-8 py-3 heading text-6xl font-bold">Contact Us</h1>
         </div> */}
@@ -201,7 +201,7 @@ const Contact = () => {
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3">
                 <label
-                  className="block uppercase tracking-wide text-slate-300 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-slate-300 text-base font-bold mb-2"
                   htmlFor="grid-last-name"
                 >
                   First Name
@@ -221,7 +221,7 @@ const Contact = () => {
 
               <div className="w-full md:w-1/2 px-3">
                 <label
-                  className="block uppercase tracking-wide text-slate-300 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-slate-300 text-base font-bold mb-2"
                   htmlFor="grid-last-name"
                 >
                   Last Name
@@ -246,7 +246,7 @@ const Contact = () => {
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
-                  className="block uppercase tracking-wide text-slate-300 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-slate-300 text-base font-bold mb-2"
                   htmlFor="grid-state"
                 >
                   Country Calling Code
@@ -273,7 +273,7 @@ const Contact = () => {
 
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
-                  className="block uppercase tracking-wide text-slate-300 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-slate-300 text-base font-bold mb-2"
                   htmlFor="grid-city"
                 >
                   Contact No.
@@ -297,7 +297,7 @@ const Contact = () => {
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
-                  className="block uppercase tracking-wide text-slate-300 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-slate-300 text-base font-bold mb-2"
                   htmlFor="grid-state"
                 >
                   State
@@ -322,7 +322,7 @@ const Contact = () => {
 
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
-                  className="block uppercase tracking-wide text-slate-300 text-xs font-bold mb-2"
+                  className="block uppercase tracking-wide text-slate-300 text-base font-bold mb-2"
                   htmlFor="grid-city"
                 >
                   City
@@ -346,7 +346,7 @@ const Contact = () => {
 
             <div className="w-full mb-6">
               <label
-                className="block uppercase tracking-wide text-slate-300 text-xs font-bold mb-2"
+                className="block uppercase tracking-wide text-slate-300 text-base font-bold mb-2"
                 htmlFor="grid-state"
               >
                 How can we help you today ?
@@ -373,7 +373,7 @@ const Contact = () => {
             <div className="mb-4">
               <label
                 htmlFor="textarea"
-                className="block text-slate-300 text-sm font-bold mb-2"
+                className="block text-slate-300 text-base font-bold mb-2"
               >
                 Your Message
               </label>

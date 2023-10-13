@@ -59,7 +59,7 @@ function AudioPlayer(props) {
   };
 
   return (
-    <div className="p-2 pb-5 bg-gray-100 border-2  rounded-lg fixed bottom-4 md:right-56  lg:right-2 ">
+    <div className="p-2 pb-5 bg-gray-100 border-2  rounded-lg fixed bottom-4 md:right-56  lg:right-2 min-w-[16rem] lg:min-h-[15rem]">
       <div className="flex flex-col items-center mb-2 w-25 ">
         <div className="lg:w-32 lg:h-32  rounded-full overflow-hidden mb-3">
           <img
