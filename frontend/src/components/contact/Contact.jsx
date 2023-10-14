@@ -207,12 +207,13 @@ const Contact = () => {
                   First Name
                 </label>
                 <input
-                  className="appearance-none block w-full bg-gray-200 text-slate-300 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  className="appearance-none block w-full bg-gray-200 text-slate-300 border border-gray-800 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-800"
                   id="grid-last-name"
                   type="text"
                   value={fname}
                   placeholder="John"
                   onChange={(event) => setfname(event.target.value)}
+                  style={{color:'rgb(75 75 75)', fontWeight:500}}
                 />
                 {error && !fname && (
                   <span className="warning_massage">Please Enter Name</span>
@@ -233,6 +234,7 @@ const Contact = () => {
                   placeholder="Doe"
                   value={lname}
                   onChange={(event) => setlname(event.target.value)}
+                  style={{color:'rgb(75 75 75)', fontWeight:500}}
                   required
                 />
                 {error && !lname && (
@@ -256,6 +258,7 @@ const Contact = () => {
                     className="block appearance-none w-full bg-gray-200 border border-gray-200 text-slate-300 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="grid-state"
                     onChange={getStates}
+                    style={{color:'rgb(75 75 75)', fontWeight:500}}
                   >
                     <option selected value={''}>
                       Select Country
@@ -285,6 +288,7 @@ const Contact = () => {
                   placeholder="Phone no."
                   onChange={(event) => setcontact(event.target.value)}
                   value={contact}
+                  style={{color:'rgb(75 75 75)', fontWeight:500}}
                 />
                 {error && !contact && (
                   <span className="warning_massage">Please Add Contact No</span>
@@ -307,6 +311,7 @@ const Contact = () => {
                     className="block appearance-none w-full bg-gray-200 border border-gray-200 text-slate-300 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="grid-state"
                     onChange={getCities}
+                    style={{color:'rgb(75 75 75)', fontWeight:500}}
                   >
                     <option value={''} selected>
                       Select State
@@ -335,6 +340,7 @@ const Contact = () => {
                   list="browsers"
                   value={city}
                   onChange={(event) => setcity(event.target.value)}
+                  style={{color:'rgb(75 75 75)', fontWeight:500}}
                 />
 
                 <datalist id="browsers">{cities.map(addCities)}</datalist>
@@ -357,6 +363,7 @@ const Contact = () => {
                   id="grid-state"
                   onChange={(event) => sethelp(event.target.value)}
                   value={help}
+                  style={{color:'rgb(75 75 75)', fontWeight:500}}
                 >
                   <option selected value={''}>
                     Topic
@@ -385,6 +392,7 @@ const Contact = () => {
                 placeholder="Type your message here..."
                 value={massage}
                 onChange={handleMassage}
+                style={{color:'rgb(75 75 75)', fontWeight:500}}
               ></textarea>
               <p>
                 Remaining Characters: {250 - massage.replace(/\s/g, '').length}
