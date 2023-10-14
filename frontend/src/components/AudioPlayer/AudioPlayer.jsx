@@ -8,7 +8,7 @@ import {
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 
-import logoimg from "../assets/AiProff X Profile.png"
+import logoimg from '../assets/AiProff X Profile.png';
 
 function formatTime(time) {
   const minutes = Math.floor(time / 60);
@@ -59,7 +59,7 @@ function AudioPlayer(props) {
   };
 
   return (
-    <div className="p-2 pb-5 bg-gray-100 border-2  rounded-lg fixed bottom-4 md:right-56  lg:right-2 ">
+    <div className="p-2 pb-5 bg-gray-100 border-2  rounded-lg fixed bottom-4 md:right-56  lg:right-2 min-w-[16rem] lg:min-h-[15rem]" style={{width: '350px', height: 'auto'}}>
       <div className="flex flex-col items-center mb-2 w-25 ">
         <div className="lg:w-32 lg:h-32  rounded-full overflow-hidden mb-3">
           <img
@@ -68,9 +68,7 @@ function AudioPlayer(props) {
             className="hidden lg:flex  object-cover w-full h-full"
           />
         </div>
-        <h2 className="font-medium mb-1">
-          Applied AI | When AI solves real world problems
-        </h2>
+        <h2 className="font-medium mb-1" style={{textAlign: 'center'}}>{props.Title}</h2>
         <p className="text-sm text-gray-500">{`Duration | ${formatTime(
           duration
         )} mins`}</p>

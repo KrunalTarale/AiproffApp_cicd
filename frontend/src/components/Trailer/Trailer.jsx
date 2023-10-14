@@ -28,7 +28,7 @@ const Trailer = () => {
           </div>
           <div className="mt-4">
             {' '}
-            <p className="leading-loose text-md md:text-xl font-thin  text-gray-700">
+            <p className="leading-loose text-md md:text-xl   text-black">
               Explore the world of applied AI, where futuristic dreams are
               transforming into real-world solutions. Dive deep into the this
               realms of artificial intelligence and deep learning, and see how
@@ -118,7 +118,7 @@ const Trailer = () => {
             </div>
             <div className="mt-4">
               {' '}
-              <p className="leading-loose text-md md:text-xl font-thin  text-gray-700">
+              <p className="leading-loose text-md md:text-xl   text-gray-700">
                 Explore the transformative journey of Natural Language
                 Processing (NLP), tracing its roots back to the 1940s and its
                 revolutionary breakthrough in 2017. Discover how NLP is
@@ -212,7 +212,7 @@ const Trailer = () => {
           </div>
           <div className="mt-4">
             {' '}
-            <p className="leading-loose text-md md:text-xl font-thin  text-gray-700">
+            <p className="leading-loose text-md md:text-xl   text-gray-700">
               Explore the strategies, advantages, challenges, and best practices
               that pave the way to a Relibale and Robust AI Application. Get
               yourself accquaint in the world of reliable and robust AI, where
