@@ -174,7 +174,7 @@ const Contact = () => {
               <div className=" flex justify-center  items-center flex-col">
                 <h1 className="  text-xl lg:text-2xl font-bold">Email us :</h1>
                 <p className="px-4 py-1 text-xl max-w-xs justify-center  items-center text-center text-slate-300">
-                  anushree.singh@aiproff.ai
+                support@aiproff.ai
                 </p>
               </div>
             </div>

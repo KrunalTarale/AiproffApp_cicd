@@ -19,7 +19,7 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import image1 from '../assets/article.png';
+import image1 from '../assets/Article1/Appliedai.jpg';
 import image2 from '../assets/Article1/graph-1.png';
 import image3 from '../assets/Article1/pie1.png';
 import image4 from '../assets/Article1/diag1.png';
@@ -205,9 +205,9 @@ const Article = () => {
             />
 
             <div className="max-w-5xl md:absolute inset-0 flex flex-col justify-center items-center p-6 mx-auto lg:mt-20 lg:pt-12">
-              <h1 className="text-4xl md:text-5xl font-semibold mb-2 z-10 text-white leading-relaxed">
+              {/* <h1 className="text-4xl md:text-5xl font-semibold mb-2 z-10 text-white leading-relaxed">
                 Applied AI: When AI solves real world problems
-              </h1>
+              </h1> */}
               <div className="w-full flex justify-start items-center">
                 {/* <p className="mt-2 text-slate-100">September 4, 2023</p> */}
               </div>
@@ -224,6 +224,9 @@ const Article = () => {
           )}
 
           <div className="mx-auto lg:max-w-7xl flex flex-col justify-center p-16 article_padding">
+          <h1 className="text-4xl font-bold mb-6 upper_heading">
+          Applied AI: When AI solves real world problems
+            </h1>
             <div className="md:flex md:justify-between md:w-4/5 space-y-8 md:space-y-0">
               <div className="underline underline-offset-4">
                 <Link to="/">By AiProff</Link>
@@ -329,6 +332,11 @@ const Article = () => {
             <div className=" mt-12 text-lg md:text-xl font-light leading-normal space-y-6 md:flex justify-center">
               <div className="flex-grow md:w-4/6 space-y-20 justify-center">
                 <div>
+                <div>
+                    <h1 className="text-4xl font-bold mb-6 lower_heading">
+                    Applied AI: When AI solves real world problems
+                    </h1>
+                  </div>
                   <div>
                     <p className="">
                       <span className="text-6xl font-bold float-left mr-2">

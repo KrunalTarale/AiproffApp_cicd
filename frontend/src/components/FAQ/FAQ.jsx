@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
 import 'font-awesome/css/font-awesome.min.css';
+import './FAQ.css';
 
 const FaqItem = ({ isOpen, onClick, children }) => {
   return (
@@ -28,7 +29,7 @@ const Faq = () => {
       <div>
         <Navbar />
       </div>
-      <div className="min-h-[45rem] lg:min-h-[50rem] mx-auto p-20">
+      <div className=" mx-auto container_faq">
         <h1 className="text-4xl md:text-5xl  lg:text-6xl font-semibold mb-10 lg:mb-20 md:leading-normal">
           Frequently Asked Questions:
         </h1>

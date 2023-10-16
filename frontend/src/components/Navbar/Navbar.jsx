@@ -213,12 +213,12 @@ function Navbar() {
                   aria-labelledby="dropdownLargeButton"
                 >
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to={"/try"}
                       className="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white"
                     >
                       Try
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <Link
