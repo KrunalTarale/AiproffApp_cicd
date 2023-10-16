@@ -160,7 +160,7 @@ const Nlp = () => {
     // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
     var url = 'https://www.aiproff.com/nlp';
     window.open(
-      +'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url),
+      'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url),
       '_blank'
     );
   }
