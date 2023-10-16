@@ -38,3 +38,12 @@
   width: 415px;
   height: 210px;
 }
+
+.card_container{
+  display: flex;
+  justify-content: space-around;
+}
+.card_width{
+  width: 420px;
+  height: 100%;
+}

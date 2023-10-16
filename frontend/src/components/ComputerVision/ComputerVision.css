@@ -69,3 +69,12 @@
   .banner_text{
     color: white;
   }
+
+  .card_container{
+    display: flex;
+    justify-content: space-around;
+  }
+  .card_width{
+    width: 420px;
+    height: 100%;
+  }
