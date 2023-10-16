@@ -31,7 +31,7 @@ const Faq = () => {
       </div>
       <div className=" mx-auto container_faq">
         <h1 className="text-4xl md:text-5xl  lg:text-6xl font-semibold mb-10 lg:mb-20 md:leading-normal">
-          Frequently Asked Questions:
+          Frequently Asked Questions
         </h1>
 
         <FaqItem isOpen={openIndex === 0} onClick={() => handleToggle(0)}>
