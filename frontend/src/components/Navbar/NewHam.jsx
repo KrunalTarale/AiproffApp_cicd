@@ -62,9 +62,32 @@ const NewHam = ({ closeModal }) => {
     {
       title: 'Data Science Glossary',
       options: [
-        { name: 'Term 1', url: '/term1' },
-        { name: 'Term 2', url: '/term2' },
-        { name: 'Term 3', url: '/term3' },
+        { name: 'A', url: 'https://developers.google.com/machine-learning/glossary#a' },
+        { name: 'B', url: 'https://developers.google.com/machine-learning/glossary#b' },
+        { name: 'C', url: 'https://developers.google.com/machine-learning/glossary#c' },
+        { name: 'D', url: 'https://developers.google.com/machine-learning/glossary#d' },
+        { name: 'E', url: 'https://developers.google.com/machine-learning/glossary#e' },
+        { name: 'F', url: 'https://developers.google.com/machine-learning/glossary#f' },
+        { name: 'G', url: 'https://developers.google.com/machine-learning/glossary#g' },
+        { name: 'H', url: 'https://developers.google.com/machine-learning/glossary#h' },
+        { name: 'I', url: 'https://developers.google.com/machine-learning/glossary#i' },
+        { name: 'J', url: 'https://developers.google.com/machine-learning/glossary#j' },
+        { name: 'K', url: 'https://developers.google.com/machine-learning/glossary#k' },
+        { name: 'L', url: 'https://developers.google.com/machine-learning/glossary#l' },
+        { name: 'M', url: 'https://developers.google.com/machine-learning/glossary#m' },
+        { name: 'N', url: 'https://developers.google.com/machine-learning/glossary#n' },
+        { name: 'O', url: 'https://developers.google.com/machine-learning/glossary#o' },
+        { name: 'P', url: 'https://developers.google.com/machine-learning/glossary#p' },
+        { name: 'Q', url: 'https://developers.google.com/machine-learning/glossary#q' },
+        { name: 'R', url: 'https://developers.google.com/machine-learning/glossary#r' },
+        { name: 'S', url: 'https://developers.google.com/machine-learning/glossary#s' },
+        { name: 'T', url: 'https://developers.google.com/machine-learning/glossary#t' },
+        { name: 'U', url: 'https://developers.google.com/machine-learning/glossary#u' },
+        { name: 'V', url: 'https://developers.google.com/machine-learning/glossary#v' },
+        { name: 'W', url: 'https://developers.google.com/machine-learning/glossary#w' },
+        { name: 'X', url: 'https://developers.google.com/machine-learning/glossary#x' },
+        { name: 'Y', url: 'https://developers.google.com/machine-learning/glossary#y' },
+        { name: 'Z', url: 'https://developers.google.com/machine-learning/glossary#z' },
       ],
     },
   ];
@@ -141,7 +164,7 @@ const NewHam = ({ closeModal }) => {
                 </div>
                 <hr className="my-4 border-gray-400" />{' '}
                 <div>
-                  <ul className="space-y-6">
+                  <ul className={`space-y-6 ham_list ${activeMenu === 5 ? 'four-columns' : ''}`}>
                     {menus[activeMenu].options.map((option, index) => (
                       <li
                         key={index}

@@ -5,7 +5,7 @@ import './PrivacyPolicy.css';
 import {Link} from 'react-router-dom'
 const About = () => {
   return (
-    <div className="About">
+    <div className="Legal">
       <div>
         <Navbar />
       </div>
@@ -34,7 +34,7 @@ const About = () => {
           </p>
 
           <div>
-            <h2 className="lg:text-2xl text-4xl font-bold mb-3">Information We Collect</h2>
+            <h2 className="lg:text-4xl text-3xl font-bold mb-3">1. Information We Collect</h2>
             <p className='mb-2'>AiProff.ai collects personal data when you interact with our website, services, and applications. The information we collect may include:</p>
             <ul className="list">
               <li>Personal information you provide, such as your name, mailing address, email address, telephone and number.</li>
@@ -45,7 +45,7 @@ const About = () => {
           </div>
           
           <div>
-            <h2 className="lg:text-2xl text-4xl font-bold mb-3">Use of Information</h2>
+            <h2 className="lg:text-4xl text-3xl font-bold mb-3">2. Use of Information</h2>
             <p className='mb-2'>We use your personal data for various purposes, including but not limited to:</p>
             <ul className="list">
               <li>Fulfilling your requests for information.</li>
@@ -62,12 +62,12 @@ const About = () => {
           </div>
 
           <div>
-            <h2 className="lg:text-2xl text-4xl font-bold mb-3">Data Retention</h2>
+            <h2 className="lg:text-4xl text-3xl font-bold mb-3">3. Data Retention</h2>
             <p className='mb-2'>We retain personal data for as long as necessary for the purposes outlined in this Privacy Policy, including for legal and compliance purposes. If you request deletion of your personal data, we will make reasonable efforts to delete it, subject to any legal or regulatory obligations. For any such queries,  please contact us at support@aiproff.ai.</p>
           </div>
 
           <div>
-            <h2 className="lg:text-2xl text-4xl font-bold mb-3">Disclosure of Personal Data</h2>
+            <h2 className="lg:text-4xl text-3xl font-bold mb-3">4. Disclosure of Personal Data</h2>
             <p className='mb-2'>We may share your personal data with third parties in certain circumstances, including:</p>
             <ul>
               <li>Service providers that assist us in delivering our services.</li>
@@ -80,7 +80,7 @@ const About = () => {
           <div>
             <h2 className="lg:text-2xl text-4xl font-bold mb-3">Your Rights</h2>
 
-            <h3 className="lg:text-2xl text-4xl font-bold mb-3">GDPR Compliance:</h3>
+            <h3 className="lg:text-4xl text-3xl font-bold mb-3">4. GDPR Compliance:</h3>
 
             <p className='mb-2'>If you are a resident of the European Union (EU), you have certain rights under the General Data Protection Regulation (GDPR) that AiProff.ai respects and is committed to upholding:</p>
             <ul className="list">
@@ -96,7 +96,7 @@ const About = () => {
 
           <div>
 
-            <h3 className="lg:text-2xl text-4xl font-bold mb-3">California State Regulations:</h3>
+            <h3 className="lg:text-4xl text-3xl font-bold mb-3">5. California State Regulations:</h3>
 
             <p className='mb-2'>If you are a California resident, you have specific rights under California privacy laws, including:</p>
             <ul className="list">
@@ -110,7 +110,7 @@ const About = () => {
 
           <div>
 
-            <h3 className="lg:text-2xl text-4xl font-bold mb-3">Security</h3>
+            <h3 className="lg:text-4xl text-3xl font-bold mb-3">6. Security</h3>
 
             <p className='mb-3'>AiProff.ai takes data security seriously and has implemented industry-standard security measures to protect your personal data from loss, unauthorised access, misuse, or alteration. However, it's important to note that while we strive to protect your personal data, no method of data transmission over the internet or storage is entirely secure.</p>
             
@@ -122,17 +122,17 @@ const About = () => {
           </div>
 
           <div>
-            <h3 className="lg:text-2xl text-4xl font-bold mb-3">Children</h3>
+            <h3 className="lg:text-4xl text-3xl font-bold mb-3">7. Children</h3>
             <p className='mb-3'>Our website and services are not intended for children under 12 years of age, and we do not knowingly collect personal data from individuals under this age.</p>
           </div>
 
           <div>
-            <h3 className="lg:text-2xl text-4xl font-bold mb-3">Changes to Privacy Policy</h3>
+            <h3 className="lg:text-4xl text-3xl font-bold mb-3">8. Changes to Privacy Policy</h3>
             <p className='mb-3'>We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes either through email or by prominently posting the updated Privacy Policy on our website.</p>
           </div>
 
           <div>
-            <h3 className="lg:text-2xl text-4xl font-bold mb-3">Contact Us</h3>
+            <h3 className="lg:text-4xl text-3xl font-bold mb-3">9. Contact Us</h3>
             <p className='mb-3'>If you have any questions or concerns, please contact us at support@aiproff.ai or fill the contact us form at <Link to={'/contact'} className='links'> https://www.aiproff.com/contactus/ </Link>.</p>
 
             <p className='mb-3'>More details about AiProff:</p>

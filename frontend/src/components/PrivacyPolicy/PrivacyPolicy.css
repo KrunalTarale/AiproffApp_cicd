@@ -1,11 +1,26 @@
-.About h1 {
-    font-family: 'Bower', Georgia, 'Times New Roman', serif;
-  }
-  
-  .About p {
-    font-family: 'Helvetica Neue', Calibri, Corbel, Helvetica, Roboto, Droid,
-      sans-serif;
-  }
+.Legal h1 {
+  font-family: 'Bower', Georgia, 'Times New Roman', serif;
+}
+
+.Legal h2 {
+  font-family: 'Bower', Georgia, 'Times New Roman', serif;
+}
+
+.Legal h3 {
+  font-family: 'Bower', Georgia, 'Times New Roman', serif;
+}
+
+.Legal p {
+  font-family: 'Helvetica Neue', Calibri, Corbel, Helvetica, Roboto, Droid,
+    sans-serif;
+}
+
+.Legal ul {
+  font-family: 'Helvetica Neue', Calibri, Corbel, Helvetica, Roboto, Droid,
+    sans-serif;
+}
+
+
   
   .list {
     margin-left: 2rem;

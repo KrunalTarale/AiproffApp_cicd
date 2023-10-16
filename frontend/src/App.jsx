@@ -102,6 +102,7 @@ function App() {
         <Route path="/rrhealthcare" element={<RRHealthcare />} />
 
         <Route path="/buy" element={<Buy />} />
+        <Route path="/try" element={<Buy />} />
         <Route
           path="/updatesubscribeduser/:id"
           element={<UpdateSubscriber />}
