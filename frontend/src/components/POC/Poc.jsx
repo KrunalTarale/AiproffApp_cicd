@@ -10,7 +10,7 @@ const Poc = () => {
       <Navbar />
 
       <div className="mvpcontainer">
-        <h1 className="head">POC (Proof of Concept)</h1>
+        <h1 className="head lg:text-5xl text-4xl font-bold">POC (Proof of Concept)</h1>
         <p>
           A proof of concept (POC) is a demonstration that a certain idea or
           technology is central to a product or service. It is often used by

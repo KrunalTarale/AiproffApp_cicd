@@ -51,7 +51,12 @@
     }
   }
 /* For desktops */
-@media (min-width: 650px) {
+/* @media (min-width: 650px) {
   .Logoham {
   }
+} */
+
+.four-columns {
+  column-count: 4;
+  column-gap: 10px;
 }
