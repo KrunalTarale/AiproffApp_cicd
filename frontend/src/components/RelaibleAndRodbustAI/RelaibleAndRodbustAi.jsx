@@ -681,19 +681,19 @@ const RealaibleAndRodbustAi = () => {
                   </div>
                   {progressdropdownVisible && (
                     <div className="mt-2 p-4 px-6 absolute left-[-50%] ml-3 border-2 rounded shadow-lg bg-white z-10 chat-bubble progress-dropdown">
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer ">
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer " onClick={shareOnLinkedIn}>
                         <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
                         Linkedin
                       </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer">
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnTwitter}>
                         <FontAwesomeIcon icon={faTwitter} className="mr-2" />
                         Twitter
                       </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer">
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareOnFacebook}>
                         <FontAwesomeIcon icon={faFacebook} className="mr-2" />
                         Facebook
                       </div>
-                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer">
+                      <div className="flex items-center py-1 hover:bg-blue-100 cursor-pointer" onClick={shareByEmail}>
                         <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
                         Email
                       </div>
@@ -834,68 +834,56 @@ const RealaibleAndRodbustAi = () => {
             Related Articles
           </h1>
         </div>
-        <div className="flex lg:flex-row flex-col p-8">
-          <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3">
+        <div className="flex lg:flex-row flex-col p-8 card_container">
+          <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
               src={card_image1}
               className="rounded-t"
               alt="Quantum Article"
             />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">
-                Introduction: When AI starts to predict Future
-              </p>
-              <h1>
-                <Link
+            <Link
                   to={'/ForcastingUsingAi'}
                   className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer"
                 >
-                  Forecasting is the art and science of predicting future events
-                  or outcomes based on past and present data.
-                </Link>
-              </h1>
+              <p className="text-gray-700 font-bold">
+                Introduction: When AI starts to predict Future
+              </p>
+              </Link>
             </div>
           </div>
-          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3">
+          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
               src={card_image2}
               className="rounded-t"
               alt="Quantum Article"
             />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">
-                Introduction to NLP: When AI talks
-              </p>
-              <h1>
-                <Link
+            <Link
                   to={'/nlp'}
                   className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer"
                 >
-                  The field of Artificial intelligence is exciting. Under this
-                  discipline of Technology, machines can talk,
-                </Link>
-              </h1>
+              <p className="text-gray-700 font-bold">
+                Introduction to NLP: When AI talks
+              </p>
+              </Link>
             </div>
           </div>
-          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3">
+          <div className="card hover:bg-white p-5   hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
               src={card_image3}
               className="rounded-t"
               alt="Quantum Article"
             />
             <div className="p-4">
-              <p className="text-gray-700 font-bold mb-2">
-                Introduction to Computer Vision: When Machines Start to See
-              </p>
-              <h1>
-                <Link
+            <Link
                   to={'/computer_vision'}
                   className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer"
                 >
-                  A computer deserves to be called intelligent if it could
-                  deceive a
-                </Link>
-              </h1>
+              <p className="text-gray-700 font-bold">
+                Introduction to Computer Vision: When Machines Start to See
+              </p>
+              </Link>
             </div>
           </div>
         </div>
