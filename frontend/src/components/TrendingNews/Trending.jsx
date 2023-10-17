@@ -42,6 +42,7 @@ const Trending = () => {
             <Link
               to={newsItem.url}
               className="hover:underline hover:text-blue-500 ml-2"
+              target='_blank'
             >
               <span className="">{newsItem.headline}</span>
             </Link>

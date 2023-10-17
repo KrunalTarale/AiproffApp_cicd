@@ -121,7 +121,7 @@ function Navbar() {
               onMouseLeave={clearOfferingsTimer} //
             >
               <button className="relative flex items-center justify-between w-full py-2 pl-3 pr-4   md:border-0 md:hover:text-blue-500 md:p-0 md:w-auto text-black">
-                OFFERING{' '}
+                OFFERINGS{' '}
                 <svg
                   className="w-2.5 h-2.5 ml-2.5"
                   aria-hidden="true"
@@ -297,7 +297,7 @@ function Navbar() {
                   onMouseLeave={() => setSubMenuOpen(null)}
                 >
                   <span className="block px-4 py-2 text-sm leading-5 text-gray-700 cursor-pointer">
-                    OFFERING
+                    OFFERINGS
                   </span>
                   {subMenuOpen === 'offering' && (
                     <div className="absolute right-full top-0 mr-1 ml-2 w-32 rounded-md shadow-lg bg-white">
