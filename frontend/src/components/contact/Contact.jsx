@@ -140,7 +140,7 @@ const Contact = () => {
     const inputValue = e.target.value;
     const inputWithoutSpaces = inputValue.replace(/\s/g, '');
 
-    if (inputWithoutSpaces.length <= 250) {
+    if (inputWithoutSpaces.length <= 500){
       setmassage(inputValue);
     }
   };
@@ -395,7 +395,7 @@ const Contact = () => {
                 style={{color:'rgb(75 75 75)', fontWeight:500}}
               ></textarea>
               <p>
-                Remaining Characters: {250 - massage.replace(/\s/g, '').length}
+                Remaining Characters: {500 - massage.replace(/\s/g, '').length}
               </p>
               {error && !massage && (
                 <span className="warning_massage">Please Add the Massage</span>
