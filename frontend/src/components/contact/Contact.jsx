@@ -29,7 +29,6 @@ const Contact = () => {
   const [city, setcity] = useState('');
   const [help, sethelp] = useState('');
   const [massage, setmassage] = useState('');
-
   const [error, setError] = useState(false);
 
   const resetForm = () => {
@@ -154,7 +153,7 @@ const Contact = () => {
         </div> */}
         <div className=" flex justify-center py-8">
           <div className="flex flex-col md:flex-row mx-auto justify-between w-full max-w-7xl ">
-            <div className="flex flex-col justify-center items-center p-10 rounded-lg space-y-4">
+            <div className="flex flex-col justify-center items-center p-10 rounded-lg space-y-4 contact_card">
               <FontAwesomeIcon
                 icon={faBuilding}
                 className="lg:text-6xl md:text-5xl text-4xl text-white"
@@ -166,7 +165,7 @@ const Contact = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col justify-center items-center   p-10 rounded-lg space-y-4">
+            <div className="flex flex-col justify-center items-center   p-10 rounded-lg space-y-4 contact_card">
               <FontAwesomeIcon
                 icon={faEnvelope}
                 className="lg:text-6xl md:text-5xl text-4xl text-white"
@@ -178,7 +177,7 @@ const Contact = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col justify-center items-center   p-10 rounded-lg space-y-4">
+            <div className="flex flex-col justify-center items-center   p-10 rounded-lg space-y-4 contact_card">
               <FontAwesomeIcon
                 icon={faPhone}
                 className="lg:text-6xl md:text-5xl text-4xl text-white"
@@ -369,6 +368,7 @@ const Contact = () => {
                     Topic
                   </option>
                   {topics.map(getAlltopics)}
+                  <option value={'others'}>Others</option>
                 </select>
                 {error && !help && (
                   <span className="warning_massage">Please Select Topic</span>
