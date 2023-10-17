@@ -170,7 +170,7 @@ const NewHam = ({ closeModal }) => {
                         key={index}
                         className="py-2 text-xl cursor-pointer hover:underline hover:text-blue-600"
                       >
-                        <Link to={option.url}>{option.name}</Link>
+                        <Link to={option.url} target={activeMenu === 5 ? '_blank' : ''}>{option.name}</Link>
                       </li>
                     ))}
                   </ul>

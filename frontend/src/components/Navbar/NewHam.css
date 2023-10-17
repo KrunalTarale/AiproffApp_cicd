@@ -50,11 +50,14 @@
       margin-left: 8px;
     }
   }
-/* For desktops */
-/* @media (min-width: 650px) {
-  .Logoham {
+@media (min-width: 490px) and (max-width: 760px) {
+    .Logoham {
+      height: 45px;
+      width: 100px;
+      margin-left: 8px;
+    }
   }
-} */
+
 
 .four-columns {
   column-count: 4;
