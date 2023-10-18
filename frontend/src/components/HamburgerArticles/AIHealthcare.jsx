@@ -1,7 +1,7 @@
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
 import './HamburgerArticle.css';
-import backgroundImage from '../assets/Banners/Appliedai/Appliedaihealth.webp';
+import backgroundImage from '../assets/Banners/Appliedai/appliedaihealth.webp';
 
 function AIHealthcare() {
   return (
