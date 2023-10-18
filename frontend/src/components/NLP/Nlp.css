@@ -67,8 +67,29 @@
   .card_container{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
+  
   .card_width{
     width: 420px;
-    height: 100%;
+    height: 100%; 
   }
+  
+  @media screen and (max-width: 1040px) {
+  
+    .card_container{
+      display: flex;
+      justify-content: center;
+    }
+    
+  }
+  
+  @media screen and (max-width: 500px) {
+  
+    .card_width{
+      width: 300px !important;
+      height: 100% !important;
+    }
+  
+  }
+  
