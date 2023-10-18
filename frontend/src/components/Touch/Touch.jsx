@@ -6,8 +6,8 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 const Touch = () => {
   return (
     <div className="touch h-19 text-white w-full p-10 bg-gradient-to-r from-blue-950 to-blue-600 shadow-lg text-center">
-      <h1 className="text-5xl font-semibold mb-4">How can we help you?</h1>
-      <p className="text-whitesmoke mb-6 text-xl pt-2">Get in touch with us.</p>
+      <h1 className="text-5xl font-semibold mb-10">How can we help you?</h1>
+      {/* <p className="text-whitesmoke mb-6 text-xl pt-2">Get in touch with us.</p> */}
       
       <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
         

@@ -1,4 +1,4 @@
-import backgroundImage from '../assets/Banners/CV/cvinretail.jpg';
+import backgroundImage from '../assets/Banners/CV/cvinretail.webp';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
 import './HamburgerArticle.css';

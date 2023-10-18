@@ -1,4 +1,4 @@
-import backgroundImage from '../assets/Banners/Appliedai/Appliedaieducation.jpg';
+import backgroundImage from '../assets/Banners/Appliedai/Appliedaieducation.webp';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
 import './HamburgerArticle.css';

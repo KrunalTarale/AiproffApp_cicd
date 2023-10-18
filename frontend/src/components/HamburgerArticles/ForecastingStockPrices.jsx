@@ -1,4 +1,4 @@
-import backgroundImage from '../assets/Banners/FORECASTING/FORECASTINGSTOCKPRICES.jpg';
+import backgroundImage from '../assets/Banners/FORECASTING/FORECASTINGSTOCKPRICES.webp';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
 import './HamburgerArticle.css';

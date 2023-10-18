@@ -1,4 +1,4 @@
-import backgroundImage from '../assets/Banners/CV/CVINAUTOMATIVE.jpg';
+import backgroundImage from '../assets/Banners/CV/CVINAUTOMATIVE.webp';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
 import './HamburgerArticle.css';
