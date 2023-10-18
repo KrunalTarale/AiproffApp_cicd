@@ -1,6 +1,6 @@
 import  { useState } from 'react';
-import image1 from '../assets/trailer2.jpeg';
-import image2 from '../assets/trailer1.jpeg';
+import image1 from '../assets/trailer2.webp';
+import image2 from '../assets/trailer1.webp';
 import './Trailer.css';
 import { Link } from 'react-router-dom';
 
