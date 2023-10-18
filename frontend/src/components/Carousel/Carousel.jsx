@@ -6,11 +6,11 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
-import image1 from '../assets/Applied AI.png';
-import image2 from '../assets/NLP.png';
-import image3 from '../assets/Computer Vision.png';
-import image4 from '../assets/Forecasting using AI.png';
-import image5 from '../assets/Reliable and Robust AI.png';
+import image1 from '../assets/Applied AI.webp';
+import image2 from '../assets/NLP.webp';
+import image3 from '../assets/Computer Vision.webp';
+import image4 from '../assets/Forecasting using AI.webp';
+import image5 from '../assets/Reliable and Robust AI.webp';
 
 const Carousel = () => {
   const images = [image1, image2, image3, image4, image5];

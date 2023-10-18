@@ -894,7 +894,7 @@ const Article = () => {
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
               src={card_image1}
-              className="rounded-t"
+              className="rounded-t card_img"
               alt="Quantum Article"
             />
             <div className="p-4">
@@ -911,7 +911,7 @@ const Article = () => {
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
               src={card_image2}
-              className="rounded-t"
+              className="rounded-t card_img"
               alt="Quantum Article"
             />
             <div className="p-4">
@@ -930,7 +930,7 @@ const Article = () => {
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
               src={card_image3}
-              className="rounded-t"
+              className="rounded-t card_img"
               alt="Quantum Article"
             />
             <div className="p-4">
