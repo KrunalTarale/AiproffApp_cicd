@@ -105,6 +105,7 @@ const Footer = () => {
               <a
                 href="https://twitter.com/aiproff_ai"
                 className="text-gray-600 hover:text-blue-500"
+                target='blank'
               >
                 <img
                   src={twitter}
@@ -115,6 +116,7 @@ const Footer = () => {
               <a
                 href="https://www.facebook.com/aiproffai/"
                 className="text-gray-600 hover:text-blue-500"
+                target='blank'
               >
                 <FontAwesomeIcon
                   icon={faFacebook}
@@ -125,6 +127,7 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/company/aiproff/"
                 className="text-gray-600 hover:text-blue-500"
+                target='blank'
               >
                 <FontAwesomeIcon
                   icon={faLinkedinIn}

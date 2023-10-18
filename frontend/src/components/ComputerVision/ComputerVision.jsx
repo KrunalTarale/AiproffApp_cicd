@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './ComputerVision.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,7 +19,7 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import image1 from '../assets/ComputerVision/img1.jpg';
+import image1 from '../assets/ComputerVision/img1r.webp';
 import image2 from '../assets/ComputerVision/img2.jpg';
 import image3 from '../assets/ComputerVision/img3.jpg';
 import image4 from '../assets/ComputerVision/img4.jpg';
@@ -28,9 +28,9 @@ import card1 from '../assets/Article1/card1.png';
 
 // Card images
 
-import card_image1 from '../assets/forcastingAi/ForecastingusingAI.jpg';
-import card_image2 from '../assets/Article1/diag2.png';
-import card_image3 from '../assets/rodbust_ai/img_1.jpg';
+import card_image1 from '../assets/forcastingAi/ForcastingusingAIr.webp';
+import card_image2 from '../assets/Article1/Appliedair.webp';
+import card_image3 from '../assets/rodbust_ai/img_1r.webp';
 
 // Card images ends
 
@@ -39,6 +39,7 @@ import Footer from '../Foot/Foot';
 
 const ComputerVision = () => {
   const Title = 'Computer Vision: When Machines Start to See';
+  const navigate = useNavigate();
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [progressdropdownVisible, setprogressDropdownVisible] = useState(false);
@@ -139,7 +140,8 @@ const ComputerVision = () => {
         setmassage('');
       }, 2000);
     } else {
-      setmassage('Please login first');
+      navigate('/login')
+      // setmassage('Please login first');
       setTimeout(() => {
         setmassage('');
       }, 2000);
@@ -148,7 +150,7 @@ const ComputerVision = () => {
 
   // links
   function shareOnLinkedIn() {
-    var url = 'https://www.aiproff.com/Computer_Vision';
+    var url = 'https://www.aiproff.ai/Computer_Vision';
     var linkedinUrl =
       'https://www.linkedin.com/sharing/share-offsite/?url=' +
       encodeURIComponent(url);
@@ -157,7 +159,7 @@ const ComputerVision = () => {
 
   function shareOnTwitter() {
     // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
-    var url = 'https://www.aiproff.com/Computer_Vision';
+    var url = 'https://www.aiproff.ai/Computer_Vision';
     window.open(
       'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url),
       '_blank'
@@ -166,7 +168,7 @@ const ComputerVision = () => {
 
   function shareOnFacebook() {
     // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
-    var url = 'https://www.aiproff.com/Computer_Vision';
+    var url = 'https://www.aiproff.ai/Computer_Vision';
     window.open(
       'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
       '_blank'
@@ -175,7 +177,7 @@ const ComputerVision = () => {
 
   function shareByEmail() {
     // Replace 'your-email-share-url' with the URL you want to share via email.
-    var url = 'https://www.aiproff.com/Computer_Vision';
+    var url = 'https://www.aiproff.ai/Computer_Vision';
     window.location.href = 'mailto:?body=' + encodeURIComponent(url);
   }
 
@@ -285,6 +287,11 @@ const ComputerVision = () => {
                   )}
                 </div>
 
+                <Link
+                  to="https://ingestionpeekai.s3.amazonaws.com/CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
                   <FontAwesomeIcon
                     icon={faPrint}
@@ -292,6 +299,7 @@ const ComputerVision = () => {
                   />
                   <span className="text-sm">Print</span>
                 </div>
+                </Link>
 
                 <Link
                   to="https://ingestionpeekai.s3.amazonaws.com/CV.pdf"
@@ -792,6 +800,11 @@ const ComputerVision = () => {
                   )}
                 </div>
 
+                <Link
+                  to="https://ingestionpeekai.s3.amazonaws.com/CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
                   <FontAwesomeIcon
                     icon={faPrint}
@@ -799,7 +812,8 @@ const ComputerVision = () => {
                   />
                   <span className="text-sm">Print</span>
                 </div>
-
+                </Link>
+                
                 <Link
                   to="https://ingestionpeekai.s3.amazonaws.com/CV.pdf"
                   target="_blank"

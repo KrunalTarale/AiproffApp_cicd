@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './Nlp.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,7 +19,7 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import image1 from '../assets/Nlp_img/nlp_banner.jpg';
+import image1 from '../assets/Nlp_img/nlp_bannerr.webp';
 import image2 from '../assets/Nlp_img/nlp_img2.jpg';
 import image3 from '../assets/Nlp_img/nlp_img3.jpg';
 import image4 from '../assets/Nlp_img/nlp_img4.jpg';
@@ -29,9 +29,9 @@ import card1 from '../assets/Article1/card1.png';
 
 // Card images
 
-import card_image1 from '../assets/forcastingAi/ForecastingusingAI.jpg';
-import card_image2 from '../assets/Article1/diag2.png';
-import card_image3 from '../assets/ComputerVision/img1.jpg';
+import card_image1 from '../assets/forcastingAi/ForcastingusingAIr.webp';
+import card_image2 from '../assets/Article1/Appliedair.webp';
+import card_image3 from '../assets/ComputerVision/img1r.webp';
 
 // Card images ends
 
@@ -40,6 +40,7 @@ import Footer from '../Foot/Foot';
 
 const Nlp = () => {
   const Title = 'Introduction to NLP: When AI talks';
+  const navigate = useNavigate()
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [progressdropdownVisible, setprogressDropdownVisible] = useState(false);
@@ -140,7 +141,8 @@ const Nlp = () => {
         setmassage('');
       }, 2000);
     } else {
-      setmassage('Please login first');
+      // setmassage('Please login first');
+      navigate('/login')
       setTimeout(() => {
         setmassage('');
       }, 2000);
@@ -149,7 +151,7 @@ const Nlp = () => {
 
   // links
   function shareOnLinkedIn() {
-    var url = 'https://www.aiproff.com/nlp';
+    var url = 'https://www.aiproff.ai/nlp';
     var linkedinUrl =
       'https://www.linkedin.com/sharing/share-offsite/?url=' +
       encodeURIComponent(url);
@@ -158,7 +160,7 @@ const Nlp = () => {
 
   function shareOnTwitter() {
     // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
-    var url = 'https://www.aiproff.com/nlp';
+    var url = 'https://www.aiproff.ai/nlp';
     window.open(
       'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url),
       '_blank'
@@ -174,7 +176,7 @@ const Nlp = () => {
 
   function shareOnFacebook() {
     // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
-    var url = 'https://www.aiproff.com/nlp';
+    var url = 'https://www.aiproff.ai/nlp';
     window.open(
       'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
       '_blank'
@@ -183,7 +185,7 @@ const Nlp = () => {
 
   function shareByEmail() {
     // Replace 'your-email-share-url' with the URL you want to share via email.
-    var url = 'https://www.aiproff.com/nlp';
+    var url = 'https://www.aiproff.ai/nlp';
     window.location.href = 'mailto:?body=' + encodeURIComponent(url);
   }
 
@@ -293,6 +295,11 @@ const Nlp = () => {
                   )}
                 </div>
 
+                <Link
+                  to="https://ingestionpeekai.s3.amazonaws.com/NLP+updated.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
                   <FontAwesomeIcon
                     icon={faPrint}
@@ -300,6 +307,7 @@ const Nlp = () => {
                   />
                   <span className="text-sm">Print</span>
                 </div>
+                </Link>
 
                 <Link
                   to="https://ingestionpeekai.s3.amazonaws.com/NLP+updated.pdf"
@@ -964,6 +972,11 @@ const Nlp = () => {
                   )}
                 </div>
 
+                <Link
+                  to="https://ingestionpeekai.s3.amazonaws.com/NLP+updated.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
                   <FontAwesomeIcon
                     icon={faPrint}
@@ -971,6 +984,7 @@ const Nlp = () => {
                   />
                   <span className="text-sm">Print</span>
                 </div>
+                </Link>
 
                 <Link
                   to="https://ingestionpeekai.s3.amazonaws.com/NLP+updated.pdf"

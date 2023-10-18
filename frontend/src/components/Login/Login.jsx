@@ -182,6 +182,13 @@ const Login = () => {
               Forgot Password ?
             </span>
             </div>
+            <div>
+            <Link to={"/signin"}>
+            <span className="text-sm ml-2 hover:text-blue-500 cursor-pointer" onClick={handleforgetpassword}>
+            Don't have an account yet?  Sign Up
+            </span>
+            </Link>
+            </div>
           </div>
         </div>
       </div>

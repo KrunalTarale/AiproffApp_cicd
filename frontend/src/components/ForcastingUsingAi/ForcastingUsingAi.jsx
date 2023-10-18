@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './ForcastingUsingAi.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,7 +19,7 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import image1 from '../assets/forcastingAi/ForecastingusingAI.jpg';
+import image1 from '../assets/forcastingAi/ForcastingusingAIr.webp';
 import image2 from '../assets/forcastingAi/img2.jpg';
 import image3 from '../assets/forcastingAi/img3.jpg';
 import image7 from '../assets/Article1/logo.png';
@@ -27,9 +27,9 @@ import card1 from '../assets/Article1/card1.png';
 
 // Card images
 
-import card_image1 from '../assets/rodbust_ai/img_1.jpg';
-import card_image2 from '../assets/Nlp_img/nlp_banner.jpg';
-import card_image3 from '../assets/ComputerVision/img1.jpg';
+import card_image1 from '../assets/rodbust_ai/img_1r.webp';
+import card_image2 from '../assets/Nlp_img/nlp_bannerr.webp';
+import card_image3 from '../assets/ComputerVision/img1r.webp';
 
 // Card images ends
 
@@ -38,6 +38,7 @@ import Footer from '../Foot/Foot';
 
 const ForcastingUsingAi = () => {
   const Title = 'Forecasting using AI';
+  const navigate = useNavigate();
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [progressdropdownVisible, setprogressDropdownVisible] = useState(false);
@@ -138,7 +139,8 @@ const ForcastingUsingAi = () => {
         setmassage('');
       }, 2000);
     } else {
-      setmassage('Please login first');
+      // setmassage('Please login first');
+      navigate('/login')
       setTimeout(() => {
         setmassage('');
       }, 2000);
@@ -147,7 +149,7 @@ const ForcastingUsingAi = () => {
 
   // links
   function shareOnLinkedIn() {
-    var url = 'https://www.aiproff.com/ForcastingUsingAi';
+    var url = 'https://www.aiproff.ai/ForcastingUsingAi';
     var linkedinUrl =
       'https://www.linkedin.com/sharing/share-offsite/?url=' +
       encodeURIComponent(url);
@@ -156,7 +158,7 @@ const ForcastingUsingAi = () => {
 
   function shareOnTwitter() {
     // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
-    var url = 'https://www.aiproff.com/ForcastingUsingAi';
+    var url = 'https://www.aiproff.ai/ForcastingUsingAi';
     window.open(
       'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url),
       '_blank'
@@ -165,7 +167,7 @@ const ForcastingUsingAi = () => {
 
   function shareOnFacebook() {
     // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
-    var url = 'https://www.aiproff.com/ForcastingUsingAi';
+    var url = 'https://www.aiproff.ai/ForcastingUsingAi';
     window.open(
       'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
       '_blank'
@@ -174,7 +176,7 @@ const ForcastingUsingAi = () => {
 
   function shareByEmail() {
     // Replace 'your-email-share-url' with the URL you want to share via email.
-    var url = 'https://www.aiproff.com/ForcastingUsingAi';
+    var url = 'https://www.aiproff.ai/ForcastingUsingAi';
     window.location.href = 'mailto:?body=' + encodeURIComponent(url);
   }
 
@@ -284,6 +286,11 @@ const ForcastingUsingAi = () => {
                   )}
                 </div>
 
+                <Link
+                  to="https://ingestionpeekai.s3.amazonaws.com/Forecasting.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
                   <FontAwesomeIcon
                     icon={faPrint}
@@ -291,6 +298,7 @@ const ForcastingUsingAi = () => {
                   />
                   <span className="text-sm">Print</span>
                 </div>
+                </Link>
 
                 <Link
                   to="https://ingestionpeekai.s3.amazonaws.com/Forecasting.pdf"
@@ -774,6 +782,11 @@ const ForcastingUsingAi = () => {
                   )}
                 </div>
 
+                <Link
+                  to="https://ingestionpeekai.s3.amazonaws.com/Forecasting.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
                   <FontAwesomeIcon
                     icon={faPrint}
@@ -781,7 +794,8 @@ const ForcastingUsingAi = () => {
                   />
                   <span className="text-sm">Print</span>
                 </div>
-
+                </Link>
+                
                 <Link
                   to="https://ingestionpeekai.s3.amazonaws.com/Forecasting.pdf"
                   target="_blank"

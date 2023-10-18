@@ -161,7 +161,7 @@ const Contact = () => {
               <div className=" flex justify-center  items-center flex-col">
                 <h1 className=" text-xl lg:text-2xl font-bold">Address :</h1>
                 <p className="px-4 py-1 text-xl max-w-xs justify-center  items-center text-center text-slate-300">
-                  Ai Proff Gurugram, Haryana, India
+                Sector 57 · Gurugram, Haryana, India
                 </p>
               </div>
             </div>

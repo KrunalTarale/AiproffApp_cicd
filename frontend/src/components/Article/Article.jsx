@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './Article.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,20 +19,20 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import image1 from '../assets/Article1/Appliedai.jpg';
+import image1 from '../assets/Article1/Appliedair.webp';
 import image2 from '../assets/Article1/graph-1.png';
 import image3 from '../assets/Article1/pie1.png';
 import image4 from '../assets/Article1/diag1.png';
-import image5 from '../assets/Article1/diag2.png';
+import image5 from '../assets/Article1/diag6.png';
 import image6 from '../assets/Article1/diag3.png';
 import image7 from '../assets/Article1/logo.png';
 import card1 from '../assets/Article1/card1.png';
 
 // Card images
 
-import card_image1 from '../assets/rodbust_ai/img_1.jpg';
-import card_image2 from '../assets/Nlp_img/nlp_banner.jpg';
-import card_image3 from '../assets/ComputerVision/img1.jpg';
+import card_image1 from '../assets/rodbust_ai/img_1r.webp';
+import card_image2 from '../assets/Nlp_img/nlp_bannerr.webp';
+import card_image3 from '../assets/ComputerVision/img1r.webp';
 
 // Card images ends
 
@@ -41,6 +41,7 @@ import Footer from '../Foot/Foot';
 
 const Article = () => {
   const Title = 'Applied AI: When AI solves real world problems';
+  const navigate = useNavigate();
 
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [progressdropdownVisible, setprogressDropdownVisible] = useState(false);
@@ -141,7 +142,7 @@ const Article = () => {
         setmassage('');
       }, 2000);
     } else {
-      setmassage('Please login first');
+      navigate('/login')
       setTimeout(() => {
         setmassage('');
       }, 2000);
@@ -150,7 +151,7 @@ const Article = () => {
 
   // links
   function shareOnLinkedIn() {
-    var url = 'https://www.aiproff.com/article';
+    var url = 'https://www.aiproff.ai/article';
     var linkedinUrl =
       'https://www.linkedin.com/sharing/share-offsite/?url=' +
       encodeURIComponent(url);
@@ -159,7 +160,7 @@ const Article = () => {
 
   function shareOnTwitter() {
     // Replace 'your-twitter-share-url' with the URL you want to share on Twitter.
-    var url = 'https://www.aiproff.com/article';
+    var url = 'https://www.aiproff.ai/article';
     window.open(
       'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url),
       '_blank'
@@ -175,7 +176,7 @@ const Article = () => {
 
   function shareOnFacebook() {
     // Replace 'your-facebook-share-url' with the URL you want to share on Facebook.
-    var url = 'https://www.aiproff.com/article';
+    var url = 'https://www.aiproff.ai/article';
     window.open(
       'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url),
       '_blank'
@@ -184,7 +185,7 @@ const Article = () => {
 
   function shareByEmail() {
     // Replace 'your-email-share-url' with the URL you want to share via email.
-    var url = 'https://www.aiproff.com/article';
+    var url = 'https://www.aiproff.ai/article';
     window.location.href = 'mailto:?body=' + encodeURIComponent(url);
   }
 
@@ -294,6 +295,11 @@ const Article = () => {
                   )}
                 </div>
 
+                <Link
+                  to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI1.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
                   <FontAwesomeIcon
                     icon={faPrint}
@@ -301,9 +307,10 @@ const Article = () => {
                   />
                   <span className="text-sm">Print</span>
                 </div>
+                </Link>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Synthetic+data+for+enterprises_ebook_2023_August.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI1.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -541,7 +548,7 @@ const Article = () => {
                     </h1>
                   </div>
                   <div>
-                    <img src={image5} alt="" />
+                    {/* <img src={image5} alt="" /> */}
                   </div>
                 </div>
                 <div className="space-y-8">
@@ -680,7 +687,7 @@ const Article = () => {
 
                 <div className="flex flex-row text-blue-600 hover:underline underline-offset-4 mb-4 space-x-2">
                   <Link
-                    to="https://ingestionpeekai.s3.amazonaws.com/Synthetic+data+for+enterprises_ebook_2023_August.pdf"
+                    to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="space-x-4"
@@ -743,6 +750,11 @@ const Article = () => {
                   )}
                 </div>
 
+                <Link
+                  to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI1.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                 <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
                   <FontAwesomeIcon
                     icon={faPrint}
@@ -750,11 +762,12 @@ const Article = () => {
                   />
                   <span className="text-sm">Print</span>
                 </div>
-
+                </Link>
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Synthetic+data+for+enterprises_ebook_2023_August.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI1.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  download
                 >
                   <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
                     <FontAwesomeIcon

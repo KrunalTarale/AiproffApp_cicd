@@ -1,0 +1,127 @@
+
+.headings{
+    /* font-family: 'Bower', Georgia, 'Times New Roman', serif; */
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.sub_headings{
+    font-family: 'Bower', Georgia, 'Times New Roman', serif;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.teamcontainer{
+    /* padding: 4% 1% 4% 1%; */
+}
+
+/* card design starts */
+
+a{
+    text-decoration: none;
+}
+
+.allcards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+._card {
+width: 260px;
+height: 330px;
+background: #f5f5f5;
+padding: 2rem 1.5rem;
+transition: box-shadow .3s ease, transform .2s ease;
+margin: 2rem;
+}
+
+.card-info {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+transition: transform .2s ease, opacity .2s ease;
+}
+
+/*Image*/
+.card-avatar {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+transition: transform .2s ease;
+margin-bottom: 1rem;
+}
+
+
+/*Card footer*/
+.card-social {
+transform: translateY(200%);
+display: flex;
+justify-content: center;
+width: 100%;
+opacity: 0;
+transition: transform .2s ease, opacity .2s ease;
+padding: 0px;
+}
+
+.card-social__item {
+list-style: none;
+color: #0077b5;
+}
+
+.card-social__item svg {
+display: block;
+height: 18px;
+width: 18px;
+fill: #515F65;
+cursor: pointer;
+transition: fill 0.2s ease ,transform 0.2s ease;
+padding-left: 3px;
+padding-right: 3px;
+}
+
+/*Text*/
+.card-title {
+color: #333;
+font-size: 1.5em;
+font-weight: 600;
+line-height: 2rem;
+}
+
+.card-subtitle {
+color: #859ba8;
+font-size: 0.8em;
+}
+
+/*Hover*/
+._card:hover {
+box-shadow: 0 8px 50px #23232333;
+}
+
+._card:hover .card-info {
+transform: translateY(-5%);
+}
+
+._card:hover .card-social {
+transform: translateY(20%);
+opacity: 1;
+}
+
+.card-social__item svg:hover {
+fill: #232323;
+transform: scale(1.1);
+}
+
+.card-avatar:hover {
+transform: scale(1.1);
+}
+
+.linkdin_icon{
+    margin-top: 3px;
+    margin-left: 2px;
+}
+
+
+/* card design ends */
