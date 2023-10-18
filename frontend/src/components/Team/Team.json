@@ -1,0 +1,15 @@
+
+[
+    {
+      "name": "Nitin Saraswat",
+      "position": "Founder and Senior Machine Learning Engineer",
+      "img": "../assets/Team/Nitin_Saraswat.jpg",
+      "linkdin_url": "https://www.linkedin.com/in/nitinsaraswat/"
+    },
+    {
+      "name": "Aditya Anil",
+      "position": "Senior Technical Writer & Content Developer",
+      "img": "../assets/Team/Aditya_Anil.jpg",
+      "linkdin_url": "https://www.linkedin.com/in/its-aditya-an1l/"
+    }
+]

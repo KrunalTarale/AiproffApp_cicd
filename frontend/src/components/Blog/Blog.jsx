@@ -5,11 +5,11 @@ import './blog.css';
 import { Link } from 'react-router-dom'
 
 // Blog Images
-import image1 from "../assets/Article1/diag2.png";
-import image2 from "../assets/rodbust_ai/img_1.jpg";
-import image3 from "../assets/Nlp_img/nlp_banner.jpg";
-import image4 from "../assets/ComputerVision/img1.jpg";
-import image5 from "../assets/forcastingAi/ForecastingusingAI.jpg";
+import image1 from "../assets/Article1/Appliedair.webp";
+import image2 from "../assets/rodbust_ai/img_1r.webp";
+import image3 from "../assets/Nlp_img/nlp_bannerr.webp";
+import image4 from "../assets/ComputerVision/img1r.webp";
+import image5 from "../assets/forcastingAi/ForcastingusingAIr.webp";
 
 const Blog = () => {
 

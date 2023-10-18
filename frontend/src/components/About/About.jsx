@@ -2,6 +2,7 @@ import Navbar from '../Navbar/Navbar';
 import Carousel from '../Carousel/Carousel';
 import Footer from '../Foot/Foot';
 import image from '../assets/Article1/logo.png';
+import Team from '../Team/Team';
 import './About.css';
 const About = () => {
   return (
@@ -20,9 +21,9 @@ const About = () => {
             Intelligence/Machine Learning and we are excited to share our
             expertise with you.
           </p>
-          <div className="flex items-center justify-center">
+          {/* <div className="flex items-center justify-center">
             <img src={image} className="max-h-[25rem]" />
-          </div>
+          </div> */}
 
           <p>
             At our core, we are a team of dedicated professionals witch
@@ -79,6 +80,7 @@ const About = () => {
             with you!
           </p>
         </div>
+        <Team/>
       </div>
       <div>
         <Footer />
