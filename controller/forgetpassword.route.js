@@ -45,7 +45,7 @@ route.post('/forgetpassword', async (req, res) => {
                         button: {
                             color: '#22BC66',
                             text: 'Change Password',
-                            link: 'https://www.aiproff.com/updatepassword/'+user[0]._id
+                            link: 'https://www.aiproff.ai/updatepassword/'+user[0]._id
                         }
                     }
                     
