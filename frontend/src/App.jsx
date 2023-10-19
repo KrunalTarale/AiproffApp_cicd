@@ -5,7 +5,6 @@ import { useLocation } from 'react-router-dom';
 import './App.css';
 
 import Navbar from './components/Navbar/Navbar';
-import TopLinks from './components/Toplinks/toplinks';
 import Trailer from './components/Trailer/Trailer';
 import Trending from './components/TrendingNews/Trending';
 import Touch from './components/Touch/Touch';
@@ -128,7 +127,6 @@ function App() {
               <div>
                 <div className="App flex flex-col">
                   <div className="h-1/5 flex flex-col z-10">
-                    <TopLinks className="h-1/2" />
                     <Navbar className="h-1/2" />
                   </div>
 

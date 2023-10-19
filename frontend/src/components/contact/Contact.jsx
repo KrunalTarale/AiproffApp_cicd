@@ -8,6 +8,7 @@ import {
   faBuilding,
   faEnvelope,
   faPhone,
+  faSquareEnvelope
 } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
@@ -166,10 +167,11 @@ const Contact = () => {
               </div>
             </div>
             <div className="flex flex-col justify-center items-center   p-10 rounded-lg space-y-4 contact_card">
-              <FontAwesomeIcon
+              {/* <FontAwesomeIcon
                 icon={faEnvelope}
                 className="lg:text-6xl md:text-5xl text-4xl text-white"
-              />
+              /> */}
+              <FontAwesomeIcon icon={faSquareEnvelope} className="lg:text-7xl md:text-5xl text-4xl text-white"/>
               <div className=" flex justify-center  items-center flex-col">
                 <h1 className="  text-xl lg:text-2xl font-bold">Email us :</h1>
                 <p className="px-4 py-1 text-xl max-w-xs justify-center  items-center text-center text-slate-300">

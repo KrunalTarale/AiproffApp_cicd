@@ -6,3 +6,16 @@
   font-family: 'Helvetica Neue', Calibri, Corbel, Helvetica, Roboto, Droid,
     sans-serif;
 }
+
+.mobile_discover{
+  display: none;
+}
+
+@media screen and (max-width: 1025px) {
+  .desktop_discover{
+    display: none;
+  }
+  .mobile_discover{
+    display: block;
+  }
+}
