@@ -45,10 +45,10 @@ route.post('/subscribe_user', async (req, res) => {
                         button: {
                             color: '#22BC66',
                             text: 'Confirm your Email',
-                            link: 'https://www.aiproff.com/updatesubscribeduser/'+result._id
+                            link: 'https://www.aiproff.ai/updatesubscribeduser/'+result._id
                         }
                     },
-                    outro: 'https://www.aiproff.com/updatesubscribeduser/'+result._id
+                    outro: 'https://www.aiproff.ai/updatesubscribeduser/'+result._id
                 }
             }
 
