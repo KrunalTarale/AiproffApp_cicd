@@ -161,7 +161,7 @@ const Footer = () => {
           <div className="w-full border-t mt-6 border-gray-300 flex justify-between items-center pt-3 ">
             <p className="text-gray-600 justify-end">
               {' '}
-              &copy; {currentYear} Aiproff.ai
+              &copy; {currentYear} AiProff Software Consulting Private Limited
             </p>
           </div>
         </div>
