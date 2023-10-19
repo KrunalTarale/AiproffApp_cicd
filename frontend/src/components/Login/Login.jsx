@@ -2,6 +2,7 @@ import React , {useState} from "react";
 import { useNavigate } from 'react-router-dom'
 import "./Login.css";
 import {Link} from 'react-router-dom'
+import logo from '../assets/logo_webp.webp';
 
 const Login = () => {
 
@@ -17,11 +18,9 @@ const Login = () => {
     if (!username || !password) {
       setError(true);
     }
-
-
     else{
 
-    const res = await fetch("/user_login", {
+    const res = await fetch("http://localhost:1338/user_login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -83,30 +82,30 @@ const Login = () => {
         <div className="flex bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center left_side">
           <div>
           {/* <img src={logo} className="logo" alt="logo" /> */}
-            <h1 className="text-white font-bold text-4xl font-sans">
-              AiProff
-            </h1>
+            <div className="text-white font-bold text-4xl font-sans">
+            <img src={logo} className="login_Logo" alt="Logo" />
+            </div>
             
-            <p className="text-white mt-1">
+            <p className="text-white mt-1 text-center">
               Applied AI for Everyone
             </p>
             <button
-              className="block w-28 bg-white text-indigo-800 mt-4 py-2 rounded-2xl font-bold mb-2"
+              className="block w-28 bg-white text-indigo-800 mt-4 py-2 rounded-2xl font-bold mb-2 read_more"
             >
               <Link to="/">
-              Read More
+              Go Home
             </Link>
             </button>
           </div>
         </div>
         <div className="flex justify-center items-center bg-white right_side">
           <div className="bg-white">
-            <h1 className="text-gray-800 font-bold text-2xl mb-1">
-              Hello Again!
+            <h1 className="text-gray-800 font-bold text-2xl mb-5">
+            Welcome Back
             </h1>
-            <p className="text-sm font-normal text-gray-600 mb-2">
+            {/* <p className="text-sm font-normal text-gray-600 mb-2">
               Welcome Back
-            </p>
+            </p> */}
 
             <p className="text-red-600 font-bold">{message}</p>
             <span className="warning_massage">{login}</span>
@@ -183,11 +182,11 @@ const Login = () => {
             </span>
             </div>
             <div>
-            <Link to={"/signin"}>
-            <span className="text-sm ml-2 hover:text-blue-500 cursor-pointer" onClick={handleforgetpassword}>
-            Don't have an account yet?  Sign Up
+            
+            <span className="text-sm ml-2 " onClick={handleforgetpassword}>
+            Don't have an account yet? <Link className="text-sm hover:text-blue-500 cursor-pointer" to={"/signin"}>Sign Up</Link>
             </span>
-            </Link>
+            
             </div>
           </div>
         </div>

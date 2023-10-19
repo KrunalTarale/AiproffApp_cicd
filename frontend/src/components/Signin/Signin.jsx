@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import "./Signin.css";
+import logo from '../assets/logo_webp.webp';
 
 const Signin = () => {
   const [fname, setfname] = React.useState("");
@@ -57,16 +58,18 @@ const Signin = () => {
       <div className="h-screen flex whole_form">
         <div className="flex bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center left_side">
           <div>
-            <h1 className="text-white font-bold text-4xl font-sans">AiProff</h1>
+            <div className="text-white font-bold text-4xl font-sans">
+            <img src={logo} className="login_Logo" alt="Logo" />
+            </div>
             <p className="text-white mt-1">
             Applied AI for Everyone
             </p>
             
             <button
-              className="block w-28 bg-white text-indigo-800 mt-4 py-2 rounded-2xl font-bold mb-2"
+              className="block w-28 bg-white text-indigo-800 mt-4 py-2 rounded-2xl font-bold mb-2 read_more"
             >
               <Link to="/">
-              Read More
+              Go Home
             </Link>
             </button>
           </div>
@@ -208,8 +211,8 @@ const Signin = () => {
             >
               Sign Up
             </button>
-            <span className="text-sm ml-2 hover:text-blue-500 cursor-pointer">
-              <Link to={"/login"}>Already have an account?</Link>
+            <span className="text-sm ml-2">
+              Already have an account?<Link className="text-sm hover:text-blue-500 cursor-pointer" to={"/login"}> Log In</Link>
             </span>
           </div>
         </div>
