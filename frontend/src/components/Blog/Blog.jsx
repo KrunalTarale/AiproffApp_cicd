@@ -34,6 +34,10 @@ const Blog = () => {
       publisher: 'Applied AI',
       link: '/Realaible_And_RodbustAi'
     },
+
+  ];
+
+  const allarticles = [
     {
       title: 'Introduction to NLP: When AI talks',
       subTitle:
@@ -64,7 +68,7 @@ const Blog = () => {
       publisher: 'Applied AI',
       link: '/ForcastingUsingAi'
     },
-  ];
+  ]
 
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('');
@@ -87,15 +91,62 @@ const Blog = () => {
     }
   };
 
+  // const topics = [
+  //   'Internet Of Things',
+  //   'Machine Learning',
+  //   'Data Visualization',
+  //   'Data Engineering',
+  //   'Cloud Computing',
+  //   'ML Ops',
+  //   'Deep Learning in NLP',
+  //   'Deep Learning in Computer Vision',
+  // ];
+
   const topics = [
-    'Internet Of Things',
-    'Machine Learning',
-    'Data Visualization',
-    'Data Engineering',
-    'Cloud Computing',
-    'ML Ops',
-    'Deep Learning in NLP',
-    'Deep Learning in Computer Vision',
+    {
+      name : "Deep Learning",
+      link : "/deep_learning"
+    },
+    {
+      name : "Computer Vision",
+      link : "/computer_vision"
+    },
+    {
+      name : "Natural Language Processing",
+      link : "/natural_language_processing"
+    },
+    {
+      name : "Streaming Data Analytics",
+      link : "/streaming_data_analytics"
+    },
+    {
+      name : "Embedded ML",
+      link : "/embedded_ML"
+    },
+    {
+      name : "TinyML, Edge AI",
+      link : "/TinyML_Edge AI"
+    },
+    {
+      name : "IIOT",
+      link : "/IIOT"
+    },
+    {
+      name : "Predictive Analytics",
+      link : "/Predictive_Analytics"
+    },
+    {
+      name : "Data Analytics",
+      link : "/Data_Analytics"
+    },
+    {
+      name : "Forecasting (Time Series Analysis)",
+      link : "/Forecasting"
+    },
+    {
+      name : "Technology Frameworks",
+      link : "/Technology_Frameworks"
+    }
   ];
 
   return (
@@ -136,7 +187,58 @@ const Blog = () => {
 
             </div>
           ))}
+
+          {allarticles.map((article, idx) => (
+            <div
+            key={idx}
+            className="flex space-x-6 border-b-2 border-black items-start hover:bg-gray-100 p-4 transition duration-200 cursor-pointer"
+            >
+    
+              <div className="flex-1">
+                <div className="text-gray-500 text-sm">
+                  {article.date} • by {article.publisher}
+                </div>
+                <Link to={article.link}>
+                <h1 className="text-2xl font-bold mt-2 font-serif">
+                  {article.title}
+                </h1>
+                </Link>
+                <p className="text-gray-700 mt-2 ">{article.subTitle}</p>
+                <div className="text-sm text-gray-600 mt-2">
+                  {article.readTime} read
+                </div>
+              </div>
+
+
+              <div>
+                <img
+                  src={article.imageUrl}
+                  alt={article.title}
+                  className="w-48 h-32 object-cover rounded-lg shadow-md"
+                />
+              </div>
+
+            </div>
+          ))}
+
+
+          <div className=" p-4  mobile_discover">
+            <div>
+              <h2 className="text-2xl font-bold">Discover more topics:</h2>
+            </div>
+            <div className="max-w-screen mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-2 xl:grid-cols-2 gap-5 pt-6">
+              {topics.map((topic, index) => (
+                <button
+                  key={index}
+                  className="bg-gray-200 text-black rounded-lg p-2  cursor:pointer hover:bg-blue-600 hover:text-white"
+                >
+                  {topic.name}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
+
 
         <div className="space-y-14 flex flex-col-reverse lg:flex-col ">
           <div className="hidden lg:block xl:max-w-md w-full  bg-[#051C2C] text-white p-10 lg:p-20 mt-10 lg:ml-2  ">
@@ -174,7 +276,7 @@ const Blog = () => {
             </div>
           </div>
 
-          <div className=" p-4  ">
+          <div className=" p-4  desktop_discover">
             <div>
               <h2 className="text-2xl font-bold">Discover more topics:</h2>
             </div>
@@ -184,7 +286,7 @@ const Blog = () => {
                   key={index}
                   className="bg-gray-200 text-black rounded-lg p-2  cursor:pointer hover:bg-blue-600 hover:text-white"
                 >
-                  {topic}
+                  {topic.name}
                 </button>
               ))}
             </div>

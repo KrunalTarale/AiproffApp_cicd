@@ -7,6 +7,16 @@
     width: 50%;
 }
 
+.login_Logo{
+    width: 150px;
+    align-items: center;
+    margin: auto;
+}
+
+.read_more{
+    text-align: center;
+    margin: auto;
+}
 
 @media screen and (max-width: 700px) {
    

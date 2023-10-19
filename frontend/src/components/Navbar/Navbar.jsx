@@ -7,11 +7,17 @@ import { useState, useEffect } from 'react';
 import NewHam from './NewHam';
 import './NewHam.css';
 import { Link } from 'react-router-dom';
-
+import Toplinks from '../Toplinks/toplinks'
 import NavSearch from '../Search/NavSearch';
 
 function Navbar() {
-  const auth = localStorage.getItem('user');
+  // const auth = localStorage.getItem('user');
+  const [auth, setAuth] = useState(localStorage.getItem('user'));
+
+  useEffect(() => {
+    const user = localStorage.getItem('user');
+    setAuth(user);
+  }, []);
 
   const [offeringsDropdownVisible, setOfferingsDropdownVisible] =
     useState(false);
@@ -84,6 +90,8 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+  <>
+  <Toplinks/>
     <nav className="bg-slate-100 border-b-2">
       <div className="flex items-center justify-between lg:p-6 py-4  ">
         <div className="flex items-center justify-between md:mr-auto space-x-4 lg:ml-0 ml-4">
@@ -405,6 +413,7 @@ function Navbar() {
         </div>
       )}
     </nav>
+    </>
   );
 }
 
