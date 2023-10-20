@@ -1,0 +1,18 @@
+h1 {
+    font-family: 'Bower', Georgia, 'Times New Roman', serif;
+  }
+
+.allcards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card_wid{
+    width: 500px;
+}
+
+.cardimg{
+    width: 100%;
+    height: 100px;
+}

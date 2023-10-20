@@ -155,10 +155,22 @@ const Contact = () => {
         <div className=" flex justify-center py-8">
           <div className="flex flex-col md:flex-row mx-auto justify-between w-full max-w-7xl ">
             <div className="flex flex-col justify-center items-center p-10 rounded-lg space-y-4 contact_card">
-              <FontAwesomeIcon
+              {/* <FontAwesomeIcon
                 icon={faBuilding}
                 className="lg:text-6xl md:text-5xl text-4xl text-white"
-              />
+              /> */}
+
+<iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14035.69545845297!2d77.07805405!3d28.421554099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d2274be0c0a87%3A0xfdc63ca716020a07!2sSector%2057%2C%20Gurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1697775643761!5m2!1sen!2sin"
+        width="250"
+        height="150"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Google Map"
+      ></iframe>
+
               <div className=" flex justify-center  items-center flex-col">
                 <h1 className=" text-xl lg:text-2xl font-bold">Address :</h1>
                 <p className="px-4 py-1 text-xl max-w-xs justify-center  items-center text-center text-slate-300">
@@ -171,7 +183,7 @@ const Contact = () => {
                 icon={faEnvelope}
                 className="lg:text-6xl md:text-5xl text-4xl text-white"
               /> */}
-              <FontAwesomeIcon icon={faSquareEnvelope} className="lg:text-7xl md:text-5xl text-4xl text-white"/>
+              <FontAwesomeIcon icon={faSquareEnvelope} className="lg:text-8xl md:text-5xl text-4xl text-white"/>
               <div className=" flex justify-center  items-center flex-col">
                 <h1 className="  text-xl lg:text-2xl font-bold">Email us :</h1>
                 <p className="px-4 py-1 text-xl max-w-xs justify-center  items-center text-center text-slate-300">
@@ -182,7 +194,7 @@ const Contact = () => {
             <div className="flex flex-col justify-center items-center   p-10 rounded-lg space-y-4 contact_card">
               <FontAwesomeIcon
                 icon={faPhone}
-                className="lg:text-6xl md:text-5xl text-4xl text-white"
+                className="lg:text-7xl md:text-5xl text-4xl text-white"
               />
               <div className=" flex justify-center  items-center flex-col">
                 <h1 className=" text-xl lg:text-2xl font-bold">
