@@ -296,7 +296,7 @@ const Article = () => {
                 </div>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI1.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -310,7 +310,7 @@ const Article = () => {
                 </Link>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI1.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -687,7 +687,7 @@ const Article = () => {
 
                 <div className="flex flex-row text-blue-600 hover:underline underline-offset-4 mb-4 space-x-2">
                   <Link
-                    to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI1.pdf"
+                    to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="space-x-4"
@@ -751,7 +751,7 @@ const Article = () => {
                 </div>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI1.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -764,7 +764,7 @@ const Article = () => {
                 </div>
                 </Link>
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI1.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   download
@@ -851,7 +851,7 @@ const Article = () => {
                 </div>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Synthetic+data+for+enterprises_ebook_2023_August.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -927,7 +927,6 @@ const Article = () => {
               </h1>
             </div>
           </div>
-          
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
               src={card_image3}

@@ -296,7 +296,7 @@ const Nlp = () => {
                 </div>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/NLP+updated.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/NLP.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -310,7 +310,7 @@ const Nlp = () => {
                 </Link>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/NLP+updated.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/NLP.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -909,7 +909,7 @@ const Nlp = () => {
 
                 <div className="flex flex-row text-blue-600 hover:underline underline-offset-4 mb-4 space-x-2">
                   <Link
-                    to="https://ingestionpeekai.s3.amazonaws.com/NLP+updated.pdf"
+                    to="https://ingestionpeekai.s3.amazonaws.com/NLP.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="space-x-4"
@@ -973,7 +973,7 @@ const Nlp = () => {
                 </div>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/NLP+updated.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/NLP.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -987,7 +987,7 @@ const Nlp = () => {
                 </Link>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/NLP+updated.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/NLP.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
