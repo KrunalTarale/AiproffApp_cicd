@@ -26,11 +26,12 @@ const Tags = () => {
         className="mx-1 text-blue-600 no-underline cursor-pointer"
       >
         <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
-        <img
+        <div
           src={card.img}
-          className="rounded-t card_img"
-          alt="Quantum Article"
-        />
+          className="card_img"
+          // alt="Quantum Article" 
+          style={{ backgroundImage: `url(${card.img})` }}
+        ></div>
         <div className="p-4">
         <p>{card.date}</p>
           <p className="text-gray-700 font-bold hover:underline underline-offset-4">
