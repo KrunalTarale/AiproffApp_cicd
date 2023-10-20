@@ -58,7 +58,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div>
               <h2 className="text-xl font-semibold mb-4 max-w-xs">
-                Subscribe to stay updated on Applied AI
+                Subscribe to AiProff and Stay Updated on Applied AI
               </h2>
             </div>
             <p>{status}</p>

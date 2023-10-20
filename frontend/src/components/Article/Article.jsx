@@ -927,6 +927,7 @@ const Article = () => {
               </h1>
             </div>
           </div>
+          
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
               src={card_image3}

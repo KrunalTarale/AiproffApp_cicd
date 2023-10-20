@@ -55,8 +55,8 @@ const Signin = () => {
 
   return (
     <div>
-      <div className="h-screen flex whole_form">
-        <div className="flex bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center left_side">
+      <div className="h-screen whole_form">
+        <div className="flex bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center left_side desktop_view">
           <div>
             <div className="text-white font-bold text-4xl font-sans">
             <img src={logo} className="login_Logo" alt="Logo" />
@@ -214,6 +214,24 @@ const Signin = () => {
             <span className="text-sm ml-2">
               Already have an account?<Link className="text-sm hover:text-blue-500 cursor-pointer" to={"/login"}> Log In</Link>
             </span>
+          </div>
+        </div>
+        <div className="flex bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center left_side mobile_view">
+          <div>
+            <div className="text-white font-bold text-4xl font-sans mt-9 mb-9">
+            <img src={logo} className="login_Logo" alt="Logo" />
+            </div>
+            <p className="text-white mt-1 text-center">
+            Applied AI for Everyone
+            </p>
+            
+            <button
+              className="block w-28 bg-white text-indigo-800 mt-4 py-2 rounded-2xl font-bold mb-2 read_more"
+            >
+              <Link to="/">
+              Go Home
+            </Link>
+            </button>
           </div>
         </div>
       </div>

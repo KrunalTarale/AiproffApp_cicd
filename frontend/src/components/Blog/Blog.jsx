@@ -22,7 +22,7 @@ const Blog = () => {
       imageUrl: image1,
       readTime: '3 min',
       date: 'Sept 23, 2023',
-      publisher: 'Applied AI',
+      publisher: 'AiProff',
       link : '/article'
     },
     {
@@ -31,7 +31,7 @@ const Blog = () => {
       imageUrl:image2,
       readTime: '4 min',
       date: 'Sept 22, 2023',
-      publisher: 'Applied AI',
+      publisher: 'AiProff',
       link: '/Realaible_And_RodbustAi'
     },
 
@@ -45,7 +45,7 @@ const Blog = () => {
       imageUrl:image3,
       readTime: '4 min',
       date: 'Sept 22, 2023',
-      publisher: 'Applied AI',
+      publisher: 'AiProff',
       link: '/nlp'
     },
     {
@@ -55,7 +55,7 @@ const Blog = () => {
       imageUrl:image4,
       readTime: '4 min',
       date: 'Sept 22, 2023',
-      publisher: 'Applied AI',
+      publisher: 'AiProff',
       link: '/Computer_Vision'
     },
     {
@@ -65,7 +65,7 @@ const Blog = () => {
       imageUrl:image5,
       readTime: '4 min',
       date: 'Sept 22, 2023',
-      publisher: 'Applied AI',
+      publisher: 'AiProff',
       link: '/ForcastingUsingAi'
     },
   ]
@@ -105,47 +105,47 @@ const Blog = () => {
   const topics = [
     {
       name : "Deep Learning",
-      link : "/deep_learning"
+      link : "/tags/Deep Learning"
     },
     {
       name : "Computer Vision",
-      link : "/computer_vision"
+      link : "/tags/Computer Vision"
     },
     {
       name : "Natural Language Processing",
-      link : "/natural_language_processing"
+      link : "/tags/Natural Language Processing"
     },
     {
       name : "Streaming Data Analytics",
-      link : "/streaming_data_analytics"
+      link : "/tags/Streaming Data Analytics"
     },
     {
       name : "Embedded ML",
-      link : "/embedded_ML"
+      link : "/tags/Embedded ML"
     },
     {
       name : "TinyML, Edge AI",
-      link : "/TinyML_Edge AI"
+      link : "/tags/TinyML Edge AI"
     },
     {
       name : "IIOT",
-      link : "/IIOT"
+      link : "/tags/IIOT"
     },
     {
       name : "Predictive Analytics",
-      link : "/Predictive_Analytics"
+      link : "/tags/Predictive Analytics"
     },
     {
       name : "Data Analytics",
-      link : "/Data_Analytics"
+      link : "/tags/Data Analytics"
     },
     {
       name : "Forecasting (Time Series Analysis)",
-      link : "/Forecasting"
+      link : "/tags/Forecasting"
     },
     {
       name : "Technology Frameworks",
-      link : "/Technology_Frameworks"
+      link : "/tags/Technology Frameworks"
     }
   ];
 
@@ -155,28 +155,23 @@ const Blog = () => {
       <div className="blog flex flex-col-reverse lg:flex-row items-start justify-center w-full md:mb-14 px-4 xl:px-0">
         <div className="space-y-5 lg:w-3/5 xl:w-2/5 p-4">
           {articles.map((article, idx) => (
+            <Link to={article.link} key={idx}>
             <div
-            key={idx}
+            
             className="flex space-x-6 border-b-2 border-black items-start hover:bg-gray-100 p-4 transition duration-200 cursor-pointer"
             >
-          
-
               <div className="flex-1">
                 <div className="text-gray-500 text-sm">
                   {article.date} • by {article.publisher}
                 </div>
-                <Link to={article.link}>
                 <h1 className="text-2xl font-bold mt-2 font-serif">
                   {article.title}
                 </h1>
-                </Link>
                 <p className="text-gray-700 mt-2 ">{article.subTitle}</p>
                 <div className="text-sm text-gray-600 mt-2">
                   {article.readTime} read
                 </div>
               </div>
-
-
               <div>
                 <img
                   src={article.imageUrl}
@@ -184,32 +179,33 @@ const Blog = () => {
                   className="w-48 h-32 object-cover rounded-lg shadow-md"
                 />
               </div>
-
             </div>
+            </Link>
           ))}
 
           {allarticles.map((article, idx) => (
+             <Link to={article.link} key={idx}>
             <div
-            key={idx}
+            
             className="flex space-x-6 border-b-2 border-black items-start hover:bg-gray-100 p-4 transition duration-200 cursor-pointer"
             >
     
               <div className="flex-1">
+             
                 <div className="text-gray-500 text-sm">
                   {article.date} • by {article.publisher}
                 </div>
-                <Link to={article.link}>
+           
                 <h1 className="text-2xl font-bold mt-2 font-serif">
                   {article.title}
                 </h1>
-                </Link>
+             
                 <p className="text-gray-700 mt-2 ">{article.subTitle}</p>
                 <div className="text-sm text-gray-600 mt-2">
                   {article.readTime} read
                 </div>
+               
               </div>
-
-
               <div>
                 <img
                   src={article.imageUrl}
@@ -219,6 +215,7 @@ const Blog = () => {
               </div>
 
             </div>
+            </Link>
           ))}
 
 
@@ -229,10 +226,12 @@ const Blog = () => {
             <div className="max-w-screen mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-2 xl:grid-cols-2 gap-5 pt-6">
               {topics.map((topic, index) => (
                 <button
-                  key={index}
+                  key={index} 
                   className="bg-gray-200 text-black rounded-lg p-2  cursor:pointer hover:bg-blue-600 hover:text-white"
                 >
+                <Link to={topic.link}>
                   {topic.name}
+                </Link>
                 </button>
               ))}
             </div>
@@ -282,11 +281,12 @@ const Blog = () => {
             </div>
             <div className="max-w-screen mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-2 xl:grid-cols-2 gap-5 pt-6">
               {topics.map((topic, index) => (
-                <button
-                  key={index}
+                <button  key={index}
                   className="bg-gray-200 text-black rounded-lg p-2  cursor:pointer hover:bg-blue-600 hover:text-white"
                 >
+                <Link to={topic.link}>
                   {topic.name}
+                </Link>
                 </button>
               ))}
             </div>
