@@ -286,7 +286,7 @@ const RealaibleAndRodbustAi = () => {
                 </div>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Reliable+%26+Robust.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Reliable+%26+Robust+ai.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -300,7 +300,7 @@ const RealaibleAndRodbustAi = () => {
                 </Link>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Reliable+%26+Robust.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Reliable+%26+Robust+ai.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -646,7 +646,7 @@ const RealaibleAndRodbustAi = () => {
 
                 <div className="flex flex-row text-blue-600 hover:underline underline-offset-4 mb-4 space-x-2">
                   <Link
-                    to="https://ingestionpeekai.s3.amazonaws.com/Reliable+%26+Robust.pdf"
+                    to="https://ingestionpeekai.s3.amazonaws.com/Reliable+%26+Robust+ai.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="space-x-4"
@@ -710,7 +710,7 @@ const RealaibleAndRodbustAi = () => {
                 </div>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Reliable+%26+Robust.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Reliable+%26+Robust+ai.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -723,7 +723,7 @@ const RealaibleAndRodbustAi = () => {
                 </div>
                 </Link>
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Reliable+%26+Robust.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Reliable+%26+Robust+ai.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -809,7 +809,7 @@ const RealaibleAndRodbustAi = () => {
                 </div>
 
                 <Link
-                  to="https://ingestionpeekai.s3.amazonaws.com/Reliable+%26+Robust.pdf"
+                  to="https://ingestionpeekai.s3.amazonaws.com/Reliable+%26+Robust+ai.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
