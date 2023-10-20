@@ -323,7 +323,7 @@ function Navbar() {
                         Proof of Concept (POC)
                       </Link>
                       <Link
-                        to="/"
+                        to="/cat"
                         className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100"
                       >
                         Corporate and Academic Training(CAT)
@@ -344,13 +344,13 @@ function Navbar() {
                     <div className="absolute right-full top-0 mr-1 w-32 rounded-md shadow-lg bg-white">
                       {/* Sub-menu items */}
                       <Link
-                        to="/product1"
+                        to="/try"
                         className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100"
                       >
                         Try
                       </Link>
                       <Link
-                        to="/product2"
+                        to="/buy"
                         className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100"
                       >
                         Buy

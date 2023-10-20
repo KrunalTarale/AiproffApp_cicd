@@ -18,12 +18,24 @@
     margin: auto;
 }
 
+.whole_form {
+    display: flex;
+  }
+
+  .mobile_view{
+    display: none !important;
+  }
+
 @media screen and (max-width: 700px) {
    
-    .whole_form{
-        flex-direction: column;
-    }
+   .desktop_view{
+    display: none !important;
+   }
 
+   .mobile_view{
+    display: block !important;
+  }
+  
     .left_side{
         width: 100%;
         height: 50%;
@@ -38,5 +50,7 @@
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
+
     
   }
+

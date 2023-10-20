@@ -87,7 +87,7 @@ const Team = () => {
   }
 
   return (
-    <div className="teamcontainer">
+    <div className="teamcontainer" id="team">
         <h1 className="lg:text-5xl text-4xl font-bold headings">
         Our Team
       </h1>

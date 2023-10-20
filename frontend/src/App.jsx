@@ -52,6 +52,7 @@ import RRHealthcare from './components/HamburgerArticles/RRHealthcare';
 import RREducational from './components/HamburgerArticles/RREducational';
 
 import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
+import Tags from './components/Tags/Tags';
 
 import Buy from './components/Buy/Buy';
 function ScrollToTop() {
@@ -120,6 +121,7 @@ function App() {
         <Route path="/Computer_Vision" element={<ComputerVision />} />
         <Route path="/ForcastingUsingAi" element={<ForcastingUsingAi />} />
         <Route path="/Privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/tags/:tagname" element={<Tags />} />
         <Route
           path="/"
           element={
