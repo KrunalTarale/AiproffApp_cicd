@@ -30,7 +30,8 @@ const Tags = () => {
           src={card.img}
           className="card_img"
           // alt="Quantum Article" 
-          style={{ backgroundImage: `url("/src/components/assets/${card.img}")` }}
+          // style={{ backgroundImage: `url("/src/components/assets/${card.img}")` }}
+          style={{ backgroundImage: `url("/src/components/assets/Article1/Appliedair.webp")` }}
         ></div>
         <div className="p-4">
         <p>{card.date}</p>
