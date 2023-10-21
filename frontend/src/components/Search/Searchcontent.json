@@ -5,7 +5,7 @@
         "description": "Applied AI: When AI solves real world problems Artificial Intelligence is a promising technological marvel that holds the key to the future. AI encompasses the ability of machines to perform cognitive tasks such as computer vision, speech recognition and natural language processing in a human-like manner. However, the true value of AI is realised when it is applied to real-world scenarios and used to address actual challenges. This is what Applied AI refers to. The importance of Applied AI in the current context is immense. A Gartner survey revealed that the number of enterprises adopting AI increased by 270% in the last four years - and remarkably, it tripled in the last year alone! Benefits of Applied AI AI holds a promising future for economies of G20 countries. Source: Accenture & Frontier Economics Applied AI is the use of artificial intelligence to enhance the efficiency of solving real-world problems.",
         "url": "/article",
         "tag": "Deep Learning",
-        "img": "Article1/Appliedair.webp",
+        "img": "/Card_images/Appliedair.webp",
         "date": "Sept 23, 2023"
     },
     {
@@ -14,7 +14,7 @@
         "description": "The field of Artificial intelligence (AI) is rapidly evolving. It is tapping into industries and it exhibits promising transformative impacts across various sectors such as healthcare, education, finance, entertainment, and security.",
         "url": "/Realaible_And_RodbustAi",
         "tag": "Deep Learning",
-        "img": "rodbust_ai/img_1r.webp",
+        "img": "/Card_images/img_1r.webp",
         "date": "Sept 22, 2023"
     },
     {
@@ -23,7 +23,7 @@
         "description": "The field of Artificial intelligence is exciting. Under this discipline of Technology, machines can talk, machines can see, and machines can think. Computer Vision allows machines to see. Conversational AI systems allow machines to talk. Deep learning allows machines to mimic human thinking.",
         "url": "/nlp",
         "tag": "Natural Language Processing",
-        "img": "Nlp_img/nlp_bannerr.webp",
+        "img": "/Card_images/nlp_bannerr.webp",
         "date": "Sept 22, 2023"
     },
     {
@@ -32,7 +32,7 @@
         "description": "The quest for intelligence has been going on for ages, and the question of ‘whether humans can think’ led us to many pursuits that culminated finally at a point where we made machines that can ‘mimic’ human thinking. This is Artificial Intelligence.But it is its subfield computer vision that gave these machines the power to ‘see’ and comprehend their surroundings.",
         "url": "/Computer_Vision",
         "tag": "Computer Vision",
-        "img": "ComputerVision/img1r.webp",
+        "img": "/Card_images/img1r.webp",
         "date": "Sept 22, 2023"
     },
     {
@@ -41,7 +41,7 @@
         "description": "Forecasting is the art and science of predicting future events or outcomes based on past and present data. It is a crucial skill for many domains, such as business, economics, weather, sports, and health. Forecasting is the process of using historical data, trends, and statistics to predict future outcomes or events. Forecasting has immense applications: from predicting weather patterns and the movement of stocks, to evaluating economies of countries, scientific research, and so on.However, forecasting can also be challenging, complex, and uncertain, especially if you are dealing with large and dynamic data sets. That's where the power of artificial intelligence (AI) comes in.",
         "url": "/ForcastingUsingAi",
         "tag": "Predictive Analytics",
-        "img": "forcastingAi/ForecastingusingAI.jpg",
+        "img": "/Card_images/ForcastingusingAIr.webp",
         "date": "Sept 22, 2023"
     }
 ]
