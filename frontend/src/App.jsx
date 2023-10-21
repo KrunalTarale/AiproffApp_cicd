@@ -70,9 +70,9 @@ function App() {
     <Router>
       <ScrollToTop />
       <Routes>
-        <Route path="/article" element={<Article />} />
+        <Route path="/applied-ai" element={<Article />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/yourarticle" element={<YourArticle />} />
+        <Route path="/articles" element={<YourArticle />} />
         <Route path="/search" element={<SearchSite />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/assessment" element={<Assessment />} />
@@ -81,25 +81,25 @@ function App() {
         <Route path="/Legal" element={<Legal />} />
         <Route path="/faq" element={<Faq />} />
 
-        <Route path="/aihealth" element={<AppliedaiHealthcare />} />
-        <Route path="/aieducation" element={<AppliedaiEducation />} />
-        <Route path="/aiaerospace" element={<AppliedaiAerospace />} />
+        <Route path="/applied-ai-healthcare" element={<AppliedaiHealthcare />} />
+        <Route path="/applied-ai-education" element={<AppliedaiEducation />} />
+        <Route path="/applied-ai-aerospace" element={<AppliedaiAerospace />} />
 
-        <Route path="/nlpinhealthcare" element={<NLPInHealthcare />} />
-        <Route path="/nlpeducation" element={<NLPInEducation />} />
-        <Route path="/nlpfinance" element={<NLPInFinance />} />
+        <Route path="/nlp-in-healthcare" element={<NLPInHealthcare />} />
+        <Route path="/nlp-in-education" element={<NLPInEducation />} />
+        <Route path="/nlp-in-finance" element={<NLPInFinance />} />
 
-        <Route path="/cvautomotive" element={<CVAutomotive />} />
-        <Route path="/cvretail" element={<CVRetail />} />
-        <Route path="/cvmanufacturing" element={<CVManufacturing />} />
+        <Route path="/computer-vision-automotive" element={<CVAutomotive />} />
+        <Route path="/computer-vision-retail" element={<CVRetail />} />
+        <Route path="/computer-vision-manufacturing" element={<CVManufacturing />} />
 
-        <Route path="/forecastingstocks" element={<ForecastingStockPrices />} />
-        <Route path="/demandforecasting" element={<DemandForecasting />} />
-        <Route path="/salesprediction" element={<SalesPrediction />} />
+        <Route path="/ai-forecasting-stocks" element={<ForecastingStockPrices />} />
+        <Route path="/ai-demand-forecasting" element={<DemandForecasting />} />
+        <Route path="/ai-sales-prediction" element={<SalesPrediction />} />
 
-        <Route path="/rrenterprises" element={<RREnterprises />} />
-        <Route path="/rreducational" element={<RREducational />} />
-        <Route path="/rrhealthcare" element={<RRHealthcare />} />
+        <Route path="/reliable-and-robust-ai-enterprise" element={<RREnterprises />} />
+        <Route path="/reliable-and-robust-ai-education" element={<RREducational />} />
+        <Route path="/reliable-and-robust-ai-healthcare" element={<RRHealthcare />} />
 
         <Route path="/buy" element={<Buy />} />
         <Route path="/try" element={<Buy />} />
@@ -108,19 +108,19 @@ function App() {
           element={<UpdateSubscriber />}
         />
         <Route path="/login" element={<Login />} />
-        <Route path="/signin" element={<Signin />} />
+        <Route path="/sign-in" element={<Signin />} />
         <Route path="/mvp" element={<MVP />} />
         <Route path="/poc" element={<POC />} />
         <Route path="/cat" element={<CAT />} />
         <Route path="/updatepassword/:id" element={<Updatepassword />} />
-        <Route path="/nlp" element={<NLP />} />
+        <Route path="/introduction-to-nlp" element={<NLP />} />
         <Route
-          path="/Realaible_And_RodbustAi"
+          path="/reliable-and-robust-ai"
           element={<RealaibleAndRodbustAi />}
         />
         <Route path="/Computer_Vision" element={<ComputerVision />} />
-        <Route path="/ForcastingUsingAi" element={<ForcastingUsingAi />} />
-        <Route path="/Privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/forecasting-using-ai" element={<ForcastingUsingAi />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/tags/:tagname" element={<Tags />} />
         <Route
           path="/"

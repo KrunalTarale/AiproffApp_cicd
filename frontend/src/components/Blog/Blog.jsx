@@ -23,7 +23,7 @@ const Blog = () => {
       readTime: '3 min',
       date: 'Sept 23, 2023',
       publisher: 'AiProff',
-      link : '/article'
+      link : '/applied-ai'
     },
     {
       title: 'Introduction: Reliable and Robust AI',
@@ -32,7 +32,7 @@ const Blog = () => {
       readTime: '4 min',
       date: 'Sept 22, 2023',
       publisher: 'AiProff',
-      link: '/Realaible_And_RodbustAi'
+      link: '/reliable-and-robust-ai'
     },
 
   ];
@@ -46,7 +46,7 @@ const Blog = () => {
       readTime: '4 min',
       date: 'Sept 22, 2023',
       publisher: 'AiProff',
-      link: '/nlp'
+      link: '/introduction-to-nlp'
     },
     {
       title: 'Introduction to Computer Vision: When Machines Start to See',
@@ -66,7 +66,7 @@ const Blog = () => {
       readTime: '4 min',
       date: 'Sept 22, 2023',
       publisher: 'AiProff',
-      link: '/ForcastingUsingAi'
+      link: '/forecasting-using-ai'
     },
   ]
 
@@ -105,47 +105,47 @@ const Blog = () => {
   const topics = [
     {
       name : "Deep Learning",
-      link : "/tags/Deep Learning"
+      link : "/tags/deep-learning"
     },
     {
       name : "Computer Vision",
-      link : "/tags/Computer Vision"
+      link : "/tags/computer-vision"
     },
     {
       name : "Natural Language Processing",
-      link : "/tags/Natural Language Processing"
+      link : "/tags/natural-language-processing"
     },
     {
       name : "Streaming Data Analytics",
-      link : "/tags/Streaming Data Analytics"
+      link : "/tags/streaming-data-analytics"
     },
     {
       name : "Embedded ML",
-      link : "/tags/Embedded ML"
+      link : "/tags/embedded-ml"
     },
     {
       name : "TinyML, Edge AI",
-      link : "/tags/TinyML Edge AI"
+      link : "/tags/tinyml-edge-ai"
     },
     {
       name : "IIOT",
-      link : "/tags/IIOT"
+      link : "/tags/iiot"
     },
     {
       name : "Predictive Analytics",
-      link : "/tags/Predictive Analytics"
+      link : "/tags/predictive-analytics"
     },
     {
       name : "Data Analytics",
-      link : "/tags/Data Analytics"
+      link : "/tags/data-analytics"
     },
     {
       name : "Forecasting (Time Series Analysis)",
-      link : "/tags/Forecasting"
+      link : "/tags/forecasting"
     },
     {
       name : "Technology Frameworks",
-      link : "/tags/Technology Frameworks"
+      link : "/tags/technology-frameworks"
     }
   ];
 

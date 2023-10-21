@@ -891,6 +891,10 @@ const Article = () => {
           </h1>
         </div>
         <div className="flex lg:flex-row flex-col p-8 card_container">
+        <Link
+                  to={'/reliable-and-robust-ai'}
+                  className="mx-1 text-blue-600 no-underline  cursor-pointer"
+                >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
               src={card_image1}
@@ -898,16 +902,21 @@ const Article = () => {
               alt="Quantum Article"
             />
             <div className="p-4">
-            <Link
-                  to={'/Realaible_And_RodbustAi'}
-                  className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer"
-                >
-              <p className="text-gray-700 font-bold">
+
+                  <p>Sept 22, 2023</p>
+              <p className="text-gray-700 font-bold hover:underline underline-offset-4">
                 Introduction: Reliable and Robust AI
               </p>
-              </Link>
+              <p>The field of Artificial intelligence (AI) is rapidly evolving. It is tapping</p>
+             
             </div>
           </div>
+          </Link>
+
+          <Link
+                  to={'/introduction-to-nlp'}
+                  className="mx-1 text-blue-600 no-underline  cursor-pointer"
+                >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
               src={card_image2}
@@ -915,18 +924,25 @@ const Article = () => {
               alt="Quantum Article"
             />
             <div className="p-4">
-            <Link
-                  to={'/nlp'}
-                  className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer"
-                >
-              <p className="text-gray-700 font-bold">
+
+                <p>Sept 22, 2023</p>
+              <p className="text-gray-700 font-bold hover:underline underline-offset-4">
                 Introduction to NLP: When AI talks
               </p>
-              </Link>
+              <p>
+              The field of Artificial intelligence is exciting. Under this discipline of Technology,
+              </p>
+              
               <h1>
               </h1>
             </div>
           </div>
+          </Link>
+
+          <Link
+                  to={'/computer_vision'}
+                  className="mx-1 text-blue-600 no-underline cursor-pointer"
+                >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
             <img
               src={card_image3}
@@ -934,16 +950,18 @@ const Article = () => {
               alt="Quantum Article"
             />
             <div className="p-4">
-            <Link
-                  to={'/computer_vision'}
-                  className="mx-1 text-blue-600 no-underline hover:underline underline-offset-4 cursor-pointer"
-                >
-              <p className="text-gray-700 font-bold">
+
+              <p>Sept 22, 2023</p>
+              <p className="text-gray-700 font-bold hover:underline underline-offset-4">
                 Introduction to Computer Vision: When Machines Start to See
               </p>
-              </Link>
+              <p>
+              The quest for intelligence has been going on for ages, and the question of 
+              </p>
+             
             </div>
           </div>
+        </Link>
         </div>
       </div>
 
