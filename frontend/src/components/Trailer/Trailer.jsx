@@ -39,7 +39,7 @@ const Trailer = () => {
           <div className="mt-4">
             <p className="text-gray-500 dark:text-gray-400">
               <Link
-                to="/article"
+                to="/applied-ai"
                 className={`inline-flex items-center font-semibold text-black hover:text-blue-700 hover:no-underline ${
                   isHovered ? 'hovered' : ''
                 }`}
@@ -131,7 +131,7 @@ const Trailer = () => {
             <div className="mt-4">
               <p className="text-gray-500 dark:text-gray-400">
                 <Link
-                  to="/nlp"
+                  to="/introduction-to-nlp"
                   className={`inline-flex items-center font-semibold text-black hover:text-blue-700 hover:no-underline ${
                     isHovered ? 'hovered' : ''
                   }`}
@@ -225,7 +225,7 @@ const Trailer = () => {
           <div className="mt-4">
             <p className="text-gray-500 dark:text-gray-400">
               <Link
-                to="/Realaible_And_RodbustAi"
+                to="/reliable-and-robust-ai"
                 className={`inline-flex items-center font-semibold text-black hover:text-blue-700 hover:no-underline ${
                   isHovered ? 'hovered' : ''
                 }`}

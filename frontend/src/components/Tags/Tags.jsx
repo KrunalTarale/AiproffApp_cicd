@@ -10,6 +10,10 @@ const Tags = () => {
   const params = useParams();
   const tagname = params.tagname;
 
+const words = tagname.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1));
+const formattedTagname = words.join(' ');
+
+
   const filteredArticles = SearchContent.filter(
     (article) => article.tag === tagname
   );
@@ -49,7 +53,7 @@ const Tags = () => {
     <>
       <Navbar />
 
-      <h1 className="lg:text-5xl text-4xl font-bold text-center mt-8 mb-7">{tagname}</h1>
+      <h1 className="lg:text-5xl text-4xl font-bold text-center mt-8 mb-7">{formattedTagname}</h1>
 
       <div className="bg-slate-100 w-full article">
         <div className="mx-auto flex  justify-center">
