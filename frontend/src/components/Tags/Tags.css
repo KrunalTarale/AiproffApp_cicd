@@ -2,6 +2,14 @@ h1 {
     font-family: 'Bower', Georgia, 'Times New Roman', serif;
   }
 
+.all_card_container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
 .allcards{
     display: flex;
     justify-content: center;
