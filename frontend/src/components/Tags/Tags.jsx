@@ -49,12 +49,12 @@ const Tags = () => {
     <>
       <Navbar />
 
-      <h1 className="lg:text-5xl text-4xl font-bold text-center mt-8 mb-6">{tagname}</h1>
+      <h1 className="lg:text-5xl text-4xl font-bold text-center mt-8 mb-7">{tagname}</h1>
 
       <div className="bg-slate-100 w-full article">
         <div className="mx-auto flex  justify-center">
         </div>
-        <div className="flex lg:flex-row flex-col p-8 card_container">
+        <div className="all_card_container">
 
           {
          filteredArticles.length === 0  ? (<h1 className="text-4xl font-semibold text-center mt-10">Post Coming Soon</h1>) : filteredArticles.map(allcards)
