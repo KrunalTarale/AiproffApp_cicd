@@ -16,33 +16,33 @@ const NewHam = ({ closeModal }) => {
     {
       title: 'Applied AI',
       options: [
-        { name: 'Applied AI in Health Care', url: '/aihealth' },
-        { name: 'Applied AI in Education', url: '/aieducation' },
-        { name: 'Applied AI in Aerospace', url: '/aiaerospace' },
+        { name: 'Applied AI in Health Care', url: '/applied-ai-healthcare' },
+        { name: 'Applied AI in Education', url: '/applied-ai-education' },
+        { name: 'Applied AI in Aerospace', url: '/applied-ai-aerospace' },
       ],
     },
     {
       title: 'Natural Language Processing',
       options: [
-        { name: 'NLP in Healthcare', url: '/nlpinhealthcare' },
-        { name: 'NLP in Education', url: '/nlpeducation' },
-        { name: 'NLP in Finance', url: '/nlpfinance' },
+        { name: 'NLP in Healthcare', url: '/nlp-in-healthcare' },
+        { name: 'NLP in Education', url: '/nlp-in-education' },
+        { name: 'NLP in Finance', url: '/nlp-in-finance' },
       ],
     },
     {
       title: 'Computer Vision',
       options: [
-        { name: 'Computer Vision in Automotive', url: '/cvautomotive' },
-        { name: 'Computer Vision in Retail', url: '/cvretail' },
-        { name: 'Computer Vision in Manufacturing', url: '/cvmanufacturing' },
+        { name: 'Computer Vision in Automotive', url: '/computer-vision-automotive' },
+        { name: 'Computer Vision in Retail', url: '/computer-vision-retail' },
+        { name: 'Computer Vision in Manufacturing', url: '/computer-vision-manufacturing' },
       ],
     },
     {
       title: 'Forecasting Using AI',
       options: [
-        { name: 'Forecasting Stock Prices', url: '/forecastingstocks' },
-        { name: 'Demand Forecasting', url: '/demandforecasting' },
-        { name: 'Sales Prediction', url: '/salesprediction' },
+        { name: 'Forecasting Stock Prices', url: '/ai-forecasting-stocks' },
+        { name: 'Demand Forecasting', url: '/ai-demand-forecasting' },
+        { name: 'Sales Prediction', url: '/ai-sales-prediction' },
       ],
     },
     {
@@ -50,13 +50,13 @@ const NewHam = ({ closeModal }) => {
       options: [
         {
           name: 'Reliable and Robust AI for Enterprises',
-          url: '/rrenterprises',
+          url: '/reliable-and-robust-ai-enterprise',
         },
         {
           name: 'Reliable and Robust AI for Educational Institutions',
-          url: '/rreducational',
+          url: '/reliable-and-robust-ai-education',
         },
-        { name: 'Reliable and Robust AI for Healthcare', url: '/rrhealthcare' },
+        { name: 'Reliable and Robust AI for Healthcare', url: '/reliable-and-robust-ai-healthcare' },
       ],
     },
     {

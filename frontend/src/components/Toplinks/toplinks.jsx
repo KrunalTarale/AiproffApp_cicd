@@ -32,7 +32,7 @@ const TopLinks = () => {
         Logout
       </Link>
       :
-      <Link to="/signin" className="text-blue-600 hover:underline">
+      <Link to="/sign-in" className="text-blue-600 hover:underline">
         Sign In
       </Link>
       }
