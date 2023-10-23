@@ -1,66 +1,52 @@
-// import { SitemapStream, streamToPromise } from 'sitemap';
-// import { createGzip } from 'zlib';
-// import fs from 'fs';
-// import path from 'path';
-
-// // Define the base URL of your website
-// const baseUrl = 'https://example.com';
-
-// // Import or manually define your routes
-// const routes = [
-//   '/',
-//   '/about',
-//   '/contact',
-//   // Add more routes as needed
-// ];
-
-// // Create a writable stream to store the sitemap
-// const sitemapStream = new SitemapStream({ hostname: baseUrl });
-// const writeStream = createGzip();
-// sitemapStream.pipe(writeStream);
-
-// // Add each route to the sitemap
-// routes.forEach((route) => {
-//   sitemapStream.write({ url: route, changefreq: 'daily', priority: 0.7 });
-// });
-
-// // End the sitemap and finalize the file
-// sitemapStream.end();
-
-// // Create the sitemap.xml file
-// const sitemapPath = path.resolve('../public/sitemap.xml');
-// const writeStreamPath = fs.createWriteStream(sitemapPath);
-// writeStream.pipe(writeStreamPath);
-
-// // Wait for the write stream to finish
-// streamToPromise(writeStream).then(() => {
-//   console.log('Sitemap generated and saved:', sitemapPath);
-// });
-
-
-
 // sitemap-generator.js
 import { SitemapStream, streamToPromise } from 'sitemap';
+import fs from 'fs';
+import path from 'path';
 
 async function generateSitemap() {
   const hostname = 'https://www.aiproff.ai';
   const routes = [
-    '/',
-    '/about',
-    '/contact'
+    { url: '/', changefreq: 'weekly' },
+    { url: '/about', changefreq: 'weekly' },
+    { url: '/contact', changefreq: 'monthly' },
+    { url: '/blog', changefreq: 'daily' },
+    { url: '/applied-ai', changefreq: 'monthly' },
+    { url: '/reliable-and-robust-ai', changefreq: 'monthly' },
+    { url: '/introduction-to-nlp', changefreq: 'monthly' },
+    { url: '/forecasting-using-ai', changefreq: 'monthly' },
+    { url: '/computer-vision', changefreq: 'monthly' },
+    { url: '/articles', changefreq: 'daily' },
+    { url: '/faq', changefreq: 'weekly' },
+    { url: '/privacy-policy', changefreq: 'weekly' },
+    { url: '/legal', changefreq: 'weekly' },
+    { url: '/mvp', changefreq: 'weekly' },
+    { url: '/poc', changefreq: 'weekly' },
+    { url: '/cat', changefreq: 'weekly' },
+    { url: '/try', changefreq: 'weekly' },
+    { url: '/buy', changefreq: 'weekly' },
+    { url: '/assessment', changefreq: 'weekly' },
+    { url: '/sign-in', changefreq: 'weekly' },
+    { url: '/login  ', changefreq: 'weekly' },
   ];
 
   const sitemapStream = new SitemapStream({ hostname });
 
   routes.forEach((route) => {
-    sitemapStream.write({ url: route });
+    sitemapStream.write(route);
   });
 
   sitemapStream.end();
 
   try {
     const sitemap = await streamToPromise(sitemapStream);
-    console.log(sitemap.toString());
+
+    // Define the path to save the sitemap.xml file
+    const sitemapPath = path.join('../public/sitemap.xml');
+
+    // Save the sitemap content to the sitemap.xml file
+    fs.writeFileSync(sitemapPath, sitemap.toString());
+
+    console.log('Sitemap saved to', sitemapPath);
   } catch (error) {
     console.error(error);
   }

@@ -940,7 +940,7 @@ const Article = () => {
           </Link>
 
           <Link
-                  to={'/computer_vision'}
+                  to={'/computer-vision'}
                   className="mx-1 text-blue-600 no-underline cursor-pointer"
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
