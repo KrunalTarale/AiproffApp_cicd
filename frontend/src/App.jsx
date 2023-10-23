@@ -118,7 +118,7 @@ function App() {
           path="/reliable-and-robust-ai"
           element={<RealaibleAndRodbustAi />}
         />
-        <Route path="/Computer_Vision" element={<ComputerVision />} />
+        <Route path="/computer-vision" element={<ComputerVision />} />
         <Route path="/forecasting-using-ai" element={<ForcastingUsingAi />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/tags/:tagname" element={<Tags />} />
