@@ -1,10 +1,14 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './Mvp.css';
 import Navbar from '../Navbar/Navbar'
 import Foot from '../Foot/Foot'
 import image1 from '../assets/mvp.jpg';
-
+import ReactGA from 'react-ga';
 const Mvp = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   return (
     <div>

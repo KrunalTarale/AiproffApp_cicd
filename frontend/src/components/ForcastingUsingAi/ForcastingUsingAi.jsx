@@ -18,6 +18,7 @@ import {
   faTwitter,
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
+import ReactGA from 'react-ga';
 
 import image1 from '../assets/forcastingAi/ForcastingusingAIr.webp';
 import image2 from '../assets/forcastingAi/img2.jpg';
@@ -37,6 +38,11 @@ import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import Footer from '../Foot/Foot';
 
 const ForcastingUsingAi = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const Title = 'Forecasting using AI';
   const navigate = useNavigate();
 

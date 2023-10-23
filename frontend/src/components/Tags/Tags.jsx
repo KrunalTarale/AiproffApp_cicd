@@ -1,12 +1,18 @@
-import React from "react";
+import React,{useEffect} from "react";
 import SearchContent from "../Search/Searchcontent.json";
 import { useParams, Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./Tags.css";
+import ReactGA from "react-ga";
 
 // import card_image2 from "../assets/Nlp_img/nlp_bannerr.webp";
 
 const Tags = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const params = useParams();
   const tagname = params.tagname;
 

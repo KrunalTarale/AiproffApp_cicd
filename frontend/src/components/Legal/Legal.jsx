@@ -2,7 +2,14 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
 import image from '../assets/Article1/logo.png';
 import './Legal.css';
+import { useEffect } from 'react';
+import ReactGA from 'react-ga';
 const Legal = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <div className="Legal">
       <div>

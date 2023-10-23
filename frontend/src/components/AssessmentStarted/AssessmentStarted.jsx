@@ -3,9 +3,13 @@ import { useParams } from "react-router-dom";
 import questions from "./questions";
 import { useNavigate } from "react-router-dom";
 import "./assessmentStarted.css";
+import ReactGA from "react-ga";
 
 const AssessmentStarted = () => {
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
   
 
   const params = useParams();

@@ -1,9 +1,15 @@
-// import React from 'react'
+import React,{useEffect} from 'react'
 import Navbar from "../Navbar/Navbar";
 import "./Assisment.css";
 import { Link } from 'react-router-dom';
+import ReactGA from "react-ga";
 
 const Assisment = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <>
       <Navbar />
