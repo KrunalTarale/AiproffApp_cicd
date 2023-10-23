@@ -1,10 +1,15 @@
-import React , {useState} from "react";
+import React , {useState, useEffect} from "react";
 import { useNavigate } from 'react-router-dom'
 import "./Login.css";
 import {Link} from 'react-router-dom'
 import logo from '../assets/logo_webp.webp';
+import ReactGA from 'react-ga';
 
 const Login = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");

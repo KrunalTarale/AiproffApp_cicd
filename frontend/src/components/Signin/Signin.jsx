@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import "./Signin.css";
 import logo from '../assets/logo_webp.webp';
+import ReactGA from 'react-ga';
 
 const Signin = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const [fname, setfname] = React.useState("");
   const [lname, setlname] = React.useState("");
   const [email, setemail] = React.useState("");

@@ -1,10 +1,16 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './Poc.css';
 import Navbar from '../Navbar/Navbar';
 import Foot from '../Foot/Foot';
 import image1 from '../assets/poc.jpg';
+import ReactGA from 'react-ga';
 
 const Poc = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <div>
       <Navbar />

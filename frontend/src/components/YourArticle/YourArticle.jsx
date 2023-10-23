@@ -5,13 +5,20 @@ import { useState,useEffect } from 'react';
 import './YourArticle.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import ReactGA from 'react-ga';
 
 const YourArticle = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('');
   const [allarticles, setArticles] = useState([]);
 
   const getArticles = async () => {
+    
     const auth = localStorage.getItem('user');
     const user = JSON.parse(auth);
 

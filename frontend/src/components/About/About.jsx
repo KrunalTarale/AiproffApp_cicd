@@ -1,11 +1,16 @@
+import { useEffect } from 'react'
 import Navbar from '../Navbar/Navbar';
-import Carousel from '../Carousel/Carousel';
 import Footer from '../Foot/Foot';
-import image from '../assets/Article1/logo.png';
 import Team from '../Team/Team';
+import ReactGA from 'react-ga';
 import './About.css';
 import { Helmet } from 'react-helmet';
 const About = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <div className="About">
 

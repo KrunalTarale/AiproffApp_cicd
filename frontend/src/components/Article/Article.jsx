@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link,useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './Article.css';
+import ReactGA from 'react-ga';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faShare,
@@ -40,6 +41,11 @@ import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import Footer from '../Foot/Foot';
 
 const Article = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const Title = 'Applied AI: When AI solves real world problems';
   const navigate = useNavigate();
 

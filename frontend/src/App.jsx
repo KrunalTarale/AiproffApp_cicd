@@ -2,6 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga'
+const GA_TRACKING_ID = 'G-P9Y3G1PK8G';
+ReactGA.initialize(GA_TRACKING_ID);
 
 import './App.css';
 

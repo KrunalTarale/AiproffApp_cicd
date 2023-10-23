@@ -10,8 +10,14 @@ import {
   faPhone,
   faSquareEnvelope
 } from '@fortawesome/free-solid-svg-icons';
+import ReactGA from 'react-ga';
 
 const Contact = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   useEffect(() => {
     getCountries();
     gettopics();
