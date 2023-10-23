@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../Navbar/Navbar";
+import ReactGA from "react-ga";
 
 const Buy = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <div>
       <Navbar />

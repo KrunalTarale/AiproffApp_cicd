@@ -1,8 +1,9 @@
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './blog.css';
 import { Link } from 'react-router-dom'
+import ReactGA from 'react-ga';
 
 // Blog Images
 import image1 from "../assets/Article1/Appliedair.webp";
@@ -12,6 +13,10 @@ import image4 from "../assets/ComputerVision/img1r.webp";
 import image5 from "../assets/forcastingAi/ForcastingusingAIr.webp";
 
 const Blog = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
 
   const articles = [

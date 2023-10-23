@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
 import 'font-awesome/css/font-awesome.min.css';
 import './FAQ.css';
+import ReactGA from 'react-ga';
 
 const FaqItem = ({ isOpen, onClick, children }) => {
   return (
@@ -18,6 +19,11 @@ const FaqItem = ({ isOpen, onClick, children }) => {
 };
 
 const Faq = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const [openIndex, setOpenIndex] = useState(null);
 
   const handleToggle = (index) => {

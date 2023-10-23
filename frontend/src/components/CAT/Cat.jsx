@@ -1,10 +1,15 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './Cat.css';
 import Navbar from '../Navbar/Navbar'
 import Foot from '../Foot/Foot'
 import image1 from '../assets/CAT_img.jpg';
+import ReactGA from 'react-ga';
 
 const Cat = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   return (
     <div>

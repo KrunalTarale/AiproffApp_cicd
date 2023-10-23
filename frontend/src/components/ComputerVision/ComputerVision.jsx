@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link,useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './ComputerVision.css';
+import ReactGA from 'react-ga';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faShare,
@@ -38,6 +39,11 @@ import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import Footer from '../Foot/Foot';
 
 const ComputerVision = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const Title = 'Computer Vision: When Machines Start to See';
   const navigate = useNavigate();
 
