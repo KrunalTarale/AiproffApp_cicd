@@ -56,7 +56,7 @@ const Blog = () => {
       readTime: '4 min',
       date: 'Sept 22, 2023',
       publisher: 'AiProff',
-      link: '/Computer_Vision'
+      link: '/computer-vision'
     },
     {
       title: 'Introduction: When AI starts to predict Future',
