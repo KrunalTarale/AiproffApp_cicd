@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import './App.css';
 
@@ -126,6 +127,12 @@ function App() {
           path="/"
           element={
             <>
+              <Helmet>
+                <meta charSet='utf-8'/>
+                <title>AiProff - Applied AI/ML for Everyone </title>
+                <meta name='description' content='Empower your journey in Applied AI and ML with AiProff. With a focus on AI/ML,  NLP, Computer Vision, and Time Series Analysis, our experts provide cutting-edge solutions and training for enterprises. Leverage your business with our Applied AI/ML expertise and demos now!' />
+                <meta name='keywords' content='Applied AI, ML, AiProff'/>
+              </Helmet>
               <div>
                 <div className="App flex flex-col">
                   <div className="h-1/5 flex flex-col z-10">
