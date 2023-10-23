@@ -2159,21 +2159,14 @@ react-router-dom@^6.15.0:
     "@remix-run/router" "1.8.0"
     react-router "6.15.0"
 
-react-router-sitemap@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/react-router-sitemap/-/react-router-sitemap-1.2.0.tgz"
-  integrity sha512-3aETwxCFTGHsGbXpyh7sr+c/WDr0q1rpng0M4pgoV6Owl3673buejPHGvzDmZEdiqhRa+I0znRDneKRc1NC06Q==
-  dependencies:
-    sitemap "^1.6.0"
-
-"react-router@^2.3.0 || ^3.2.1 || ^4.3.0", react-router@6.15.0:
+react-router@6.15.0:
   version "6.15.0"
   resolved "https://registry.npmjs.org/react-router/-/react-router-6.15.0.tgz"
   integrity sha512-NIytlzvzLwJkCQj2HLefmeakxxWHWAP+02EGqWEZy+DgfHHKQMUoBBjUQLOtFInBMhWtb3hiUy6MfFgwLjXhqg==
   dependencies:
     "@remix-run/router" "1.8.0"
 
-react@*, "react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^15.1.0 || ^16.0.0", react@^18, react@^18.2.0, react@>=16.3, react@>=16.8, "react@>=16.8 || ^17.0.0 || ^18.0.0", react@>=16.8.0, react@18.2.0:
+react@*, "react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", react@^18, react@^18.2.0, react@>=16.3, react@>=16.8, "react@>=16.8 || ^17.0.0 || ^18.0.0", react@>=16.8.0, react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -2329,14 +2322,6 @@ side-channel@^1.0.4:
     call-bind "^1.0.0"
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
-
-sitemap@^1.6.0:
-  version "1.13.0"
-  resolved "https://registry.npmjs.org/sitemap/-/sitemap-1.13.0.tgz"
-  integrity sha512-++mJIYR1+WpO1m0iqZv9viGmalxkm6r8Zq8OOFcFzx3aLlXU50T0JV3pvr6WHyFkwudlXmt190ZRbtH3yOm3Hg==
-  dependencies:
-    underscore "^1.7.0"
-    url-join "^1.1.0"
 
 sitemap@^7.1.1:
   version "7.1.1"
@@ -2591,11 +2576,6 @@ unbox-primitive@^1.0.2:
     has-symbols "^1.0.3"
     which-boxed-primitive "^1.0.2"
 
-underscore@^1.7.0:
-  version "1.13.6"
-  resolved "https://registry.npmjs.org/underscore/-/underscore-1.13.6.tgz"
-  integrity sha512-+A5Sja4HP1M08MaXya7p5LvjuM7K6q/2EaC0+iovj/wOcMsTzMvDFbasi/oSapiwOlt252IqsKqPjCl7huKS0A==
-
 update-browserslist-db@^1.0.11:
   version "1.0.11"
   resolved "https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.0.11.tgz"
@@ -2610,11 +2590,6 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
-
-url-join@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/url-join/-/url-join-1.1.0.tgz"
-  integrity sha512-zz1wZk4Lb5PTVwZ3HWDmm8XnlPvmOof6/fjdDPA5yBrUcbtV64U6bV832Zf1BtU2WkBBWaUT46wCs+l0HP5nhg==
 
 util-deprecate@^1.0.2:
   version "1.0.2"
