@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Navigate} from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -59,6 +60,8 @@ import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import Tags from './components/Tags/Tags';
 
 import Buy from './components/Buy/Buy';
+
+import NotFound from './components/NotFound/NotFound';
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -126,6 +129,7 @@ function App() {
         <Route path="/forecasting-using-ai" element={<ForcastingUsingAi />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/tags/:tagname" element={<Tags />} />
+        <Route path="*" element= {<NotFound/>} />
         <Route
           path="/"
           element={
@@ -156,6 +160,11 @@ function App() {
             </>
           }
         />
+
+{/* Rediricting old links to the new links */}
+  <Route path="/blog-3" element={<Navigate to="/blog" />} />
+  <Route path="/assessments" element={<Navigate to="/assessment" />} />
+  <Route path="/contact-us" element={<Navigate to="/contact" />} />
       </Routes>
     </Router>
   );
