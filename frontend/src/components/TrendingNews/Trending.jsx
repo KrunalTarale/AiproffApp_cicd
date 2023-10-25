@@ -4,21 +4,21 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        'SoftBank CEO predicts AI surpassing human intelligence in a decade',
-      url: 'https://apnews.com/article/japan-softbank-masayoshi-son-ai-28e82a3b405dab8ca2a83d411e99847f',
+        'Top LLM models scores "unimpressively" in AI transparency, according to a new Stanford report',
+      url: 'https://arstechnica.com/information-technology/2023/10/stanford-researchers-challenge-openai-others-on-ai-transparency-in-new-report/',
     },
     {
-      headline: 'Humane’s ‘Ai Pin’ debuts on the Paris runway',
-      url: 'https://techcrunch.com/2023/09/30/humanes-ai-pin-debuts-on-the-paris-runway/?utm_source=newsletter&utm_medium=email&utm_campaign=newsletter_axioslogin&stream=top',
+      headline: 'Foxconn and NVIDIA are building AI Factories to power up the production of AI self-driving cars',
+      url: 'https://techcrunch.com/2023/10/17/foxconn-and-nvidia-are-building-ai-factories-to-accelerate-self-driving-cars/',
     },
     {
-      headline: 'Meta debuts new AI assistant and chatbots',
-      url: 'https://www.axios.com/2023/09/27/meta-debuts-new-artificial-intelligence-chatbot?utm_source=newsletter&utm_medium=email&utm_campaign=newsletter_axioslogin&stream=top',
+      headline: 'Apple to invest $1 Billion per year to integrate AI in its products',
+      url: 'https://www.bloomberg.com/news/newsletters/2023-10-22/what-is-apple-doing-in-ai-revamping-siri-search-apple-music-and-other-apps-lo1ffr7p',
     },
     {
       headline:
-        'JPMorgan CEO Jamie Dimon predicts that AI will shorten the workweek to three and a half days',
-      url: 'https://www.businessinsider.in/tech/news/jpmorgan-ceo-jamie-dimon-says-our-children-will-probably-only-work-3-5-days-a-week-thanks-to-ai/articleshow/104137497.cms',
+        "66% of Indian CEOs find Gen AI top investment priority, 77% see it as double edged sword, says KPMG's latest report",
+      url: 'https://www.livemint.com/news/india/66-of-ceos-in-india-gen-artificial-intelligence-top-investment-priority-77-see-it-as-double-edged-sword-says-report-11698162201716.html',
     },
   ];
 
