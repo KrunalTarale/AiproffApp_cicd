@@ -74,7 +74,7 @@ const Contact = () => {
           lname: lname,
           country: country,
           contact: contact,
-          state: state,
+          state: state, 
           city: city,
           help: help,
           massage: massage,
