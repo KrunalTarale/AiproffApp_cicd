@@ -165,6 +165,7 @@ function App() {
   <Route path="/blog-3" element={<Navigate to="/blog" />} />
   <Route path="/assessments" element={<Navigate to="/assessment" />} />
   <Route path="/contact-us" element={<Navigate to="/contact" />} />
+  <Route path="/home-2" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );

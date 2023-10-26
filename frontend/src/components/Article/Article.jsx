@@ -195,6 +195,24 @@ const Article = () => {
     window.location.href = 'mailto:?body=' + encodeURIComponent(url);
   }
 
+  // Print logic
+
+  function handlePrintClick(event) {
+    event.preventDefault(); // Prevent the default behavior of opening a new tab or window
+    const url = event.target.getAttribute("to");
+  
+    if (url) {
+      // Open the PDF in a new window or tab
+      const newWindow = window.open(url, "_blank");
+  
+      if (newWindow) {
+        newWindow.onload = function () {
+          newWindow.print(); // Trigger the print dialog
+        };
+      }
+    }
+  }
+
   return (
     <>
       <Navbar />
@@ -305,6 +323,7 @@ const Article = () => {
                   to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={handlePrintClick}
                 >
                 <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
                   <FontAwesomeIcon
@@ -760,6 +779,7 @@ const Article = () => {
                   to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={handlePrintClick}
                 >
                 <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
                   <FontAwesomeIcon
