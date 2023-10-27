@@ -143,7 +143,7 @@ const Footer = () => {
                 />
               </a>
               <a
-                href="https://www.youtube.com/channel/UCCI91MUrgIGZYhNNOdfzIzQ"
+                href="https://www.youtube.com/@AiProffAi"
                 target="blank"
                 className="text-gray-600 hover:text-blue-500"
               >
