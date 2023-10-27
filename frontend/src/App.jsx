@@ -58,10 +58,11 @@ import RREducational from './components/HamburgerArticles/RREducational';
 
 import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import Tags from './components/Tags/Tags';
-
 import Buy from './components/Buy/Buy';
+// import ChatBot from './components/ChatBot/ChatBot'
 
 import NotFound from './components/NotFound/NotFound';
+
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -156,6 +157,7 @@ function App() {
                   <Touch />
                 </div>
                 <Footer />
+                
               </div>
             </>
           }
