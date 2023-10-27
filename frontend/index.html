@@ -37,10 +37,31 @@
 </script>
 
     <title>AiProff</title>
+
+    <style>
+      df-messenger {
+       --df-messenger-bot-message: #6275be;
+       --df-messenger-button-titlebar-color: #1d4ed8;
+       --df-messenger-chat-background-color: #e1e7fb;
+       --df-messenger-font-color: white;
+       --df-messenger-send-icon: #6479c2;
+       --df-messenger-user-message: #6287ee;
+      }
+    </style>
+
   </head>
 
   <body>
+    <!-- <df-messenger
+    intent="WELCOME"
+    chat-title="AiProff"
+    agent-id="db8daa0c-6168-4982-a179-e5668427027d"
+    language-code="en"
+    chat-icon="logo.png"
+  ></df-messenger> -->
     <div id="root"></div>
+    
     <script type="module" src="/src/main.jsx"></script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
   </body>
 </html>
