@@ -4,21 +4,21 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        'Top LLM models scores "unimpressively" in AI transparency, according to a new Stanford report',
-      url: 'https://arstechnica.com/information-technology/2023/10/stanford-researchers-challenge-openai-others-on-ai-transparency-in-new-report/',
+        'Boston Dynamics uses ChatGPT for a robot tour guide',
+      url: 'https://gizmodo.com/boston-dynamics-robot-dog-uses-chatgpt-1850963851',
     },
     {
-      headline: 'Foxconn and NVIDIA are building AI Factories to power up the production of AI self-driving cars',
-      url: 'https://techcrunch.com/2023/10/17/foxconn-and-nvidia-are-building-ai-factories-to-accelerate-self-driving-cars/',
+      headline: 'Shutterstock launches AI image editor for 750-million picture library.',
+      url: 'https://venturebeat.com/ai/shutterstock-debuts-an-ai-image-editor-for-its-750-million-picture-library/',
     },
     {
-      headline: 'Apple to invest $1 Billion per year to integrate AI in its products',
-      url: 'https://www.bloomberg.com/news/newsletters/2023-10-22/what-is-apple-doing-in-ai-revamping-siri-search-apple-music-and-other-apps-lo1ffr7p',
+      headline: 'Amazon unveils new AI product image generator',
+      url: 'https://www.aboutamazon.com/news/innovation-at-amazon/amazon-ads-ai-powered-image-generator',
     },
     {
       headline:
-        "66% of Indian CEOs find Gen AI top investment priority, 77% see it as double edged sword, says KPMG's latest report",
-      url: 'https://www.livemint.com/news/india/66-of-ceos-in-india-gen-artificial-intelligence-top-investment-priority-77-see-it-as-double-edged-sword-says-report-11698162201716.html',
+        "Indian tech experts join new UN AI advisory body",
+      url: 'https://www.google.com/amp/s/www.thehindu.com/sci-tech/technology/eminent-technology-experts-from-india-named-to-new-ai-advisory-body-announced-by-un-secretary-general/article67464818.ece/amp/',
     },
   ];
 

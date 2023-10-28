@@ -52,6 +52,7 @@
   </head>
 
   <body>
+
     <!-- <df-messenger
     intent="WELCOME"
     chat-title="AiProff"
@@ -59,9 +60,31 @@
     language-code="en"
     chat-icon="logo.png"
   ></df-messenger> -->
+
     <div id="root"></div>
+
+    <!-- db8daa0c-6168-4982-a179-e5668427027d -->
     
     <script type="module" src="/src/main.jsx"></script>
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+    <script>
+      function sendMessageWithDelay(message, delay) {
+  setTimeout(function() {
+    // Send the message after the specified delay
+    dfMessenger.sendMessage({text: message});
+  }, delay);
+}
+sendMessageWithDelay("This is the first message", 5000); 
+sendMessageWithDelay("This is the first message", 5000); 
+sendMessageWithDelay("This is the first message", 5000); 
+sendMessageWithDelay("This is the first message", 5000); 
+sendMessageWithDelay("This is the first message", 5000); 
+sendMessageWithDelay("This is the first message", 5000); 
+sendMessageWithDelay("This is the first message", 5000); 
+sendMessageWithDelay("This is the first message", 5000); 
+sendMessageWithDelay("This is the first message", 5000); 
+sendMessageWithDelay("This is the first message", 5000); 
+    </script>
   </body>
 </html>
