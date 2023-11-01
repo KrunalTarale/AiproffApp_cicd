@@ -4,6 +4,7 @@ import { Link,useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './ForcastingUsingAi.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Helmet } from 'react-helmet';
 import {
   faShare,
   faPrint,
@@ -188,6 +189,11 @@ const ForcastingUsingAi = () => {
 
   return (
     <>
+
+<Helmet>
+                <link href="https://www.aiproff.ai/forecasting-using-ai" rel="canonical" />
+              </Helmet>
+
       <Navbar />
       <div className="article">
         <div className=" article space-y-2 mx-auto flex flex-col justify-center">

@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar'
 import Foot from '../Foot/Foot'
 import image1 from '../assets/CAT_img.jpg';
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 const Cat = () => {
 
@@ -13,6 +14,10 @@ const Cat = () => {
 
   return (
     <div>
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/cat" rel="canonical" />
+              </Helmet>
 
       <Navbar />
       

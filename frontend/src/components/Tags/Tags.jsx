@@ -4,6 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./Tags.css";
 import ReactGA from "react-ga";
+import { Helmet } from 'react-helmet';
 
 // import card_image2 from "../assets/Nlp_img/nlp_bannerr.webp";
 
@@ -57,6 +58,11 @@ const formattedTagname = words.join(' ');
 
   return (
     <>
+
+        <Helmet>
+            <link href="https://www.aiproff.ai/tags/" rel="canonical" />
+        </Helmet>
+
       <Navbar />
 
       <h1 className="lg:text-5xl text-4xl font-bold text-center mt-8 mb-7">{formattedTagname}</h1>

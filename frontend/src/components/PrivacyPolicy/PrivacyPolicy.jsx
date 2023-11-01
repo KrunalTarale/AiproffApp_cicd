@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import './PrivacyPolicy.css';
 import {Link} from 'react-router-dom';
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 const About = () => {
 
@@ -14,6 +15,9 @@ const About = () => {
 
   return (
     <div className="Legal">
+          <Helmet>
+                <link href="https://www.aiproff.ai/privacy-policy" rel="canonical" />
+          </Helmet>
       <div>
         <Navbar />
       </div>

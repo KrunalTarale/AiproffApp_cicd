@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Helmet } from 'react-helmet';
 import {
   faBuilding,
   faEnvelope,
@@ -153,6 +154,11 @@ const Contact = () => {
 
   return (
     <>
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/contact" rel="canonical" />
+              </Helmet>
+
       <Navbar />
       <div className="contact_form bg-gradient-to-r from-blue-950 to-blue-500 text-white py-8 mt-0 mb-0">
         {/* <div className="flex items-center justify-center">

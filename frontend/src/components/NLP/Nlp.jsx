@@ -4,6 +4,7 @@ import { Link,useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './Nlp.css';
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faShare,
@@ -196,6 +197,9 @@ const Nlp = () => {
 
   return (
     <>
+        <Helmet>
+            <link href="https://www.aiproff.ai/introduction-to-nlp" rel="canonical" />
+        </Helmet>
       <Navbar />
       <div className="article">
         <div className=" article space-y-2 mx-auto flex flex-col justify-center">

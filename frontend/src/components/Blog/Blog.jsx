@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import './blog.css';
 import { Link } from 'react-router-dom'
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 // Blog Images
 import image1 from "../assets/thumbnail/applied-ai-4-6538ad3e0b3a8.webp";
@@ -19,30 +20,30 @@ const Blog = () => {
   }, []);
 
 
+  // const articles = [
+  //   {
+  //     title: 'Applied AI: When AI solves real world problems ',
+  //     subTitle:
+  //       'Artificial Intelligence is a promising technological marvel that holds the key to the future. ',
+  //     imageUrl: image1,
+  //     readTime: '3 min',
+  //     date: 'Sept 23, 2023',
+  //     publisher: 'AiProff',
+  //     link : '/applied-ai'
+  //   },
+  //   {
+  //     title: 'Introduction: Reliable and Robust AI',
+  //     subTitle: 'The field of Artificial intelligence (AI) is rapidly evolving.  ',
+  //     imageUrl:image2,
+  //     readTime: '4 min',
+  //     date: 'Sept 22, 2023',
+  //     publisher: 'AiProff',
+  //     link: '/reliable-and-robust-ai'
+  //   },
+
+  // ];
+
   const articles = [
-    {
-      title: 'Applied AI: When AI solves real world problems ',
-      subTitle:
-        'Artificial Intelligence is a promising technological marvel that holds the key to the future. ',
-      imageUrl: image1,
-      readTime: '3 min',
-      date: 'Sept 23, 2023',
-      publisher: 'AiProff',
-      link : '/applied-ai'
-    },
-    {
-      title: 'Introduction: Reliable and Robust AI',
-      subTitle: 'The field of Artificial intelligence (AI) is rapidly evolving.  ',
-      imageUrl:image2,
-      readTime: '4 min',
-      date: 'Sept 22, 2023',
-      publisher: 'AiProff',
-      link: '/reliable-and-robust-ai'
-    },
-
-  ];
-
-  const allarticles = [
     {
       title: 'Introduction to NLP: When AI talks',
       subTitle:
@@ -63,6 +64,20 @@ const Blog = () => {
       publisher: 'AiProff',
       link: '/computer-vision'
     },
+
+  ];
+
+  const allarticles = [
+    {
+      title: 'Applied AI: When AI solves real world problems ',
+      subTitle:
+        'Artificial Intelligence is a promising technological marvel that holds the key to the future. ',
+      imageUrl: image1,
+      readTime: '3 min',
+      date: 'Sept 23, 2023',
+      publisher: 'AiProff',
+      link : '/applied-ai'
+    },
     {
       title: 'Introduction: When AI starts to predict Future',
       subTitle:
@@ -72,6 +87,15 @@ const Blog = () => {
       date: 'Sept 22, 2023',
       publisher: 'AiProff',
       link: '/forecasting-using-ai'
+    },
+    {
+      title: 'Introduction: Reliable and Robust AI',
+      subTitle: 'The field of Artificial intelligence (AI) is rapidly evolving.  ',
+      imageUrl:image2,
+      readTime: '4 min',
+      date: 'Sept 22, 2023',
+      publisher: 'AiProff',
+      link: '/reliable-and-robust-ai'
     },
   ]
 
@@ -156,6 +180,11 @@ const Blog = () => {
 
   return (
     <div>
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/blog" rel="canonical" />
+              </Helmet>
+
       <Navbar />
       <div className="blog flex flex-col-reverse lg:flex-row items-start justify-center w-full md:mb-14 px-4 xl:px-0">
         <div className="space-y-5 lg:w-3/5 xl:w-2/5 p-4">

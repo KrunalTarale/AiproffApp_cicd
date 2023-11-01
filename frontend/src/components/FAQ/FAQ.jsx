@@ -4,6 +4,7 @@ import Footer from '../Foot/Foot';
 import 'font-awesome/css/font-awesome.min.css';
 import './FAQ.css';
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 const FaqItem = ({ isOpen, onClick, children }) => {
   return (
@@ -32,6 +33,11 @@ const Faq = () => {
 
   return (
     <div className="flex flex-col ">
+
+      <Helmet>
+          <link href="https://www.aiproff.ai/faq" rel="canonical" />
+      </Helmet>
+
       <div>
         <Navbar />
       </div>
