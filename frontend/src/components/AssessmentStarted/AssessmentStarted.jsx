@@ -4,6 +4,7 @@ import questions from "./questions";
 import { useNavigate } from "react-router-dom";
 import "./assessmentStarted.css";
 import ReactGA from "react-ga";
+import { Helmet } from "react-helmet";
 
 const AssessmentStarted = () => {
 
@@ -127,6 +128,11 @@ const AssessmentStarted = () => {
 
   return (
     <div className="quiz_container">
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/assessmentStarted/" rel="canonical" />
+              </Helmet>
+
       <h1 className="quiz_title">Quiz</h1>
       <div className="quiz_section">
         <div>

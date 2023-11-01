@@ -1,6 +1,8 @@
 import React , {useState} from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet';
+
 const Updatepassword = () => {
   const params = useParams();
   let userid = params.id;
@@ -48,6 +50,11 @@ const Updatepassword = () => {
 
   return (
     <div>
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/updatepassword/" rel="canonical" />
+              </Helmet>
+
       <div className="h-screen flex whole_form">
         <div className="flex bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center left_side">
           <div>

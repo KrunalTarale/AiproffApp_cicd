@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar'
 import Foot from '../Foot/Foot'
 import image1 from '../assets/mvp.jpg';
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 const Mvp = () => {
 
   useEffect(() => {
@@ -12,6 +13,10 @@ const Mvp = () => {
 
   return (
     <div>
+
+        <Helmet>
+            <link href="https://www.aiproff.ai/mvp" rel="canonical" />
+        </Helmet>
 
       <Navbar />
       

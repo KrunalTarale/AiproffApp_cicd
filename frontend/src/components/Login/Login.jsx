@@ -4,7 +4,7 @@ import "./Login.css";
 import {Link} from 'react-router-dom'
 import logo from '../assets/logo_webp.webp';
 import ReactGA from 'react-ga';
-
+import { Helmet } from 'react-helmet';
 const Login = () => {
 
   useEffect(() => {
@@ -83,6 +83,11 @@ const Login = () => {
 
   return (
     <div>
+
+      <Helmet>
+          <link href="https://www.aiproff.ai/login" rel="canonical" />
+      </Helmet>
+
       <div className="h-screen whole_form">
         <div className="flex bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center left_side desktop_view">
           <div>
