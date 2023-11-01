@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom'
 import ReactGA from 'react-ga';
 
 // Blog Images
-import image1 from "../assets/Article1/Appliedair.webp";
-import image2 from "../assets/rodbust_ai/img_1r.webp";
-import image3 from "../assets/Nlp_img/nlp_bannerr.webp";
-import image4 from "../assets/ComputerVision/img1r.webp";
-import image5 from "../assets/forcastingAi/ForcastingusingAIr.webp";
+import image1 from "../assets/thumbnail/applied-ai-4-6538ad3e0b3a8.webp";
+import image2 from "../assets/thumbnail/reliable-and-robust-ai-1-6538ad3ee3077.webp";
+import image3 from "../assets/thumbnail/nlp-1-6538ad3dadc12.webp";
+import image4 from "../assets/thumbnail/computer-vision-3-6538ad3ea0802.webp";
+import image5 from "../assets/thumbnail/forecasting-6538ad3fb2d70.webp";
 
 const Blog = () => {
 

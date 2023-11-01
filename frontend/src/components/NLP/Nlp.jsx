@@ -20,13 +20,12 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import image1 from '../assets/Nlp_img/nlp_bannerr.webp';
+import image1 from '../assets/Nlp_img/nlp_bannerrr.webp';
 import image2 from '../assets/Nlp_img/nlp_img2.jpg';
 import image3 from '../assets/Nlp_img/nlp_img3.jpg';
 import image4 from '../assets/Nlp_img/nlp_img4.jpg';
 import image5 from '../assets/Nlp_img/nlp_img5.jpg';
 import image7 from '../assets/Article1/logo.png';
-import card1 from '../assets/Article1/card1.png';
 
 // Card images
 
