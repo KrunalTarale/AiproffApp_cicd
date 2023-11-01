@@ -6,6 +6,7 @@ import './YourArticle.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 const YourArticle = () => {
 
@@ -91,6 +92,11 @@ const YourArticle = () => {
 
   return (
     <div className="min-h-screen flex flex-col h-full YourArticle">
+
+          <Helmet>
+              <link href="https://www.aiproff.ai/articles" rel="canonical" />
+          </Helmet>
+
       <div className="flex-shrink-0">
         <Navbar />
       </div>

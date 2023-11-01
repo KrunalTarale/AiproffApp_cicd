@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import "./Assisment.css";
 import { Link } from 'react-router-dom';
 import ReactGA from "react-ga";
+import { Helmet } from "react-helmet";
 
 const Assisment = () => {
 
@@ -12,6 +13,11 @@ const Assisment = () => {
 
   return (
     <>
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/assessment" rel="canonical" />
+              </Helmet>
+
       <Navbar />
 
       <div className="allCards">

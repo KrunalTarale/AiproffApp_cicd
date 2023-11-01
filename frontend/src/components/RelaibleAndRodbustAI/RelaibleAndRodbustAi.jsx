@@ -4,6 +4,7 @@ import { Link,useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './RelaibleAndRodbustAi.css';
 import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faShare,
@@ -187,6 +188,11 @@ const RealaibleAndRodbustAi = () => {
 
   return (
     <>
+
+              <Helmet>
+                <link href="https://www.aiproff.ai/reliable-and-robust-ai" rel="canonical" />
+              </Helmet>
+
       <Navbar />
       <div className="article">
         <div className=" article space-y-2 mx-auto flex flex-col justify-center">
