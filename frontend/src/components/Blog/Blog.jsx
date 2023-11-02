@@ -19,30 +19,6 @@ const Blog = () => {
     ReactGA.pageview(window.location.pathname);
   }, []);
 
-
-  // const articles = [
-  //   {
-  //     title: 'Applied AI: When AI solves real world problems ',
-  //     subTitle:
-  //       'Artificial Intelligence is a promising technological marvel that holds the key to the future. ',
-  //     imageUrl: image1,
-  //     readTime: '3 min',
-  //     date: 'Sept 23, 2023',
-  //     publisher: 'AiProff',
-  //     link : '/applied-ai'
-  //   },
-  //   {
-  //     title: 'Introduction: Reliable and Robust AI',
-  //     subTitle: 'The field of Artificial intelligence (AI) is rapidly evolving.  ',
-  //     imageUrl:image2,
-  //     readTime: '4 min',
-  //     date: 'Sept 22, 2023',
-  //     publisher: 'AiProff',
-  //     link: '/reliable-and-robust-ai'
-  //   },
-
-  // ];
-
   const articles = [
     {
       title: 'Introduction to NLP: When AI talks',
