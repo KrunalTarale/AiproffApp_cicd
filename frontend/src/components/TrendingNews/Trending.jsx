@@ -4,21 +4,21 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        'Boston Dynamics uses ChatGPT for a robot tour guide',
-      url: 'https://gizmodo.com/boston-dynamics-robot-dog-uses-chatgpt-1850963851',
+        'Biden Administration issues U.S.′ first AI executive order: Safety, Civil Rights, and Labor Impact',
+      url: 'https://www.cnbc.com/2023/10/30/biden-unveils-us-governments-first-ever-ai-executive-order.html',
     },
     {
-      headline: 'Shutterstock launches AI image editor for 750-million picture library.',
-      url: 'https://venturebeat.com/ai/shutterstock-debuts-an-ai-image-editor-for-its-750-million-picture-library/',
+      headline: 'California suspends Cruise driverless vehicles in San Francisco',
+      url: 'https://www.dmv.ca.gov/portal/news-and-media/dmv-statement-on-cruise-llc-suspension/',
     },
     {
-      headline: 'Amazon unveils new AI product image generator',
-      url: 'https://www.aboutamazon.com/news/innovation-at-amazon/amazon-ads-ai-powered-image-generator',
+      headline: 'Microsoft will lay off the team behind AI drone to focus on OpenAI',
+      url: 'https://www.businessinsider.com/microsoft-shutters-project-airsim-ai-strategy-openai-2023-10?IR=T',
     },
     {
       headline:
-        "Indian tech experts join new UN AI advisory body",
-      url: 'https://www.google.com/amp/s/www.thehindu.com/sci-tech/technology/eminent-technology-experts-from-india-named-to-new-ai-advisory-body-announced-by-un-secretary-general/article67464818.ece/amp/',
+        "How to use CuPy in Python to harness GPU power",
+      url: 'https://www.kdnuggets.com/leveraging-the-power-of-gpus-with-cupy-in-python',
     },
   ];
 

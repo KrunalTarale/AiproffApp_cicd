@@ -140,6 +140,7 @@ function App() {
                 <title>AiProff - Smart Move for Every Business</title>
                 <meta name='description' content='Empower your journey in Applied AI and ML with AiProff. With a focus on AI/ML,  NLP, Computer Vision, and Time Series Analysis, our experts provide cutting-edge solutions and training for enterprises. Leverage your business with our Applied AI/ML expertise and demos now!' />
                 <meta name='keywords' content='Applied AI, ML, AiProff'/>
+                <link href="https://www.aiproff.ai/" rel="canonical" />
               </Helmet>
               <div>
                 <div className="App flex flex-col">
