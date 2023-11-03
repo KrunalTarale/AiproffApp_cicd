@@ -29,9 +29,19 @@ const Footer = () => {
   // New code starts
 
   const [email, setEmail] = useState('');
+  // const [emailError, setEmailError] = useState('');
   const [status, setStatus] = useState('');
 
   const handleSubmit = async () => {
+
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!email.match(emailPattern)) {
+      setStatus('Please enter a valid email address');
+      return;
+    }
+
+    else{
+
     const res = await fetch('/subscribe_user', {
       method: 'POST',
       headers: {
@@ -47,7 +57,11 @@ const Footer = () => {
       setStatus(data.status);
       setEmail('');
     }
+
+  }
   };
+
+
 
   // New code ends
 
@@ -68,7 +82,10 @@ const Footer = () => {
                 className="px-4 py-2 border border-gray-400 rounded-l-md focus:outline-none"
                 placeholder="Enter your email"
                 value={email}
-                onChange={(event) => setEmail(event.target.value)}
+                onChange={(event) => {
+                  setEmail(event.target.value);
+                }}
+                
               />
               <button
                 onClick={handleSubmit}
