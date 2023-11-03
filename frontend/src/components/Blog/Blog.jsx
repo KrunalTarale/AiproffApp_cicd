@@ -79,6 +79,13 @@ const Blog = () => {
   const [status, setStatus] = useState('');
 
   const handleSubmit = async () => {
+
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!email.match(emailPattern)) {
+      setStatus('Please enter a valid email address');
+      return;
+    }
+    else{
     const res = await fetch('/subscribe_user', {
       method: 'POST',
       headers: {
@@ -94,6 +101,7 @@ const Blog = () => {
       setStatus(data.status);
       setEmail('');
     }
+  }
   };
 
   // const topics = [
@@ -313,7 +321,7 @@ const Blog = () => {
                 Stay updated about AiProff news as it happens
               </h2>
             </div>
-
+            <p className='text-center'>{status}</p>
             <div className="flex justify-center">
               <div className="flex text-black">
                 <input
