@@ -19,6 +19,7 @@ const Signin = () => {
   const [error, setError] = useState(false);
   const [checkpass, setCheckpass] = useState("");
   const [validuser , setValiduser] = useState(false);
+  const [emailValidation, setEmailValidation] = useState("");
 
   const navigate = useNavigate();
 
@@ -26,6 +27,13 @@ const Signin = () => {
     if (!fname || !lname || !email || !password || !cpassword) {
       setError(true);
     } else {
+
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      if (!email.match(emailPattern)) {
+        setEmailValidation('Please enter a valid email address');
+        return;
+      }
+      else{
       if (password === cpassword) {
         setCheckpass("");
 
@@ -56,7 +64,7 @@ const Signin = () => {
         setCheckpass("Both Password Should be match");
       }
 
-      
+    }
     }
   };
 
@@ -95,6 +103,7 @@ const Signin = () => {
             {validuser && (
               <span className="warning_massage">User Already Exist</span>
             )}
+            <span className="warning_massage">{emailValidation}</span>
             <div className="mb-4">
               <div className="flex items-center border-2 py-2 px-3 rounded-2xl">
                 <input

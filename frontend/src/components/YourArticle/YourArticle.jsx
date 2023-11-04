@@ -55,16 +55,63 @@ const YourArticle = () => {
     }
   };
 
+  // const topics = [
+  //   'Programming',
+  //   'Data Science',
+  //   'Technology',
+  //   'Self Improvement',
+  //   'Writing',
+  //   'Relationships',
+  //   'Machine Learning',
+  //   'Productivity',
+  //   'Politics',
+  // ];
+
   const topics = [
-    'Programming',
-    'Data Science',
-    'Technology',
-    'Self Improvement',
-    'Writing',
-    'Relationships',
-    'Machine Learning',
-    'Productivity',
-    'Politics',
+    {
+      name : "Deep Learning",
+      link : "/tags/deep-learning"
+    },
+    {
+      name : "Computer Vision",
+      link : "/tags/computer-vision"
+    },
+    {
+      name : "Natural Language Processing",
+      link : "/tags/natural-language-processing"
+    },
+    {
+      name : "Streaming Data Analytics",
+      link : "/tags/streaming-data-analytics"
+    },
+    {
+      name : "Embedded ML",
+      link : "/tags/embedded-ml"
+    },
+    {
+      name : "TinyML, Edge AI",
+      link : "/tags/tinyml-edge-ai"
+    },
+    {
+      name : "IIOT",
+      link : "/tags/iiot"
+    },
+    {
+      name : "Predictive Analytics",
+      link : "/tags/predictive-analytics"
+    },
+    {
+      name : "Data Analytics",
+      link : "/tags/data-analytics"
+    },
+    {
+      name : "Forecasting (Time Series Analysis)",
+      link : "/tags/forecasting"
+    },
+    {
+      name : "Technology Frameworks",
+      link : "/tags/technology-frameworks"
+    }
   ];
 
   // delete article
@@ -144,14 +191,15 @@ const YourArticle = () => {
             <div>
               <h2 className="text-2xl font-bold">Discover more topics:</h2>
             </div>
-            <div className="max-w-screen mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-2 xl:grid-cols-3 gap-5 pt-6">
+            <div className="max-w-screen mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-2 xl:grid-cols-2 gap-5 pt-6">
               {topics.map((topic, index) => (
+                 <Link to={topic.link} key={index} >
                 <button
-                  key={index}
-                  className="bg-gray-200 text-black rounded-lg p-2  cursor:pointer hover:bg-blue-600 hover:text-white"
+                  className="bg-gray-200 text-black rounded-lg p-2  cursor:pointer hover:bg-blue-600 hover:text-white tag_btn"
                 >
-                  {topic}
+                  {topic.name}
                 </button>
+                </Link>
               ))}
             </div>
           </div>
