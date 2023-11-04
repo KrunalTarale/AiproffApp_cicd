@@ -11,6 +11,10 @@
   display: none;
 }
 
+.tag_btn{
+  width: 100%;
+}
+
 @media screen and (max-width: 1025px) {
   .desktop_discover{
     display: none;
