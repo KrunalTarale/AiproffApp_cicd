@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
 import SearchContent from "../Search/Searchcontent.json";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./Tags.css";
 import ReactGA from "react-ga";
@@ -10,21 +10,24 @@ import { Helmet } from 'react-helmet';
 
 const Tags = () => {
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
+    if(filteredArticles.length === 0){
+      navigate('/notfound')
+    }
   }, []);
 
   const params = useParams();
   const tagname = params.tagname;
 
-const words = tagname.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1));
-const formattedTagname = words.join(' ');
-
-
   const filteredArticles = SearchContent.filter(
     (article) => article.tag === tagname
   );
-  console.log(filteredArticles);
+
+  const words = tagname.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1));
+const formattedTagname = words.join(' ');
 
   function allcards(card){
 

@@ -104,17 +104,6 @@ const Blog = () => {
   }
   };
 
-  // const topics = [
-  //   'Internet Of Things',
-  //   'Machine Learning',
-  //   'Data Visualization',
-  //   'Data Engineering',
-  //   'Cloud Computing',
-  //   'ML Ops',
-  //   'Deep Learning in NLP',
-  //   'Deep Learning in Computer Vision',
-  // ];
-
   const topics = [
     {
       name : "Deep Learning",
@@ -243,14 +232,13 @@ const Blog = () => {
             </div>
             <div className="max-w-screen mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-2 xl:grid-cols-2 gap-5 pt-6">
               {topics.map((topic, index) => (
+                 <Link to={topic.link} key={index} >
                 <button
-                  key={index} 
-                  className="bg-gray-200 text-black rounded-lg p-2  cursor:pointer hover:bg-blue-600 hover:text-white"
+                  className="bg-gray-200 text-black rounded-lg p-2  cursor:pointer hover:bg-blue-600 hover:text-white tag_btn"
                 >
-                <Link to={topic.link}>
                   {topic.name}
-                </Link>
                 </button>
+                </Link>
               ))}
             </div>
           </div>
@@ -299,13 +287,13 @@ const Blog = () => {
             </div>
             <div className="max-w-screen mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-2 xl:grid-cols-2 gap-5 pt-6">
               {topics.map((topic, index) => (
-                <button  key={index}
-                  className="bg-gray-200 text-black rounded-lg p-2  cursor:pointer hover:bg-blue-600 hover:text-white"
+                <Link to={topic.link} key={index}>
+                <button  
+                  className="bg-gray-200 text-black rounded-lg p-2 cursor:pointer hover:bg-blue-600 hover:text-white tag_btn"
                 >
-                <Link to={topic.link}>
-                  {topic.name}
-                </Link>
+                  {topic.name}  
                 </button>
+                </Link>
               ))}
             </div>
           </div>

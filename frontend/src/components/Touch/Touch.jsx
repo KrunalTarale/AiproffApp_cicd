@@ -13,12 +13,12 @@ const Touch = () => {
         
         <div className="flex items-center justify-center text-center">
           <FontAwesomeIcon icon={faPhone} className="text-lg" />
-          <p className="ml-2">+918076774495</p>
+          <p className="ml-2">Tel:<a href="tel:+918076774495" className="ml-1">+91 8076774495</a></p>
         </div>
         
         <div className="flex items-center justify-center text-center">
           <FontAwesomeIcon icon={faEnvelope} size="lg" />
-          <p className="ml-2">Email us: <a href="mailto:support@aiproff.ai" className="ml-2"> support@aiproff.ai</a></p>
+          <p className="ml-2">Email us: <a href="mailto:support@aiproff.ai" className="ml-1"> support@aiproff.ai</a></p>
         </div>
       
       </div>
