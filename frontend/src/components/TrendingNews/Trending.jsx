@@ -4,21 +4,21 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        'Biden Administration issues U.S.′ first AI executive order: Safety, Civil Rights, and Labor Impact',
-      url: 'https://www.cnbc.com/2023/10/30/biden-unveils-us-governments-first-ever-ai-executive-order.html',
+        'Elon Musk releases new AI chatbot ‘Grok’ in bid to take on ChatGPT',
+      url: 'https://www.ft.com/content/093cda92-91d8-49ff-8475-4f66ccff137b',
     },
     {
-      headline: 'California suspends Cruise driverless vehicles in San Francisco',
-      url: 'https://www.dmv.ca.gov/portal/news-and-media/dmv-statement-on-cruise-llc-suspension/',
+      headline: 'OpenAI is reportedly set to debut a new interface for ChatGPT, and third parties tools to build custom GPT-4 chatbots.',
+      url: 'https://venturebeat.com/ai/alleged-openai-devday-leak-suggests-connections-to-cloud-drives-custom-chatbot-builder/',
     },
     {
-      headline: 'Microsoft will lay off the team behind AI drone to focus on OpenAI',
-      url: 'https://www.businessinsider.com/microsoft-shutters-project-airsim-ai-strategy-openai-2023-10?IR=T',
+      headline: 'Stability AI has launched Stable 3D, an AI app for creating 3D models quickly and affordably ',
+      url: 'https://techcrunch.com/2023/11/02/stability-ais-latest-tool-uses-ai-to-generate-3d-models/',
     },
     {
       headline:
-        "How to use CuPy in Python to harness GPU power",
-      url: 'https://www.kdnuggets.com/leveraging-the-power-of-gpus-with-cupy-in-python',
+        "UK to create one of world’s most powerful AI supercomputers",
+      url: 'https://thenextweb.com/news/uk-ai-supercomputer-summit',
     },
   ];
 
