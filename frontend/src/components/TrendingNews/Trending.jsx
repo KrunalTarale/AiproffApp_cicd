@@ -17,8 +17,8 @@ const Trending = () => {
     },
     {
       headline:
-        "Meta’s Chief AI and 70 others call for more openness in AI development",
-      url: 'https://techcrunch.com/2023/11/01/metas-yann-lecun-joins-70-others-in-calling-for-more-openness-in-ai-development/',
+        "UK to create one of world’s most powerful AI supercomputers",
+      url: 'https://thenextweb.com/news/uk-ai-supercomputer-summit',
     },
   ];
 
