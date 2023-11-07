@@ -21,29 +21,27 @@ router.post("/webhook", async (req, res) => {
   if (intent === "ThirdLevel - custom - custom") {
     const response = {
       fulfillmentText:
-        "Please enter your Email address / Phone No. for our team to reach out",
+        "Please enter your contact number preceded by International Calling Code or you may reach out to us at : +918076774495",
     };
     res.json(response);
   }
 
   if (intent === "ThirdLevel - custom - custom - custom") {
 
+    const user_details = req.body.queryResult.outputContexts[1].parameters;
+    console.log(user_details);
 
 
-    console.log(req.body.queryResult.outputContexts[1].parameters);
-
-    if (req.body.queryResult.outputContexts[1].parameters.email) {
-      if (
-        isValidEmail(req.body.queryResult.outputContexts[1].parameters.email)
-      ) {
+    if (user_details.number && !user_details.email) {
+      if (isValidPhoneNumber("+"+req.body.queryResult.outputContexts[1].parameters.number)) {
         const user_info = req.body.queryResult.outputContexts[1].parameters;
 
         if (user_info.name || user_info.any) {
 
           const createdSubscriber = new Webhook({
             name: user_info.person.name,
-            email: user_info.email,
-            phone: null,
+            email: null,
+            phone: user_info.number,
             query: user_info.any,
           });
           const result = await createdSubscriber.save();
@@ -63,31 +61,21 @@ router.post("/webhook", async (req, res) => {
           };
           res.json(response);
         }
+      } 
+      
+      else {
+        const response = {
+          fulfillmentText:
+            "Please enter a valid phone number with the country code, like this: +91 1122334455. Thank you",
+        };
+        res.json(response);
       }
-    } else {
-      const response = {
-        fulfillmentText:
-          "Invalid email address. Please provide a valid email address.",
-      };
-      res.json(response);
     }
 
+  
 
-    // if (req.body.queryResult.outputContexts[1].parameters.number) {
-    //   if (isValidPhoneNumber(req.body.queryResult.outputContexts[1].parameters.number)) {
-    //     const response = {
-    //       fulfillmentText: "Phone number is valid. Thank you!",
-    //     };
-    //     res.json(response);
-    //   } else {
-    //     const response = {
-    //       fulfillmentText:
-    //         "Invalid phone number. Please provide a valid phone number with the country code.",
-    //     };
-    //     res.json(response);
-    //   }
-    // }
   }
+
 
 });
 
@@ -100,7 +88,6 @@ function isValidEmail(email) {
 function isValidPhoneNumber(phone) {
   // Regular expression for phone number format validation
   const phoneRegex = /^\+\d{2}(?: \d{10})?/;
-  console.log(phoneRegex.test(phone));
   return phoneRegex.test(phone);
 }
 
