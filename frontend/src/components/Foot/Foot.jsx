@@ -13,6 +13,8 @@ import twitter from '../assets/x-twitter.svg';
 
 import Cookie from '../Cookie/Cookie';
 
+import whitelogo from "../assets/white_logo.svg"
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -67,6 +69,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-slate-100 text-black py-6 lg:py-8 border-t-2   ">
+      <img src={whitelogo} style={{ display: 'none' }} alt="demo logo"/>
       <div className="mx-auto lg:mx-24 px-10">
         <div className="flex lg:flex-row flex-col justify-center  lg:justify-between space-y-12">
           <div className="space-y-6">
