@@ -2,7 +2,10 @@ const mongoose = require('mongoose');
 
 const webhookSchema = new mongoose.Schema(
     {
-        email : String
+        name : String, 
+        email : String,
+        phone : String,
+        query : String
     }
 )
 
