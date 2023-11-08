@@ -4,7 +4,7 @@ const webhookSchema = new mongoose.Schema(
     {
         name : String, 
         email : String,
-        phone : String,
+        phone : Array,
         query : String
     }
 )
