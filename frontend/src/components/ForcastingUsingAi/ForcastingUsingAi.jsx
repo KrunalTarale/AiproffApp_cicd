@@ -191,7 +191,7 @@ const ForcastingUsingAi = () => {
     <>
 
 <Helmet>
-                <link href="https://www.aiproff.ai/forecasting-using-ai" rel="canonical" />
+                {/* <link href="https://www.aiproff.ai/forecasting-using-ai" rel="canonical" /> */}
               </Helmet>
 
       <Navbar />

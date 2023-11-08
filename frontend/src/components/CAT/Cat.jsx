@@ -16,7 +16,7 @@ const Cat = () => {
     <div>
 
               <Helmet>
-                <link href="https://www.aiproff.ai/cat" rel="canonical" />
+                {/* <link href="https://www.aiproff.ai/cat" rel="canonical" /> */}
               </Helmet>
 
       <Navbar />

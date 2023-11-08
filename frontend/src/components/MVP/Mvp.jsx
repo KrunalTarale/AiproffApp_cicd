@@ -15,7 +15,7 @@ const Mvp = () => {
     <div>
 
         <Helmet>
-            <link href="https://www.aiproff.ai/mvp" rel="canonical" />
+            {/* <link href="https://www.aiproff.ai/mvp" rel="canonical" /> */}
         </Helmet>
 
       <Navbar />

@@ -72,7 +72,7 @@ const Signin = () => {
     <div>
 
         <Helmet>
-          <link href="https://www.aiproff.ai/sign-in" rel="canonical" />
+          {/* <link href="https://www.aiproff.ai/sign-in" rel="canonical" /> */}
         </Helmet>
 
       <div className="h-screen whole_form">

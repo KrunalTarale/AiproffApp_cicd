@@ -63,7 +63,7 @@ const formattedTagname = words.join(' ');
     <>
 
         <Helmet>
-            <link href="https://www.aiproff.ai/tags/" rel="canonical" />
+            {/* <link href="https://www.aiproff.ai/tags/" rel="canonical" /> */}
         </Helmet>
 
       <Navbar />

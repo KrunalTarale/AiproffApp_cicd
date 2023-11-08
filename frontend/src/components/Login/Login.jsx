@@ -85,7 +85,7 @@ const Login = () => {
     <div>
 
       <Helmet>
-          <link href="https://www.aiproff.ai/login" rel="canonical" />
+          {/* <link href="https://www.aiproff.ai/login" rel="canonical" /> */}
       </Helmet>
 
       <div className="h-screen whole_form">

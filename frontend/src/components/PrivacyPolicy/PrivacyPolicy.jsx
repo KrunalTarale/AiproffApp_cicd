@@ -16,7 +16,7 @@ const About = () => {
   return (
     <div className="Legal">
           <Helmet>
-                <link href="https://www.aiproff.ai/privacy-policy" rel="canonical" />
+                {/* <link href="https://www.aiproff.ai/privacy-policy" rel="canonical" /> */}
           </Helmet>
       <div>
         <Navbar />

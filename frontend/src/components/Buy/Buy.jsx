@@ -12,7 +12,7 @@ const Buy = () => {
   return (
     <div>
           <Helmet>
-            <link href="https://www.aiproff.ai/buy" rel="canonical" />
+            {/* <link href="https://www.aiproff.ai/buy" rel="canonical" /> */}
           </Helmet>
       <Navbar />
 

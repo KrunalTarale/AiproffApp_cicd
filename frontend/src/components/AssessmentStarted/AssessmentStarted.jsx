@@ -130,7 +130,7 @@ const AssessmentStarted = () => {
     <div className="quiz_container">
 
               <Helmet>
-                <link href="https://www.aiproff.ai/assessmentStarted/" rel="canonical" />
+                {/* <link href="https://www.aiproff.ai/assessmentStarted/" rel="canonical" /> */}
               </Helmet>
 
       <h1 className="quiz_title">Quiz</h1>

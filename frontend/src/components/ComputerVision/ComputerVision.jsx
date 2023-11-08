@@ -192,7 +192,7 @@ const ComputerVision = () => {
     <>
 
               <Helmet>
-                <link href="https://www.aiproff.ai/computer-vision" rel="canonical" />
+                {/* <link href="https://www.aiproff.ai/computer-vision" rel="canonical" /> */}
               </Helmet>
 
       <Navbar />

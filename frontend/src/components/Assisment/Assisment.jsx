@@ -15,7 +15,7 @@ const Assisment = () => {
     <>
 
               <Helmet>
-                <link href="https://www.aiproff.ai/assessment" rel="canonical" />
+                {/* <link href="https://www.aiproff.ai/assessment" rel="canonical" /> */}
               </Helmet>
 
       <Navbar />

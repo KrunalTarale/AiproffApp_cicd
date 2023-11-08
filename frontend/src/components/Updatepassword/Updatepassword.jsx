@@ -52,7 +52,7 @@ const Updatepassword = () => {
     <div>
 
               <Helmet>
-                <link href="https://www.aiproff.ai/updatepassword/" rel="canonical" />
+                {/* <link href="https://www.aiproff.ai/updatepassword/" rel="canonical" /> */}
               </Helmet>
 
       <div className="h-screen flex whole_form">
