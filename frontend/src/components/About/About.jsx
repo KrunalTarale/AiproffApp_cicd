@@ -19,7 +19,7 @@ const About = () => {
                 <title>About Us - Our Mission, Services and Expertise in Applied AI/ML </title>
                 <meta name='description' content='At AiProff, we specialise in Applied AI/ML, NLP, Computer Vision, and Time Series Analysis. Our mission is to bridge the gap between expertise and innovation through applied AI. We are a dedicated team of ML and data science professionals, delivering cutting-edge solutions to enterprises and academic institutions.' />
                 <meta name='keywords' content='Applied AI, ML, NLP, Computer Vision, AiProff'/>
-                <link href="https://www.aiproff.ai/about" rel="canonical" />
+                {/* <link href="https://www.aiproff.ai/about" rel="canonical" /> */}
               </Helmet>
 
       <div>
