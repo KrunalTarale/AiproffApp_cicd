@@ -21,7 +21,7 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import image1 from '../assets/Nlp_img/nlp_bannerrr.webp';
+import image1 from '../assets/Nlp_img/nlp-654b1bf74208d.webp';
 import image2 from '../assets/Nlp_img/nlp_img2.jpg';
 import image3 from '../assets/Nlp_img/nlp_img3.jpg';
 import image4 from '../assets/Nlp_img/nlp_img4.jpg';

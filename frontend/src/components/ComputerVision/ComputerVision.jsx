@@ -21,7 +21,7 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import image1 from '../assets/ComputerVision/img1r.webp';
+import image1 from '../assets/ComputerVision/cv-654b1bf98f9e1.webp';
 import image2 from '../assets/ComputerVision/img2.jpg';
 import image3 from '../assets/ComputerVision/img3.jpg';
 import image4 from '../assets/ComputerVision/img4.jpg';
