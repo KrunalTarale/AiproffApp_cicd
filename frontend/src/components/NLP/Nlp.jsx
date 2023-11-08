@@ -198,7 +198,7 @@ const Nlp = () => {
   return (
     <>
         <Helmet>
-            <link href="https://www.aiproff.ai/introduction-to-nlp" rel="canonical" />
+            {/* <link href="https://www.aiproff.ai/introduction-to-nlp" rel="canonical" /> */}
         </Helmet>
       <Navbar />
       <div className="article">

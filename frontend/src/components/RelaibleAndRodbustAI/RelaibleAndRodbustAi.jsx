@@ -190,7 +190,7 @@ const RealaibleAndRodbustAi = () => {
     <>
 
               <Helmet>
-                <link href="https://www.aiproff.ai/reliable-and-robust-ai" rel="canonical" />
+                {/* <link href="https://www.aiproff.ai/reliable-and-robust-ai" rel="canonical" /> */}
               </Helmet>
 
       <Navbar />

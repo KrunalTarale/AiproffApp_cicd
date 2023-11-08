@@ -16,7 +16,7 @@ const Poc = () => {
     <div>
 
         <Helmet>
-            <link href="https://www.aiproff.ai/poc" rel="canonical" />
+            {/* <link href="https://www.aiproff.ai/poc" rel="canonical" /> */}
         </Helmet>
 
       <Navbar />

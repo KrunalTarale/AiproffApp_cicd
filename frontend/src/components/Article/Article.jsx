@@ -218,7 +218,7 @@ const Article = () => {
     <>
 
               <Helmet>
-                <link href="https://www.aiproff.ai/applied-ai" rel="canonical" />
+                {/* <link href="https://www.aiproff.ai/applied-ai" rel="canonical" /> */}
               </Helmet>
 
       <Navbar />
