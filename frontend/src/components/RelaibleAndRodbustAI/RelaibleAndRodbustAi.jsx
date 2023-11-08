@@ -21,7 +21,7 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import image1 from '../assets/rodbust_ai/img_1r.webp';
+import image1 from '../assets/rodbust_ai/reliable-and-robust-ai-654b1bf75ef8b.webp';
 import image2 from '../assets/rodbust_ai/img_2.jpg';
 import image7 from '../assets/Article1/logo.png';
 import card1 from '../assets/Article1/card1.png';

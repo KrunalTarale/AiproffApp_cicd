@@ -21,7 +21,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import ReactGA from 'react-ga';
 
-import image1 from '../assets/forcastingAi/ForcastingusingAIr.webp';
+import image1 from '../assets/forcastingAi/forecasting-using-ai-654b1bf97eb0c.webp';
 import image2 from '../assets/forcastingAi/img2.jpg';
 import image3 from '../assets/forcastingAi/img3.jpg';
 import image7 from '../assets/Article1/logo.png';
