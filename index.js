@@ -14,12 +14,12 @@ require('dotenv').config();
 
 app.use(express.static(path.join(__dirname, '/frontend/dist')));
 
-app.use((req, res, next) => {
-    if (req.hostname === 'aiproff.ai' || req.hostname === 'www.aiproff.ai' || req.hostname === 'https://aiproff.ai') {
-      return res.redirect(301, `https://www.${req.hostname}${req.url}`);
-    }
-    next();
-  });
+// app.use((req, res, next) => {
+//     if (req.hostname === 'aiproff.ai' || req.hostname === 'www.aiproff.ai' || req.hostname === 'https://aiproff.ai') {
+//       return res.redirect(301, `https://www.${req.hostname}${req.url}`);
+//     }
+//     next();
+//   });
 
 const get_countries = require('./controller/get_countries.route')
 app.use(get_countries)
