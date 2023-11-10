@@ -50,7 +50,7 @@ const Carousel = () => {
       <div className="carousel-slider" style={sliderStyle}>
         {images.map((image, index) => (
           <div key={index} className="carousel-slide ">
-            <Link to={'/contact'}>
+            <Link to={'/contact'} className='links'>
             <img src={image} alt="Carousel slide" className="carousel-image " />
             </Link>
           </div>
