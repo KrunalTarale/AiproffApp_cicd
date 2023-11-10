@@ -6,11 +6,13 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
-import image1 from '../assets/Applied AI.webp';
-import image2 from '../assets/NLP.webp';
-import image3 from '../assets/Computer Vision.webp';
-import image4 from '../assets/Forecasting using AI.webp';
-import image5 from '../assets/Reliable and Robust AI.webp';
+import { Link } from 'react-router-dom'
+
+import image1 from '../assets/Article1/applied-ai-654b1bfba8edd.webp';
+import image2 from '../assets/Nlp_img/nlp-654b1bf74208d.webp';
+import image3 from '../assets/ComputerVision/cv-654b1bf98f9e1.webp';
+import image4 from '../assets/forcastingAi/forecasting-using-ai-654b1bf97eb0c.webp';
+import image5 from '../assets/rodbust_ai/reliable-and-robust-ai-654b1bf75ef8b.webp';
 
 const Carousel = () => {
   const images = [image1, image2, image3, image4, image5];
@@ -48,7 +50,9 @@ const Carousel = () => {
       <div className="carousel-slider" style={sliderStyle}>
         {images.map((image, index) => (
           <div key={index} className="carousel-slide ">
+            <Link to={'/contact'}>
             <img src={image} alt="Carousel slide" className="carousel-image " />
+            </Link>
           </div>
         ))}
       </div>
