@@ -4,21 +4,21 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        'Researchers warn we could run out of data to train AI by 2026.',
-      url: 'https://theconversation.com/researchers-warn-we-could-run-out-of-data-to-train-ai-by-2026-what-then-216741?utm_source=twitter&utm_medium=bylinetwitterbutton',
+        'ThinkDiffusionXL: A Groundbreaking Free A.I. Art Model',
+      url: 'https://www.bignewsnetwork.com/news/274030564/thinkdiffusionxl-a-groundbreaking-free-ai-art-model-for-the-open-source-community',
     },
     {
-      headline: "OpenAI's ChatGPT and API faced severe outages due to DDoS Attack",
-      url: 'https://mashable.com/article/chatgpt-down-major-outage-ddos-attack',
+      headline: "Biden AI executive order ‘certainly challenging’ for open-source AI ",
+      url: 'https://cointelegraph.com/news/biden-ai-executive-order-certainly-challenging-open-source-ai-industry-insiders',
     },
     {
-      headline: 'Due to power-hungry Bing AI, Microsoft is renting GPU power from Oracle',
-      url: 'https://www.theregister.com/2023/11/07/bing_gpu_oracle/',
+      headline: 'Abu Dhabi’s Core42 sets new benchmark for Arabic LLM with Jais 30B',
+      url: 'https://gulfbusiness.com/core42-sets-new-benchmark-with-jais-30b/',
     },
     {
       headline:
-        "Samsung’s Galaxy S24 to have on-device generative AI called Samsung Gauss",
-      url: 'https://www.theverge.com/2023/11/8/23951930/samsung-galaxy-s24-generative-ai-model-samsung-gauss',
+        "Chinese AI unicorn’s 34B LLM outperforms larger Llama 2 and Falcon models",
+      url: 'https://venturebeat.com/ai/chinese-ai-unicorns-34b-llm-outperforms-larger-llama-2-and-falcon-models/',
     },
   ];
 
