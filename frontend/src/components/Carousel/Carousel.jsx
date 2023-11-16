@@ -57,21 +57,21 @@ const Carousel = () => {
         ))}
       </div>
 
-      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 ">
+      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 btn_div" onClick={prevSlide}>
         <button
-          onClick={prevSlide}
-          className="p-4 text-black bg-white rounded-full border-2 border-blue-600 hover:text-white hover:bg-blue-600"
+          
+          className="p-4 text-black bg-white rounded-full border-2 border-blue-600 hover:text-white hover:bg-blue-600 slider_btns"
         >
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
       </div>
       <div
         className="absolute top-1/2 right-0 transform -translate-y-1/2 p-2
-        <button"
+        <button btn_div" onClick={nextSlide}
       >
         <button
-          onClick={nextSlide}
-          className="p-4 text-black bg-white rounded-full border-2 border-blue-600 hover:text-white hover:bg-blue-600"
+         
+          className="p-4 text-black bg-white rounded-full border-2 border-blue-600 hover:text-white hover:bg-blue-600 slider_btns"
         >
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
