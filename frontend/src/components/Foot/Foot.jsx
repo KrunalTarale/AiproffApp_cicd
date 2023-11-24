@@ -13,6 +13,8 @@ import twitter from '../assets/x-twitter.svg';
 
 import Cookie from '../Cookie/Cookie';
 
+import whitelogo from "../assets/white_logo.svg"
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -29,9 +31,19 @@ const Footer = () => {
   // New code starts
 
   const [email, setEmail] = useState('');
+  // const [emailError, setEmailError] = useState('');
   const [status, setStatus] = useState('');
 
   const handleSubmit = async () => {
+
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!email.match(emailPattern)) {
+      setStatus('Please enter a valid email address');
+      return;
+    }
+
+    else{
+
     const res = await fetch('/subscribe_user', {
       method: 'POST',
       headers: {
@@ -47,12 +59,17 @@ const Footer = () => {
       setStatus(data.status);
       setEmail('');
     }
+
+  }
   };
+
+
 
   // New code ends
 
   return (
     <footer className="bg-slate-100 text-black py-6 lg:py-8 border-t-2   ">
+      <img src={whitelogo} style={{ display: 'none' }} alt="demo logo"/>
       <div className="mx-auto lg:mx-24 px-10">
         <div className="flex lg:flex-row flex-col justify-center  lg:justify-between space-y-12">
           <div className="space-y-6">
@@ -68,7 +85,10 @@ const Footer = () => {
                 className="px-4 py-2 border border-gray-400 rounded-l-md focus:outline-none"
                 placeholder="Enter your email"
                 value={email}
-                onChange={(event) => setEmail(event.target.value)}
+                onChange={(event) => {
+                  setEmail(event.target.value);
+                }}
+                
               />
               <button
                 onClick={handleSubmit}
@@ -143,7 +163,7 @@ const Footer = () => {
                 />
               </a>
               <a
-                href="https://www.youtube.com/channel/UCCI91MUrgIGZYhNNOdfzIzQ"
+                href="https://www.youtube.com/@AiProffAi"
                 target="blank"
                 className="text-gray-600 hover:text-blue-500"
               >

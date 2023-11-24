@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { Link,useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './RelaibleAndRodbustAi.css';
+import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faShare,
@@ -19,7 +21,7 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import image1 from '../assets/rodbust_ai/img_1r.webp';
+import image1 from '../assets/rodbust_ai/reliable-and-robust-ai-654b1bf75ef8b.webp';
 import image2 from '../assets/rodbust_ai/img_2.jpg';
 import image7 from '../assets/Article1/logo.png';
 import card1 from '../assets/Article1/card1.png';
@@ -36,6 +38,11 @@ import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import Footer from '../Foot/Foot';
 
 const RealaibleAndRodbustAi = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const Title = 'Reliable and Robust AI';
   const navigate = useNavigate();
 
@@ -181,6 +188,11 @@ const RealaibleAndRodbustAi = () => {
 
   return (
     <>
+
+              <Helmet>
+                {/* <link href="https://www.aiproff.ai/reliable-and-robust-ai" rel="canonical" /> */}
+              </Helmet>
+
       <Navbar />
       <div className="article">
         <div className=" article space-y-2 mx-auto flex flex-col justify-center">

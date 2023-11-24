@@ -1,6 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Navigate} from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga'
+const GA_TRACKING_ID = 'G-P9Y3G1PK8G';
+ReactGA.initialize(GA_TRACKING_ID);
 
 import './App.css';
 
@@ -53,8 +58,11 @@ import RREducational from './components/HamburgerArticles/RREducational';
 
 import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import Tags from './components/Tags/Tags';
-
 import Buy from './components/Buy/Buy';
+// import ChatBot from './components/ChatBot/ChatBot'
+
+import NotFound from './components/NotFound/NotFound';
+
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -122,10 +130,18 @@ function App() {
         <Route path="/forecasting-using-ai" element={<ForcastingUsingAi />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/tags/:tagname" element={<Tags />} />
+        <Route path="*" element= {<NotFound/>} />
         <Route
           path="/"
           element={
             <>
+              <Helmet>
+                <meta charSet='utf-8'/>
+                <title>AiProff - Smart Move for Every Business</title>
+                <meta name='description' content='Empower your journey in Applied AI and ML with AiProff. With a focus on AI/ML,  NLP, Computer Vision, and Time Series Analysis, our experts provide cutting-edge solutions and training for enterprises. Leverage your business with our Applied AI/ML expertise and demos now!' />
+                <meta name='keywords' content='Applied AI, ML, AiProff'/>
+                {/* <link href="https://www.aiproff.ai/" rel="canonical" /> */}
+              </Helmet>
               <div>
                 <div className="App flex flex-col">
                   <div className="h-1/5 flex flex-col z-10">
@@ -142,10 +158,17 @@ function App() {
                   <Touch />
                 </div>
                 <Footer />
+                
               </div>
             </>
           }
         />
+
+{/* Rediricting old links to the new links */}
+  <Route path="/blog-3" element={<Navigate to="/blog" />} />
+  <Route path="/assessments" element={<Navigate to="/assessment" />} />
+  <Route path="/contact-us" element={<Navigate to="/contact" />} />
+  <Route path="/home-2" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );

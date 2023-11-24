@@ -1,12 +1,27 @@
+import { useEffect } from 'react'
 import Navbar from '../Navbar/Navbar';
-import Carousel from '../Carousel/Carousel';
 import Footer from '../Foot/Foot';
-import image from '../assets/Article1/logo.png';
 import Team from '../Team/Team';
+import ReactGA from 'react-ga';
 import './About.css';
+import { Helmet } from 'react-helmet';
 const About = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <div className="About">
+
+              <Helmet>
+                <meta charSet='utf-8'/>
+                <title>About Us - Our Mission, Services and Expertise in Applied AI/ML </title>
+                <meta name='description' content='At AiProff, we specialise in Applied AI/ML, NLP, Computer Vision, and Time Series Analysis. Our mission is to bridge the gap between expertise and innovation through applied AI. We are a dedicated team of ML and data science professionals, delivering cutting-edge solutions to enterprises and academic institutions.' />
+                <meta name='keywords' content='Applied AI, ML, NLP, Computer Vision, AiProff'/>
+                {/* <link href="https://www.aiproff.ai/about" rel="canonical" /> */}
+              </Helmet>
+
       <div>
         <Navbar />
       </div>

@@ -4,6 +4,7 @@ import { Link,useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './ForcastingUsingAi.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Helmet } from 'react-helmet';
 import {
   faShare,
   faPrint,
@@ -18,8 +19,9 @@ import {
   faTwitter,
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
+import ReactGA from 'react-ga';
 
-import image1 from '../assets/forcastingAi/ForcastingusingAIr.webp';
+import image1 from '../assets/forcastingAi/forecasting-using-ai-654b1bf97eb0c.webp';
 import image2 from '../assets/forcastingAi/img2.jpg';
 import image3 from '../assets/forcastingAi/img3.jpg';
 import image7 from '../assets/Article1/logo.png';
@@ -37,6 +39,11 @@ import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import Footer from '../Foot/Foot';
 
 const ForcastingUsingAi = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const Title = 'Forecasting using AI';
   const navigate = useNavigate();
 
@@ -182,6 +189,11 @@ const ForcastingUsingAi = () => {
 
   return (
     <>
+
+<Helmet>
+                {/* <link href="https://www.aiproff.ai/forecasting-using-ai" rel="canonical" /> */}
+              </Helmet>
+
       <Navbar />
       <div className="article">
         <div className=" article space-y-2 mx-auto flex flex-col justify-center">

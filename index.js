@@ -14,6 +14,13 @@ require('dotenv').config();
 
 app.use(express.static(path.join(__dirname, '/frontend/dist')));
 
+// app.use((req, res, next) => {
+//     if (req.hostname === 'aiproff.ai' || req.hostname === 'www.aiproff.ai' || req.hostname === 'https://aiproff.ai') {
+//       return res.redirect(301, `https://www.${req.hostname}${req.url}`);
+//     }
+//     next();
+//   });
+
 const get_countries = require('./controller/get_countries.route')
 app.use(get_countries)
 const get_states = require('./controller/get_states.route')
@@ -44,6 +51,8 @@ const updatepassword = require('./controller/updatepassword.route');
 app.use(updatepassword);
 const delete_user_Article = require('./controller/delete_user_Article.route');
 app.use(delete_user_Article);
+const webhook = require('./controller/webhook.route');
+app.use(webhook);
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/dist/index.html'));

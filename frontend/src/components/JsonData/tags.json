@@ -1,0 +1,58 @@
+[
+    {
+      "name": "Deep Learning",
+      "link": "/tags/deep-learning",
+      "tag" : "deep-learning"
+    },
+    {
+      "name": "Computer Vision",
+      "link": "/tags/computer-vision",
+      "tag" : "computer-vision"
+    },
+    {
+      "name": "Natural Language Processing",
+      "link": "/tags/natural-language-processing",
+      "tag" : "natural-language-processing"
+    },
+    {
+      "name": "Streaming Data Analytics",
+      "link": "/tags/streaming-data-analytics",
+      "tag" : "streaming-data-analytics"
+    },
+    {
+      "name": "Embedded ML",
+      "link": "/tags/embedded-ml",
+      "tag" : "embedded-ml"
+    },
+    {
+      "name": "TinyML, Edge AI",
+      "link": "/tags/tinyml-edge-ai",
+      "tag" : "tinyml-edge-ai"
+    },
+    {
+      "name": "IIOT",
+      "link": "/tags/iiot",
+      "tag" : "iiot"
+    },
+    {
+      "name": "Predictive Analytics",
+      "link": "/tags/predictive-analytics",
+      "tag" : "predictive-analytics"
+    },
+    {
+      "name": "Data Analytics",
+      "link": "/tags/data-analytics",
+      "tag" : "data-analytics"
+    },
+    {
+      "name": "Forecasting (Time Series Analysis)",
+      "link": "/tags/forecasting",
+      "tag" : "forecasting"
+    },
+    {
+      "name": "Technology Frameworks",
+      "link": "/tags/technology-frameworks",
+      "tag" : "technology-frameworks"
+    }
+  ]
+  

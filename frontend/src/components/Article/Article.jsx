@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { Link,useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './Article.css';
+import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faShare,
@@ -19,7 +21,7 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import image1 from '../assets/Article1/Appliedair.webp';
+import image1 from '../assets/Article1/applied-ai-654b1bfba8edd.webp';
 import image2 from '../assets/Article1/graph-1.png';
 import image3 from '../assets/Article1/pie1.png';
 import image4 from '../assets/Article1/diag1.png';
@@ -40,6 +42,11 @@ import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import Footer from '../Foot/Foot';
 
 const Article = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const Title = 'Applied AI: When AI solves real world problems';
   const navigate = useNavigate();
 
@@ -189,8 +196,31 @@ const Article = () => {
     window.location.href = 'mailto:?body=' + encodeURIComponent(url);
   }
 
+  // Print logic
+
+  function handlePrintClick(event) {
+    event.preventDefault(); // Prevent the default behavior of opening a new tab or window
+    const url = event.target.getAttribute("to");
+  
+    if (url) {
+      // Open the PDF in a new window or tab
+      const newWindow = window.open(url, "_blank");
+  
+      if (newWindow) {
+        newWindow.onload = function () {
+          newWindow.print(); // Trigger the print dialog
+        };
+      }
+    }
+  }
+
   return (
     <>
+
+              <Helmet>
+                {/* <link href="https://www.aiproff.ai/applied-ai" rel="canonical" /> */}
+              </Helmet>
+
       <Navbar />
       <div className="article">
         <div className=" article space-y-2 mx-auto flex flex-col justify-center">
@@ -299,6 +329,7 @@ const Article = () => {
                   to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={handlePrintClick}
                 >
                 <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
                   <FontAwesomeIcon
@@ -754,6 +785,7 @@ const Article = () => {
                   to="https://ingestionpeekai.s3.amazonaws.com/Applied+AI.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={handlePrintClick}
                 >
                 <div className="flex flex-col items-center text-center hover:text-blue-500 cursor-pointer">
                   <FontAwesomeIcon

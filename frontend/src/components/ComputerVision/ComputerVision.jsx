@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { Link,useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import './ComputerVision.css';
+import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faShare,
@@ -19,7 +21,7 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import image1 from '../assets/ComputerVision/img1r.webp';
+import image1 from '../assets/ComputerVision/cv-654b1bf98f9e1.webp';
 import image2 from '../assets/ComputerVision/img2.jpg';
 import image3 from '../assets/ComputerVision/img3.jpg';
 import image4 from '../assets/ComputerVision/img4.jpg';
@@ -38,6 +40,11 @@ import AudioPlayer from '../AudioPlayer/AudioPlayer';
 import Footer from '../Foot/Foot';
 
 const ComputerVision = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const Title = 'Computer Vision: When Machines Start to See';
   const navigate = useNavigate();
 
@@ -183,6 +190,11 @@ const ComputerVision = () => {
 
   return (
     <>
+
+              <Helmet>
+                {/* <link href="https://www.aiproff.ai/computer-vision" rel="canonical" /> */}
+              </Helmet>
+
       <Navbar />
       <div className="article">
         <div className=" article space-y-2 mx-auto flex flex-col justify-center">

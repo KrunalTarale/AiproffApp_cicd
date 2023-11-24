@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link,useNavigate } from "react-router-dom";
 import "./Signin.css";
 import logo from '../assets/logo_webp.webp';
+import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 const Signin = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const [fname, setfname] = React.useState("");
   const [lname, setlname] = React.useState("");
   const [email, setemail] = React.useState("");
@@ -12,6 +19,7 @@ const Signin = () => {
   const [error, setError] = useState(false);
   const [checkpass, setCheckpass] = useState("");
   const [validuser , setValiduser] = useState(false);
+  const [emailValidation, setEmailValidation] = useState("");
 
   const navigate = useNavigate();
 
@@ -19,6 +27,13 @@ const Signin = () => {
     if (!fname || !lname || !email || !password || !cpassword) {
       setError(true);
     } else {
+
+      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      if (!email.match(emailPattern)) {
+        setEmailValidation('Please enter a valid email address');
+        return;
+      }
+      else{
       if (password === cpassword) {
         setCheckpass("");
 
@@ -49,12 +64,17 @@ const Signin = () => {
         setCheckpass("Both Password Should be match");
       }
 
-      
+    }
     }
   };
 
   return (
     <div>
+
+        <Helmet>
+          {/* <link href="https://www.aiproff.ai/sign-in" rel="canonical" /> */}
+        </Helmet>
+
       <div className="h-screen whole_form">
         <div className="flex bg-gradient-to-tr from-blue-800 to-purple-700 i justify-around items-center left_side desktop_view">
           <div>
@@ -83,6 +103,7 @@ const Signin = () => {
             {validuser && (
               <span className="warning_massage">User Already Exist</span>
             )}
+            <span className="warning_massage">{emailValidation}</span>
             <div className="mb-4">
               <div className="flex items-center border-2 py-2 px-3 rounded-2xl">
                 <input

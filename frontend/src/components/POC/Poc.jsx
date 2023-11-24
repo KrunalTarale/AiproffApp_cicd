@@ -1,12 +1,24 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import './Poc.css';
 import Navbar from '../Navbar/Navbar';
 import Foot from '../Foot/Foot';
 import image1 from '../assets/poc.jpg';
+import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 const Poc = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <div>
+
+        <Helmet>
+            {/* <link href="https://www.aiproff.ai/poc" rel="canonical" /> */}
+        </Helmet>
+
       <Navbar />
 
       <div className="mvpcontainer">

@@ -1,43 +1,25 @@
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './blog.css';
 import { Link } from 'react-router-dom'
+import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 // Blog Images
-import image1 from "../assets/Article1/Appliedair.webp";
-import image2 from "../assets/rodbust_ai/img_1r.webp";
-import image3 from "../assets/Nlp_img/nlp_bannerr.webp";
-import image4 from "../assets/ComputerVision/img1r.webp";
-import image5 from "../assets/forcastingAi/ForcastingusingAIr.webp";
+import image1 from "../assets/thumbnail/applied-ai-4-6538ad3e0b3a8.webp";
+import image2 from "../assets/thumbnail/reliable-and-robust-ai-1-6538ad3ee3077.webp";
+import image3 from "../assets/thumbnail/nlp-1-6538ad3dadc12.webp";
+import image4 from "../assets/thumbnail/computer-vision-3-6538ad3ea0802.webp";
+import image5 from "../assets/thumbnail/forecasting-6538ad3fb2d70.webp";
 
 const Blog = () => {
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   const articles = [
-    {
-      title: 'Applied AI: When AI solves real world problems ',
-      subTitle:
-        'Artificial Intelligence is a promising technological marvel that holds the key to the future. ',
-      imageUrl: image1,
-      readTime: '3 min',
-      date: 'Sept 23, 2023',
-      publisher: 'AiProff',
-      link : '/applied-ai'
-    },
-    {
-      title: 'Introduction: Reliable and Robust AI',
-      subTitle: 'The field of Artificial intelligence (AI) is rapidly evolving.  ',
-      imageUrl:image2,
-      readTime: '4 min',
-      date: 'Sept 22, 2023',
-      publisher: 'AiProff',
-      link: '/reliable-and-robust-ai'
-    },
-
-  ];
-
-  const allarticles = [
     {
       title: 'Introduction to NLP: When AI talks',
       subTitle:
@@ -58,6 +40,20 @@ const Blog = () => {
       publisher: 'AiProff',
       link: '/computer-vision'
     },
+
+  ];
+
+  const allarticles = [
+    {
+      title: 'Applied AI: When AI solves real world problems ',
+      subTitle:
+        'Artificial Intelligence is a promising technological marvel that holds the key to the future. ',
+      imageUrl: image1,
+      readTime: '3 min',
+      date: 'Sept 23, 2023',
+      publisher: 'AiProff',
+      link : '/applied-ai'
+    },
     {
       title: 'Introduction: When AI starts to predict Future',
       subTitle:
@@ -68,12 +64,28 @@ const Blog = () => {
       publisher: 'AiProff',
       link: '/forecasting-using-ai'
     },
+    {
+      title: 'Introduction: Reliable and Robust AI',
+      subTitle: 'The field of Artificial intelligence (AI) is rapidly evolving.  ',
+      imageUrl:image2,
+      readTime: '4 min',
+      date: 'Sept 22, 2023',
+      publisher: 'AiProff',
+      link: '/reliable-and-robust-ai'
+    },
   ]
 
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('');
 
   const handleSubmit = async () => {
+
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!email.match(emailPattern)) {
+      setStatus('Please enter a valid email address');
+      return;
+    }
+    else{
     const res = await fetch('/subscribe_user', {
       method: 'POST',
       headers: {
@@ -89,18 +101,8 @@ const Blog = () => {
       setStatus(data.status);
       setEmail('');
     }
+  }
   };
-
-  // const topics = [
-  //   'Internet Of Things',
-  //   'Machine Learning',
-  //   'Data Visualization',
-  //   'Data Engineering',
-  //   'Cloud Computing',
-  //   'ML Ops',
-  //   'Deep Learning in NLP',
-  //   'Deep Learning in Computer Vision',
-  // ];
 
   const topics = [
     {
@@ -151,6 +153,11 @@ const Blog = () => {
 
   return (
     <div>
+
+              <Helmet>
+                {/* <link href="https://www.aiproff.ai/blog" rel="canonical" /> */}
+              </Helmet>
+
       <Navbar />
       <div className="blog flex flex-col-reverse lg:flex-row items-start justify-center w-full md:mb-14 px-4 xl:px-0">
         <div className="space-y-5 lg:w-3/5 xl:w-2/5 p-4">
@@ -225,14 +232,13 @@ const Blog = () => {
             </div>
             <div className="max-w-screen mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-2 xl:grid-cols-2 gap-5 pt-6">
               {topics.map((topic, index) => (
+                 <Link to={topic.link} key={index} >
                 <button
-                  key={index} 
-                  className="bg-gray-200 text-black rounded-lg p-2  cursor:pointer hover:bg-blue-600 hover:text-white"
+                  className="bg-gray-200 text-black rounded-lg p-2  cursor:pointer hover:bg-blue-600 hover:text-white tag_btn"
                 >
-                <Link to={topic.link}>
                   {topic.name}
-                </Link>
                 </button>
+                </Link>
               ))}
             </div>
           </div>
@@ -281,13 +287,13 @@ const Blog = () => {
             </div>
             <div className="max-w-screen mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-2 xl:grid-cols-2 gap-5 pt-6">
               {topics.map((topic, index) => (
-                <button  key={index}
-                  className="bg-gray-200 text-black rounded-lg p-2  cursor:pointer hover:bg-blue-600 hover:text-white"
+                <Link to={topic.link} key={index}>
+                <button  
+                  className="bg-gray-200 text-black rounded-lg p-2 cursor:pointer hover:bg-blue-600 hover:text-white tag_btn"
                 >
-                <Link to={topic.link}>
-                  {topic.name}
-                </Link>
+                  {topic.name}  
                 </button>
+                </Link>
               ))}
             </div>
           </div>
@@ -303,7 +309,7 @@ const Blog = () => {
                 Stay updated about AiProff news as it happens
               </h2>
             </div>
-
+            <p className='text-center'>{status}</p>
             <div className="flex justify-center">
               <div className="flex text-black">
                 <input

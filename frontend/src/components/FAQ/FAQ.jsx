@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Foot/Foot';
 import 'font-awesome/css/font-awesome.min.css';
 import './FAQ.css';
+import ReactGA from 'react-ga';
+import { Helmet } from 'react-helmet';
 
 const FaqItem = ({ isOpen, onClick, children }) => {
   return (
@@ -18,6 +20,11 @@ const FaqItem = ({ isOpen, onClick, children }) => {
 };
 
 const Faq = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const [openIndex, setOpenIndex] = useState(null);
 
   const handleToggle = (index) => {
@@ -26,6 +33,11 @@ const Faq = () => {
 
   return (
     <div className="flex flex-col ">
+
+      <Helmet>
+          {/* <link href="https://www.aiproff.ai/faq" rel="canonical" /> */}
+      </Helmet>
+
       <div>
         <Navbar />
       </div>
