@@ -82,10 +82,10 @@ const About = () => {
             and build solid case studies catering to specific use case of
             Applied AI/ML.
           </p>
-          <p className="leading-loose text-md md:text-xl text-gray-700 mb-3">
+          {/* <p className="leading-loose text-md md:text-xl text-gray-700 mb-3">
             We just don’t talk about the algorithms and code – rather we present
             working solutions for Individuals and Business alike.
-          </p>
+          </p> */}
           <p className="leading-loose text-md md:text-xl text-gray-700 mb-3">
             Applied AI/ML including ML Ops, ML Engineering, and all aspects of
             AI/ML is our forte. View the demos to know more!
