@@ -14,13 +14,6 @@ require('dotenv').config();
 
 app.use(express.static(path.join(__dirname, '/frontend/dist')));
 
-// app.use((req, res, next) => {
-//     if (req.hostname === 'aiproff.ai' || req.hostname === 'www.aiproff.ai' || req.hostname === 'https://aiproff.ai') {
-//       return res.redirect(301, `https://www.${req.hostname}${req.url}`);
-//     }
-//     next();
-//   });
-
 const get_countries = require('./controller/get_countries.route')
 app.use(get_countries)
 const get_states = require('./controller/get_states.route')
@@ -53,6 +46,14 @@ const delete_user_Article = require('./controller/delete_user_Article.route');
 app.use(delete_user_Article);
 const webhook = require('./controller/webhook.route');
 app.use(webhook);
+const whatsapp_webhook = require('./controller/whatsapp_webhook.route');
+app.use(whatsapp_webhook);
+const getWhatsAppdata = require('./controller/getWhatsAppdata.route');
+app.use(getWhatsAppdata);
+const getwhatsappuserbyid = require('./controller/get_whatsappuserbyid.route');
+app.use(getwhatsappuserbyid);
+const sendwhatsAppMessages = require('./controller/sendwhatsAppMessages.route');
+app.use(sendwhatsAppMessages);
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/frontend/dist/index.html'));
