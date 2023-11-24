@@ -4,21 +4,21 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        'ThinkDiffusionXL: A Groundbreaking Free A.I. Art Model',
-      url: 'https://www.bignewsnetwork.com/news/274030564/thinkdiffusionxl-a-groundbreaking-free-ai-art-model-for-the-open-source-community',
+        'Microsoft releases Orca 2, a pair of small language models that outperform larger counterparts',
+      url: 'https://venturebeat.com/ai/microsoft-releases-orca-2-a-pair-of-small-language-models-that-outperform-larger-counterparts/',
     },
     {
-      headline: "Biden AI executive order ‘certainly challenging’ for open-source AI ",
-      url: 'https://cointelegraph.com/news/biden-ai-executive-order-certainly-challenging-open-source-ai-industry-insiders',
+      headline: 'OpenAI having "intense discussions" amid 95% of employees are threatening to leave',
+      url: 'https://www.benzinga.com/news/23/11/35890083/we-have-a-plan-leaked-openai-memo-calls-for-unity-even-as-over-95-employees-want-sam-altman-back',
     },
     {
-      headline: 'Abu Dhabi’s Core42 sets new benchmark for Arabic LLM with Jais 30B',
-      url: 'https://gulfbusiness.com/core42-sets-new-benchmark-with-jais-30b/',
+      headline: 'Discord is shutting down its AI chatbot Clyde over limited server access and inappropriate responses',
+      url: 'https://timesofindia.indiatimes.com/gadgets-news/discord-is-shutting-down-the-clyde-ai-chatbot/articleshow/105295994.cms',
     },
     {
       headline:
-        "Chinese AI unicorn’s 34B LLM outperforms larger Llama 2 and Falcon models",
-      url: 'https://venturebeat.com/ai/chinese-ai-unicorns-34b-llm-outperforms-larger-llama-2-and-falcon-models/',
+        'Google’s next-generation ‘Gemini’ AI model is reportedly delayed',
+      url: 'https://www.theverge.com/2023/11/16/23964937/googles-next-generation-gemini-ai-model-is-reportedly-delayed',
     },
   ];
 
