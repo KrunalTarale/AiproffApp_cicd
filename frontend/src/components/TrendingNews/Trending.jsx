@@ -4,21 +4,21 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        'SoftBank CEO predicts AI surpassing human intelligence in a decade',
-      url: 'https://apnews.com/article/japan-softbank-masayoshi-son-ai-28e82a3b405dab8ca2a83d411e99847f',
+        'Microsoft releases Orca 2, a pair of small language models that outperform larger counterparts',
+      url: 'https://venturebeat.com/ai/microsoft-releases-orca-2-a-pair-of-small-language-models-that-outperform-larger-counterparts/',
     },
     {
-      headline: 'Humane’s ‘Ai Pin’ debuts on the Paris runway',
-      url: 'https://techcrunch.com/2023/09/30/humanes-ai-pin-debuts-on-the-paris-runway/?utm_source=newsletter&utm_medium=email&utm_campaign=newsletter_axioslogin&stream=top',
+      headline: 'OpenAI having "intense discussions" amid 95% of employees are threatening to leave',
+      url: 'https://www.benzinga.com/news/23/11/35890083/we-have-a-plan-leaked-openai-memo-calls-for-unity-even-as-over-95-employees-want-sam-altman-back',
     },
     {
-      headline: 'Meta debuts new AI assistant and chatbots',
-      url: 'https://www.axios.com/2023/09/27/meta-debuts-new-artificial-intelligence-chatbot?utm_source=newsletter&utm_medium=email&utm_campaign=newsletter_axioslogin&stream=top',
+      headline: 'Discord is shutting down its AI chatbot Clyde over limited server access and inappropriate responses',
+      url: 'https://timesofindia.indiatimes.com/gadgets-news/discord-is-shutting-down-the-clyde-ai-chatbot/articleshow/105295994.cms',
     },
     {
       headline:
-        'JPMorgan CEO Jamie Dimon predicts that AI will shorten the workweek to three and a half days',
-      url: 'https://www.businessinsider.in/tech/news/jpmorgan-ceo-jamie-dimon-says-our-children-will-probably-only-work-3-5-days-a-week-thanks-to-ai/articleshow/104137497.cms',
+        'Google’s next-generation ‘Gemini’ AI model is reportedly delayed',
+      url: 'https://www.theverge.com/2023/11/16/23964937/googles-next-generation-gemini-ai-model-is-reportedly-delayed',
     },
   ];
 
