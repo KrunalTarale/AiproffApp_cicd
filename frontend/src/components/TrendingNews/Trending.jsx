@@ -4,21 +4,21 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        'Microsoft releases Orca 2, a pair of small language models that outperform larger counterparts',
-      url: 'https://venturebeat.com/ai/microsoft-releases-orca-2-a-pair-of-small-language-models-that-outperform-larger-counterparts/',
+        'Europe’s IT sector worried AI Act ‘misses mark on tech neutrality’',
+      url: 'https://thenextweb.com/news/europes-it-sector-worried-ai-act-tech-neutrality',
     },
     {
-      headline: 'OpenAI having "intense discussions" amid 95% of employees are threatening to leave',
-      url: 'https://www.benzinga.com/news/23/11/35890083/we-have-a-plan-leaked-openai-memo-calls-for-unity-even-as-over-95-employees-want-sam-altman-back',
+      headline: 'Alibaba donates its quantum lab to a local university, shifts focus to AI in agriculture and healthcare.',
+      url: 'https://www.scmp.com/tech/big-tech/article/3242956/alibaba-donates-its-quantum-lab-local-university-shifts-focus-ai-agriculture-healthcare',
     },
     {
-      headline: 'Discord is shutting down its AI chatbot Clyde over limited server access and inappropriate responses',
-      url: 'https://timesofindia.indiatimes.com/gadgets-news/discord-is-shutting-down-the-clyde-ai-chatbot/articleshow/105295994.cms',
+      headline: "The Pentagon's new initiative, Replicator, aims to deploy thousands of AI-enabled autonomous vehicles by 2026",
+      url: 'https://economictimes.indiatimes.com/tech/technology/pentagons-ai-initiatives-accelerate-hard-decisions-on-lethal-autonomous-weapons/articleshow/105507375.cms',
     },
     {
       headline:
-        'Google’s next-generation ‘Gemini’ AI model is reportedly delayed',
-      url: 'https://www.theverge.com/2023/11/16/23964937/googles-next-generation-gemini-ai-model-is-reportedly-delayed',
+        'Nvidia postpones the release of its China-compliant AI chip to next year amid U.S. export regulations',
+      url: 'https://www.reuters.com/technology/nvidia-delays-launch-new-china-focused-ai-chip-sources-2023-11-24/',
     },
   ];
 
