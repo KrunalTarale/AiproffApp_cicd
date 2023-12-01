@@ -1,0 +1,15 @@
+
+.chat_box{
+    height: 530px;
+    width: 700px;
+    overflow-y: auto;
+}
+
+.user_list{
+    height: 630px;
+    overflow-y: auto;
+}
+
+.container_chat{
+    width: 100%;
+}

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const axios = require("axios");
 const token =
-  "EAAZAa1WwYEL0BOZCDwWNJkEaMZA7DIq3c2ItmLgZCRwxS9HKGdJbGTubJ9yd4B1zPoN7IMiKtvEcrRL6XcE4N5yZAUKtqkkAUUXK5djQJazbJbcDvy6YGXdRQQ0Sr4uyxZAt66dfjacrk6yRof5IJNzzxJC0oETZAk6ScREyZAmypkkSNsnQBd86EbtxKbzfJ5FEdtpHYucqgcPAhVDAMZAtmXBhKTexI";
+  "EAAZAa1WwYEL0BOZB5QC8Oo6ekJcpFxQldVw5j4oHMUOq9AZAvKNodw8TqGoEPcuEAgSszVJeWpMlTsIEwupc7cQulIhIxqtxBgUSVCtFZACQ6ftMZAgyoKQpZBqRRTLCGJ8T774Ia7lCBXQ9lRGoIhSHXzrWl5gEEHrM6g2BH8doihQqkWW2Vk7msailgYXLOoXHHPEz9XnlwqqJ9lW3ubsznbCVIZD";
 const mytoken = "krunalt";
 const WhatsappModel = require("../module/whatsapp.module");
 
@@ -39,7 +39,7 @@ router.get("/first_req-whatsapp", (req, res) => {
     url: "https://graph.facebook.com/v17.0/185315941321665/messages",
     headers: {
       Authorization:
-        "Bearer EAAZAa1WwYEL0BOZCDwWNJkEaMZA7DIq3c2ItmLgZCRwxS9HKGdJbGTubJ9yd4B1zPoN7IMiKtvEcrRL6XcE4N5yZAUKtqkkAUUXK5djQJazbJbcDvy6YGXdRQQ0Sr4uyxZAt66dfjacrk6yRof5IJNzzxJC0oETZAk6ScREyZAmypkkSNsnQBd86EbtxKbzfJ5FEdtpHYucqgcPAhVDAMZAtmXBhKTexI",
+        "Bearer EAAZAa1WwYEL0BOZB5QC8Oo6ekJcpFxQldVw5j4oHMUOq9AZAvKNodw8TqGoEPcuEAgSszVJeWpMlTsIEwupc7cQulIhIxqtxBgUSVCtFZACQ6ftMZAgyoKQpZBqRRTLCGJ8T774Ia7lCBXQ9lRGoIhSHXzrWl5gEEHrM6g2BH8doihQqkWW2Vk7msailgYXLOoXHHPEz9XnlwqqJ9lW3ubsznbCVIZD",
       "Content-Type": "application/json",
     },
     data: data,
@@ -63,6 +63,7 @@ router.post("/whatsapp-webhook", async (req, res) => {
       if (
         body_param.entry &&
         body_param.entry[0].changes &&
+        body_param.entry[0].changes[0].value &&
         body_param.entry[0].changes[0].value.messages &&
         body_param.entry[0].changes[0].value.messages[0]
       ) {
@@ -162,14 +163,15 @@ router.post("/whatsapp-webhook", async (req, res) => {
 
           res.sendStatus(200);
 
-          await axios.post(url, data, { headers });
-
-          existingUser.messages.push({
-            body: "INDUSTRY USE CASES",
-            timestamp: new Date(),
+          let existingUser = await WhatsappModel.findOne({ phonenumber: from });
+            existingUser.messages.push({
+            body: "INDUSTRY ALL OPTIONS",
+            timestamp: new Date(),  
             action: "send",
           });
           await existingUser.save();
+
+          await axios.post(url, data, { headers });
 
         } 
         
@@ -200,48 +202,15 @@ router.post("/whatsapp-webhook", async (req, res) => {
 
           res.sendStatus(200);
 
-          await axios.post(url, data, { headers });
-
+          let existingUser = await WhatsappModel.findOne({ phonenumber: from });
           existingUser.messages.push({
-            body: "AI/ML USE CASES",
-            timestamp: new Date(),
-            action: "send",
-          });
-          await existingUser.save();
+          body: "AI/ML ALL OPTIONS",
+          timestamp: new Date(),  
+          action: "send",
+        });
+        await existingUser.save();
 
-
-          if (existingUser) {
-          if (paylod_body) {
-            existingUser.messages.push({
-              body: paylod_body,
-              timestamp: new Date(),
-              action: "recive",
-            });
-            await existingUser.save();
-          } else if (msg_body) {
-            existingUser.messages.push({
-              body: msg_body,
-              timestamp: new Date(),
-              action: "recive",
-            });
-            await existingUser.save();
-          }
-        } else {
-          // User does not exist, create a new user
-          const newUser = new WhatsappModel({
-            name: name,
-            phoneid: phone_no_id,
-            phonenumber: from,
-            messages: [
-              {
-                body: msg_body || paylod_body,
-                timestamp: new Date(),
-                action: "recive",
-              },
-            ],
-          });
-          await newUser.save();
-        }
+          await axios.post(url, data, { headers });
 
         } 
 
@@ -270,14 +239,52 @@ router.post("/whatsapp-webhook", async (req, res) => {
 
           res.sendStatus(200);
 
+          let existingUser = await WhatsappModel.findOne({ phonenumber: from });
+          existingUser.messages.push({
+          body: "CORPORATE & ACADEMIC ALL OPTIONS",
+          timestamp: new Date(),  
+          action: "send",
+        });
+        await existingUser.save();
+
           await axios.post(url, data, { headers });
 
-          existingUser.messages.push({
-            body: "CORPORATE & ACADEMIC USE CASES",
-            timestamp: new Date(),
-            action: "send",
+        } 
+
+        else if ( msg_body === "MVPE" || paylod_body === "MVPE" ) {
+          const url =
+            "https://graph.facebook.com/v17.0/" + phone_no_id + "/messages";
+          const accessToken = token;
+
+          const headers = {
+            Authorization: `Bearer ${accessToken}`,
+            "Content-Type": "application/json",
+          };
+
+          let data = JSON.stringify({
+            messaging_product: "whatsapp",
+            to: "917709228649",
+            type: "template",
+            template: {
+              name: "minimal_viable_product_engagement",
+              language: {
+                code: "en_US",
+              },
+            },
           });
-          await existingUser.save();
+
+          res.sendStatus(200);
+
+          let existingUser = await WhatsappModel.findOne({ phonenumber: from });
+          existingUser.messages.push({
+          body: "MVPE ALL OPTIONS",
+          timestamp: new Date(),  
+          action: "send",
+        });
+        await existingUser.save();
+
+          await axios.post(url, data, { headers });
+
         } 
 
 
@@ -290,10 +297,20 @@ router.post("/whatsapp-webhook", async (req, res) => {
           msg_body === "EDUCATION" || paylod_body === "EDUCATION" ||
           msg_body === "SUPPLY CHAIN" || paylod_body === "SUPPLY CHAIN" ||
           msg_body === "HEALTHCARE" || paylod_body === "HEALTHCARE" ||
+          msg_body === "CUSTOMER SEGMENTATION" || paylod_body === "CUSTOMER SEGMENTATION" ||  
+          msg_body === "RECOMMENDATION ENGINE" || paylod_body === "RECOMMENDATION ENGINE" ||  
+          msg_body === "INTERNET OF THINGS" || paylod_body === "INTERNET OF THINGS" ||  
+          msg_body === "INDUSTRIAL INTERNET OF TH" || paylod_body === "INDUSTRIAL INTERNET OF TH" ||  
+          msg_body === "DS WITH PY/R/SAS/MATLAB" || paylod_body === "DS WITH PY/R/SAS/MATLAB" ||  
+          msg_body === "ML WITH PY/R/SAS/MATLAB" || paylod_body === "ML WITH PY/R/SAS/MATLAB" ||  
+          msg_body === "DL WITH PY/R/SAS/MATLAB" || paylod_body === "DL WITH PY/R/SAS/MATLAB" ||  
+          msg_body === "DL USING CUDA/INTEL API" || paylod_body === "DL USING CUDA/INTEL API" ||  
+          msg_body === "QUANTUM COMPUTING IN ML" || paylod_body === "QUANTUM COMPUTING IN ML" ||  
+          msg_body === "FINANCIAL TECHNOLOGY HEAL" || paylod_body === "FINANCIAL TECHNOLOGY HEAL" ||  
           msg_body === "OTHERS" || paylod_body === "OTHERS" 
           ) {
           const url =
-            "https://graph.facebook.com/v17.0/" + phone_no_id + "/messages";
+            "https://graph.facebook.com/v17.0/" + phone_no_id + "/messages";  
           const accessToken = token;
 
           const headers = {

@@ -60,6 +60,7 @@ import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import Tags from './components/Tags/Tags';
 import Buy from './components/Buy/Buy';
 // import ChatBot from './components/ChatBot/ChatBot'
+import ChatComponent from './components/ChatComponent/ChatComponent';
 
 import NotFound from './components/NotFound/NotFound';
 
@@ -130,6 +131,7 @@ function App() {
         <Route path="/forecasting-using-ai" element={<ForcastingUsingAi />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/tags/:tagname" element={<Tags />} />
+        <Route path="/chatbot" element={<ChatComponent />} />
         <Route path="*" element= {<NotFound/>} />
         <Route
           path="/"
