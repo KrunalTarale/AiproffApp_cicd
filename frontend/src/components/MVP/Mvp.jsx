@@ -1,24 +1,27 @@
 import React,{useEffect} from 'react';
 import './Mvp.css';
-import Navbar from '../Navbar/Navbar'
-import Foot from '../Foot/Foot'
+import Navbar from '../Navbar/Navbar.jsx'
+import Foot from '../Foot/Foot.jsx'
 import image1 from '../assets/mvp.jpg';
 import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
 const Mvp = () => {
-
+  
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
+    if (typeof window !== 'undefined') {
+      // Code inside useEffect will only run on the client side
+      ReactGA.pageview(window.location.pathname);
+    }
   }, []);
 
   return (
     <div>
 
         <Helmet>
-            {/* <link href="https://www.aiproff.ai/mvp" rel="canonical" /> */}
+            <link href="https://www.aiproff.ai/mvp" rel="canonical" />
         </Helmet>
 
-      <Navbar />
+      {/* <Navbar /> */}
       
 
       <div className="mvpcontainer">
@@ -62,7 +65,7 @@ const Mvp = () => {
 
      <p>Don't miss this opportunity to turn your vision into reality with the expertise of AiProff! Contact with our team today for free.</p>
      </div>
-      <Foot />
+      {/* <Foot /> */}
     </div>
   )
 }

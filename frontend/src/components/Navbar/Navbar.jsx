@@ -16,6 +16,9 @@ function Navbar() {
 
   useEffect(() => {
     const user = localStorage.getItem('user');
+    if (!user) {
+      setAuth(null);
+    }
     setAuth(user);
   }, []);
 
