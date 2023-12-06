@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",
+  "mjs": [
+    "jsx"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -20,6 +23,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@material-tailwind/react": "^2.1.1",
+    "esm": "^3.2.25",
     "express": "^4.18.2",
     "flowbite-react": "^0.5.0",
     "font-awesome": "^4.7.0",

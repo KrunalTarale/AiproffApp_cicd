@@ -181,11 +181,18 @@
 
 import React from 'react'
 import MVP from './components/MVP/Mvp.jsx'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
     <div>
-      <MVP />
+      {/* <Router>
+        <Routes>
+          <Route path="/" element={<MVP />} />
+          <Route path="/a" element={<h1>this is second page</h1>} />
+        </Routes>
+      </Router> */}
+      <h1>this is second page</h1>
     </div>
   )
 }

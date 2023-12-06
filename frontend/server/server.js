@@ -5,7 +5,7 @@ import express from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import App from '../src/App.jsx';
-
+import { StaticRouter } from 'react-router-dom';
 
 const app = express();
 
@@ -15,7 +15,12 @@ const serverRenderer = (req, res) => {
       console.error(err);
       return res.status(500).send('An error occurred');
     }
-    const appHtml = ReactDOMServer.renderToString(React.createElement(App));
+    const context = {};  // Initialize the context object
+    const appHtml = ReactDOMServer.renderToString(
+      <StaticRouter location={req.url} context={context}>
+        <App />
+      </StaticRouter>
+    );
     return res.send(data.replace('<div id="root"></div>', `<div id="root">${appHtml}</div>`));
   });
 };
