@@ -26,7 +26,7 @@ const About = () => {
         <h1 className="lg:text-5xl text-4xl font-bold">AiProff.ai Privacy Policy</h1>
         <div className="lg:text-xl text-lg space-y-12">
           <p>
-          Effective Date: April 1, 2023; 
+          Effective Date: 1-Apr-2023
           </p>
           <div className="flex items-center justify-center">
             <img src={image} className="max-h-[25rem]" />
