@@ -1,7 +1,8 @@
 // import React , {useState , useEffect} from "react";
+import React from 'react';
 import './Contact.css';
-import Navbar from '../Navbar/Navbar';
-import Footer from '../Foot/Foot';
+import Navbar from '../Navbar/Navbar.jsx';
+import Footer from '../Foot/Foot.jsx';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Helmet } from 'react-helmet';

@@ -160,7 +160,6 @@
 //                   <Touch />
 //                 </div>
 //                 <Footer />
-                
 //               </div>
 //             </>
 //           }
@@ -179,21 +178,24 @@
 // export default App;
 
 
-import React from 'react'
-import MVP from './components/MVP/Mvp.jsx'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import MVP from './components/MVP/Mvp.jsx';
+import Footer from './components/Foot/Foot.jsx';
+import Contact from './components/contact/Contact.jsx';
+import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
   return (
     <div>
-      {/* <Router>
         <Routes>
-          <Route path="/" element={<MVP />} />
+          <Route path="/" element={
+            <>
+            <MVP />
+            </>
+          } />
           <Route path="/a" element={<h1>this is second page</h1>} />
         </Routes>
-      </Router> */}
-      <h1>this is second page</h1>
-    </div>
+     </div>
   )
 }
 
