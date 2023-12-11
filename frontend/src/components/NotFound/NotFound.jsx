@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from '../Navbar/Navbar';
+// import NavBar from '../Navbar/Navbar.jsx';
 
 
 const NotFound = () => {
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="h-screen w-screen bg-gray-50 flex items-center">
     <div className="container flex flex-col md:flex-row items-center justify-between px-5 text-gray-700">
             <div className="w-full lg:w-1/2 mx-8">

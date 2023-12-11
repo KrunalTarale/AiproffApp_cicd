@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
 import { Link,useNavigate } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar';
+import Navbar from '../Navbar/Navbar.jsx';
 import './Article.css';
 import ReactGA from 'react-ga';
 import { Helmet } from 'react-helmet';
@@ -21,7 +21,7 @@ import {
   faFacebook,
 } from '@fortawesome/free-brands-svg-icons';
 
-import image1 from '../assets/Article1/applied-ai-654b1bfba8edd.webp';
+// import image1 from '../assets/Article1/applied-ai-654b1bfba8edd.webp';
 import image2 from '../assets/Article1/graph-1.png';
 import image3 from '../assets/Article1/pie1.png';
 import image4 from '../assets/Article1/diag1.png';
@@ -32,9 +32,9 @@ import card1 from '../assets/Article1/card1.png';
 
 // Card images
 
-import card_image1 from '../assets/rodbust_ai/img_1r.webp';
-import card_image2 from '../assets/Nlp_img/nlp_bannerr.webp';
-import card_image3 from '../assets/ComputerVision/img1r.webp';
+// import card_image1 from '../assets/rodbust_ai/img_1r.webp';
+// import card_image2 from '../assets/Nlp_img/nlp_bannerr.webp';
+// import card_image3 from '../assets/ComputerVision/img1r.webp';
 
 // Card images ends
 
@@ -218,19 +218,19 @@ const Article = () => {
     <>
 
               <Helmet>
-                {/* <link href="https://www.aiproff.ai/applied-ai" rel="canonical" /> */}
+                <link href="https://www.aiproff.ai/applied-ai" rel="canonical" />
               </Helmet>
 
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="article">
         <div className=" article space-y-2 mx-auto flex flex-col justify-center">
           <div
             className="relative bg-cover bg-center"
-            style={{ backgroundImage: `url(${image1})` }}
+            style={{ backgroundImage: `url(${image2})` }}
           >
             <img
               ref={imageRef}
-              src={image1}
+              src={image2}
               alt="Generative AI"
               className="w-full object-cover opacity-0"
             />
@@ -928,11 +928,11 @@ const Article = () => {
                   className="mx-1 text-blue-600 no-underline  cursor-pointer"
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
-            <img
+            {/* <img
               src={card_image1}
               className="rounded-t card_img"
               alt="Quantum Article"
-            />
+            /> */}
             <div className="p-4">
 
                   <p>Sept 22, 2023</p>
@@ -950,11 +950,11 @@ const Article = () => {
                   className="mx-1 text-blue-600 no-underline  cursor-pointer"
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
-            <img
+            {/* <img
               src={card_image2}
               className="rounded-t card_img"
               alt="Quantum Article"
-            />
+            /> */}
             <div className="p-4">
 
                 <p>Sept 22, 2023</p>
@@ -976,11 +976,11 @@ const Article = () => {
                   className="mx-1 text-blue-600 no-underline cursor-pointer"
                 >
           <div className="card hover:bg-white p-5 hover:shadow-lg transition-shadow duration-300 m-3 card_width">
-            <img
+            {/* <img
               src={card_image3}
               className="rounded-t card_img"
               alt="Quantum Article"
-            />
+            /> */}
             <div className="p-4">
 
               <p>Sept 22, 2023</p>

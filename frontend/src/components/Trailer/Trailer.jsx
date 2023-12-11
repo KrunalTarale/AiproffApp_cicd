@@ -1,6 +1,6 @@
 import  { useState } from 'react';
-import image1 from '../assets/trailer2.webp';
-import image2 from '../assets/trailer1.webp';
+// import image1 from '../assets/trailer2.webp';
+// import image2 from '../assets/trailer1.webp';
 import './Trailer.css';
 import { Link } from 'react-router-dom';
 
@@ -14,11 +14,11 @@ const Trailer = () => {
 
       <div className="lg:flex trailer ">
         <div className="flex lg:w-1/2">
-          <img
+          {/* <img
             src={image1}
             alt="Left"
             className="w-full h-auto md:ml-0 md:mr-4 object-cover"
-          />
+          /> */}
         </div>
         <div className="lg:w-1/2 p-10 lg:space-y-10">
           <div>
@@ -103,11 +103,11 @@ const Trailer = () => {
 
       <div className="lg:flex flex-row-reverse trailer ">
         <div className="flex lg:w-1/2">
-          <img
+          {/* <img
             src={image2}
             alt="Left"
             className="w-full h-auto md:ml-0 md:mr-4 object-cover"
-          />
+          /> */}
         </div>
         <div className="lg:w-1/2 p-10  flex justify-end">
           <div className="lg:max-w-3xl lg:space-y-10">

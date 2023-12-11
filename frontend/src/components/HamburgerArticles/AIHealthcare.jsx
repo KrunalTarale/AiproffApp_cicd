@@ -1,12 +1,13 @@
-import Navbar from '../Navbar/Navbar';
-import Footer from '../Foot/Foot';
+import React from 'react';
+// import Navbar from '../Navbar/Navbar.jsx';
+import Footer from '../Foot/Foot.jsx';
 import './HamburgerArticle.css';
-import backgroundImage from '../assets/Banners/Appliedai/appliedaihealth.webp';
+import backgroundImage from '../assets/Banners/Appliedai/aiaero.jpg';
 
 function AIHealthcare() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="min-w-full flex flex-col article">
         <div
           className="flex w-full xl:h-[35rem] bg-cover bg-center bg-no-repeat"

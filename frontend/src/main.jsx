@@ -1,13 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import App from './App.jsx';
 import './index.css';
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
-ReactDOM.hydrateRoot(document.getElementById('root')).render(
+const rootElement = document.getElementById('root');
+
+ReactDOM.hydrate(
+  <HelmetProvider>
   <BrowserRouter>
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
   </BrowserRouter>
+  </HelmetProvider>,
+  rootElement
 );
