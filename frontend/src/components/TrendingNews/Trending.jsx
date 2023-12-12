@@ -4,21 +4,20 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        'Europe’s IT sector worried AI Act ‘misses mark on tech neutrality’',
-      url: 'https://thenextweb.com/news/europes-it-sector-worried-ai-act-tech-neutrality',
+        'Cruise faces potential fines for not fully disclosing an accident where its robotaxi dragged a pedestrian, undermining trust and regulatory compliance ’',
+      url: 'https://techcrunch.com/2023/12/04/cruise-faces-fines-in-california-for-withholding-key-details-in-robotaxi-accident/?guccounter=1',
     },
     {
-      headline: 'Alibaba donates its quantum lab to a local university, shifts focus to AI in agriculture and healthcare.',
-      url: 'https://www.scmp.com/tech/big-tech/article/3242956/alibaba-donates-its-quantum-lab-local-university-shifts-focus-ai-agriculture-healthcare',
+      headline: 'IBM and Meta join forces in AI Alliance, a new group of over 50 organizations that support open source AI development and innovation.',
+      url: 'https://newsroom.ibm.com/AI-Alliance-Launches-as-an-International-Community-of-Leading-Technology-Developers,-Researchers,-and-Adopters-Collaborating-Together-to-Advance-Open,-Safe,-Responsible-AI',
     },
     {
-      headline: "The Pentagon's new initiative, Replicator, aims to deploy thousands of AI-enabled autonomous vehicles by 2026",
-      url: 'https://economictimes.indiatimes.com/tech/technology/pentagons-ai-initiatives-accelerate-hard-decisions-on-lethal-autonomous-weapons/articleshow/105507375.cms',
+      headline: "Amazon's AI chatbot Q reportedly suffering 'severe hallucinations' and 'leaking confidential data'",
+      url: 'https://www.businessinsider.com/amazon-ai-chatbot-q-hallucinations-2023-12?IR=T',
     },
     {
-      headline:
-        'Nvidia postpones the release of its China-compliant AI chip to next year amid U.S. export regulations',
-      url: 'https://www.reuters.com/technology/nvidia-delays-launch-new-china-focused-ai-chip-sources-2023-11-24/',
+      headline: 'Google launches Gemini, its long-awaited answer to ChatGPT',
+      url: 'https://www.wired.com/story/google-gemini-ai-model-chatgpt/',
     },
   ];
 
