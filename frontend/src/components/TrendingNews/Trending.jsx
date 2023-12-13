@@ -4,20 +4,20 @@ const Trending = () => {
   const trendingNews = [
     {
       headline:
-        'Cruise faces potential fines for not fully disclosing an accident where its robotaxi dragged a pedestrian, undermining trust and regulatory compliance ’',
-      url: 'https://techcrunch.com/2023/12/04/cruise-faces-fines-in-california-for-withholding-key-details-in-robotaxi-accident/?guccounter=1',
+        'Nvidia emerges as the leading investor in AI companies  ’',
+      url: 'https://dealroom.co/uploaded/2023/11/Dealroom-Global-tech-vc-startup-Nov-2023.pdf?x92057',
     },
     {
-      headline: 'IBM and Meta join forces in AI Alliance, a new group of over 50 organizations that support open source AI development and innovation.',
-      url: 'https://newsroom.ibm.com/AI-Alliance-Launches-as-an-International-Community-of-Leading-Technology-Developers,-Researchers,-and-Adopters-Collaborating-Together-to-Advance-Open,-Safe,-Responsible-AI',
+      headline: "Scientists created an AI system using living brain cells that can identify different people's voices with 78% accuracy.",
+      url: 'https://www.nature.com/articles/d41586-023-03975-7',
     },
     {
-      headline: "Amazon's AI chatbot Q reportedly suffering 'severe hallucinations' and 'leaking confidential data'",
-      url: 'https://www.businessinsider.com/amazon-ai-chatbot-q-hallucinations-2023-12?IR=T',
+      headline: "Microsoft and labour unions form ‘historic’ alliance on AI'",
+      url: 'https://www.bloomberg.com/news/articles/2023-12-11/microsoft-and-labor-unions-form-historic-alliance-on-ai',
     },
     {
-      headline: 'Google launches Gemini, its long-awaited answer to ChatGPT',
-      url: 'https://www.wired.com/story/google-gemini-ai-model-chatgpt/',
+      headline: 'Meta unveils Audiobox, an AI that clones voices and generates ambient sounds',
+      url: 'https://audiobox.metademolab.com/',
     },
   ];
 
